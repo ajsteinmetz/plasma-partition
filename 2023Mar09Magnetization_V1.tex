@@ -296,12 +296,11 @@ In this case, given the magnetic field $B$ we can solve the chemical potential $
 %\begin{center}
 \centering
 \includegraphics[width=0.75\linewidth]{ChemicalPotential_case1.jpg}
-\includegraphics[width=0.75\linewidth]{ChemicalPotential_case2.jpg}
-\caption{The chemical potential $\eta/T$(upper) and magnetization $M/B$(lower) as a function of temperature $20<T<60$keV  for the case 2.  It shows that the chemical potential is not sensitive to the magnetic field $b_0$. However, the magnetization does depend on the magnetic field $b_0$ strongly. This is because for small magnetic field $b_0$ the dominant term in Eq(\ref{Magnetization_002}) is $xK_1(x)/b_0$. For giving $b_0$  we can have $M/B>1$ in early universe.}
-\label{Case2_fig} 
+\caption{The chemical potential $\eta/T$ a function of temperature $20<T<60$keV.  It shows that the chemical potential is not sensitive to the magnetic field $b_0$.}
+\label{chemical_fig} 
 \end{figure}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In Fig {\ref{Chemical_fig}}, we plot the  chemical potential as a function of temperature $T$. It shows that the chemical potential is not sensitive to the magnetic field because the small value of $b_0=10^{-3}\sim10^{-8}$ and can be neglected in Eq.(\ref{ChemicalPotential}). 
 
 \subsection{Magnetization}
 On the other hand, giving the partition function Eq.(\ref{lnZ}) the magnetization can be obtained via the definition
@@ -324,11 +323,7 @@ Substituting the chemical potential Eq.(\ref{ChemicalPotential}) into Eq.(\ref{M
 In this case, given the magnetic field $B$ and chemical potential we can solve the magnetization $M$ as a function of temperature numerically.
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Example: g-factor $g=2$}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 In our calculation we introduce an effective mass term which incorporates the ground state component of the Landau energy as follow
 \begin{align}
 x_\pm=\frac{\tilde{m}_\pm}{T}=\frac{1}{T}\sqrt{m^2_e+eB\left(1\pm\frac{g}{2}\right)}
@@ -339,11 +334,9 @@ Considering the case $g=2$ we have following two cases:
   \begin{align}\label{Magnetization_001}
  \left(\frac{M}{B}\right)&=-\frac{8\pi\alpha}{(2\pi)^2}\left(\frac{b_0}{6x}K_1(x_\pm)+\frac{2}{3}K_0(x_\pm)\right)\sqrt{1+\left[\frac{{(2\pi)^2n_p}/{(2T^3)}}{\left[x_\pm^2K_2(x_\pm)+b_0x_\pm K_1(x_\pm)+\frac{b^2_0}{6}K_0(x_\pm)\right]}\right]^2}
    \end{align}
-Substituting the magnetic field $b_0$ and proton density $n_p/T^3$ from pervious section, we can solve the magnetization and chemical potential numerically. 
-
-In Fig {\ref{Case1_fig}}, we plot the chemical potential $\eta/T$(left) and magnetization $M/B$(right) as a function of temperature $T$. It shows for the case1 the chemical potential and magnetization are not sensitive to the magnetic field, this is because the small value of $b_0=10^{-3}\sim10^{-8}$ and can be neglected in Eq.(\ref{chemical_001}) and Eq.(\ref{Magnetization_001}).
+Substituting the magnetic field $b_0$ and proton density $n_p/T^3$  we can solve the magnetization and chemical potential numerically. In Fig {\ref{Case1_fig}}, we plot the  magnetization $M/B$ as a function of temperature $T$. It shows for the case1 the magnetization is not sensitive to the magnetic field, this is because the small value of $b_0=10^{-3}\sim10^{-8}$ and can be neglected in Eq.(\ref{chemical_001}) and Eq.(\ref{Magnetization_001}).
  %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\begin{figure}[h]
+\begin{figure}[t]
 %\begin{center}
 \centering
 \includegraphics[width=0.75\linewidth]{Magnetization_case1.jpg}
@@ -351,17 +344,12 @@ In Fig {\ref{Case1_fig}}, we plot the chemical potential $\eta/T$(left) and magn
 \label{Case1_fig} 
 \end{figure}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  \item Case 2: $\tilde m_-=m_e$ and $x=\tilde m_-/T$,then the equations for chemical potential and magnetization can be written as
-  \begin{align}\label{chemical_002}
-\sinh{(\eta/T)}=\frac{(2\pi)^2n_p}{2T^3}\,\frac{1}{\left[x^2K_2(x)+b_0xK_1(x)+\frac{b^2_0}{6}K_0(x)\right]}
-  \end{align}
-and
+\\
+  \item Case 2: $\tilde m_-=m_e$ and $x=\tilde m_-/T$,then the magnetization of electron/ positron becomes
 \begin{align}\label{Magnetization_002}
 \left(\frac{M}{B}\right)&=\frac{8\pi\alpha}{(2\pi)^2}\left(\frac{1}{b_0}xK_1(x)+\frac{1}{3}K_0(x)\right)\sqrt{1+\left[\frac{{(2\pi)^2n_p}/{(2T^3)}}{\left[x^2K_2(x)+b_0x K_1(x)+\frac{b^2_0}{6}K_0(x)\right]}\right]^2}
 \end{align}
-Using the magnetic field $b_0$ and proton density $n_p/T^3$ from pervious section, we can solve the magnetization and chemical potential  for case 2 numerically. 
-
-In Fig {\ref{Case2_fig}}, we plot the chemical potential $\eta/T$(left) and magnetization $M/B$(right) as a function of temperature $T$. It shows that the chemical potential is not sensitive to the magnetic field because the small value of $b_0=10^{-3}\sim10^{-8}$ and can be neglected in Eq.(\ref{chemical_002}). However, the magnetization does depend on the magnetic field $b_0$ strongly. This is because for small magnetic field $b_0$ the dominant term in Eq(\ref{Magnetization_002}) is $xK_1(x)/b_0$. For given $b_0$, the value of magnetization can be larger than the magnetic filed, i.e. $M/B>1$  which shows the possibility that magnetic domains can be formed in early universe.
+Using the magnetic field $b_0$ and proton density $n_p/T^3$ we solve the magnetization  for case 2 numerically. In Fig {\ref{Case2_fig}}, we plot the  magnetization $M/B$ as a function of temperature $T$. It shows that the magnetization depends on the magnetic field $b_0$ strongly. This is because for a small magnetic field $b_0$ the dominant term in Eq(\ref{Magnetization_002}) is $xK_1(x)/b_0$. For given $b_0$, the value of magnetization can be larger than the magnetic field, i.e. $M/B>1$  which shows the possibility that magnetic domains can be formed in the early universe.
 
  %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \begin{figure}[h]
@@ -369,7 +357,7 @@ In Fig {\ref{Case2_fig}}, we plot the chemical potential $\eta/T$(left) and magn
 \centering
 %\includegraphics[width=0.75\linewidth]{ChemicalPotential_case2.jpg}
 \includegraphics[width=0.75\linewidth]{Magnetization_case2.jpg}
-\caption{The chemical potential $\eta/T$(upper) and magnetization $M/B$(lower) as a function of temperature $20<T<60$keV  for the case 2.  It shows that the chemical potential is not sensitive to the magnetic field $b_0$. However, the magnetization does depend on the magnetic field $b_0$ strongly. This is because for small magnetic field $b_0$ the dominant term in Eq(\ref{Magnetization_002}) is $xK_1(x)/b_0$. For giving $b_0$  we can have $M/B>1$ in early universe.}
+\caption{The chemical potential $\eta/T$(upper) and magnetization $M/B$(lower) as a function of temperature $20<T<60$keV  for the case 2.  It shows that for giving $b_0$ we can find the temperature that $M/B>1$ in early universe.}
 \label{Case2_fig} 
 \end{figure}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
