@@ -100,7 +100,7 @@ where $\sigma_{\mu\nu}$ is the spin tensor proportional to the commutator of the
 \end{align}
 This approach, while straightforward, would complicate the energies making analytic understanding and clarity difficult without a clear benefit. Our preferred model for the AMM is through the Klein-Gordon-Pauli (KGP) equation which is given by
 \begin{alignat}{1}
-  \label{KGP} \left(\left(i\partial_{\mu}-eA_{\mu}\right)^{2}-m^{2}-e\frac{g}{2}\frac{\sigma_{\mu\nu}F^{\mu\mu}}{2}\right)\Psi=0\,.
+  \label{KGP} \left(\left(i\partial_{\mu}-eA_{\mu}\right)^{2}-m_{e}^{2}-e\frac{g}{2}\frac{\sigma_{\mu\nu}F^{\mu\mu}}{2}\right)\Psi=0\,.
 \end{alignat}
 We wish to emphasize, that each of the three above models are distinct and have differing physical consequences and are not interchangeable. One benefit of the KGP approach is that the energies take eigenvalues which are mathematically similar to the Dirac energies. Considering the $e^\pm$ plasma in a uniform magnetic field $B$ pointing along the $z$-axis, the energy of $e^\pm$ fermions can be written as
 \begin{align}
@@ -108,7 +108,7 @@ We wish to emphasize, that each of the three above models are distinct and have 
 \end{align}
 where $n$ is the principle quantum number for the Landau levels and $s$ is the spin quantum number. Here we introduce a notion of \lq\lq magnetic mass\rq\rq\ which inherits the spin-specific part of the energy adding them to the mass. This convention is also generalizable to further non-minimal electromagnetic models with more exotic energy contributions such that we write a general replacement as
 \begin{align}
-  \label{MagMass} m^{2}\rightarrow\tilde{m}^2(B)\,.
+  \label{MagMass} m_{e}^{2}\rightarrow\tilde{m}^2(B)\,.
 \end{align}
 This definition also pulls out the ground state Landau energy separating it from the remainder of the Landau tower of states. One restriction is that the magnetic-mass must remain positive definite in our analysis thus we require
 \begin{align}
@@ -116,15 +116,49 @@ This definition also pulls out the ground state Landau energy separating it from
 \end{align}
 This condition fails under ultra-strong magnetic fields of order
 \begin{align}
-  \label{MagMassFail} B_{\mathrm{crit}}=\frac{m^{2}}{ea}=\frac{\mathcal{B}_{S}}{a}\approx3.8\times10^{12}\ \mathrm{T}\,,
+  \label{MagMassFail} B_{\mathrm{crit}}=\frac{m_{e}^{2}}{ea}=\frac{\mathcal{B}_{S}}{a}\approx3.8\times10^{12}\ \mathrm{T}\,,
 \end{align}
 where $\mathcal{B}_{S}$ is the Schwinger critical field strength. For electrons, this field strength is well above the window of magnetic field strengths of interest during the late $e^{\pm}$ epoch.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Cosmic expansion considerations}
-There is another natural scale for the magnetic field when considering the implications of FLRW expansion of the $e^{\pm}$ fluid. 
+\noindent {\color{red}ANDREW: How much cosmology do we want here? I assume putting in at least the FLRW metric here such that $a(t)$ is defined is a minimal requirement for this section.} There is another natural scale for the magnetic field when considering the implications of FLRW expansion of the $e^{\pm}$ fluid. As the universe expands, different terms in the energies and thus partition function evolve as a function of the scale factor $a(t)$ which arises in the FLRW metric. We can consider the expansion to be an adiabatic process which result in a smooth shifting of the relevant dynamical quantities. From the convervation of magnetic flux through a comoving surface, the magnetic field under expansion starting at some initial time $t_{0}$ is given by
+\begin{alignat}{1}
+    \label{BScale} B(t) = B(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
+\end{alignat}
+Related, as the universe expands, the temperature cools as the cosmological redshift reduces the kinetic energy of the particles contributing to the energy content of the universe. This cosmological redshift is written as
+\begin{alignat}{1}
+    \label{TScale} T(t) = T(t_{0})\frac{a(t_{0})}{a(t)}\,.
+\end{alignat}
+The momenta scale with the same factor as temperature, which is the origin of cosmological redshift
+\begin{alignat}{1}
+    \label{PScale} p_{i}(t) = p_{i}(t_{0})\frac{a(t_{0})}{a(t)}\,.
+\end{alignat}
+The energy of massive particles in the universe scales differently based on their momentum (and thus temperature). When hot and relativistic, particle energy scales with inverse scale factor like radiation. However as particles transition to non-relativistic momenta, their energies scale with the inverse square of the scale factor like magnetic flux. The argument in the Boltzmann statistical factor is given by
+\begin{alignat}{1}
+    \label{Boltz} X_{n}^{s}\equiv\frac{E_{n}^{s}}{T}\,.
+\end{alignat}
+We can explore this relationship for the magnetized system explicitly by writing out \req{Boltz} as
+\begin{alignat}{1}
+    \label{XExplicit} X_{n}^{s} = \sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{p_{z}^{2}}{T^{2}}+\frac{2eB}{T^{2}}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,,
+\end{alignat}
+where we now introduce the expansion scale factor via \req{BScale} - \req{PScale}. The Boltzmann factor can then be written as
+\begin{alignat}{1}
+    \label{XScale} X_{n}^{s}\left[a(t_{0});a(t)\right] = \sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,.
+\end{alignat}
+This reveals that only the mass contribution is dynamical over cosmological time. For any given eigen-state, the mass term increases driving the state into the non-relativistic limit while the momenta and magnetic contributions are frozen by initial conditions. We can specifically introduce a dimensionless cosmic magnetic scale which is frozen in the homogenous case as
+\begin{alignat}{1}
+    \label{Bo} b_{0}\equiv\frac{eB}{T^{2}}=\frac{eB\hbar c^{2}}{(k_{B}T)^{2}}\ \mathrm{(S.I)}\,,
+\end{alignat}
+written explicitly in full SI units. We can estimate the value of $b_{0}$ from the bounds on the extragalactic magnetic field strength and the temperature of the universe today.  If the origin of deep space extra-galactic magnetic fields are relic fields from the early universe, which today are expected to exist between $5\times10^{-12}\ \mathrm{T}>B_{relic}>10^{-20}\ \mathrm{T}$, then at temperature $T=2.7\ \mathrm{K}$, the value of the cosmic magnetic scale is between
+\begin{alignat}{1}
+    \label{BoScale} 5.5\times10^{-5}>b_{0}>1.1\times10^{-11}\,.
+\end{alignat}
+This should remain constant in the universe at-large up to the last epoch the universe was sufficiently magnetized to disturb this value. As the electron-proton plasma which generated the CMB was relatively dilute over its duration, it was unlikely sufficiently magnetized to significantly alter this value over extra-galactic scales. Rather, the best candidate plasma to have been sufficiently magnetized and dense to have set the relic field magnetic scale would have been the electron-positron plasma which existed during the duration of Big Bang Nucleosynthesis (BBN) and beforehand.
 
-{\color{blue}(I was thinking to metion the dimensionless $b_0$ here, but feel free to remove or edit it)
+Higher order non-minimal magnetic contributions to the energy eigenvalues like $\approx\mu_{B}^{2}B^{2}/T^{2}$ are even more surpressed over cosmological time which drives the system into minimal electromagnetic coupling with the exception of the anomalous magnetic moment. It is interesting that cosmological expansion serves to \lq\lq smooth out\rq\rq\ the characteristics of more complex BSM electrodynmaics erasing them from a statistical perspective in favor of the non-minimal dynamics.
+
+{\color{blue}(CHENG-TAO: I was thinking to mention the dimensionless $b_0$ here, but feel free to remove or edit it)
 The dimensionless magnetic constant under expansion in the Boltzmann factor is
 \begin{align}
 b_0= \frac{|e|B(\hbar c^2)}{(k_B T)^2}
@@ -146,8 +180,7 @@ As $b_0$ is a constant of expansion, assuming the electron-proton plasma between
 \begin{align}
 &B^{\mathrm{max}}(T=50 \mathrm{keV}) = \frac{B^{\mathrm{max}}_0(k_B T)^2}{(|q|\hbar c^2)}= 2.3\times10^5 \mathrm{Tesla},\\
 &B^{\mathrm{min}}(T=50 \mathrm{keV})= 4.6\times10^{-4} \mathrm{Tesla}
-\end{align}
-}
+\end{align}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Partition function}
 \noindent We now turn our attention now to the statistical behavior of the $e^{\pm}$ system. We can utilize the general Fermion partition function given by
@@ -178,9 +211,9 @@ W^\pm_1(n,k)\equiv\frac{k\sqrt{\tilde{m}^2_\pm+2eBn}}{T}\,\,K_1\!\!\left(\frac{k
 \end{align}
 defined in terms of the modified (hyperbolic) Bessel function of the second kind $K_{i}(x)$. We then utilize the Euler-Maclaurin formula to replace the sum over Landau levels with an integration yielding
 \begin{align}
-\sum^{\infty}_{n=0}W^\pm_1(n,k)=\int^\infty_0\!\!dn\,W^\pm_1(n,k)+\frac{1}{2}\bigg[W^\pm_1(\infty,k)+W^\pm_1(0,k)\bigg]+\frac{1}{12}\bigg[\left.\frac{\partial W^\pm_1}{\partial n}\right|_{\infty}-\left.\frac{\partial W^\pm_1}{\partial n}\right|_{0}\bigg]+R\,,
+\label{EMIntegration}\sum^{\infty}_{n=0}W^\pm_1(n,k)=\int^\infty_0\!\!dn\,W^\pm_1(n,k)+\frac{1}{2}\bigg[W^\pm_1(\infty,k)+W^\pm_1(0,k)\bigg]+\frac{1}{12}\bigg[\left.\frac{\partial W^\pm_1}{\partial n}\right|_{\infty}-\left.\frac{\partial W^\pm_1}{\partial n}\right|_{0}\bigg]+R\,,
 \end{align}
-where $R$ is the error remainder which is defined by integrals over Bernoulli polynomials. Using the asymptotic properties of Bessel function $K_{i}(x)$ as $x$ becomes large, we can simplify the above expression to obtain
+where $R$ is the error remainder which is defined by integrals over Bernoulli polynomials. The error remainder has, for well behaved functioned, a finite size and therefore for a more extensive analysis is required to demonstrate to what order in Bessel functions is required to minimize the error remainder for good results. For \req{EMIntegration}, we've chosen to include up to the first order in derivatives. Using the asymptotic properties of Bessel function $K_{i}(x)$ as $x$ becomes large, we can simplify the above expression to obtain
 \begin{align}
 \label{Winitial}\sum^{\infty}_{n=0}W^\pm_1(n,k)&=\int^\infty_0\!\!dn\,W^\pm_1(n,k)+\frac{1}{2}W^\pm_1(0,k)-\frac{1}{12}\left.\frac{\partial W^\pm_1}{\partial n}\right|_{0}+R\,,\\
 \label{WReplacement}\sum^{\infty}_{n=0}W^\pm_1(n,k)&=\left(\frac{T^2}{k^2eB}\right)z^{2}K_{2}(z)+\frac{1}{2}zK_{1}(z)+\frac{1}{12}\left(\frac{k^2eB}{T^2}\right)K_{0}(z)+R\,,\qquad z = \frac{k\tilde{m}_{\pm}}{T}\,.
@@ -220,19 +253,18 @@ we can rewrite the total partition function in \req{PartTotal} as
   \label{PartTotalNR} \ln\left(\mathcal{Z}_{tot}\right)\vert_{NR}&=\frac{2eBV}{(2\pi)^{2}}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\frac{(-1)^{k+1}}{k}\left[2\cosh(k\beta\eta_{e}^{+})+2\cosh(k\beta\eta_{e}^{-})\right]\int_{0}^{\infty}dp_{z}e^{-k\beta\epsilon_{n}}\,,\\
   \label{NREnergy} \epsilon_{n}&=m_{e}+\frac{p_{z}^{2}}{2m_{e}}+\frac{eB}{2m_{e}}\left(n+1\right)\,.
 \end{align}
-\req{PartTotalNR} is then the traditional NR quantum harmonic oscillator partition function with a spin dependant chemical potential shift differentiating the aligned and anti-aligned states. We note that in this formulation, the spin contribution is entirely excised from the orbital contribution to the partition function merely acting as a constant coefficient. Under Euler-Maclaurin integration, the now spin-independant Boltzmann factor can be further separated into \lq\lq free\rq\rq\ and Landau quantum parts as was done in \req{FreePart}-\req{ErrorPart} for the relativistic case. The non-relativistic \lq\lq free\rq\rq\ partition function is then identical to the free fermion partition function with a simple modification from the intrinsic spin energies.
+\req{PartTotalNR} is then the traditional NR quantum harmonic oscillator partition function with a spin dependant chemical potential shift differentiating the aligned and anti-aligned states. We note that in this formulation, the spin contribution is entirely excised from the orbital contribution to the partition function merely acting as a constant coefficient. Under Euler-Maclaurin integration, the now spin-independant Boltzmann factor can be further separated into \lq\lq free\rq\rq\ and Landau quantum parts as was done in \req{FreePart} - \req{ErrorPart} for the relativistic case. The non-relativistic \lq\lq free\rq\rq\ partition function is then identical to the free fermion partition function with a simple modification from the intrinsic spin energies. We note however that the inclusion of anomalous magnetic moment (AMM) spoils this clean separation therefore, we take the above as only useful as a limit or approximation of the physical system. {\color{red}ANDREW: I would like to demonstrate this above paragraph mathematically, though this might just be considered a corollary point more appropriate for a subsequent paper.}
 
-Another approach to the non-relativistic electron-positron plasma is to consider the partition function obtained in \req{FreePart}-\req{ErrorPart} in the Boltzmann approximation and assuming the error remainder $R$ is small and can be neglected. In this case, we have
+Another approach to the non-relativistic electron-positron plasma is to consider the partition function obtained in \req{FreePart} - \req{ErrorPart} in the Boltzmann approximation $k=1$ and assuming the error remainder $R$ is small and can be neglected. In this case, we have
 \begin{align}
-\ln\mathcal{Z}_{tot}=&\frac{T^3V}{(2\pi)^2}\left[2\cosh(\eta_{e}/T)\right]\left(\frac{\tilde m_\pm}{T}\right)^{\!\!2} K_2(\tilde m_\pm/T)\notag\\
-&+\frac{2eBTV}{(2\pi)^2}\left[2\cosh(\eta_{e}/T)\right]\left[\frac{1}{2}\left(\frac{\tilde m_\pm}{T}\right)K_1(\tilde m_\pm/T)+\frac{1}{12}\left(\frac{eB}{T^2}\right)K_0(\tilde m_\pm/T)\right]
+  \label{lnZIntermediate}\ln\mathcal{Z}_{tot}=&\frac{T^3V}{(2\pi)^2}\left[2\cosh\left(\frac{\eta_{e}}{T}\right)\right]\left(\frac{\tilde m_\pm}{T}\right)^{\!\!2} K_2\left(\frac{\tilde{m}_{\pm}}{T}\right)\notag\\
+  &+\frac{2eBTV}{(2\pi)^2}\left[2\cosh\left(\frac{\eta_{e}}{T}\right)\right]\left[\frac{1}{2}\left(\frac{\tilde m_\pm}{T}\right)K_1\left(\frac{\tilde{m}_{\pm}}{T}\right)+\frac{1}{12}\left(\frac{eB}{T^2}\right)K_0\left(\frac{\tilde{m}_{\pm}}{T}\right)\right]\,.
 \end{align}
-It can be written as
-\begin{align}\label{lnZ}
-\ln\mathcal{Z}_{tot}=\frac{T^3V}{(2\pi)^2}\left[2\cosh(\eta_{e}/T)\right]\left\{\left(\frac{\tilde m_\pm}{T}\right)^{\!\!2} K_2(\tilde m_\pm/T)+\frac{eB}{T^2} \left[\left(\frac{\tilde m_\pm}{T}\right)K_1(\tilde m_\pm/T)+\frac{1}{6}\left(\frac{eB}{T^2}\right)K_0(\tilde m_\pm/T)\right]
-\right\}
+The above equation \req{lnZIntermediate} can be simplified into the expression
+\begin{align}
+  \label{lnZ}\ln\mathcal{Z}_{tot}=\frac{T^3V}{(2\pi)^2}\left[2\cosh\left(\frac{\eta_{e}}{T}\right)\right]\left\{\left(\frac{\tilde m_\pm}{T}\right)^{\!\!2} K_2\left(\frac{\tilde{m}_{\pm}}{T}\right)+\frac{eB}{T^2} \left[\left(\frac{\tilde m_\pm}{T}\right)K_1\left(\frac{\tilde{m}_{\pm}}{T}\right)+\frac{1}{6}\left(\frac{eB}{T^2}\right)K_0\left(\frac{\tilde{m}_{\pm}}{T}\right)\right]\right\}\,.
 \end{align}
-
+{\color{red}ANDREW: We should have more to comment here. This is essentially the \lq\lq working equation\rq\rq\ for the remainder of the paper. So this is a nice key result we should emphasize.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Chemical potential and Magnetization}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -240,13 +272,13 @@ It can be written as
 Giving the partition function in Boltzmann limit Eq.(\ref{lnZ}) the net number density of electron can be written as
 \begin{align}
 \left(n_e-n_{\bar e}\right)&=\frac{T}{V}\frac{\partial}{\partial \eta_{e}}\ln\mathcal{Z}_{tot}\notag\\
-&=\frac{2T^3}{(2\pi)^2}\sinh{(\eta_{e}/T)}\left[\left(\frac{\tilde{m}_\pm}{T}\right)^2K_2(\tilde m_\pm/T)\right]+\frac{4eBT}{(2\pi)^2}\sinh{(\eta_{e}/T)}\bigg[\frac{\tilde{m}_\pm}{2T}K_1(\tilde m_\pm/T)+\frac{eB}{12T^2}K_0(\tilde m_\pm/T)\bigg]
+&=\frac{2T^3}{(2\pi)^2}\sinh{(\eta_{e}/T)}\left[\left(\frac{\tilde{m}_\pm}{T}\right)^2K_2\left(\frac{\tilde{m}_{\pm}}{T}\right)\right]+\frac{4eBT}{(2\pi)^2}\sinh{(\eta_{e}/T)}\bigg[\frac{\tilde{m}_\pm}{2T}K_1\left(\frac{\tilde{m}_{\pm}}{T}\right)+\frac{eB}{12T^2}K_0\left(\frac{\tilde{m}_{\pm}}{T}\right)\bigg]
 \end{align}
 Using the charge neutrality, we have
 \begin{align}
 n_p&=\left(n_e-n_{\bar e}\right)\notag\\
-&=\frac{2T^3}{(2\pi)^2}\sinh{(\eta_{e}/T)}\left[\left(\frac{\tilde{m}_\pm}{T}\right)^2K_2(\tilde m_\pm/T)\right]
-+\frac{4eBT}{(2\pi)^2}\sinh{(\eta_{e}/T)}\bigg[\frac{\tilde{m}_\pm}{2T}K_1(\tilde m_\pm/T)+\frac{eB}{12T^2}K_0(\tilde m_\pm/T)\bigg]
+&=\frac{2T^3}{(2\pi)^2}\sinh{(\eta_{e}/T)}\left[\left(\frac{\tilde{m}_\pm}{T}\right)^2K_2\left(\frac{\tilde{m}_{\pm}}{T}\right)\right]
++\frac{4eBT}{(2\pi)^2}\sinh{(\eta_{e}/T)}\bigg[\frac{\tilde{m}_\pm}{2T}K_1\left(\frac{\tilde{m}_{\pm}}{T}\right)+\frac{eB}{12T^2}K_0\left(\frac{\tilde{m}_{\pm}}{T}\right)\bigg]
 \end{align}
 where $n_p$ is the number density of proton. It is also convenient to introduce the dimensionless variables:
 \begin{align}
@@ -334,7 +366,7 @@ x_\pm=\frac{\tilde m_\pm}{T},\qquad b_0=\frac{eB}{T^2}
 \end{align}
 then the magnetization can be written as
 \begin{align}\label{Magnetization}
-\left(\frac{M}{B}\right)=\frac{4\pi\alpha}{(2\pi)^2b_0}\left[2\cosh(\eta_{e}/T)\right]\left\{\left[1-\frac{(1\pm g/2)}{2}\left(1+\frac{b^2_0}{6x^2_\pm}\right)\right]x_\pm K_1(x_\pm)+\left[\frac{1}{3}-\frac{(1\pm g/2)}{2}\right]b_0K_0(x_\pm)\right\}.
+\left(\frac{M}{B}\right)=\frac{4\pi\alpha}{(2\pi)^2b_0}\left[2\cosh\left(\frac{\eta_{e}}{T}\right)\right]\left\{\left[1-\frac{(1\pm g/2)}{2}\left(1+\frac{b^2_0}{6x^2_\pm}\right)\right]x_\pm K_1(x_\pm)+\left[\frac{1}{3}-\frac{(1\pm g/2)}{2}\right]b_0K_0(x_\pm)\right\}.
 \end{align}
 Substituting the chemical potential Eq.(\ref{ChemicalPotential}) into Eq.(\ref{Magnetization}) we obtain
 \begin{align}
