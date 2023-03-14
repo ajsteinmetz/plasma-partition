@@ -25,6 +25,12 @@
 
 %=================================================================
 % Add packages and commands here. The following packages are loaded in our class file: fontenc, inputenc, calc, indentfirst, fancyhdr, graphicx,epstopdf, lastpage, ifthen, lineno, float, amsmath, setspace, enumitem, mathpazo, booktabs, titlesec, etoolbox, tabto, xcolor, soul, multirow, microtype, tikz, totcount, amsthm, hyphenat, natbib, hyperref, footmisc, url, geometry, newfloat, caption
+\usepackage{xcolor}
+\newcommand*{\req}[1]{Eq.~{\eqref{#1}}}
+\newcommand*{\rf}[1]{Fig.~{\ref{#1}}}
+\newcommand*{\rsec}[1]{Sect.\,{\ref{#1}}}
+\newcommand*{\bb}{\boldsymbol}
+\newcommand*{\ar}{{\color{red}ADDREF }}
 
 %=================================================================
 %% Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
@@ -34,9 +40,10 @@
 % Full title of the paper (Capitalized)
 \Title{\uppercase{Electron Positron Partition Function in Early Universe}}
 
-% Author Orchid ID: enter ID or remove command
+% Author Orcid ID: enter ID or remove command
 \newcommand{\orcidauthorA}{0000-0001-8217-1484} % Add \orcidA{} behind the author's name
 \newcommand{\orcidauthorB}{0000-0001-5038-8427} % Add \orcidB{} behind the author's name
+\newcommand{\orcidauthorC}{0000-0001-5474-2649} % Add \orcidC{} behind the author's name
  
 % Authors, for the paper (add full first names)
 \Author{Johann Rafelski, Cheng Tao Yang, and Andrew Steinmetz}
@@ -67,11 +74,6 @@ Department of Physics, The University of Arizona, Tucson, Arizona 85721, USA}
 %
 \keyword{Magnetization; Electron-Positron plasma; Cosmology.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand*{\req}[1]{Eq.~{\eqref{#1}}}
-\newcommand*{\rf}[1]{Fig.~{\ref{#1}}}
-\newcommand*{\rsec}[1]{Sect.\,{\ref{#1}}}
-\newcommand*{\bb}{\boldsymbol}
-\newcommand*{\ar}{{\color{red}ADDREF }}
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Introduction}
@@ -162,8 +164,8 @@ where the $\pm$ script refers to spin aligned and anti-aligned eigenvalues. To s
 \end{align}
 We emphasize that this expansion is only value where the Boltzmann factor $\exp\left(-\beta(E\pm\mu_{e})\right)$ remains less than unity, otherwise the partition function becomes divergent and ill-behaved. The partition function of $e^{\pm}$ system can be further expanded as
 \begin{align}
-\ln\mathcal{Z}_{tot}=&\frac{2eBV}{(2\pi)^2}\sum_{n=0}^\infty\int^\infty_{0} \!\!dp_z\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}\bigg[e^{k\beta\mu_e}+e^{-k\beta\mu_e}\bigg]e^{-k\beta E_n^\pm}\notag\\
-&=\frac{2eBV}{(2\pi)^2}\sum_{n=0}^\infty\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}\bigg[2\cosh{(k\beta\mu_e)}\bigg]\int_0^\infty dp_z\,e^{-k\beta E_n^\pm}\notag\\
+\ln\mathcal{Z}_{tot}
+&=\frac{2eBV}{(2\pi)^2}\sum_{n=0}^\infty\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}\bigg[e^{k\beta\mu_e}+e^{-k\beta\mu_e}\bigg]\int_0^\infty dp_z\,e^{-k\beta E_n^\pm}\notag\\
 &=\frac{2eBTV}{(2\pi)^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^2}\bigg[2\cosh{(k\beta\mu_e)}\bigg]\sum_{n=0}^\infty W^\pm_1(n,k),
 \end{align}
 where we introduce the function $W^\pm_1(n,k)$ as follows
@@ -289,7 +291,16 @@ n_p= X_p\left(\frac{n_B}{s_{\gamma,\nu}}\right)\,s_{\gamma,\nu}=\frac{0.878\time
 \end{align}
 
 In this case, given the magnetic field $B$ we can solve the chemical potential $\eta$ as a function of temperature numerically.
-
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\begin{figure}[h]
+%\begin{center}
+\centering
+\includegraphics[width=0.75\linewidth]{ChemicalPotential_case1.jpg}
+\includegraphics[width=0.75\linewidth]{ChemicalPotential_case2.jpg}
+\caption{The chemical potential $\eta/T$(upper) and magnetization $M/B$(lower) as a function of temperature $20<T<60$keV  for the case 2.  It shows that the chemical potential is not sensitive to the magnetic field $b_0$. However, the magnetization does depend on the magnetic field $b_0$ strongly. This is because for small magnetic field $b_0$ the dominant term in Eq(\ref{Magnetization_002}) is $xK_1(x)/b_0$. For giving $b_0$  we can have $M/B>1$ in early universe.}
+\label{Case2_fig} 
+\end{figure}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \subsection{Magnetization}
@@ -310,8 +321,6 @@ Substituting the chemical potential Eq.(\ref{ChemicalPotential}) into Eq.(\ref{M
 \frac{M}{B}=\frac{8\pi\alpha}{(2\pi)^2b_0}&{\left(\left[1-\frac{(1\pm g/2)}{2}\left(1+\frac{b^2_0}{6x^2_\pm}\right)\right]x_\pm K_1(x_\pm)+\left[\frac{1}{3}-\frac{(1\pm g/2)}{2}\right]b_0K_0(x_\pm)\right)}\notag\\
 &\qquad\times\sqrt{1+\left[\frac{{(2\pi)^2n_p}/{(2T^3)}}{x_\pm^2K_2(x_\pm)+b_0x_\pm K_1(x_\pm)+\frac{b^2_0}{6}K_0(x_\pm)}\right]^2}
 \end{align}
-
-
 In this case, given the magnetic field $B$ and chemical potential we can solve the magnetization $M$ as a function of temperature numerically.
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -326,11 +335,7 @@ x_\pm=\frac{\tilde{m}_\pm}{T}=\frac{1}{T}\sqrt{m^2_e+eB\left(1\pm\frac{g}{2}\rig
 \end{align}
 Considering the case $g=2$ we have following two cases:
 \begin{itemize}
-  \item Case1: $\tilde m_+=\sqrt{m^2_e+2eB}$, and $x=\tilde m_+/T$. The equations for chemical potential and magnetization are given by
-  \begin{align}\label{chemical_001}
- \sinh{(\eta/T)}=\frac{(2\pi)^2n_p}{2T^3}\,\frac{1}{\left[x^2K_2(x)+b_0x K_1(x)+\frac{b^2_0}{6}K_0(x)\right]}
-  \end{align}
-  and
+  \item Case1: $\tilde m_+=\sqrt{m^2_e+2eB}$, and $x=\tilde m_+/T$. The magnetization is given by
   \begin{align}\label{Magnetization_001}
  \left(\frac{M}{B}\right)&=-\frac{8\pi\alpha}{(2\pi)^2}\left(\frac{b_0}{6x}K_1(x_\pm)+\frac{2}{3}K_0(x_\pm)\right)\sqrt{1+\left[\frac{{(2\pi)^2n_p}/{(2T^3)}}{\left[x_\pm^2K_2(x_\pm)+b_0x_\pm K_1(x_\pm)+\frac{b^2_0}{6}K_0(x_\pm)\right]}\right]^2}
    \end{align}
@@ -341,7 +346,6 @@ In Fig {\ref{Case1_fig}}, we plot the chemical potential $\eta/T$(left) and magn
 \begin{figure}[h]
 %\begin{center}
 \centering
-\includegraphics[width=0.75\linewidth]{ChemicalPotential_case1.jpg}
 \includegraphics[width=0.75\linewidth]{Magnetization_case1.jpg}
 \caption{The chemical potential $\eta/T$ (upper) and magnetization $M/B$ (lower) as a function of temperature $20<T<60$keV  for the case 1. The chemical potential and magnetization are not sensitive to the magnetic field, because the small value of $b_0=10^{-3}\sim10^{-8}$ can be neglected in Eq.(\ref{chemical_001}) and Eq.(\ref{Magnetization_001}). }
 \label{Case1_fig} 
@@ -363,7 +367,7 @@ In Fig {\ref{Case2_fig}}, we plot the chemical potential $\eta/T$(left) and magn
 \begin{figure}[h]
 %\begin{center}
 \centering
-\includegraphics[width=0.75\linewidth]{ChemicalPotential_case2.jpg}
+%\includegraphics[width=0.75\linewidth]{ChemicalPotential_case2.jpg}
 \includegraphics[width=0.75\linewidth]{Magnetization_case2.jpg}
 \caption{The chemical potential $\eta/T$(upper) and magnetization $M/B$(lower) as a function of temperature $20<T<60$keV  for the case 2.  It shows that the chemical potential is not sensitive to the magnetic field $b_0$. However, the magnetization does depend on the magnetic field $b_0$ strongly. This is because for small magnetic field $b_0$ the dominant term in Eq(\ref{Magnetization_002}) is $xK_1(x)/b_0$. For giving $b_0$  we can have $M/B>1$ in early universe.}
 \label{Case2_fig} 
