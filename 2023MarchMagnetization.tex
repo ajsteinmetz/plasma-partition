@@ -306,7 +306,7 @@ Another approach to the non-relativistic electron-positron plasma is to consider
 %{\xred ANDREW: I don't agree with the above and below equations because this represents the total partition function which means it needs to be a sum of both polarizations. This inflicts a lot of your further analysis where you use charge neutrality because you're using quantities which functions of $x_{\pm}$ which is ambiguous as these are different. Rather we need to write sums. I see you already starting writing the explicit sums in the beginning of the Partition Function section, so that correction needs to continue throughout the paper.} The above equation \req{lnZIntermediate} can be simplified into the expression
 \begin{align}
   \label{lnZ}
-  \ln\mathcal{Z}_{tot}=\frac{T^3V}{2\pi^2}\left[2\cosh\left(\frac{\eta_{e}}{T}\right)\right]\sum_{i=\pm}\left\{x_i^{2} K_2\left(x_i\right)+b_0\left[\frac{1}{2}x_iK_1\left(x_i\right)+\frac{b_0}{12}K_0\left(x_i\right)\right]\right\}\,.
+  \ln\mathcal{Z}_{tot}=\frac{T^3V}{2\pi^2}\left[2\cosh\left(\frac{\eta_{e}}{T}\right)\right]\sum_{i=\pm}\left\{x_i^{2} K_2\left(x_i\right)+\frac{b_0}{2}x_iK_1\left(x_i\right)+\frac{b^2_0}{12}K_0\left(x_i\right)\right\}\,.
 \end{align}
 {\xred ANDREW: We should have more to comment here. This is essentially the \lq\lq working equation\rq\rq\ for the remainder of the paper. So this is a nice key result we should emphasize.}
 
@@ -314,12 +314,11 @@ Another approach to the non-relativistic electron-positron plasma is to consider
 \section{Chemical potential and Magnetization}
 \subsection{Charge neutrality and chemical potential}
  In this section we are interested in exploring the chemical potential of dense $e\bar e$ plasma in early universe under the hypothesis charge neutrality and entropy conservation. We focus on the temperature interval $2\,\mathrm{MeV}>T>10\,\mathrm{keV}$. Considering the homogeneous proton number density in the early universe,the charge neutrality can be written as
-\begin{align}\label{density_proton}
-\left(n_e-n_\bar{e}\right)=n_p=\frac{n_p}{n_B}\,\left(\frac{n_B}{s_{\gamma,\nu,e}}\right)\,s_{\gamma,\nu,e}= X_p\left(\frac{n_B}{s_{\gamma,\nu}}\right)\,s_{\gamma,\nu},\qquad X_p=\frac{n_p}{n_B}
+\begin{align}
+  \label{density_proton}\left(n_{e}-n_{\bar{e}}\right)=n_{p}=\frac{n_{p}}{n_{B}}\,\left(\frac{n_{B}}{s_{\gamma,\nu,e}}\right)\,s_{\gamma,\nu,e}= X_p\left(\frac{n_B}{s_{\gamma,\nu}}\right)\,s_{\gamma,\nu},\qquad X_p=\frac{n_p}{n_B}
 \end{align}
 where $n_B$ is the number density of baryon, and the entropy density is obtained by considering the contribution of $e^\pm$ in entropy density is negligible compared to the photon and neutrino entropy density at post-BBN temperature $20<T<50$keV because the low density $n_e\ll n_{\gamma,\nu}$. 
 \begin{itemize}
-
   \item The proton fraction $X_p$ can be written as follow:
   \begin{align}
   X_p=\frac{n_p}{n_B}=\frac{n_p}{n_p+n_n}=\frac{1}{1+n_n/n_p}
@@ -363,14 +362,11 @@ s_{\gamma,\nu}=\frac{2\pi^2}{45}g_sT_\gamma^3,\qquad g_s=g_\gamma+\frac{7}{8}g_\
  
 On the other hand, given the partition function in Boltzmann limit \req{lnZ} the net number density of electron can be written as
 \begin{align}
-\left(n_e-n_{\bar e}\right)&=\frac{T}{V}\frac{\partial}{\partial \eta_{e}}\ln\mathcal{Z}_{tot}\notag\\
-&=\frac{2T^3}{(2\pi)^2}\sinh{(\eta_{e}/T)}\left[\left(\frac{\tilde{m}_\pm}{T}\right)^2K_2\left(\frac{\tilde{m}_{\pm}}{T}\right)\right]+\frac{4eBT}{(2\pi)^2}\sinh{(\eta_{e}/T)}\bigg[\frac{\tilde{m}_\pm}{2T}K_1\left(\frac{\tilde{m}_{\pm}}{T}\right)+\frac{eB}{12T^2}K_0\left(\frac{\tilde{m}_{\pm}}{T}\right)\bigg]
+\left(n_e-n_{\bar e}\right)&=\frac{T}{V}\frac{\partial}{\partial \eta_{e}}\ln\mathcal{Z}_{tot}=\frac{T^3}{2\pi^2}\left[2\sinh{(\eta_{e}/T)}\right]\sum_{i=\pm}\left[x_i^2K_2(x_i)+\frac{b_0}{2}x_i K_1(x_i)+\frac{b^2_0}{12}K_0(x_i)\right]
 \end{align}
-Using the charge neutrality, we have
+In this case, the charge neutrality becomes
 \begin{align}
-n_p&=\left(n_e-n_{\bar e}\right)\notag\\
-&=\frac{2T^3}{(2\pi)^2}\sinh{(\eta_{e}/T)}\left[\left(\frac{\tilde{m}_\pm}{T}\right)^2K_2\left(\frac{\tilde{m}_{\pm}}{T}\right)\right]
-+\frac{4eBT}{(2\pi)^2}\sinh{(\eta_{e}/T)}\bigg[\frac{\tilde{m}_\pm}{2T}K_1\left(\frac{\tilde{m}_{\pm}}{T}\right)+\frac{eB}{12T^2}K_0\left(\frac{\tilde{m}_{\pm}}{T}\right)\bigg]
+X_p\left(\frac{n_B}{s_{\gamma,\nu}}\right)\,s_{\gamma,\nu}=\frac{T^3}{2\pi^2}\left[2\sinh{(\eta_{e}/T)}\right]\sum_{i=\pm}\left[x_i^2K_2(x_i)+\frac{b_0}{2}x_i K_1(x_i)+\frac{b^2_0}{12}K_0(x_i)\right]
 \end{align}
 where $n_p$ is the number density of proton. It is also convenient to introduce the dimensionless variables:
 \begin{align}
