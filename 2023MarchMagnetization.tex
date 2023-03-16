@@ -151,26 +151,22 @@ This condition fails under ultra-strong magnetic fields of order
 where $\mathcal{B}_{S}$ is the Schwinger critical field strength. For electrons, this field strength is well above the window of magnetic field strengths of interest during the late $e^{\pm}$ epoch.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Cosmic expansion considerations}
-\noindent {\color{red}ANDREW: How much cosmology do we want here? I assume putting in at least the FLRW metric here such that $a(t)$ is defined is a minimal requirement for this section.} 
-{\color{blue}
-Considering the spatially flat Friedman-Roberston-Walker(FRW) universe, the spacetime metric in  rectangular coordinates can be written as
+\section{Landau eigen-energies in cosmology}
+\noindent The standard model of cosmology with a cosmological constant plus cold dark matter ($\Lambda\mathrm{CDM}$) is described by the Friedman-Lemaître-Robertson-Walker (FLRW) metric. The spatially flat (Gaussian curvature $k=0$) FLRW metric with metric signature $(+1,-1,-1,-1)$ in Cartesian coordinates is
 \begin{align}
-ds^2=dt^2-a^2(t)\left[ dx^2+dy^2+dz^2\right].
+    \label{FLRW} ds^2=dt^2-a^2(t)\left[dx^2+dy^2+dz^2\right]\,.
 \end{align}
-which characterized by the scale factor $a(t)$ of a spatially homogeneous Universe. The Universe dynamics can be characterized by the quantity: the Hubble parameter $H$ as follows
+The scale factor $a(t)$ denotes the change of proper distances in an expanding (or contracting) universe which is both homogeneous and isotropic. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H$ as follows
 \begin{align}
-    H^2\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_N}{3}\rho_{tot}
+    \label{FriedmannOne}H^2\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_N}{3}\rho_{tot}
 \end{align}
-where $G_N$ is the Newtonian constant of gravitation and $\rho_{tot}$ is the total energy density in early universe.
-}
-   
+where $G_N$ is the Newtonian constant of gravitation and $\rho_{tot}$ is the total energy density of the universe. \req{FriedmannOne} is also known as the first Friedmann equation. 
 
-There is another natural scale for the magnetic field when considering the implications of FLRW expansion of the $e^{\pm}$ fluid. As the universe expands, different terms in the energies and thus partition function evolve as a function of the scale factor $a(t)$ which arises in the FLRW metric. We can consider the expansion to be an adiabatic process which result in a smooth shifting of the relevant dynamical quantities. From the conservation of magnetic flux through a co-moving surface, the magnetic field under expansion starting at some initial time $t_{0}$ is given by
+There is another natural scale for the magnetic field besides \req{MagMassFail} when considering the consequences of FLRW expansion on the $e^{\pm}$ fluid. As the universe expands, different terms in the energies and thus partition function evolve as a function of the scale factor $a(t)$ which arises in the FLRW metric. We can consider the expansion to be an adiabatic process which results in a smooth shifting of the relevant dynamical quantities. From the conservation of magnetic flux through a co-moving surface, the magnetic field under expansion starting at some initial time $t_{0}$ is given by
 \begin{alignat}{1}
     \label{BScale} B(t) = B(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
 \end{alignat}
-Related, as the universe expands, the temperature cools as the cosmological redshift reduces the kinetic energy of the particles contributing to the energy content of the universe. This cosmological redshift is written as
+As the universe expands, the temperature also cools as the cosmological redshift reduces the kinetic energies of particles in the universe lowering their contribution to the energy content of the universe. This cosmological redshift is written as
 \begin{alignat}{1}
     \label{TScale} T(t) = T(t_{0})\frac{a(t_{0})}{a(t)}\,.
 \end{alignat}
@@ -178,19 +174,31 @@ The momenta scale with the same factor as temperature, which is the origin of co
 \begin{alignat}{1}
     \label{PScale} p_{i}(t) = p_{i}(t_{0})\frac{a(t_{0})}{a(t)}\,.
 \end{alignat}
-The energy of massive particles in the universe scales differently based on their momentum (and thus temperature). When hot and relativistic, particle energy scales with inverse scale factor like radiation. However as particles transition to non-relativistic momenta, their energies scale with the inverse square of the scale factor like magnetic flux. The argument in the Boltzmann statistical factor is given by
+The energy of massive particles in the universe scales differently based on their momentum (and thus temperature). When hot and relativistic, particle energy scales with inverse scale factor like radiation. However as particles transition to non-relativistic momenta, their energies scale with the inverse square of the scale factor like magnetic flux. This occurs because of the functional dependence of energy on momentum in the relativistic versus non-relativistic cases.
+\begin{alignat}{1}
+    \label{EScale} E(t) = E(t_{0})\frac{a(t_{0})}{a(t)}\xrightarrow{\mathrm{NR}}\  E(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
+\end{alignat}
+The argument in the Boltzmann statistical factor is given by
 \begin{alignat}{1}
     \label{Boltz} X_{n}^{s}\equiv\frac{E_{n}^{s}}{T}\,.
 \end{alignat}
-We can explore this relationship for the magnetized system explicitly by writing out \req{Boltz} as
+We can explore this relationship for the magnetized system explicitly by writing out \req{Boltz} using the KGP eigen-energies as
 \begin{alignat}{1}
     \label{XExplicit} X_{n}^{s} = \sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{p_{z}^{2}}{T^{2}}+\frac{2eB}{T^{2}}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,,
 \end{alignat}
 where we now introduce the expansion scale factor via \req{BScale} - \req{PScale}. The Boltzmann factor can then be written as
 \begin{alignat}{1}
-    \label{XScale} X_{n}^{s}\left[a(t_{0});a(t)\right] = \sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,.
+    \label{XScale} X_{n}^{s}[a(t)] = \sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-\frac{gs}{2}\right)}\,.
 \end{alignat}
-This reveals that only the mass contribution is dynamical over cosmological time. For any given eigen-state, the mass term increases driving the state into the non-relativistic limit while the momenta and magnetic contributions are frozen by initial conditions. We can specifically introduce a dimensionless cosmic magnetic scale which is frozen in the homogeneous case as
+This reveals that only the mass contribution is dynamical over cosmological time. For any given eigen-state, the mass term increases driving the state into the non-relativistic limit while the momenta and magnetic contributions are frozen by initial conditions. As a point of comparison, the Boltzmann factor for the DP eigen-energies becomes
+\begin{alignat}{1}
+    \label{XDP} X_{n}^{s}\vert_{DP} = \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}}+\frac{2eB}{T^{2}}\left(n+\frac{1}{2}-s\right)}-\frac{eB}{2mT}(g-2)s\right)^{2}+\frac{p_{z}^{2}}{T^{2}}}\,,
+\end{alignat}
+which over cosmological time under expansion scales as
+\begin{alignat}{1}
+    \label{XScaleDP} X_{n}^{s}[a(t)]\vert_{DP} = \sqrt{\left(\sqrt{\frac{m_{e}^{2}}{T^{2}(t_{0})}\frac{a(t)^{2}}{a(t_{0})^{2}}+\frac{2eB(t_{0})}{T^{2}(t_{0})}\left(n+\frac{1}{2}-s\right)}-\frac{eB(t_{0})}{2mT(t_{0})}\frac{a(t_{0})}{a(t)}(g-2)s\right)^{2}+\frac{p_{z}^{2}(t_{0})}{T^{2}(t_{0})}}\,.
+\end{alignat}
+We note here one important difference between KGP and DP eigen-energies in the context of cosmology: The anomalous magnetic moment portion of the DP statistics is suppressed by $1/a(t)$ over cosmological time while the AMM contribution is preserved in the KGP model. That the universe's expansion makes a distinction between $g=2$ magnetic moment and AMM for DP fermions appears as a rather artificial and nonphysical trait. While the suppression of AMM may often be small for particles such as electrons, this suppression is non-trivial for particles with large AMM values such as the proton. That cosmological redshift would push DP protons to be described by $g=2$ eign-energies in the non-relativistic limit counts as a malaise for the model. Motivated by \req{XScale}, we can introduce a dimensionless cosmic magnetic scale which is frozen in the homogeneous case as
 \begin{alignat}{1}
     \label{Bo} b_{0}\equiv\frac{eB}{T^{2}}=\frac{eB\hbar c^{2}}{(k_{B}T)^{2}}\ \mathrm{(S.I)}\,,
 \end{alignat}
@@ -212,7 +220,7 @@ As $b_0$ is a constant of expansion, assuming the electron-proton plasma between
 \section{Partition function}
 \noindent We now turn our attention now to the statistical behavior of the $e^{\pm}$ system. We can utilize the general fermion partition function given by
 \begin{align}
-  \label{PartFunc} \ln\mathcal{Z}=\sum_{\alpha}\ln\left(1+e^{-\beta(E-\eta_{e})}\right)\,,
+  \label{PartFunc} \ln\mathcal{Z}=\sum_{\alpha}\ln\left(1+e^{-\beta(E-\eta)}\right)\,,
 \end{align}
 where $\beta=1/T$, $\alpha$ is the set of all quantum numbers in the system, and $\eta$ is the generalized chemical potential. The magnetized $e^{\pm}$ system should be considered a system of four quantum species: Particles and anti-particles, and spin aligned and anti-aligned. Taken together we consider a system where all electrons and positrons are spin aligned or anti-aligned with the magnetic field $B$ and the partition function of the system is written as
 \begin{align}
@@ -224,15 +232,15 @@ and energy $E_{n}^\pm$ can be written as
 \begin{align}
 E_{n}^\pm&=\sqrt{p^2_z+\tilde m^2_\pm+2eBn},\qquad\tilde{m}^2_\pm=m^2_e+eB\left(1\mp\frac{g}{2}\right)\,,
 \end{align}
-where the $\pm$ script refers to spin aligned and anti-aligned eigenvalues. To simplify the partition function we can consider the expansion of the logarithmic function into a power series yielding
+where the $\pm$ script refers to spin aligned and anti-aligned eigenvalues. To simplify the partition function we consider the case $\eta_s/T=0$ for the first approximation and use the expansion of the logarithmic function into a power series yielding
 \begin{align}
 \ln\left(1+x\right)=\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}x^k, \,\,\,\,\,\,\,\mathrm{for}\,|x|<1.
 \end{align}
 We emphasize that this expansion is only value where the Boltzmann factor $\exp\left(-\beta(E\pm\eta_{e})\right)$ remains less than unity, otherwise the partition function becomes divergent and ill-behaved. The partition function of $e^{\pm}$ system can be further expanded to isolate the contribution of the chemical potential $\eta_{e}$ as
 \begin{align}
   \label{PartTotal}\ln\mathcal{Z}_{tot}
-  &=\frac{2eBV}{(2\pi)^2}\sum_{n=0}^\infty\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}\bigg[e^{k\beta\eta_{e}}+e^{-k\beta\eta_{e}}\bigg]\left(e^{\eta_s/T}\int_0^\infty dp_z\,e^{-k\beta E_n^+}+e^{-\eta_s/T}\int_0^\infty dp_z\,e^{-k\beta E_n^-}\right)\notag\\
-  &=\frac{2eBTV}{(2\pi)^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^2}\bigg[2\cosh{(k\beta\eta_{e})}\bigg]\left(e^{\eta_s/T}\sum_{n=0}^\infty W^+_1(n,k)+e^{-\eta_s/T}\sum_{n=0}^\infty W^-_1(n,k)\right),
+  &=\frac{2eBV}{(2\pi)^2}\sum_{n=0}^\infty\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}\bigg[e^{k\beta\eta_{e}}+e^{-k\beta\eta_{e}}\bigg]\left(\int_0^\infty dp_z\,e^{-k\beta E_n^+}+\int_0^\infty dp_z\,e^{-k\beta E_n^-}\right)\notag\\
+  &=\frac{2eBTV}{(2\pi)^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^2}\bigg[2\cosh{(k\beta\eta_{e})}\bigg]\sum_{n=0}^\infty \left(W^+_1(n,k)+ W^-_1(n,k)\right),
 \end{align}
 where we introduce the function $W^\pm_1(n,k)$ as follows
 \begin{align}
@@ -244,7 +252,7 @@ defined in terms of the modified (hyperbolic) Bessel function of the second kind
 \end{align}
 where $R$ is the error remainder which is defined by integrals over Bernoulli polynomials. The error remainder has, for well behaved functioned, a finite size and therefore for a more extensive analysis is required to demonstrate to what order in Bessel functions is required to minimize the error remainder for good results. For \req{EMIntegration}, we've chosen to include up to the first order in derivatives. Using the asymptotic properties of Bessel function $K_{i}(x)$ as $x$ becomes large, we can simplify the above expression to obtain
 \begin{align}
-\label{Winitial}\sum^{\infty}_{n=0}W^\pm_1(n,k)&=\int^\infty_0\!\!dn\,W^\pm_1(n,k)+\frac{1}{2}W^\pm_1(0,k)-\frac{1}{12}\left.\frac{\partial W^\pm_1}{\partial n}\right|_{0}+R\,,\\
+\label{Winitial}\sum^{\infty}_{n=0}W^\pm_1(n,k)&=\int^\infty_0\!\!dn\,W^\pm_1(n,k)+\frac{1}{2}W^\pm_1(0,k)-\frac{1}{12}\left.\frac{\partial W^\pm_1}{\partial n}\right|_{0}+R\\
 \label{WReplacement}
 &=\left(\frac{T^2}{k^2eB}\right)x_{\pm}^{2}K_{2}(x_{\pm})+\frac{1}{2}x_{\pm}K_{1}(x_{\pm})+\frac{1}{12}\left(k^2b_0\right)K_{0}(x_{\pm})+R\,,\qquad x_{\pm} = \frac{k\tilde{m}_{\pm}}{T}\,.
 \end{align}
@@ -254,13 +262,9 @@ Here we see mathematically that the ground state $n=0$, which has no analogue in
 \end{align}
 where we define 
 \begin{align}
-  \label{FreePart}&\ln\mathcal{Z}_{free}=\frac{T^3V}{2\pi^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^4}\left[2\cosh{\left(\frac{k\eta_{e}}{T}\right)}\right]\left[e^{k\eta_s/T}x_+^2K_2\left(x_+\right)+e^{-k\eta_s/T}x_-^2K_2\left(x_-\right)\right]\,,\\
-  \label{MagPart}&\ln\mathcal{Z}_B=\frac{eBTV}{2\pi^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^2}\left[2\cosh{\left(\frac{k\eta_{e}}{T}\right)}\right]\bigg\{e^{k\eta_s/T}\,\bigg[\frac{x_\pm}{2}K_1\left(x_\pm\right)+\frac{k^2b_0}{12}K_0\left(x_\pm\right)\bigg]\notag\\
-  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad+e^{-k\eta_s/T}\,\bigg[\frac{x_\pm}{2}K_1\left(x_\pm\right)+\frac{k^2b_0}{12}K_0\left(x_\pm\right)\bigg]\bigg\}\,,\\
-\end{align}
-and
-\begin{align}
-  \label{ErrorPart}&\ln\mathcal{Z}_R=\frac{eBTV}{2\pi^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^2}\left[2\cosh{\left(\frac{k\eta_{e}}{T}\right)}\right]\left(e^{k\eta/T}\,R+e^{-k\eta/T}\,R\right)\,.
+  \label{FreePart}&\ln\mathcal{Z}_{free}=\frac{T^3V}{2\pi^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^4}\left[2\cosh{\left(\frac{k\eta_{e}}{T}\right)}\right]\left[x_+^2K_2\left(x_+\right)+x_-^2K_2\left(x_-\right)\right]\,,\\
+  \label{MagPart}&\ln\mathcal{Z}_B=\frac{eBTV}{2\pi^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^2}\left[2\cosh{\left(\frac{k\eta_{e}}{T}\right)}\right]\sum_{i=\pm}\bigg[\frac{x_i}{2}K_1\left(x_i\right)+\frac{k^2b_0}{12}K_0\left(x_i\right)\bigg]\,,\\
+  \label{ErrorPart}&\ln\mathcal{Z}_R=\frac{eBTV}{\pi^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^2}\left[2\cosh{\left(\frac{k\eta_{e}}{T}\right)}\right]R.
 \end{align}
 While this would require further derivation to demonstrate explicitly, the benefit of the Euler-Maclaurin approach is if the error contribution remains finite or bound for the magnetized partition function, then a correspondence between the free Fermi partition function (with noticeably modified magnetic-mass $\tilde{m}_{\pm}$) and the magnetized Fermi partition function can be established. The mismatch between the summation and integral in the Euler-Maclaurin formula would then encapsulate the immediate magnetic response and deviation from the free particle phase space.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -295,7 +299,7 @@ Another approach to the non-relativistic electron-positron plasma is to consider
   \label{lnZIntermediate}\ln\mathcal{Z}_{tot}=&\frac{T^3V}{(2\pi)^2}\left[2\cosh\left(\frac{\eta_{e}}{T}\right)\right]\left(\frac{\tilde m_\pm}{T}\right)^{\!\!2} K_2\left(\frac{\tilde{m}_{\pm}}{T}\right)\notag\\
   &+\frac{2eBTV}{(2\pi)^2}\left[2\cosh\left(\frac{\eta_{e}}{T}\right)\right]\left[\frac{1}{2}\left(\frac{\tilde m_\pm}{T}\right)K_1\left(\frac{\tilde{m}_{\pm}}{T}\right)+\frac{1}{12}\left(\frac{eB}{T^2}\right)K_0\left(\frac{\tilde{m}_{\pm}}{T}\right)\right]\,.
 \end{align}
-The above equation \req{lnZIntermediate} can be simplified into the expression
+{\color{red}ANDREW: I don't agree with the above and below equations because this represents the total partition function which means it needs to be a sum of both polarizations. This inflicts a lot of your further analysis where you use charge neutrality because you're using quantities which functions of $x_{\pm}$ which is ambiguous as these are different. Rather we need to write sums. I see you already starting writing the explicit sums in the beginning of the Partition Function section, so that correction needs to continue throughout the paper.} The above equation \req{lnZIntermediate} can be simplified into the expression
 \begin{align}
   \label{lnZ}\ln\mathcal{Z}_{tot}=\frac{T^3V}{(2\pi)^2}\left[2\cosh\left(\frac{\eta_{e}}{T}\right)\right]\left\{\left(\frac{\tilde m_\pm}{T}\right)^{\!\!2} K_2\left(\frac{\tilde{m}_{\pm}}{T}\right)+\frac{eB}{T^2} \left[\left(\frac{\tilde m_\pm}{T}\right)K_1\left(\frac{\tilde{m}_{\pm}}{T}\right)+\frac{1}{6}\left(\frac{eB}{T^2}\right)K_0\left(\frac{\tilde{m}_{\pm}}{T}\right)\right]\right\}\,.
 \end{align}
