@@ -387,7 +387,7 @@ In this case, given the magnetic field $B$ we can solve the chemical potential $
 \begin{figure}[h]
 %\begin{center}
 \centering
-\includegraphics[width=0.75\linewidth]{./plots/ChemicalPotential_case1.jpg}
+\includegraphics[width=0.75\linewidth]{ChemicalPotential_Final.jpg}
 \caption{The chemical potential $\eta_{e}/T$ a function of temperature $20<T<60$keV.  It shows that the chemical potential is not sensitive to the magnetic field $b_0$.}
 \label{chemical_fig} 
 \end{figure}
@@ -415,8 +415,9 @@ where the functions $(M/B)_\pm$ are defined as
   \begin{align}\label{Magnetization_001}
  \left(\frac{M}{B}\right)_+&=-\frac{8\pi\alpha}{2\pi^2}\sqrt{1+\sinh^2(\eta_e/T)}\left[\left(\frac{1}{2b_0}+\frac{b_0}{12x_+^2}\right)x_+K_1(x_+)+\frac{1}{3}K_0(x_+)\right]
    \end{align}
- \item Case 2: $\tilde m_-=m_e$ and $x_-=\tilde m_-/T$,then the magnetization of electron/ positron becomes
-
+Substituting the magnetic field $b_0$ and proton density $n_p/T^3$  we can solve the magnetization and chemical potential numerically. In \rf{Case1_fig}, we plot the  magnetization $M/B$ as a function of temperature $T$. It shows for the case1 the magnetization is not sensitive to the magnetic field, this is because the small value of $b_0=10^{-3}\sim10^{-8}$ and can be neglected in \req{chemical_001} and \req{Magnetization_001}.
+\\
+  \item Case 2: $\tilde m_-=m_e$ and $x=\tilde m_-/T$,then the magnetization of electron/ positron becomes
 \begin{align}\label{Magnetization_002}
 \left(\frac{M}{B}\right)_-&=\frac{8\pi\alpha}{2\pi^2}\sqrt{1+\sinh^2(\eta_e/T)}\left(\frac{1}{b_0}x_-K_1(x_-)+\frac{1}{6}K_0(x_-)\right)
 \end{align}
@@ -427,7 +428,7 @@ Using the magnetic field $b_0$ and proton density $n_p/T^3$ we solve the magneti
 %\begin{center}
 \centering
 %\includegraphics[width=0.75\linewidth]{./plots/ChemicalPotential_case2.jpg}
-\includegraphics[width=0.75\linewidth]{./plots/Magnetization_case2.jpg}
+\includegraphics[width=0.75\linewidth]{Magnetization_Final.jpg}
 \caption{The chemical potential $\eta_{e}/T$(upper) and magnetization $M/B$(lower) as a function of temperature $20<T<60$keV  for the case 2.  It shows that for giving $b_0$ we can find the temperature that $M/B>1$ in early universe.}
 \label{Case2_fig} 
 \end{figure}
