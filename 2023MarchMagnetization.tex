@@ -372,20 +372,13 @@ In this case, the charge neutrality becomes
 \begin{align}
 X_p\left(\frac{n_B}{s_{\gamma,\nu}}\right)\,s_{\gamma,\nu}=\frac{T^3}{2\pi^2}\left[2\sinh{(\eta_{e}/T)}\right]\sum_{i=\pm}\left[x_i^2K_2(x_i)+\frac{b_0}{2}x_i K_1(x_i)+\frac{b^2_0}{12}K_0(x_i)\right]
 \end{align}
-where $n_p$ is the number density of proton. It is also convenient to introduce the dimensionless variables:
-\begin{align}
-x_\pm=\frac{\tilde m_\pm}{T},\qquad b_0=\frac{eB}{T^2}
-\end{align}
-and we obtain
-\begin{align}
-n_p&=\frac{T^3}{2\pi^2}\left[2\sinh{(\eta_{e}/T)}\right]\sum_{i=\pm}\left[x_i^2K_2(x_i)+\frac{b_0}{2}x_i K_1(x_i)+\frac{b^2_0}{12}K_0(x_i)\right]
-\end{align}
-and the chemical potential of electron and positron can be written as
+Solving the chemical potential we obtain:
 \begin{align}\label{ChemicalPotential}
-\sinh{(\eta_{e}/T)}&=\frac{(2\pi)^2n_p}{2T^3}\,\frac{1}{\left[x_\pm^2K_2(x_\pm)+b_0x_\pm K_1(x_\pm)+\frac{b^2_0}{6}K_0(x_\pm)\right]}\\
-&\longrightarrow\frac{(2\pi)^2n_p}{2T^3}\,\frac{1}{x_\pm^2K_2(x_\pm)},\qquad \mathrm{for}\,\,b_0=0
+\sinh{(\eta_{e}/T)}&=\frac{2\pi^2}{2T^3}\,\frac{x_p(n_B/s_{\gamma,\nu})s_{\gamma,\nu}}{\sum_{i=\pm}\left[x_i^2K_2(x_i)+\frac{b_0}{2}x_i K_1(x_i)+\frac{b^2_0}{12}K_0(x_i)\right]}\\
+&\longrightarrow\frac{2\pi^2n_p}{2T^3}\,\frac{x_p(n_B/s_{\gamma,\nu})s_{\gamma,\nu}}{2x^2K_2(x)},\qquad x=m_e/T,\qquad \mathrm{for}\,\,b_0=0
 \end{align}
-It shows that for the case $b_0=0$ the chemical potential agrees with our earlier results.
+It shows that for the case $b_0=0$ the chemical potential agrees with our earlier results \cite{Chris:2023abc}.
+In {\rf{chemical_fig}}, we solve the Eq.(\ref{ChemicalPotential}) numerically and plot the  chemical potential as a function of temperature $T$. It shows that the chemical potential is not sensitive to the magnetic field because the small value of $b_0=10^{-5}\sim10^{-11}$ and can be neglected in \req{ChemicalPotential}. 
 
 
 
