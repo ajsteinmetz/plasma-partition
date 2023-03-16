@@ -120,7 +120,7 @@ In \rf{Density_fig} we show that the dense $e^{\pm}$ plasma in early universe un
 
 We can now connect back to the consideration of cosmic magnetic fields as they might have risen in the environment of early universe plasmas noting that such primordial magnetic fields would be lensed through each of the various plasmas that existed when the universe was far hotter and denser. Of particular interest to us is the electron-positron plasma which existed in the early universe especially at temperatures $T>35\ \mathrm{keV}$ which was the last matter(antimatter) plasma in the universe where the energy its density exceeded that of the proton/neutron baryon energy density. This dense plasma environment is where BBN occurred and where similar plasmas can still be found within exotic stars such as magnetars. The contemporary relic magnetic fields may then be an artifact of this final time of universe-scale magnetization in a manner similar to how the CMB is a relic of the time of charge recombination.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Energy Eigenvalues}\label{sec:energy}
 \noindent As a starting point, we consider the energy eigenvalues of charged fermions within a homogeneous magnetic field. Here, we have several choices: We could assume the typical Dirac energy eigenvalues with gyro-magnetic g-factor set to $g=2$. But as electrons, positrons and most plasma species have anomalous magnetic moments (AMM), we require a more complete model. Another option would be to modify the Dirac equation with a Pauli term, often called the Dirac-Pauli (DP) approach, via
 \begin{align}
@@ -130,11 +130,15 @@ where $\sigma_{\mu\nu}$ is the spin tensor proportional to the commutator of the
 \begin{align}
   \label{AMM} \frac{g}{2}=1+a\,.
 \end{align}
-This approach, while straightforward, would complicate the energies making analytic understanding and clarity difficult without a clear benefit. Our preferred model for the AMM is through the Klein-Gordon-Pauli (KGP) equation which is given by
+This approach, while straightforward, would complicate the energies making analytic understanding and clarity difficult without a clear benefit. Modifying the Dirac equation with \req{Pauli} yields the following eigen-energies
+\begin{align}
+  \label{DPEnergy} E_{n}^{s}\vert_{DP}=\sqrt{\left(\sqrt{m_{e}^{2}+2eB\left(n+\frac{1}{2}-s\right)}-\frac{eB}{2m}(g-2)s\right)^{2}+p_{z}^{2}}
+\end{align}
+This model for the electron-positron plasma of the early universe has been used in work such as Strickland et. al. \cite{Strickland:2012vu}. Our work here is then in part a companion peice which compares and contrasts the DP model of fermions to our preferred model for the AMM via the Klein-Gordon-Pauli (KGP) equation given by
 \begin{alignat}{1}
   \label{KGP} \left(\left(i\partial_{\mu}-eA_{\mu}\right)^{2}-m_{e}^{2}-e\frac{g}{2}\frac{\sigma_{\mu\nu}F^{\mu\mu}}{2}\right)\Psi=0\,.
 \end{alignat}
-We wish to emphasize, that each of the three above models are distinct and have differing physical consequences and are not interchangeable. One benefit of the KGP approach is that the energies take eigenvalues which are mathematically similar to the Dirac energies. Considering the $e^\pm$ plasma in a uniform magnetic field $B$ pointing along the $z$-axis, the energy of $e^\pm$ fermions can be written as
+We wish to emphasize, that each of the three above models (Dirac, DP, KGP) are distinct and have differing physical consequences and are not interchangeable which we explored in the context of hydrogen-like atoms in \cite{Steinmetz:2018ryf}. Recent work done in \cite{Rafelski:2022bsv} discuss the benefits of KGP over other approaches for $g\neq2$ from a quantum field theory perspective. Exploring the statistical behavior of KGP in a cosmological contenxt can lead to new insights in magnetization which may be distinquished from pure $g=2$ behavior of the Dirac equation or the \emph{ad hoc} modification imposed by the Pauli term in DP. One major improvement of the KGP approach over the more standard DP approach is that the energies take eigenvalues which are mathematically similar to the Dirac energies. Considering the $e^\pm$ plasma in a uniform magnetic field $B$ pointing along the $z$-axis, the energy of $e^\pm$ fermions can be written as
 \begin{align}
   \label{KGPEnergy} E_{n}^{s}&=\sqrt{p^2_z+\tilde{m}^2+2eBn},\qquad\tilde{m}^2=m^2_e+eB\left(1-gs\right),\qquad s=\pm\frac{1}{2},\qquad n=0,1,2,3,\dots
 \end{align}
@@ -152,7 +156,7 @@ This condition fails under ultra-strong magnetic fields of order
 \end{align}
 where $\mathcal{B}_{S}$ is the Schwinger critical field strength. For electrons, this field strength is well above the window of magnetic field strengths of interest during the late $e^{\pm}$ epoch.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Landau eigen-energies in cosmology}
 \noindent The standard model of cosmology with a cosmological constant plus cold dark matter ($\Lambda\mathrm{CDM}$) is described by the Friedman-Lemaître-Robertson-Walker (FLRW) metric. The spatially flat (Gaussian curvature $k=0$) FLRW metric with metric signature $(+1,-1,-1,-1)$ in Cartesian coordinates is
 \begin{align}
@@ -220,7 +224,7 @@ yielding a range of field strengths
 \end{align}
 during which the electron-positron plasma in the universe had a number density comparable to that of the Solar core with $n_{e}=4.49\times10^{24}\ \mathrm{cm}^{-3}$ at $r=0.01R_{\odot}$.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Partition function}
 \noindent We now turn our attention now to the statistical behavior of the $e^{\pm}$ system. We can utilize the general fermion partition function given by
 \begin{align}
@@ -238,7 +242,7 @@ E_{n}^\pm&=\sqrt{p^2_z+\tilde m^2_\pm+2eBn},\qquad\tilde{m}^2_\pm=m^2_e+eB\left(
 \end{align}
 where the $\pm$ script refers to spin aligned and anti-aligned eigenvalues. To simplify the partition function we consider the case $\eta_s/T\ll1$ for the first approximation and use the expansion of the logarithmic function into a power series yielding
 \begin{align}
-\ln\left(1+x\right)=\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}x^k, \,\,\,\,\,\,\,\mathrm{for}\,|x|<1.
+  \label{PowerLaw}\ln\left(1+x\right)=\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}x^k, \,\,\,\,\,\,\,\mathrm{for}\,|x|<1.
 \end{align}
 We emphasize that this expansion is only value where the Boltzmann factor $\exp\left(-\beta(E\pm\eta_{e})\right)$ remains less than unity, otherwise the partition function becomes divergent and ill-behaved. The partition function of $e^{\pm}$ system can be further expanded to isolate the contribution of the chemical potential $\eta_{e}$ as
 \begin{align}
@@ -272,7 +276,7 @@ where we define
 \end{align}
 While this would require further derivation to demonstrate explicitly, the benefit of the Euler-Maclaurin approach is if the error contribution remains finite or bound for the magnetized partition function, then a correspondence between the free Fermi partition function (with noticeably modified magnetic-mass $\tilde{m}_{\pm}$) and the magnetized Fermi partition function can be established. The mismatch between the summation and integral in the Euler-Maclaurin formula would then encapsulate the immediate magnetic response and deviation from the free particle phase space.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Non-relativistic limit of the partition function}
 While we label $\ln(\mathcal{Z}_{free})$ in \req{FreePart} as the \lq\lq free\rq\rq\ partition function, this is not strictly true as this contribution to the overall partition function is a function of the magnetic-mass we defined earlier in \req{MagMass}. When determining the magnetization of the quantum Fermi gas, derivatives of the magnetic field $B$ will not fully vanish on this first term which will resulting in an intrinsic magnetization which is distinct from the contribution from the ground state and mismatch between the quantized Landau levels and the continuum of the free momentum. Specifically, this free Fermi contribution represents the magnetization that arises from the spin magnetic energy rather than orbital contributions. To demonstrate this, we will briefly consider the weak field limit for $g=2$. The magnetic-mass, for $g=2$, have the following values
 \begin{align}
@@ -308,7 +312,7 @@ Another approach to the non-relativistic electron-positron plasma is to consider
   \label{lnZ}
   \ln\mathcal{Z}_{tot}=\frac{T^3V}{2\pi^2}\left[2\cosh\left(\frac{\eta_{e}}{T}\right)\right]\sum_{i=\pm}\left\{x_i^{2} K_2\left(x_i\right)+\frac{b_0}{2}x_iK_1\left(x_i\right)+\frac{b^2_0}{12}K_0\left(x_i\right)\right\}\,.
 \end{align}
-{\xred ANDREW: We should have more to comment here. This is essentially the \lq\lq working equation\rq\rq\ for the remainder of the paper. So this is a nice key result we should emphasize.}
+\req{lnZ} is the working model that the remainder of this work will focus on analyzing, but a comparison between it and the result in \req{PartTotalNR} is an important demonstration of the analytic behavior of the magnetized partition function. In the first approach, the integration preceeded the NR limit while in the latter it occured afterwards. This effectively switches the order of summation of states and summation of powers which should in principle be identical as long as $\ln\mathcal{Z}_{tot}$ is a well behaved function. This however is not immediately obvious and should be carefully considered for the given eigen-energies used in the analysis. We find the correspondance between both mathematical approaches remains valid as long as the magnetic field strength remains below the critical value noted in \req{MassLimit} and \req{MagMassFail} which also ensures the power-law expansion used in \req{PowerLaw} remains satisfied and the integration over Landau levels convergent.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Chemical potential and Magnetization}
@@ -378,7 +382,8 @@ In {\rf{chemical_fig}}, we solve the Eq.(\ref{ChemicalPotential}) numerically an
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this case, given the magnetic field $B$ we can solve the chemical potential $\eta_{e}$ as a function of temperature numerically.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
 %\begin{center}
 \centering
@@ -386,8 +391,8 @@ In {\rf{chemical_fig}}, we solve the Eq.(\ref{ChemicalPotential}) numerically an
 \caption{The chemical potential $\eta_{e}/T$ a function of temperature $20<T<60$keV.  It shows that the chemical potential is not sensitive to the magnetic field $b_0$.}
 \label{chemical_fig} 
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In {\rf{chemical_fig}}, we plot the  chemical potential as a function of temperature $T$. It shows that the chemical potential is not sensitive to the magnetic field because the small value of $b_0=10^{-3}\sim10^{-8}$ and can be neglected in \req{ChemicalPotential}. 
 
 \subsection{Magnetization}
 On the other hand, giving the partition function \req{lnZ} the magnetization can be obtained via the definition
@@ -410,13 +415,14 @@ where the functions $(M/B)_\pm$ are defined as
   \begin{align}\label{Magnetization_001}
  \left(\frac{M}{B}\right)_+&=-\frac{8\pi\alpha}{2\pi^2}\sqrt{1+\sinh^2(\eta_e/T)}\left[\left(\frac{1}{2b_0}+\frac{b_0}{12x_+^2}\right)x_+K_1(x_+)+\frac{1}{3}K_0(x_+)\right]
    \end{align}
-  \item Case 2: $\tilde m_-=m_e$ and $x_-=\tilde m_-/T$,then the magnetization of electron/ positron becomes
+ \item Case 2: $\tilde m_-=m_e$ and $x_-=\tilde m_-/T$,then the magnetization of electron/ positron becomes
+
 \begin{align}\label{Magnetization_002}
 \left(\frac{M}{B}\right)_-&=\frac{8\pi\alpha}{2\pi^2}\sqrt{1+\sinh^2(\eta_e/T)}\left(\frac{1}{b_0}x_-K_1(x_-)+\frac{1}{6}K_0(x_-)\right)
 \end{align}
 Using the magnetic field $b_0$ and proton density $n_p/T^3$ we solve the magnetization  numerically. In \rf{Case2_fig}, we plot the  magnetization $M/B$ as a function of temperature $T$. It shows that the magnetization depends on the magnetic field $b_0$ strongly. This is because for a small magnetic field $b_0$ the dominant term in \req{Magnetization_002} is $xK_1(x)/b_0$. For given $b_0$, the value of magnetization can be larger than the magnetic field, i.e. $M/B>1$  which shows the possibility that magnetic domains can be formed in the early universe.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
 %\begin{center}
 \centering
@@ -425,10 +431,10 @@ Using the magnetic field $b_0$ and proton density $n_p/T^3$ we solve the magneti
 \caption{The chemical potential $\eta_{e}/T$(upper) and magnetization $M/B$(lower) as a function of temperature $20<T<60$keV  for the case 2.  It shows that for giving $b_0$ we can find the temperature that $M/B>1$ in early universe.}
 \label{Case2_fig} 
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \reftitle{References}
 \begin{thebibliography}{99}
@@ -496,9 +502,31 @@ E.~W.~Kolb and M.~S.~Turner,
 547 pp, Front.\ Phys.\ {\bf 69}, 1 (1990),
 ISBN: 0201626748, 9780201626742
 
+%\cite{Strickland:2012vu}
+\bibitem{Strickland:2012vu}
+M.~Strickland, V.~Dexheimer and D.~P.~Menezes,
+%``Bulk Properties of a Fermi Gas in a Magnetic Field,''
+Phys. Rev. D \textbf{86} (2012), 125032
+doi:10.1103/PhysRevD.86.125032
+[arXiv:1209.3276 [nucl-th]].
+%101 citations counted in INSPIRE as of 16 Mar 2023
 
+%\cite{Steinmetz:2018ryf}
+\bibitem{Steinmetz:2018ryf}
+A.~Steinmetz, M.~Formanek and J.~Rafelski,
+%``Magnetic Dipole Moment in Relativistic Quantum Mechanics,''
+Eur. Phys. J. A \textbf{55} (2019) no.3, 40
+doi:10.1140/epja/i2019-12715-5
+[arXiv:1811.06233 [hep-ph]].
+%17 citations counted in INSPIRE as of 16 Mar 2023
+
+%\cite{Rafelski:2022bsv}
+\bibitem{Rafelski:2022bsv}
+J.~Rafelski, S.~Evans and L.~Labun,
+%``Study of QED singular properties for variable gyromagnetic ratio $g\simeq 2$,''
+[arXiv:2212.13165 [hep-th]].
+%0 citations counted in INSPIRE as of 16 Mar 2023
  
-
 %\bibitem{Aksenov:2007}
 %A. G. Aksenov, R. Ruffini, and G. V. Vereshchagin
 %``Thermalization of Nonequilibrium Electron-Positron-Photon Plasmas,''
@@ -512,5 +540,5 @@ ISBN: 0201626748, 9780201626742
 %doi: 10.1103/PhysRevE.81.046401
 \end{thebibliography}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
