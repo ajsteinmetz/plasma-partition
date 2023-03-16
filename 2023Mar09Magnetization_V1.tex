@@ -98,7 +98,19 @@ We then connect back to the plasmas of the early universe as such primordial mag
  \item  Electron-positron plasma: After neutrino freezeout from the cosmic plasma at $T=1$ MeV, we have electron-positron-photon plasma in  the universe. We show that the electron-positron-photon plasma can exist until $T\approx0.02\,\mathrm{MeV}$, and the BBN happened in the electron-positron-rich plasma.
 \end{itemize}
 The properties of the electron-positron  $e\bar e$-pair plasma in the early Universe has not received the appropriate attention in the days of precision BBN studies~\cite{Pitrou:2018cgg}. The presence of $e\bar e$-pairs before and during BBN has been acknowledged by Wang, Bertulani and Balantekin~\cite{Wang:2010px} nearly a decade ago. This was before necessary tools were developed to explore the connection between electron and neutrino plasma~\cite{Mangano:2005cc,Birrell:2012gg,Birrell:2014uka}. 
+
+In Fig.(\ref{Density_fig}) it shows the dense $e\bar e$ plasma in early universe under the hypothesis charge neutrality and entropy conservation as a function of temperature $2\,\mathrm{MeV}>T>10\,\mathrm{keV}$ \cite{Chris:2023abc}. It shows  that we have electron-positron rich plasma,i.e, $n_{^\pm}\gg n_B$ in early universe until $T_{\mathrm{split}} = 20.36$ keV. for $T<T_{\mathrm{split}} $ the positron density $n_{e^+}$ decreases because of the annihilation and electron density equal to the proton density because of the charge neutrality.
+
 }
+%~~~~~figure~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\begin{figure}[h]
+%\begin{center}
+\centering
+\includegraphics[width=0.75\linewidth]{NewDensity_cm3.jpg}
+\caption{The electron(positron) number density as a function of temperature $2\,\mathrm{MeV}>T>10\,\mathrm{keV}$. The blue solid line is the electron density, the red solid line is the positron density, and brown solid line is the baryon density. For comparison, we also show the green dotted line as the solar electron density. It shows  that we have electron-positron rich plasma in early universe until $T_{\mathrm{split}} = 20.36$ keV, for $T<T_{\mathrm{split}} $ the positron density decreases because of the annihilation.}
+\label{Density_fig} 
+\end{figure}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Energy Eigenvalues}\label{sec:energy}
@@ -134,7 +146,21 @@ where $\mathcal{B}_{S}$ is the Schwinger critical field strength. For electrons,
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Cosmic expansion considerations}
-\noindent {\color{red}ANDREW: How much cosmology do we want here? I assume putting in at least the FLRW metric here such that $a(t)$ is defined is a minimal requirement for this section.} There is another natural scale for the magnetic field when considering the implications of FLRW expansion of the $e^{\pm}$ fluid. As the universe expands, different terms in the energies and thus partition function evolve as a function of the scale factor $a(t)$ which arises in the FLRW metric. We can consider the expansion to be an adiabatic process which result in a smooth shifting of the relevant dynamical quantities. From the conservation of magnetic flux through a co-moving surface, the magnetic field under expansion starting at some initial time $t_{0}$ is given by
+\noindent {\color{red}ANDREW: How much cosmology do we want here? I assume putting in at least the FLRW metric here such that $a(t)$ is defined is a minimal requirement for this section.} 
+{\color{blue}
+Considering the spatially flat Friedman-Roberston-Walker(FRW) universe, the spacetime metric in  rectangular coordinates can be written as
+\begin{align}
+ds^2=dt^2-a^2(t)\left[ dx^2+dy^2+dz^2\right].
+\end{align}
+which characterized by the scale factor $a(t)$ of a spatially homogeneous Universe. The Universe dynamics can be characterized by the quantity: the Hubble parameter $H$ as follows
+\begin{align}
+    H^2\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_N}{3}\rho_{tot}
+\end{align}
+where $G_N$ is the Newtonian constant of gravitation and $\rho_{tot}$ is the total energy density in early universe.
+}
+   
+
+There is another natural scale for the magnetic field when considering the implications of FLRW expansion of the $e^{\pm}$ fluid. As the universe expands, different terms in the energies and thus partition function evolve as a function of the scale factor $a(t)$ which arises in the FLRW metric. We can consider the expansion to be an adiabatic process which result in a smooth shifting of the relevant dynamical quantities. From the conservation of magnetic flux through a co-moving surface, the magnetic field under expansion starting at some initial time $t_{0}$ is given by
 \begin{alignat}{1}
     \label{BScale} B(t) = B(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
 \end{alignat}
@@ -171,23 +197,6 @@ This should remain constant in the universe at-large up to the last epoch the un
 Higher order non-minimal magnetic contributions to the energy eigenvalues like $\approx\mu_{B}^{2}B^{2}/T^{2}$ are even more surpressed over cosmological time which drives the system into minimal electromagnetic coupling with the exception of the anomalous magnetic moment. It is interesting that cosmological expansion serves to \lq\lq smooth out\rq\rq\ the characteristics of more complex BSM electrodynmaics erasing them from a statistical perspective in favor of the non-minimal dynamics.
 
 {\color{blue}(CHENG TAO: I was thinking to mention the dimensionless $b_0$ here, but feel free to remove or edit it)
-The dimensionless magnetic constant under expansion in the Boltzmann factor is
-\begin{align}
-b_0= \frac{|e|B(\hbar c^2)}{(k_B T)^2}
-\end{align}
-Magnetic flux drops with $1/a(t)^(2)$ where $a$ is the scale factor while temperature drops with $1/a(t)$making the above a constant. The current modern bounds on the relic magnetic field lies between
-\begin{align}
-B_{t_0}=10^{-20}\sim10^{-12}\,\mathrm{Tesla}
-\end{align}
-where the subscript $t_0$ denotes the present day value The current temperature of the universe is 
-\begin{align}
-T_{t_0}=2.7\,\mathrm{K}
-\end{align}
-Plugging in those values, $b_0$ takes the values
-\begin{align}
-&b_0^{\mathrm{max}}= 5.5\times10^{-3},\\
-&b_0 ^{\mathrm{min}}= 1.1\times10^{-11}.
-\end{align}
 As $b_0$ is a constant of expansion, assuming the electron-proton plasma between the CMB and electron-positron annihilation did not greatly disturbed it, we can calculate the remnant values at the temperature $k_BT=50$ keV with the expression
 \begin{align}
 &B^{\mathrm{max}}(T=50 \mathrm{keV}) = \frac{B^{\mathrm{max}}_0(k_B T)^2}{(|q|\hbar c^2)}= 2.3\times10^5 \mathrm{Tesla},\\
@@ -201,9 +210,11 @@ As $b_0$ is a constant of expansion, assuming the electron-proton plasma between
 \end{align}
 where $\beta=1/T$, $\alpha$ is the set of all quantum numbers in the system, and $\eta$ is the generalized chemical potential. The magnetized $e^{\pm}$ system should be considered a system of four quantum species: Particles and anti-particles, and spin aligned and anti-aligned. Taken together we consider a system where all electrons and positrons are spin aligned or anti-aligned with the magnetic field $B$ and the partition function of the system is written as
 \begin{align}
-\ln\mathcal{Z}_{tot}=\frac{2eBV}{(2\pi)^2}\sum_{n=0}^\infty\int^\infty_{0} \!\!dp_z\bigg[\ln\left(1+e^{-\beta(E_{n}^\pm-\eta_{e})}\right)+\ln\left(1+e^{-\beta(E_{n}^\pm+\eta_{e})}\right)\bigg],
+\ln\mathcal{Z}_{tot}=\frac{2eBV}{(2\pi)^2}\sum_{n=0}^\infty\int^\infty_{0} \!\!dp_z\bigg[&\ln\left(1+\lambda_s e^{-\beta(E_{n}^+-\eta_{e})}\right)+\ln\left(1+\lambda_s e^{-\beta(E_{n}^++\eta_{e})}\right)\notag\\
+&+\ln\left(1+\lambda^{-1}_s e^{-\beta(E_{n}^--\eta_{e})}\right)+\ln\left(1+\lambda_s^{-1} e^{-\beta(E_{n}^-+\eta_{e})}\right)\bigg],
 \end{align}
-where $\eta_{e}$ is the electron chemical potential, the positron chemical potential is the negative of the electron's, and energy $E_{n}^\pm$ can be written as
+where $\eta_{e}$ is the electron chemical potential, $\lambda_s=e^{\eta_s/T}$ is the spin chemical potential%and the positron chemical potential is the negative of the electron's 
+and energy $E_{n}^\pm$ can be written as
 \begin{align}
 E_{n}^\pm&=\sqrt{p^2_z+\tilde m^2_\pm+2eBn},\qquad\tilde{m}^2_\pm=m^2_e+eB\left(1\mp\frac{g}{2}\right)\,,
 \end{align}
@@ -214,8 +225,8 @@ where the $\pm$ script refers to spin aligned and anti-aligned eigenvalues. To s
 We emphasize that this expansion is only value where the Boltzmann factor $\exp\left(-\beta(E\pm\eta_{e})\right)$ remains less than unity, otherwise the partition function becomes divergent and ill-behaved. The partition function of $e^{\pm}$ system can be further expanded to isolate the contribution of the chemical potential $\eta_{e}$ as
 \begin{align}
   \label{PartTotal}\ln\mathcal{Z}_{tot}
-  &=\frac{2eBV}{(2\pi)^2}\sum_{n=0}^\infty\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}\bigg[e^{k\beta\eta_{e}}+e^{-k\beta\eta_{e}}\bigg]\int_0^\infty dp_z\,e^{-k\beta E_n^\pm}\notag\\
-  &=\frac{2eBTV}{(2\pi)^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^2}\bigg[2\cosh{(k\beta\eta_{e})}\bigg]\sum_{n=0}^\infty W^\pm_1(n,k),
+  &=\frac{2eBV}{(2\pi)^2}\sum_{n=0}^\infty\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k}\bigg[e^{k\beta\eta_{e}}+e^{-k\beta\eta_{e}}\bigg]\left(e^{\eta_s/T}\int_0^\infty dp_z\,e^{-k\beta E_n^+}+e^{-\eta_s/T}\int_0^\infty dp_z\,e^{-k\beta E_n^-}\right)\notag\\
+  &=\frac{2eBTV}{(2\pi)^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^2}\bigg[2\cosh{(k\beta\eta_{e})}\bigg]\left(e^{\eta_s/T}\sum_{n=0}^\infty W^+_1(n,k)+e^{-\eta_s/T}\sum_{n=0}^\infty W^-_1(n,k)\right),
 \end{align}
 where we introduce the function $W^\pm_1(n,k)$ as follows
 \begin{align}
@@ -228,7 +239,8 @@ defined in terms of the modified (hyperbolic) Bessel function of the second kind
 where $R$ is the error remainder which is defined by integrals over Bernoulli polynomials. The error remainder has, for well behaved functioned, a finite size and therefore for a more extensive analysis is required to demonstrate to what order in Bessel functions is required to minimize the error remainder for good results. For \req{EMIntegration}, we've chosen to include up to the first order in derivatives. Using the asymptotic properties of Bessel function $K_{i}(x)$ as $x$ becomes large, we can simplify the above expression to obtain
 \begin{align}
 \label{Winitial}\sum^{\infty}_{n=0}W^\pm_1(n,k)&=\int^\infty_0\!\!dn\,W^\pm_1(n,k)+\frac{1}{2}W^\pm_1(0,k)-\frac{1}{12}\left.\frac{\partial W^\pm_1}{\partial n}\right|_{0}+R\,,\\
-\label{WReplacement}\sum^{\infty}_{n=0}W^\pm_1(n,k)&=\left(\frac{T^2}{k^2eB}\right)x_{\pm}^{2}K_{2}(x_{\pm})+\frac{1}{2}x_{\pm}K_{1}(x_{\pm})+\frac{1}{12}\left(\frac{k^2eB}{T^2}\right)K_{0}(x_{\pm})+R\,,\qquad x_{\pm} = \frac{k\tilde{m}_{\pm}}{T}\,.
+\label{WReplacement}
+&=\left(\frac{T^2}{k^2eB}\right)x_{\pm}^{2}K_{2}(x_{\pm})+\frac{1}{2}x_{\pm}K_{1}(x_{\pm})+\frac{1}{12}\left(k^2b_0\right)K_{0}(x_{\pm})+R\,,\qquad x_{\pm} = \frac{k\tilde{m}_{\pm}}{T}\,.
 \end{align}
 Here we see mathematically that the ground state $n=0$, which has no analogue in the classical continuum limit, contributes to a difference between the sum and integral formulations. Replacing the sum over Landau levels by the integral, the partition function can separated into three distinct parts
 \begin{align}
@@ -236,9 +248,13 @@ Here we see mathematically that the ground state $n=0$, which has no analogue in
 \end{align}
 where we define 
 \begin{align}
-  \label{FreePart}&\ln\mathcal{Z}_{free}=\frac{2T^3V}{(2\pi)^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^4}\cosh{\left(\frac{k\eta_{e}}{T}\right)}\left[\left(\frac{k\tilde{m}_\pm}{T}\right)^2K_2\left(\frac{k\tilde{m}_\pm}{T}\right)\right]\,,\\
-  \label{MagPart}&\ln\mathcal{Z}_B=\frac{4eBTV}{(2\pi)^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^2}\cosh{\left(\frac{k\eta_{e}}{T}\right)}\bigg[\frac{k\tilde{m}_\pm}{2T}K_1\left(\frac{k\tilde m_\pm}{T}\right)+\frac{k^2eB}{12T^2}K_0\left(\frac{k\tilde m_\pm}{T}\right)\bigg]\,,\\
-  \label{ErrorPart}&\ln\mathcal{Z}_R=\frac{4eBTV}{(2\pi)^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^2}\cosh{\left(\frac{k\eta_{e}}{T}\right)}R\,.
+  \label{FreePart}&\ln\mathcal{Z}_{free}=\frac{T^3V}{2\pi^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^4}\left[2\cosh{\left(\frac{k\eta_{e}}{T}\right)}\right]\left[e^{k\eta_s/T}x_+^2K_2\left(x_+\right)+e^{-k\eta_s/T}x_-^2K_2\left(x_-\right)\right]\,,\\
+  \label{MagPart}&\ln\mathcal{Z}_B=\frac{eBTV}{2\pi^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^2}\left[2\cosh{\left(\frac{k\eta_{e}}{T}\right)}\right]\bigg\{e^{k\eta_s/T}\,\bigg[\frac{x_\pm}{2}K_1\left(x_\pm\right)+\frac{k^2b_0}{12}K_0\left(x_\pm\right)\bigg]\notag\\
+  &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad+e^{-k\eta_s/T}\,\bigg[\frac{x_\pm}{2}K_1\left(x_\pm\right)+\frac{k^2b_0}{12}K_0\left(x_\pm\right)\bigg]\bigg\}\,,\\
+\end{align}
+and
+\begin{align}
+  \label{ErrorPart}&\ln\mathcal{Z}_R=\frac{eBTV}{2\pi^2}\sum^{\infty}_{k=1}\frac{(-1)^{k+1}}{k^2}\left[2\cosh{\left(\frac{k\eta_{e}}{T}\right)}\right]\left(e^{k\eta/T}\,R+e^{-k\eta/T}\,R\right)\,.
 \end{align}
 While this would require further derivation to demonstrate explicitly, the benefit of the Euler-Maclaurin approach is if the error contribution remains finite or bound for the magnetized partition function, then a correspondence between the free Fermi partition function (with noticeably modified magnetic-mass $\tilde{m}_{\pm}$) and the magnetized Fermi partition function can be established. The mismatch between the summation and integral in the Euler-Maclaurin formula would then encapsulate the immediate magnetic response and deviation from the free particle phase space.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -440,9 +456,10 @@ Acta Phys. Polon. B \textbf{43}, no.12, 2261-2284 (2012)
 doi:10.5506/APhysPolB.43.2261
 
 \bibitem{Yang:2021bko}
-Cheng~Tao~Yang and J.~Rafelski,
-``Cosmological Strangeness Abundance,''
-[arXiv:2108.01752 [hep-ph]].
+C.~T.~Yang and J.~Rafelski,
+``Cosmological strangeness abundance,''
+Phys. Lett. B \textbf{827}, 136944 (2022)
+doi:10.1016/j.physletb.2022.136944
 
 \bibitem{Birrell:2012gg} 
 J.~Birrell, Cheng~Tao~Yang, P.~Chen and J.~Rafelski,
@@ -477,6 +494,10 @@ doi:10.1016/j.nuclphysb.2005.09.041
  Nucl.\ Phys.\ B {\bf 890}, 481 (2014)
  doi:10.1016/j.nuclphysb.2014.11.020
  [arXiv:1406.1759 [nucl-th]].
+
+\bibitem{Chris:2023abc}
+Christopher Grayson, C.~T.~Yang and J.~Rafelski,
+``Electron-Positron Plasma in BBN epoch,'' (to be published).
 
 
 \bibitem{ParticleDataGroup:2022pth}
