@@ -162,25 +162,22 @@ where $\mathcal{B}_{S}$ is the Schwinger critical field strength. For electrons,
 \begin{align}
     \label{FLRW} ds^2=dt^2-a^2(t)\left[dx^2+dy^2+dz^2\right]\,.
 \end{align}
-The scale factor $a(t)$ denotes the change of proper distances in an expanding (or contracting) universe which is both homogeneous and isotropic. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H$ as follows
+The scale factor $a(t)$ denotes the change of proper distances in an expanding (or contracting) universe which is both homogeneous and isotropic. The evolutionary expansion of the universe is then traditionally defined in terms of the Hubble parameter $H(t)$ as follows
 \begin{align}
-    \label{FriedmannOne}H^2\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_N}{3}\rho_{tot}
+  \label{Friedmann} H(t)^{2}\equiv\left(\frac{\dot a}{a}\right)^2=\frac{8\pi G_{N}}{3}\rho_{tot},\quad \frac{\ddot a}{a}=-qH^2,\quad 
+q\equiv -\frac{a\ddot a}{\dot a^2},\quad \dot H=-H^2(1+q).
 \end{align}
-where $G_N$ is the Newtonian constant of gravitation and $\rho_{tot}$ is the total energy density of the universe. \req{FriedmannOne} is also known as the first Friedmann equation. 
+where $G_N$ is the Newtonian constant of gravitation, $\rho_{tot}$ is the total energy density of the universe and $q$ is the cosmic deceleration parameter. \req{Friedmann} is also known as the Friedmann equations. 
 
 There is another natural scale for the magnetic field besides \req{MagMassFail} when considering the consequences of FLRW expansion on the $e^{\pm}$ fluid. As the universe expands, different terms in the energies and thus partition function evolve as a function of the scale factor $a(t)$ which arises in the FLRW metric. We can consider the expansion to be an adiabatic process which results in a smooth shifting of the relevant dynamical quantities. From the conservation of magnetic flux through a co-moving surface, the magnetic field under expansion starting at some initial time $t_{0}$ is given by
 \begin{alignat}{1}
     \label{BScale} B(t) = B(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
 \end{alignat}
-As the universe expands, the temperature also cools as the cosmological redshift reduces the kinetic energies of particles in the universe lowering their contribution to the energy content of the universe. This cosmological redshift is written as
+As the universe expands, the temperature also cools as the cosmological redshift reduces the momenta of particles in the universe lowering their contribution to the energy content of the universe. This cosmological redshift is written as
 \begin{alignat}{1}
-    \label{TScale} T(t) = T(t_{0})\frac{a(t_{0})}{a(t)}\,.
+  \label{Redshift} p_{i}(t) = p_{i}(t_{0})\frac{a(t_{0})}{a(t)}\,,\qquad T(t) = T(t_{0})\frac{a(t_{0})}{a(t)}\,.
 \end{alignat}
-The momenta scale with the same factor as temperature, which is the origin of cosmological redshift
-\begin{alignat}{1}
-    \label{PScale} p_{i}(t) = p_{i}(t_{0})\frac{a(t_{0})}{a(t)}\,.
-\end{alignat}
-The energy of massive free particles in the universe scales differently based on their momentum (and thus temperature). When hot and relativistic, particle energy scales with inverse scale factors like radiation. However as particles transition to non-relativistic momenta, their energies scale with the inverse square of the scale factor like magnetic flux.
+The momenta scale with the same factor as temperature as it is the origin of cosmological redshift. The energy of massive free particles in the universe scales differently based on their momentum (and thus temperature). When hot and relativistic, particle energy scales with inverse scale factors like radiation. However as particles transition to non-relativistic momenta, their energies scale with the inverse square of the scale factor like magnetic flux.
 \begin{alignat}{1}
     \label{EScale} E(t) = E(t_{0})\frac{a(t_{0})}{a(t)}\xrightarrow{\mathrm{NR}}\  E(t_{0})\frac{a(t_{0})^{2}}{a(t)^{2}}\,.
 \end{alignat}
