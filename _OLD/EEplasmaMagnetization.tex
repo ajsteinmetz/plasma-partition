@@ -33,9 +33,35 @@ We will write something here for the abstract.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
+In the present-day Universe, we have magnetic fields~\cite{Kronberg:1993vk} at various scales and strengths both within galaxies and in deep extra-galactic space far and away from matter sources. Extra-galactic magnetic fields are not well constrained today, but are required by observation to be non-zero~\cite{Anchordoqui:2001bs,Widrow:2002ud} with a magnitude between $10^{-12}\ \mathrm{T}>B_{EGMF}>10^{-20}\ \mathrm{T}$ over Mpc coherent length scales. The upper bound is constrained from the characteristics of the CMB while the lower bound is constrained by non-observation of ultra-energetic photons from blazars~\cite{Neronov:2010gir}.
+Two primary origins are commonly considered for extra-galactic magnetic fields\cite{Widrow:2011hs,Vazza:2021vwy}:  (a) matter-induced dynamo processes involving Amperian currents and (b) primordial (or relic) seed magnetic fields whose origins may go as far back as the Big Bang itself. It is currently unknown which origin accounts for extra-galactic magnetic fields today or if it some combination of the two models. Even if magnetic fields in the Universe today are primarily driven via amplification through Amperian matter currents, such models still require primordial seed fields at some point to act as catalyst.
 
-{\color{blue}(Brief introduction for ee-plasma)} In early universe after neutrinos decoupled  at temperature $T\approx2$ MeV and become free-streaming from the cosmic plasma, the cosmic plasma was dominated by electrons, positrons, and photons. 
- Fig.~\ref{Density_fig} shows this plasma existed until $T\approx20\ \mathrm{keV}$ such that BBN occurred within a rich electron-positron plasma~\cite{Chris:2023abc}. The electron-positron plasma is the last epoch the Universe contained a significant fraction of its content in antimatter. The electron-positron epoch of the early Universe was home to Big Bang Nucleosynthesis (BBN), the annihilation of most electrons and positrons reheating both the photon and neutrino fields, as well as setting the stage for the eventual recombination period which would generate the cosmic microwave background (CMB). The properties of the electron-positron $e^{\pm}$ plasma in the early Universe has not received appropriate attention in an era of precision BBN studies~\cite{Pitrou:2018cgg}. The presence of $e^{\pm}$ pairs before and during BBN has been acknowledged by Wang, Bertulani and Balantekin~\cite{Wang:2010px,Hwang:2021kno} over a decade ago. This however was before necessary tools were developed to explore the connection between electron and neutrino plasmas~\cite{Mangano:2005cc,Birrell:2012gg,Birrell:2014uka}.
+%~Figure~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+\begin{figure}[htbp]
+ \centering \includegraphics[trim=110 50 120 40,clip,width=0.5\textwidth]{./plots/relic_plot.pdf}
+ \caption{Qualitative value of the primordial magnetic field over the evolutionary lifespan of the Universe. The upper and lower black lines represent extrapolation of the EGMF bounds into the past. The major phases of the Universe are indicated with shaded regions. The values of the Schwinger critical field (purple line) and the upper bound of surface magnetar field strength (blue line) are included for scale.\label{relic_plot}}
+\end{figure}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As the universe undergoes the isentropic expansion,  the temperature gradually decreases as $T\propto1/a(t)$ where $a(t)$ represents the scale factor. The assumption magnetic flux is conserved over co-moving surfaces, we see in Fig.~\ref{relic_plot} implies that the primordial relic field is expected to dilute as $B\propto1/a(t)^{2}$. Inspired by these cosmological redshift relations, we can introduce a dimensionless cosmic magnetic scale which is frozen in the homogeneous case as
+\begin{alignat}{1}
+ \label{Bo} b_{0}\equiv\frac{eB}{T^{2}}=\frac{eB\hbar c^{2}}{(k_{B}T)^{2}}\ \mathrm{(S.I)}\,,
+\end{alignat}
+where we've included the expression explicitly in full SI units. We can estimate the value of $b_{0}$ from the bounds of the extra-galactic magnetic field strength and the temperature of the Universe today. If the origin of deep space extra-galactic magnetic fields are relic fields from the early Universe, which today are expected to exist between $5\times10^{-12}\ \mathrm{T}>B_{relic}>10^{-20}\ \mathrm{T}$, then at temperature $T=2.7\ \mathrm{K}$, the value of the cosmic magnetic scale is between
+\begin{alignat}{1}
+ \label{BoScale} 5.5\times10^{-5}>b_{0}>1.1\times10^{-11}\,.
+\end{alignat}
+As $b_0$ is a constant of expansion, this means the contemporary small bounded values of $5\times10^{-12}\ \mathrm{T}>B_{relic}>10^{-20}\ \mathrm{T}$ (coherent over $\mathcal{O}(1\ \mathrm{Mpc})$ distances) may have once represented large magnetic fields in the early Universe and require detail study in different universe epoch.
+
+Tracing back the history of the Universe, the epoch electron-positron plasma is the last phase of the Universe that contained a significant fraction content in antimatter. The presence of $e^{\pm}$ pairs before and during BBN has been acknowledged by Wang, Bertulani and Balantekin~\cite{Wang:2010px,Hwang:2021kno}. However, the properties of the electron-positron $e^{\pm}$ plasma in the early Universe has not received appropriate attention. In early universe after neutrinos decoupled  at temperature $T\approx2$ MeV and become free-streaming from the cosmic plasma, the cosmic plasma was dominated by electrons, positrons, and photons. Fig.~\ref{Density_fig} shows this plasma existed until $T\approx20\ \mathrm{keV}$ such that BBN occurred within a rich electron-positron plasma~\cite{Chris:2023abc}. 
+
+In order to have sufficiently magnetized and set the relic magnetic scale for observation today, the first best candidate is the electron-positron plasma. This is because very dense pair of $e^\pm$ can provide the possibility to create strong magnetic field. We can calculate the remnant values at the temperature $T=50\ \mathrm{keV}$ (which takes place in the middle of BBN) with the Eq.(\ref{Bo}) yielding a range of field strengths
+\begin{align}
+ \label{BBNRange} 2.3\times10^{5}\ \mathrm{T}>B(T=50\ \mathrm{keV})>4.6\times10^{-4}\ \mathrm{T}\,,
+\end{align}
+Therefore, correctly describing the dynamics of this $e^{\pm}$ plasma is of interest when considering modern cosmic mysteries such as the origin of extra-galactic magnetic fields (EGMF)~\cite{Anchordoqui:2001bs,Neronov:2010gir}. While most approaches tackle magnetized plasma from the perspective of classical or semi-classical magneto-hydrodynamics (MHD)~\cite{berezhiani1992influence,berezhiani1995large,Schlickeiser:2018hzq}, our perspective in this work is to demonstrate that fundamental quantum statistical analysis can lead to further insights on the behavior of magnetized plasmas.
+
+
 %~Figure~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 \begin{figure}[h]
 \centerline{\includegraphics[width=0.5\textwidth]{./plots/NewDensity_cm3_new.jpg}}
@@ -44,33 +70,6 @@ We will write something here for the abstract.
 \end{figure}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{\color{blue}(Brief introduction for magnetic field)} The Universe today filled with magnetic fields~\cite{Kronberg:1993vk} at various scales and strengths both within galaxies and in deep extra-galactic space far and away from matter sources. Extra-galactic magnetic fields are not well constrained today, but are required by observation to be non-zero~\cite{Anchordoqui:2001bs,Widrow:2002ud} with a magnitude between $10^{-12}\ \mathrm{T}>B_{EGMF}>10^{-20}\ \mathrm{T}$ over Mpc coherent length scales. The upper bound is constrained from the characteristics of the CMB while the lower bound is constrained by non-observation of ultra-energetic photons from blazars~\cite{Neronov:2010gir}. There are generally considered two possible origins~\cite{Widrow:2011hs,Vazza:2021vwy} for extra-galactic magnetic fields: (a) matter-induced dynamo processes involving Amperian currents and (b) primordial (or relic) seed magnetic fields whose origins may go as far back as the Big Bang itself. It is currently unknown which origin accounts for extra-galactic magnetic fields today or if it some combination of the two models. Even if magnetic fields in the Universe today are primarily driven via amplification through Amperian matter currents, such models still require primordial seed fields at some point to act as catalyst.
-%~Figure~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-\begin{figure}[htbp]
- \centering \includegraphics[trim=110 50 120 40,clip,width=0.5\textwidth]{./plots/relic_plot.pdf}
- \caption{Qualitative value of the primordial magnetic field over the evolutionary lifespan of the Universe. The upper and lower black lines represent extrapolation of the EGMF bounds into the past. The major phases of the Universe are indicated with shaded regions. The values of the Schwinger critical field (purple line) and the upper bound of surface magnetar field strength (blue line) are included for scale.\label{relic_plot}}
-\end{figure}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-As the universe expand, the temperature cools as $T\propto1/a(t)$  and as magnetic flux is conserved over co-moving surfaces, we see in Fig.~\ref{relic_plot} that the primordial relic field is expected to dilute as $B\propto1/a(t)^{2}$. Motivated by these eredshit, we can introduce a dimensionless cosmic magnetic scale which is frozen in the homogeneous case as
-\begin{alignat}{1}
- \label{Bo} b_{0}\equiv\frac{eB}{T^{2}}=\frac{eB\hbar c^{2}}{(k_{B}T)^{2}}\ \mathrm{(S.I)}\,,
-\end{alignat}
-where we've included the expression explicitly in full SI units. We can estimate the value of $b_{0}$ from the bounds of the extra-galactic magnetic field strength and the temperature of the Universe today. If the origin of deep space extra-galactic magnetic fields are relic fields from the early Universe, which today are expected to exist between $5\times10^{-12}\ \mathrm{T}>B_{relic}>10^{-20}\ \mathrm{T}$, then at temperature $T=2.7\ \mathrm{K}$, the value of the cosmic magnetic scale is between
-\begin{alignat}{1}
- \label{BoScale} 5.5\times10^{-5}>b_{0}>1.1\times10^{-11}\,.
-\end{alignat}
-This should remain constant in the Universe at-large up to the last epoch the Universe was sufficiently magnetized to disturb this value. As the electron-proton plasma which generated the CMB was relatively dilute over its duration, it was unlikely sufficiently magnetized to significantly alter this value over extra-galactic scales. Rather, the best candidate plasma to have been sufficiently magnetized and dense to have set the relic field magnetic scale would have been the electron-positron plasma which existed during the duration of Big Bang Nucleosynthesis (BBN) and beforehand.
-
-As $b_0$ is a constant of expansion, this means the contemporary small bounded values of $5\times10^{-12}\ \mathrm{T}>B_{relic}>10^{-20}\ \mathrm{T}$ (coherent over $\mathcal{O}(1\ \mathrm{Mpc})$ distances) may have once represented large magnetic fields in the early Universe. Assuming the electron-proton plasma between the CMB and electron-positron annihilation did not greatly disturbed it, we can calculate the remnant values at the temperature $T=50\ \mathrm{keV}$ (which takes place in the middle of BBN) with the expression
-\begin{align}
- \label{BBNFields} B(T)=\frac{b_{0}}{e}T^{2}\,,
-\end{align}
-yielding a range of field strengths
-\begin{align}
- \label{BBNRange} 2.3\times10^{5}\ \mathrm{T}>B(T=50\ \mathrm{keV})>4.6\times10^{-4}\ \mathrm{T}\,,
-\end{align}
-Therefore, correctly describing the dynamics of this $e^{\pm}$ plasma is of interest when considering modern cosmic mysteries such as the origin of extra-galactic magnetic fields (EGMF)~\cite{Anchordoqui:2001bs,Neronov:2010gir}. While most approaches tackle magnetized plasmas from the perspective of classical or semi-classical magneto-hydrodynamics (MHD)~\cite{berezhiani1992influence,berezhiani1995large,Schlickeiser:2018hzq}, our perspective is to demonstrate that fundamental quantum statistical analysis can lead to further insights on the behavior of magnetized plasmas.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Landau eigen-energies in cosmology}\label{sec:Landau}
@@ -141,20 +140,29 @@ This reveals that only the mass contribution is dynamic over cosmological time. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Partition function for Electron-Positron plasma}\label{sec:Partition}
-\noindent We now turn our attention now to the statistical behavior of the $e^{\pm}$ system. We can utilize the general fermion partition function given by~\cite{Elze:1980er}
+
+To study the statistical behavior of the $e^\pm$ system in magnetic field, we utilize the general fermion partition function~\cite{Elze:1980er}
 \begin{align}
  \label{PartFunc} \ln\mathcal{Z}=\sum_{\alpha}\ln\left(1+e^{-\beta(E-\eta)}\right)\,,
 \end{align}
-where $\beta=1/T$, $\alpha$ is the set of all quantum numbers in the system, and $\eta$ is the generalized chemical potential. The magnetized $e^{\pm}$ system should be considered a system of four quantum species: Particles and antiparticles, and spin aligned and anti-aligned. Taken together we consider a system where all electrons and positrons are spin aligned or anti-aligned with the magnetic field $B$ and the partition function of the system is written as
+where $\beta=1/T$, $\alpha$ is the set of all quantum numbers in the system, and $\eta$ is the generalized chemical potential. In the case of magnetized $e^{\pm}$ system, it should be considered as a system of four quantum species: Particles and antiparticles, and spin aligned and anti-aligned. Taken together we consider a system where all electrons and positrons are spin aligned or anti-aligned with the magnetic field $B$ and the partition function of the system is written as
 \begin{align}\label{PartFuncB}
 \ln\mathcal{Z}_{tot}=&\frac{2eBV}{(2\pi)^2}\sum_{\sigma}^{\pm1}\sum_{s}^{\pm1/2}\sum_{n=0}^\infty\notag\\
 \qquad&\int^\infty_{0}dp_z\left[\ln\left(1+\Upsilon_{\sigma}^{s}(x)e^{-\beta E_{n}^{s}}\right)\right]\,
 \end{align}
 where the fugacity is defined as
 \begin{align}\label{Fugacity}
-\Upsilon_{\sigma}^{s}(x)=\gamma(x)\lambda_{\sigma}^{s}\,,\qquad\lambda_{\sigma}^{s}=e^{(\sigma\eta_{e}+s\eta_{s})/T}\,,
+\Upsilon_{\sigma}^{s}(x)=\gamma(x)\lambda_{\sigma}^{s}\,,\qquad\lambda_{\sigma}^{s}=e^{(\sigma\eta_{e}+s\eta_{s)/T}}
 \end{align}
-where $\eta_{e}$ is the electron chemical potential and $\eta_s$ is the spin chemical potential for the generalized fugacity $\lambda_{\sigma}^{s}$. The parameter $\gamma(x)$ is a spatial field which controls the distribution inhomogeneity of the Fermi gas. Inhomogeneities can arise from the influence of other forces on the gas such as gravitational forces. Deviations of $\gamma\neq1$ represent configurations of reduced entropy (maximum entropy yields the normal Fermi distribution itself with $\gamma=1$) without pulling the system off a thermal temperature. This situation is similar to that of the quarks during QGP, but instead here the deviation is spatial rather than in time. This is precisely the kind of behavior that may arise in the $e^{\pm}$ epoch as the dominant photon thermal bath keeps the Fermi gas in thermal equilibrium while spatial inequilibria could spontaneously develop. For the remainder of this work, we will retain $\gamma(x)=1$. The energy $E_{n}^\pm$ can be written as
+where $\eta_{e}$ is the electron chemical potential and $\eta_s$ is the spin chemical potential for the generalized fugacity $\lambda_{\sigma}^{s}$. The parameter $\gamma(x)$ is a spatial field which controls the distribution inhomogeneity of the Fermi gas. 
+
+
+In general $\gamma=1$ represents the maximum entropy and corresponds to the normal Fermi distribution. The deviation of $\gamma\neq1$ represents the configurations of reduced entropy without pulling the system off a thermal temperature. This scenario is well studied for quarks in QGP. The situation for $e^\pm$ palama is similar to the case of the quarks during QGP, but instead here the deviation is spatial rather than in time. 
+
+
+Inhomogeneities can arise from the influence of other forces on the gas such as gravitational forces. This is precisely the kind of behavior that may arise in the $e^{\pm}$ epoch as the dominant photon thermal bath keeps the Fermi gas in thermal equilibrium while spatial inequilibria could spontaneously develop. 
+
+For the remainder of this work, we will retain $\gamma(x)=1$. The energy $E_{n}^\pm$ can be written as
 \begin{align}
 &E_{n}^\pm=\sqrt{p^2_z+\tilde m^2_\pm+2eBn},\\
 &\tilde{m}^2_\pm=m^2_e+eB\left(1\mp\frac{g}{2}\right)\,,
@@ -168,7 +176,7 @@ Using the Euler-Maclaurin formula to replace the sum over Landau levels with an 
 where we define the partition functions as  
 \begin{align}
  \label{FreePart}&\ln\mathcal{Z}_{free}=\frac{T^3V}{2\pi^2}\left[2\cosh{\left(\frac{\eta_{e}}{T}\right)}\right]\sum_{i=\pm}x_i^2K_2\left(x_i\right)\,,\qquad x_i=\frac{\tilde{m}_i}{T}\\
- \label{MagPart}&\ln\mathcal{Z}_B=\frac{eBTV}{2\pi^2}\left[2\cosh{\left(\frac{\eta_{e}}{T}\right)}\right]\sum_{i=\pm}\bigg[\frac{x_i}{2}K_1\left(x_i\right)+\frac{k^2b_0}{12}K_0\left(x_i\right)\bigg]\,,\\
+ \label{MagPart}&\ln\mathcal{Z}_B=\frac{eBTV}{2\pi^2}\left[2\cosh{\left(\frac{\eta_{e}}{T}\right)}\right]\sum_{i=\pm}\bigg[\frac{x_i}{2}K_1\left(x_i\right)+\frac{b_0}{12}K_0\left(x_i\right)\bigg]\,,\\
  \label{ErrorPart}&\ln\mathcal{Z}_R=\frac{eBTV}{\pi^2}\left[2\cosh{\left(\frac{\eta_{e}}{T}\right)}\right]R.
 \end{align}
 where $R$ is the error remainder which is defined by integrals over Bernoulli polynomials.
