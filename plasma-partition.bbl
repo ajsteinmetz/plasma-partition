@@ -1,0 +1,110 @@
+\begin{thebibliography}{13}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Kronberg(1994)]{kronberg1994extragalactic}
+P.~P. Kronberg.
+\newblock Extragalactic magnetic fields.
+\newblock \emph{Reports on Progress in Physics}, 57\penalty0 (4):\penalty0 325,
+  1994.
+\newblock \doi{10.1088/0034-4885/57/4/001}.
+
+\bibitem[Gaensler et~al.(2004)Gaensler, Beck, and Feretti]{gaensler2004origin}
+B.~M. Gaensler, R.~Beck, and L.~Feretti.
+\newblock The origin and evolution of cosmic magnetism.
+\newblock \emph{New Astronomy Reviews}, 48\penalty0 (11-12):\penalty0
+  1003--1012, 2004.
+\newblock \doi{10.1016/j.newar.2004.09.003}.
+
+\bibitem[Durrer and Neronov(2013)]{durrer2013cosmological}
+R.~Durrer and A.~Neronov.
+\newblock Cosmological magnetic fields: their generation, evolution and
+  observation.
+\newblock \emph{The Astronomy and Astrophysics Review}, 21:\penalty0 1--109,
+  2013.
+\newblock \doi{10.1007/s00159-013-0062-7}.
+
+\bibitem[Neronov and Vovk(2010)]{neronov2010evidence}
+A.~Neronov and I.~Vovk.
+\newblock Evidence for strong extragalactic magnetic fields from fermi
+  observations of tev blazars.
+\newblock \emph{Science}, 328\penalty0 (5974):\penalty0 73--75, 2010.
+\newblock \doi{10.1126/science.1184192}.
+
+\bibitem[Taylor et~al.(2011)Taylor, Vovk, and Neronov]{taylor2011extragalactic}
+A.~M. Taylor, I.~Vovk, and A.~Neronov.
+\newblock Extragalactic magnetic fields constraints from simultaneous gev--tev
+  observations of blazars.
+\newblock \emph{Astronomy \& Astrophysics}, 529:\penalty0 A144, 2011.
+\newblock \doi{10.1051/0004-6361/201116441}.
+
+\bibitem[Vernstrom et~al.(2021)Vernstrom, Heald, Vazza, Galvin, West,
+  Locatelli, Fornengo, and Pinetti]{vernstrom2021discovery}
+T.~Vernstrom, G.~Heald, F.~Vazza, T.~J. Galvin, J.~L. West, N.~Locatelli,
+  N.~Fornengo, and E.~Pinetti.
+\newblock {Discovery of magnetic fields along stacked cosmic filaments as
+  revealed by radio and X-ray emission}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  505\penalty0 (3):\penalty0 4178--4196, 05 2021.
+\newblock \doi{10.1093/mnras/stab1301}.
+
+\bibitem[Batista and Saveliev(2021)]{batista2021gammaray}
+R.~A. Batista and A.~Saveliev.
+\newblock The gamma-ray window to intergalactic magnetism.
+\newblock \emph{Universe}, 7\penalty0 (7), 2021.
+\newblock ISSN 2218-1997.
+\newblock \doi{10.3390/universe7070223}.
+
+\bibitem[{Pomakov} et~al.(2022){Pomakov}, {O'Sullivan}, {Br{\"u}ggen}, {Vazza},
+  {Carretti}, {Heald}, {Horellou}, {Shimwell}, {Shulevski}, and
+  {Vernstrom}]{pomakov2022redshift}
+V.~P. {Pomakov}, S.~P. {O'Sullivan}, M.~{Br{\"u}ggen}, F.~{Vazza},
+  E.~{Carretti}, G.~H. {Heald}, C.~{Horellou}, T.~{Shimwell}, A.~{Shulevski},
+  and T.~{Vernstrom}.
+\newblock {The redshift evolution of extragalactic magnetic fields}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  515\penalty0 (1):\penalty0 256--270, September 2022.
+\newblock \doi{10.1093/mnras/stac1805}.
+
+\bibitem[Jedamzik and Pogosian(2020)]{jedamzik2020relieving}
+A.~Jedamzik and L.~Pogosian.
+\newblock Relieving the hubble tension with primordial magnetic fields.
+\newblock \emph{Physical Review Letters}, 125\penalty0 (18):\penalty0 181302,
+  2020.
+\newblock \doi{10.1103/PhysRevLett.125.181302}.
+
+\bibitem[Jedamzik and Saveliev(2019)]{jedamzik2019stringent}
+K.~Jedamzik and A.~Saveliev.
+\newblock Stringent limit on primordial magnetic fields from the cosmic
+  microwave background radiation.
+\newblock \emph{Physical review letters}, 123\penalty0 (2):\penalty0 021301,
+  2019.
+\newblock \doi{10.1103/PhysRevLett.123.021301}.
+
+\bibitem[Rafelski et~al.(2023)Rafelski, Birrell, Steinmetz, and
+  Yang]{rafelski2023short}
+J.~Rafelski, J.~Birrell, A.~Steinmetz, and C.~T. Yang.
+\newblock A short survey of matter-antimatter evolution in the primordial
+  universe.
+\newblock \emph{MDPI Universe}, 2023.
+\newblock \doi{10.48550/arXiv.2305.09055}.
+
+\bibitem[Bahcall et~al.(2001)Bahcall, Pinsonneault, and Basu]{bahcall2001solar}
+J.~N. Bahcall, M.~H. Pinsonneault, and S.~Basu.
+\newblock Solar models: Current epoch and time dependences, neutrinos, and
+  helioseismological properties.
+\newblock \emph{The Astrophysical Journal}, 555\penalty0 (2):\penalty0 990, jul
+  2001.
+\newblock \doi{10.1086/321493}.
+
+\bibitem[Castellani et~al.(1997)Castellani, Degl'Innocenti, Fiorentini, Lissia,
+  and Ricci]{castellani1997solar}
+Vittorio Castellani, S~Degl'Innocenti, G~Fiorentini, M~Lissia, and B~Ricci.
+\newblock Solar neutrinos: Beyond standard solar models.
+\newblock \emph{Physics Reports}, 281\penalty0 (5-6):\penalty0 309--398, 1997.
+\newblock \doi{10.1016/S0370-1573(96)00032-4}.
+
+\end{thebibliography}
