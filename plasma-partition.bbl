@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{26}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -119,6 +119,32 @@ V.~Castellani, S.~Degl'Innocenti, G.~Fiorentini, M.~Lissia, and B.~Ricci.
 \newblock Solar neutrinos: Beyond standard solar models.
 \newblock \emph{Physics Reports}, 281\penalty0 (5-6):\penalty0 309--398, 1997.
 \newblock \doi{10.1016/S0370-1573(96)00032-4}.
+
+\bibitem[Subramanian(2010)]{subramanian2009magnetic}
+K.~Subramanian.
+\newblock {Magnetic fields in the early universe}.
+\newblock \emph{Astron. Nachr.}, 331:\penalty0 110--120, 2010.
+\newblock \doi{10.1002/asna.200911312}.
+
+\bibitem[Vachaspati(2021)]{vachaspati2020progress}
+T.~Vachaspati.
+\newblock {Progress on cosmological magnetic fields}.
+\newblock \emph{Rept. Prog. Phys.}, 84\penalty0 (7):\penalty0 074901, 2021.
+\newblock \doi{10.1088/1361-6633/ac03a9}.
+
+\bibitem[Bali et~al.(2012)Bali, Bruckmann, Endrodi, Fodor, Katz, Krieg,
+  Schafer, and Szabo]{bali2011qcd}
+G.~S. Bali, F.~Bruckmann, G.~Endrodi, Z.~Fodor, S.~D. Katz, S.~Krieg,
+  A.~Schafer, and K.~K. Szabo.
+\newblock {The QCD phase diagram for external magnetic fields}.
+\newblock \emph{JHEP}, 02:\penalty0 044, 2012.
+\newblock \doi{10.1007/JHEP02(2012)044}.
+
+\bibitem[Birrell et~al.(2014)Birrell, Yang, and Rafelski]{birrell2014relic}
+J.~Birrell, C.~T. Yang, and J.~Rafelski.
+\newblock {Relic Neutrino Freeze-out: Dependence on Natural Constants}.
+\newblock \emph{Nucl. Phys. B}, 890:\penalty0 481--517, 2014.
+\newblock \doi{10.1016/j.nuclphysb.2014.11.020}.
 
 \bibitem[Melrose(2013)]{melrose2008quantum}
 D.~Melrose.
