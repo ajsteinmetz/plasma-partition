@@ -24,14 +24,14 @@
 \newcommand{\orcB}{0000-0001-5038-8427}
 \newcommand{\orcC}{0000-0001-5474-2649}
 
-\author{Cheng Tao Yang\orc{\orcB}\thanks{Correspondence: \texttt{Put Official Email Here!}}, Andrew Steinmetz\orc{\orcC}, and Johann Rafelski\orc{\orcA}\\ Department of Physics, The University of Arizona, Tucson, AZ 85721, USA}
+\author{Andrew Steinmetz\orc{\orcC}\thanks{Correspondence: \texttt{ajsteinmetz@arizona.edu}}, Cheng Tao Yang\orc{\orcB}, and Johann Rafelski\orc{\orcA}\\ Department of Physics, The University of Arizona, Tucson, AZ 85721, USA}
 
 \begin{document}
 
 \maketitle
 
 \begin{abstract}
-    In the early universe above temperature $T>20\keV$ there was an gargantuan density of electron-positron pairs which rapidly vanished. We explore the possibility that this phenomenon was responsible for generating primordial magnetic fields in the universe. At higher electron-positron pair densities, spin paramagnetism is dominant over the Landau orbital diamagnetism of the gas. In this work, we seek to describe the magnetization of (and possible magnetogenesis within) the primordial electron-positron plasma as it underwent a rapid drop in density of order ${\cal O}(10^{12})$ relative to the baryon density in the temperature range $200\keV>T>20\keV$. Our analysis focuses on the partition function of the relativistic Fermi gas at finite temperatures in the Boltzmann approximation with higher order corrections.
+    In the early universe above temperature $T>20\keV$ there was an gargantuan density of electron-positron pairs which rapidly vanished. We explore the possibility that this phenomenon was responsible for generating primordial magnetic fields in the universe. At higher electron-positron pair densities, spin paramagnetism is dominant over the Landau orbital diamagnetism of the gas. In this work, we seek to describe the magnetization of (and possible magnetogenesis within) the primordial electron-positron plasma as it underwent a rapid drop in density of order ${\cal O}(10^{12})$ relative to the baryon density in the temperature range $200\keV>T>20\keV$. Our analysis focuses on the partition function of the relativistic Fermi gas at finite temperatures.
 \end{abstract}
 
 \keywords{early universe cosmology \and magnetization \and electron-positron plasma \and intergalactic magnetic fields}
@@ -40,7 +40,7 @@
 \section{Introduction}\label{sec:Introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Inter-galactic magnetic fields}\label{sec:IGMF}
-\noindent Unlike electric fields which cannot be supported at large scales due to the charge neutrality of the universe, cosmic magnetic fields are easily generated~\cite{kronberg1994extragalactic,gaensler2004origin,durrer2013cosmological} by a variety of physical phenomenon which are difficult to screen. Magnetic fields are present everywhere: around compact objects (stars, planets, etc...), between stars, within galaxies, between galaxies in clusters, and surprisingly in the deep extra-galactic void spaces where little matter exists. These intergalactic magnetic fields (IGMF) present a challenge both experimentally and theoretically in that they are (a) difficult to measure and (b) difficult to explain using known physics. The bounds for IGMF at a coherent length scale of $1{\rm\ Mpc}$ are today~\cite{neronov2010evidence,taylor2011extragalactic,vernstrom2021discovery}
+\noindent Unlike electric fields which cannot be supported at large scales due to the charge neutrality of the universe, cosmic magnetic fields are easily generated~\cite{kronberg1994extragalactic,gaensler2004origin,durrer2013cosmological} by a variety of physical phenomenon which are difficult to screen. Magnetic fields are present everywhere: around compact objects (stars, planets, etc...), between stars, within galaxies, between galaxies in clusters, and surprisingly in the deep extra-galactic void spaces where little matter exists. These intergalactic magnetic fields (IGMF) present a challenge both experimentally and theoretically in that they are (a) difficult to measure and (b) difficult to explain using known physics. The bounds for IGMF at a coherent length scale of $1{\rm\ Mpc}$ are today~\cite{neronov2010evidence,taylor2011extragalactic,pshirkov2015new,vernstrom2021discovery}
 \begin{align}
     10^{-8}{\rm\ G}>\mathcal{B}_{\rm IGFM}>10^{-16}{\rm\ G}\,.
 \end{align}
@@ -50,19 +50,42 @@ There are three conventional explanations~\cite{batista2021gammaray} for the exi
     \item [2.] \textbf{Dynamo amplification} - Initially small \lq\lq seed\rq\rq\ magnetic fields dynamically reorganize charged matter fluids amplifying the total magnetic flux in a process called dynamo. Such seed fields may be primordial or astrophysical in origin.
     \item [3.] \textbf{Astrophysical sources} - Late times development of IGMF arises from stars, supernova and active galaxy nuclei (AGN) producing galactic outflows of charged matter which would contaminate and magnetize regions between galaxies.
 \end{itemize}
-Measurements of Faraday Rotation from distant radio AGN~\cite{pomakov2022redshift} suggest that neither dynamo nor astrophysical processes would sufficiently account for the presence of IGMF in the universe today if the IGMF strength was around the upper bound of $30{\rm\ nG}>{\cal B}_{\rm IGMF}>1{\rm\ nG}$ as found in~\cite{vernstrom2021discovery}. Such strong IGMFs would then require that at least some portion of the IGMF arise from primordial sources that predate the formation of stars and galaxies, or the CMB. It was shown by Jedamzik and Pogosian~\cite{jedamzik2020relieving} that the presence of ${\cal B}_{\rm PMF}\simeq0.1{\rm\ nG}$ could be sufficient to explain the Hubble tension. Such pre-recombination PMFs would lead to early universe baryon inhomogeneities which in turn would produce anisotropies in the CMB. PMF strengths of around a tenth of a nanoGauss is also near the more stringent upper bound for PMFs found in~\cite{jedamzik2019stringent}.
+Faraday rotation from distant radio AGN~\cite{pomakov2022redshift} suggest that neither dynamo nor astrophysical processes would sufficiently account for the presence of IGMF in the universe today if the IGMF strength was around the upper bound of ${\cal B}_{\rm IGMF}\simeq30-60{\rm\ nG}$ as found in~\cite{vernstrom2021discovery}. Such strong IGMFs would then require that at least some portion of the IGMF arise from primordial sources that predate the formation of stars and galaxies, or the CMB. It was shown by Jedamzik and Pogosian~\cite{jedamzik2020relieving} that the presence of ${\cal B}_{\rm PMF}\simeq0.1{\rm\ nG}$ could be sufficient to explain the Hubble tension. Such pre-recombination PMFs would lead to early universe baryon inhomogeneities which in turn would produce anisotropies in the CMB. PMF strengths of around a tenth of a nanoGauss is also near the more stringent upper bound for PMFs found in~\cite{jedamzik2019stringent}. Even if IGMFs are found to be produced by some mixture all three scenarios listed above, the existence of PMFs would be uniquely interesting because of their effects on (or generation within) the early universe primordial plasmas which populated the universe before recombination.
 
-Even if IGMFs are found to be produced by some mixture all three scenarios listed above, the existence of PMFs would be uniquely interesting because of their effects on the early universe primordial plasmas which populated the universe before recombination. We seek in this work to describe the influence PMFs had on the dense electron-positron $(e^{\pm})$ plasma epoch in the early universe. We note that above temperature~\cite{rafelski2023short} $T>85\keV$, the $e^{\pm}$ primordial plasma density exceeded that of the Sun's core density $n_{e}\simeq6\times10^{26}{\rm\ cm}^{-3}$~\cite{bahcall2001solar}. Due to cosmological redshift, and the conservation of magnetic flux over a co-moving volume, such PMFs would have extraordinary field strengths during the various primordial plasmas of the early universe subject to whatever temperature they were initially generated in. \textbf{Include ref on how QGP, EWT and Inflation are also candidates.} This combination of strong magnetic fields, high matter-antimatter density, and relatively high temperatures (far higher than the Sun's core temperature of $T_{\odot}=1.37\keV$~\cite{castellani1997solar}) make this era unique in cosmology and astrophysics.
+We seek in this work to describe the influence PMFs had on the dense electron-positron $(e^{\pm})$ plasma epoch in the temperature range $2\MeV>T>0.02\MeV$ in the early universe. We note that above temperature $T>85\keV$~\cite{rafelski2023short}, the $e^{\pm}$ primordial plasma density exceeded that of the Sun's core density $n_{e}\simeq6\times10^{26}{\rm\ cm}^{-3}$~\cite{bahcall2001solar}. Due to cosmological redshift, and the conservation of magnetic flux over a comoving volume, such PMFs would have extraordinary field strengths during the various primordial plasmas of the early universe subject to whatever temperature they were initially generated in. \textbf{Include ref on how QGP, EWT and Inflation are also candidates.} This combination of strong magnetic fields, high matter-antimatter density, and relatively high temperatures (far higher than the Sun's core temperature~\cite{castellani1997solar} of $T_{\odot}=1.37\keV$) make this era unique in cosmology and astrophysics.
+
+\section{Magnetic scale}
+\noindent Within a homogenous field regime, the magnetic field varies over cosmic expansion as
+\begin{align}
+    \label{cosmicscale}
+    {\cal B}(t)={\cal B}_{0}\left(\frac{a(t_0)}{a(t)}\right)^{\gamma}\rightarrow{\cal B}(z)={\cal B}_{0}\left(1+z\right)^{\gamma}\,,
+\end{align}
+where $a(t)$ is the scale factor for the universe's expansion (as given by the FLRW metric), $z$ is the redshift, and ${\cal B}_{0}$ is the comoving value of the magnetic field defined by the contemporary value of the magnetic field today. The parameter $\gamma$ is then determined by the physical origin of the magnetic field. For scale-invariant PMFs, $\gamma=2$ as to conserve the total magnetic flux through comoving surfaces. Magnetic fields which are generated through other mechanisms~\cite{pomakov2022redshift} (such as dynamo or astrophysical sources) will have values which differ and in general $\gamma\rightarrow\gamma(z)$ can be parametrized as a function of redshift. Even for PMFs, the measured value of $\gamma$ will deviate to account for the change in flux from large scale structure formation in the mid to late universe's evolution.
+
+While the universe is nearly homogeneous and isotropic (the Cosmological Principle) on the largest scales, the inhomogeneities of matter (and dark matter) evolution are non-trivial and must generally be solved numerically using magnetohydrodynamics (MHD)~\cite{melrose2008quantum,vazza2017simulations}. Our focus however will be on the bulk properties of thermalized plasmas in (near) equilibrium. In considering the $e^{\pm}$ plasma, we introduce the microscopic energy of the charged $e$ relativistic fermion within a homogenous ($z$-direction) magnetic field~\cite{steinmetz2018magnetic} in natural units ($c=\hbar=k_{B}=1$)
+\begin{align}
+    \label{eigenenergy}
+    E(p_{z},n,{\cal B})={\tilde m}_{\pm}\sqrt{1+\frac{p_{z}^{2}}{{\tilde m}_{\pm}^{2}}+\frac{e{\cal B}n}{{\tilde m}_{\pm}^{2}}}\,,\qquad {\tilde m}_{\pm}^{2}=m^{2}+e{\cal B}\left(1\mp\frac{g}{2}\right)\,,\qquad n\in0,1,2,\ldots
+\end{align}
+where $p_{z}$ is the momentum parallel to the field axis and $n$ is the Landau orbital quantum number. The subscript $\pm$ refers to the spin polarization along the field axis: aligned $(+)$ or anti-aligned $(-)$. In \req{eigenenergy} we also introduced the effective mass ${\tilde m}_{\pm}$ which is distinct for each polarization and is a function of magnetic field strength ${\cal B}$. The parameter $g$ is the gyromagnetic ($g$-factor) of the particle. Under the PMF assumption of $\gamma=2$ in \req{cosmicscale}, we can define a cosmic magnetic scale
+\begin{align}
+    b_{0}\equiv\frac{e{\cal B}}{T^{2}}={\rm\ const.}
+\end{align}
+in terms of temperature $T$ and charge $e$ of the particles in that field.
+
+
+
+
+
+
 
 \section{Primordial electron-positron plasma}\label{sec:ElectronPositron}
-
-
-
 \section{Stray thoughts (Put somewhere!)}
 
 Our work creates a correspondence between the magnetized Fermi partition function and the free Fermi gas via a redefinition of effective mass taking into account the spin of the the electrons and positrons. The electron-positron plasma of the early universe existed between the temperatures $2\MeV>T>0.02\MeV$.  This dense and hot plasma was the environment where neutrinos decoupled and Big Bang Nucleosynthesis (BBN) occurred setting the stage for recombination and the Cosmic Microwave Background (CMB). This epoch is unique as it is the last time antimatter existed in large quantities.
 
-It was found in~\cite{gopal2004generation} that the electron, proton, photon plasma of the pre-recombination era generates, from density fluctuations, a weak PMF far below the known IGMF bound or necessarily seed field size for dynamo.
+It was found in~\cite{gopal2004generation} that the electron, proton, photon plasma of the immediate pre-recombination era generates (from density fluctuations) a weak field of ${\cal B}\simeq10^{-30}{\rm\ G}$ far below the known IGMF bound or necessarily seed field size for dynamo.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{unsrtnat}

@@ -1,4 +1,4 @@
-\begin{thebibliography}{13}
+\begin{thebibliography}{18}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -41,6 +41,12 @@ A.~M. Taylor, I.~Vovk, and A.~Neronov.
 \newblock \emph{Astronomy \& Astrophysics}, 529:\penalty0 A144, 2011.
 \newblock \doi{10.1051/0004-6361/201116441}.
 
+\bibitem[Pshirkov et~al.(2016)Pshirkov, Tinyakov, and Urban]{pshirkov2015new}
+M.~S. Pshirkov, P.~G. Tinyakov, and F.~R. Urban.
+\newblock {New limits on extragalactic magnetic fields from rotation measures}.
+\newblock \emph{Phys. Rev. Lett.}, 116\penalty0 (19):\penalty0 191302, 2016.
+\newblock \doi{10.1103/PhysRevLett.116.191302}.
+
 \bibitem[Vernstrom et~al.(2021)Vernstrom, Heald, Vazza, Galvin, West,
   Locatelli, Fornengo, and Pinetti]{vernstrom2021discovery}
 T.~Vernstrom, G.~Heald, F.~Vazza, T.~J. Galvin, J.~L. West, N.~Locatelli,
@@ -70,7 +76,7 @@ V.~P. {Pomakov}, S.~P. {O'Sullivan}, M.~{Br{\"u}ggen}, F.~{Vazza},
 \newblock \doi{10.1093/mnras/stac1805}.
 
 \bibitem[Jedamzik and Pogosian(2020)]{jedamzik2020relieving}
-A.~Jedamzik and L.~Pogosian.
+K.~Jedamzik and L.~Pogosian.
 \newblock Relieving the hubble tension with primordial magnetic fields.
 \newblock \emph{Physical Review Letters}, 125\penalty0 (18):\penalty0 181302,
   2020.
@@ -106,5 +112,32 @@ Vittorio Castellani, S~Degl'Innocenti, G~Fiorentini, M~Lissia, and B~Ricci.
 \newblock Solar neutrinos: Beyond standard solar models.
 \newblock \emph{Physics Reports}, 281\penalty0 (5-6):\penalty0 309--398, 1997.
 \newblock \doi{10.1016/S0370-1573(96)00032-4}.
+
+\bibitem[Melrose(2013)]{melrose2008quantum}
+D.~Melrose.
+\newblock \emph{Quantum plasmadynamics: Magnetized plasmas}.
+\newblock Springer, 2013.
+\newblock \doi{10.1007/978-1-4614-4045-1}.
+
+\bibitem[Vazza et~al.(2017)Vazza, Br\"uggen, Gheller, Hackstein, Wittor, and
+  Hinz]{vazza2017simulations}
+F.~Vazza, M.~Br\"uggen, C.~Gheller, S.~Hackstein, D.~Wittor, and P.~M. Hinz.
+\newblock {Simulations of extragalactic magnetic fields and of their
+  observables}.
+\newblock \emph{Class. Quant. Grav.}, 34\penalty0 (23):\penalty0 234001, 2017.
+\newblock \doi{10.1088/1361-6382/aa8e60}.
+
+\bibitem[Steinmetz et~al.(2019)Steinmetz, Formanek, and
+  Rafelski]{steinmetz2018magnetic}
+A.~Steinmetz, M.~Formanek, and J.~Rafelski.
+\newblock {Magnetic Dipole Moment in Relativistic Quantum Mechanics}.
+\newblock \emph{Eur. Phys. J. A}, 55\penalty0 (3):\penalty0 40, 2019.
+\newblock \doi{10.1140/epja/i2019-12715-5}.
+
+\bibitem[Gopal and Sethi(2005)]{gopal2004generation}
+R.~Gopal and S.~Sethi.
+\newblock {Generation of magnetic field in the pre-recombination era}.
+\newblock \emph{Mon. Not. Roy. Astron. Soc.}, 363:\penalty0 521--528, 2005.
+\newblock \doi{10.1111/j.1365-2966.2005.09442.x}.
 
 \end{thebibliography}
