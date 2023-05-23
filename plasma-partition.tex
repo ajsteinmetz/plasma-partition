@@ -73,7 +73,7 @@ The comoving density of electrons and positrons fell over eight orders of magnit
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Electron-positron magnetization}\label{sec:electronPositron}
-\noindent Within a homogenous field regime, the magnetic field varies over cosmic expansion as
+\noindent Within a homogeneous field regime, the magnetic field varies over cosmic expansion as
 \begin{align}
     \label{cosmicscale}
     {\cal B}(t)={\cal B}_{0}\left(\frac{a(t_0)}{a(t)}\right)^{\kappa}\rightarrow{\cal B}(z)={\cal B}_{0}\left(1+z\right)^{\kappa}\,,
@@ -85,12 +85,12 @@ where $a(t)$ is the scale factor for the universe's expansion (as given by the F
 \end{align}
 in terms of temperature and electric charge. In \req{magneticscale}, we have computed the bounds given in \req{igmf} for today's contemporary temperature of $T_{0}=2.7{\rm\ K}$.
 
-While the universe is nearly homogeneous and isotropic (the Cosmological Principle) on the largest scales, the inhomogeneities of matter (and dark matter) evolution are non-trivial and must generally be solved numerically using magnetohydrodynamics (MHD)~\cite{melrose2008quantum,vazza2017simulations}. Our focus however will be on the bulk properties of thermalized plasmas in (near) equilibrium. In considering $e^{\pm}$ plasma, we introduce the microscopic energy of the charged $e$ relativistic fermion within a homogenous ($z$-direction) magnetic field~\cite{steinmetz2018magnetic} in natural units ($c=\hbar=k_{B}=1$)
+While the universe is nearly homogeneous and isotropic (the Cosmological Principle) on the largest scales, the inhomogeneities of matter (and dark matter) evolution are non-trivial and must generally be solved numerically using magneto-hydrodynamics (MHD)~\cite{melrose2008quantum,vazza2017simulations}. Our focus however will be on the bulk properties of thermalized plasmas in (near) equilibrium. In considering $e^{\pm}$ plasma, we introduce the microscopic energy of the charged $e$ relativistic fermion within a homogeneous ($z$-direction) magnetic field~\cite{steinmetz2018magnetic} in natural units ($c=\hbar=k_{B}=1$)
 \begin{align}
     \label{eigenenergy}
     E^{\pm}_{n}(p_{z},{\cal B})={\tilde m}_{\pm}\sqrt{1+\frac{p_{z}^{2}}{{\tilde m}_{\pm}^{2}}+\frac{e{\cal B}n}{{\tilde m}_{\pm}^{2}}}\,,\qquad {\tilde m}_{\pm}^{2}=m_{e}^{2}+e{\cal B}\left(1\mp\frac{g}{2}\right)\,,\qquad n\in0,1,2,\ldots
 \end{align}
-where $p_{z}$ is the momentum parallel to the field axis and $n$ is the Landau orbital quantum number. The subscript $\pm$ refers to the spin polarization along the field axis: aligned $(+)$ or anti-aligned $(-)$. In \req{eigenenergy} we also introduced the effective mass ${\tilde m}_{\pm}$ which is distinct for each polarization and is a function of magnetic field strength ${\cal B}$. The parameter $g$ is the gyromagnetic ($g$-factor) of the particle.
+where $p_{z}$ is the momentum parallel to the field axis and $n$ is the Landau orbital quantum number. The subscript $\pm$ refers to the spin polarization along the field axis: aligned $(+)$ or anti-aligned $(-)$. In \req{eigenenergy} we also introduced the effective mass ${\tilde m}_{\pm}$ which is distinct for each polarization and is a function of magnetic field strength ${\cal B}$. The parameter $g$ is the gyro-magnetic ($g$-factor) of the particle.
 
 The magnetized plasma Fermi-Dirac partition function is then given by
 \begin{align}
@@ -99,13 +99,13 @@ The magnetized plasma Fermi-Dirac partition function is then given by
 \end{align}
 where $\sigma$ is a sum over electron and positron states and $s$ is a sum over polarizations. We introduce the fugacity $\lambda_{\sigma}$ and the chemical potential $\mu_{\sigma}$ noting that the electron and positron chemical potentials may differ. In a charge neutral plasma, $\mu\equiv\mu_{e^{-}}=-\mu_{e^{+}}$~\cite{elze1980relativistic}. While the primordial electron-positron plasma era was overall charge neutral, there was a small asymmetry in the charged leptons from baryon asymmetry~\cite{canetti2012matter} and the presence of protons. The resulting asymmetry in chemical potentials was small~\cite{rafelski2023short} until the temperature of the universe dropped below $T<20\keV$ and the positrons vanished from the particle inventory of the universe.
 
-We implement the Boltzmann approximation for the domain where $|\mu_{e^{-}}|/T\ll1$ which is approximately true in the temperature range of interest and apply the Euler-Maclaurin formula to convert the summation over Landau levels into an integration. The resulting partition function can then be written in terms of modified Bessel (Macdonald) functions yielding
+We implement the Boltzmann approximation for the domain where $\mu/T\ll1$ which is approximately true in the temperature range of interest and apply the Euler-Maclaurin formula to convert the summation over Landau levels into an integration. The resulting partition function can then be written in terms of modified Bessel (Macdonald) functions yielding
 \begin{align}
     \label{partitionfinal}
     \ln{\cal Z}_{e^{+}e^{-}}&\simeq\frac{T^{3}V}{2\pi^{2}}\left[2\cosh\left(\frac{\mu(T)}{T}\right)\right]\sum_{s}^{\pm}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\,,\\
     x_{\pm}&=\frac{{\tilde m}_{\pm}}{T}\rightarrow\sqrt{\frac{m_{e}^{2}}{T^{2}}+b_{0}\left(1\mp\frac{g}{2}\right)}\,.
 \end{align}
-As the $e^{\pm}$ density changes dramatically over this period, we have used the charge neutrality condition~\cite{rafelski2023short} to parametrize the chemical potential $\mu(T)$ as a function of temperature. The magnetization of the $e^{\pm}$ plasma described by \req{partitionfinal} can be written in terms of the effective mass as
+As the $e^{\pm}$ density changes dramatically over this period, we have used the charge neutrality condition~\cite{rafelski2023short} to parameterize the chemical potential $\mu(T)$ as a function of temperature. The magnetization of the $e^{\pm}$ plasma described by \req{partitionfinal} can be written in terms of the effective mass as
 \begin{align}
     \label{definemagetization}
     {\cal M}\equiv\frac{T}{V}\frac{\partial\ln{{\cal Z}_{e^{+}e^{-}}}}{\partial{\cal B}}=\sum_{s}^{\pm}\frac{T}{V}\left(\frac{\partial{\tilde m}_{s}}{\partial{\cal B}}\right)\frac{\partial\ln{{\cal Z}_{e^{+}e^{-}}}}{\partial{\tilde m}_{s}}\,,
@@ -116,7 +116,7 @@ yielding
     \left(\frac{\cal M}{\cal B}\right)&=\frac{2\alpha}{\pi b_{0}}\left[2\cosh\left(\frac{\mu(T)}{T}\right)\right]\sum_{s}^{\pm}\left[c_{1}(x_{s})K_{1}(x_{s})+c_{0}K_{0}(x_{s})\right]\,,\\
     c_{1}(x_{\pm})&=x_{\pm}\left[\frac{1}{2}-\left(\frac{1}{2}\pm\frac{g}{4}\right)\left(1+\frac{b_{0}^{2}}{12x_{\pm}}\right)\right]\,,\qquad c_{0}=b_{0}\left[\frac{1}{6}-\left(\frac{1}{4}\mp\frac{g}{8}\right)\right]\,.
 \end{align}
-Here $\alpha$ is fine-structure constant. We note that the expression for the magnetization simplifies significantly for $g=2$ which is the \lq\lq cusp\rq\rq\ gyromagnetic factor~\cite{rafelski2022study} of the Dirac particle.
+Here $\alpha$ is fine-structure constant. We note that the expression for the magnetization simplifies significantly for $g=2$ which is the \lq\lq cusp\rq\rq\ gyro-magnetic factor~\cite{rafelski2022study} of the Dirac particle.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Closing}\label{sec:conclusions}
