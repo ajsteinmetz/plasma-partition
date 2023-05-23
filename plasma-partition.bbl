@@ -140,6 +140,12 @@ G.~S. Bali, F.~Bruckmann, G.~Endrodi, Z.~Fodor, S.~D. Katz, S.~Krieg,
 \newblock \emph{JHEP}, 02:\penalty0 044, 2012.
 \newblock \doi{10.1007/JHEP02(2012)044}.
 
+\bibitem[Gopal and Sethi(2005)]{gopal2004generation}
+R.~Gopal and S.~Sethi.
+\newblock {Generation of magnetic field in the pre-recombination era}.
+\newblock \emph{Mon. Not. Roy. Astron. Soc.}, 363:\penalty0 521--528, 2005.
+\newblock \doi{10.1111/j.1365-2966.2005.09442.x}.
+
 \bibitem[Birrell et~al.(2014)Birrell, Yang, and Rafelski]{birrell2014relic}
 J.~Birrell, C.~T. Yang, and J.~Rafelski.
 \newblock {Relic Neutrino Freeze-out: Dependence on Natural Constants}.
@@ -187,11 +193,5 @@ J.~Rafelski, S.~Evans, and L.~Labun.
   $g\simeq 2$}.
 \newblock \emph{Phys. Rev. D}, 107, 2023{\natexlab{b}}.
 \newblock \doi{10.1103/PhysRevD.107.076002}.
-
-\bibitem[Gopal and Sethi(2005)]{gopal2004generation}
-R.~Gopal and S.~Sethi.
-\newblock {Generation of magnetic field in the pre-recombination era}.
-\newblock \emph{Mon. Not. Roy. Astron. Soc.}, 363:\penalty0 521--528, 2005.
-\newblock \doi{10.1111/j.1365-2966.2005.09442.x}.
 
 \end{thebibliography}
