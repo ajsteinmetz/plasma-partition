@@ -1,4 +1,4 @@
-\begin{thebibliography}{18}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -82,6 +82,13 @@ K.~Jedamzik and L.~Pogosian.
   2020.
 \newblock \doi{10.1103/PhysRevLett.125.181302}.
 
+\bibitem[Jedamzik and Abel(2013)]{jedamzik2013smallscale}
+K.~Jedamzik and T.~Abel.
+\newblock {Small-scale primordial magnetic fields and anisotropies in the
+  cosmic microwave background radiation}.
+\newblock \emph{JCAP}, 10:\penalty0 050, 2013.
+\newblock \doi{10.1088/1475-7516/2013/10/050}.
+
 \bibitem[Jedamzik and Saveliev(2019)]{jedamzik2019stringent}
 K.~Jedamzik and A.~Saveliev.
 \newblock Stringent limit on primordial magnetic fields from the cosmic
@@ -90,12 +97,12 @@ K.~Jedamzik and A.~Saveliev.
   2019.
 \newblock \doi{10.1103/PhysRevLett.123.021301}.
 
-\bibitem[Rafelski et~al.(2023)Rafelski, Birrell, Steinmetz, and
+\bibitem[Rafelski et~al.(2023{\natexlab{a}})Rafelski, Birrell, Steinmetz, and
   Yang]{rafelski2023short}
 J.~Rafelski, J.~Birrell, A.~Steinmetz, and C.~T. Yang.
 \newblock A short survey of matter-antimatter evolution in the primordial
   universe.
-\newblock \emph{MDPI Universe}, 2023.
+\newblock \emph{MDPI Universe}, 2023{\natexlab{a}}.
 \newblock \doi{10.48550/arXiv.2305.09055}.
 
 \bibitem[Bahcall et~al.(2001)Bahcall, Pinsonneault, and Basu]{bahcall2001solar}
@@ -108,7 +115,7 @@ J.~N. Bahcall, M.~H. Pinsonneault, and S.~Basu.
 
 \bibitem[Castellani et~al.(1997)Castellani, Degl'Innocenti, Fiorentini, Lissia,
   and Ricci]{castellani1997solar}
-Vittorio Castellani, S~Degl'Innocenti, G~Fiorentini, M~Lissia, and B~Ricci.
+V.~Castellani, S.~Degl'Innocenti, G.~Fiorentini, M.~Lissia, and B.~Ricci.
 \newblock Solar neutrinos: Beyond standard solar models.
 \newblock \emph{Physics Reports}, 281\penalty0 (5-6):\penalty0 309--398, 1997.
 \newblock \doi{10.1016/S0370-1573(96)00032-4}.
@@ -133,6 +140,27 @@ A.~Steinmetz, M.~Formanek, and J.~Rafelski.
 \newblock {Magnetic Dipole Moment in Relativistic Quantum Mechanics}.
 \newblock \emph{Eur. Phys. J. A}, 55\penalty0 (3):\penalty0 40, 2019.
 \newblock \doi{10.1140/epja/i2019-12715-5}.
+
+\bibitem[Elze et~al.(1980)Elze, Greiner, and Rafelski]{elze1980relativistic}
+H.~T. Elze, W.~Greiner, and J.~Rafelski.
+\newblock {The relativistic Fermi gas revisited}.
+\newblock \emph{J. Phys. G}, 6:\penalty0 L149--L153, 1980.
+\newblock \doi{10.1088/0305-4616/6/9/003}.
+
+\bibitem[Canetti et~al.(2012)Canetti, Drewes, and
+  Shaposhnikov]{canetti2012matter}
+L.~Canetti, M.~Drewes, and M.~Shaposhnikov.
+\newblock {Matter and Antimatter in the Universe}.
+\newblock \emph{New J. Phys.}, 14:\penalty0 095012, 2012.
+\newblock \doi{10.1088/1367-2630/14/9/095012}.
+
+\bibitem[Rafelski et~al.(2023{\natexlab{b}})Rafelski, Evans, and
+  Labun]{rafelski2022study}
+J.~Rafelski, S.~Evans, and L.~Labun.
+\newblock {Study of QED singular properties for variable gyromagnetic ratio
+  $g\simeq 2$}.
+\newblock \emph{Phys. Rev. D}, 107, 2023{\natexlab{b}}.
+\newblock \doi{10.1103/PhysRevD.107.076002}.
 
 \bibitem[Gopal and Sethi(2005)]{gopal2004generation}
 R.~Gopal and S.~Sethi.
