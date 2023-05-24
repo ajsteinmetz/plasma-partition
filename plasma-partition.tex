@@ -78,22 +78,33 @@ or almost 1 billion times more abundant than the baryons. Constancy of this rati
     \label{fusion}
     \gamma+\gamma\leftrightarrow e^{+}+e^{-}\,.
 \end{align}
-The comoving density of electrons and positrons fell over eight orders of magnitude as the universe cooled. At $T=20.3\keV$, the lepton asymmetry became evident as the few remaining excess electrons could no longer annihilate as the positrons vanished entirely. This process took no longer than an afternoon lunch break. The new comoving ratio is slightly offset by the presence of $\alpha$ particles and the other light elements which contain neutrons.
+The comoving density of electrons and positrons fell over eight orders of magnitude as the universe cooled. At $T=20.3\keV$, the lepton asymmetry became evident as the few remaining excess electrons could no longer annihilate as the positrons vanished entirely. This process took no longer than an afternoon lunch break. {\color{blue}By the charge neutrality,} the new comoving ratio is slightly offset by the presence of $\alpha$ particles and the other light elements which contain neutrons.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Electron-positron magnetization}\label{sec:electronPositron}
 % Par down this discussion of z redshift, while interesting, it is too much detail for our short note here. Put in longer paper or in thesis work. Put cosmic scale (5) above equation (4) and then define expansion and power for redshift. Mention this is a testable prediction of PMFs as such fields are conserved over comoving surfaces.
-\noindent Within a homogeneous field regime, the magnetic field varies over cosmic expansion as
+\noindent 
+Within a homogeneous field regime, the magnetic field varies over cosmic expansion as
 \begin{align}
     \label{cosmicscale}
     {\cal B}(t)={\cal B}_{0}\left(\frac{a(t_0)}{a(t)}\right)^{\kappa}\rightarrow{\cal B}(z)={\cal B}_{0}\left(1+z\right)^{\kappa}\,,
 \end{align}
-where $a(t)$ is the scale factor for the universe's expansion (as given by the FLRW metric), $z$ is the redshift, and ${\cal B}_{0}$ is the comoving value of the magnetic field defined by the contemporary value of the magnetic field today. The parameter $\kappa$ is then determined by the physical origin of the magnetic field. For scale-invariant PMFs, $\kappa=2$ as to conserve the total magnetic flux through comoving surfaces~\cite{durrer2013cosmological}. Magnetic fields which are generated through other mechanisms~\cite{pomakov2022redshift} (such as dynamo or astrophysical sources) will have values which differ and in general $\kappa\rightarrow\kappa(z)$ can be parametrized as a function of redshift. Even for PMFs, the measured value of $\kappa$ will deviate to account for the change in flux from large scale structure formation in the mid to late universe's evolution. Under the PMF assumption of $\kappa=2$ in \req{cosmicscale}, we can define a cosmic magnetic scale
-\begin{align}
-    \label{magneticscale}
-    b_{0}\equiv\frac{e{\cal B}}{T^{2}}={\rm\ const.}\qquad10^{-3}>b_{0}>10^{-11}\,,
+where $a(t)$ is the scale factor for the universe's expansion (as given by the FLRW metric), $z$ is the redshift, and ${\cal B}_{0}$ is the comoving value of the magnetic field defined by the contemporary value of the magnetic field today. The parameter $\kappa$ is then determined by the physical origin of the magnetic field. For scale-invariant PMFs, $\kappa=2$ as to conserve the total magnetic flux through comoving surfaces~\cite{durrer2013cosmological}. Magnetic fields which are generated through other mechanisms~\cite{pomakov2022redshift} (such as dynamo or astrophysical sources) will have values which differ and in general $\kappa\rightarrow\kappa(z)$ can be parametrized as a function of redshift. Even for PMFs, the measured value of $\kappa$ will deviate to account for the change in flux from large scale structure formation in the mid to late universe's evolution. 
+
+
+%Under the PMF assumption of $\kappa=2$ in \req{cosmicscale}, we can define a cosmic magnetic scale
+%\begin{align}
+%    \label{magneticscale}
+%    b_{0}\equiv\frac{e{\cal B}}{T^{2}}={\rm\ const.}\qquad10^{-3}>b_{0}>10^{-11}\,,
+%\end{align}
+%in terms of temperature and electric charge. In \req{magneticscale}, we have computed the bounds given in \req{igmf} for today's contemporary temperature of $T_{0}=2.7{\rm\ K}$.
+
+
+{\color{blue}On the other hands, as the universe undergoes the isentropic expansion,  the temperature gradually decreases as $T\propto1/a(t)$. Under the PMF assumption of $\kappa=2$ in \req{cosmicscale}, we can define a {\color{blue}dimensionless} cosmic magnetic scale
+\begin{align}\label{magneticscale}
+b_{0}\equiv\frac{e{\cal B}}{T^{2}}=\left(\frac{e{\cal B}}{T^{2}}\right)_{\!\!t_0}\!\!={\rm\ const.}\qquad10^{-3}>b_{0}>10^{-11}\,,
 \end{align}
-in terms of temperature and electric charge. In \req{magneticscale}, we have computed the bounds given in \req{igmf} for today's contemporary temperature of $T_{0}=2.7{\rm\ K}$.
+where the subscript $t_0$ denotes the present day value. During the universe expansion, $b_0$ is a conserved quantity, and We can compute the bounds given in \req{igmf} by using the present day observation of IGMF and CMB temperature $T_{0}=2.7{\rm\ K}$.}
 
 We take inspiration from Ch. 9 of Melrose's treatise on magnetized plasmas~\cite{melrose2008quantum}. Our focus however will be on the bulk properties of thermalized plasmas in (near) equilibrium. In considering $e^{+}e^{-}$ plasma, we introduce the microscopic energy of the charged $e$ relativistic fermion within a homogeneous ($z$-direction) magnetic field~\cite{steinmetz2018magnetic} in natural units ($c=\hbar=k_{B}=1$)
 % Re add back in traditional expression for eigenenergies which we THEN rearrange into our prefered form.
@@ -106,15 +117,15 @@ where $p_{z}$ is the momentum parallel to the field axis and $n$ is the Landau o
 The magnetized plasma Fermi-Dirac partition function is then given by
 \begin{align}
     \label{partition}
-    \ln{\cal Z}_{e^{+}e^{-}}=\frac{2e{\cal B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm1}\sum_{s}^{\pm}\sum_{n=0}^{\infty}\int_{0}^{\infty}\left[\ln\left(1+\lambda_{\sigma}e^{-E_{n}^{s}/T}\right)\right]\,,\qquad\lambda_{\sigma}=e^{\mu_{\sigma}/T}\,,
+    \ln{\cal Z}_{e^{+}e^{-}}=\frac{2e{\cal B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm1}\sum_{s}^{\pm}\sum_{n=0}^{\infty}\int_{0}^{\infty}\left[\ln\left(1+\lambda_{\sigma}e^{-E_{n}^{s}/T}\right)\right]\,,\qquad{\color{blue}\lambda_{\sigma}=e^{{\sigma}\mu/T}}\,,
 \end{align}
 where $\sigma$ is a sum over electron and positron states and $s$ is a sum over polarizations. We introduce the fugacity $\lambda_{\sigma}$ and the chemical potential $\mu_{\sigma}$ noting that the electron and positron chemical potentials may differ. In a charge neutral plasma, $\mu\equiv\mu_{e^{-}}=-\mu_{e^{+}}$~\cite{elze1980relativistic}. While the primordial electron-positron plasma era was overall charge neutral, there was a small asymmetry in the charged leptons from baryon asymmetry~\cite{canetti2012matter} and the presence of protons. The resulting asymmetry in chemical potentials was small~\cite{rafelski2023short} until the temperature of the universe dropped below $T<20\keV$ and the positrons vanished from the particle inventory of the universe.
 
-We implement the Boltzmann approximation for the domain where $\mu/T\ll1$ which is approximately true in the temperature range of interest and apply the Euler-Maclaurin formula to convert the summation over Landau levels into an integration. The resulting partition function can then be written in terms of modified Bessel (Macdonald) functions yielding
+We implement the Boltzmann approximation for the domain where ${\color{blue}m_e\ll T}$ which is approximately true in the temperature range of interest and apply the Euler-Maclaurin formula to convert the summation over Landau levels into an integration. The resulting partition function can then be written in terms of modified Bessel (Macdonald) functions yielding
 \begin{align}
     \label{partitionfinal}
     \ln{\cal Z}_{e^{+}e^{-}}&\simeq\frac{T^{3}V}{2\pi^{2}}\left[2\cosh\left(\frac{\mu(T)}{T}\right)\right]\sum_{s}^{\pm}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\,,\\
-    x_{\pm}&=\frac{{\tilde m}_{\pm}}{T}\rightarrow\sqrt{\frac{m_{e}^{2}}{T^{2}}+b_{0}\left(1\mp\frac{g}{2}\right)}\,.
+    x_{\pm}&=\frac{{\tilde m}_{\pm}}{T}{\color{blue}=}\sqrt{\frac{m_{e}^{2}}{T^{2}}+b_{0}\left(1\mp\frac{g}{2}\right)}\,.
 \end{align}
 As the $e^{+}e^{-}$ density changes dramatically over this period, we have used the charge neutrality condition~\cite{rafelski2023short} to parameterize the chemical potential $\mu(T)$ as a function of temperature. The magnetization of the $e^{+}e^{-}$ plasma described by \req{partitionfinal} can be written in terms of the effective mass as
 \begin{align}
@@ -125,8 +136,8 @@ yielding
 \begin{align}
     \label{magnetization}
     \left(\frac{\cal M}{\cal B}\right)=\frac{2\alpha}{\pi b_{0}}\left[2\cosh\left(\frac{\mu(T)}{T}\right)\right]\sum_{s}^{\pm}\left[c_{1}(x_{s})K_{1}(x_{s})+c_{0}K_{0}(x_{s})\right]\,,\\
-    c_{1}(x_{\pm})=x_{\pm}\left[\frac{1}{2}-\left(\frac{1}{2}\pm\frac{g}{4}\right)\left(1+\frac{b_{0}^{2}}{12x_{\pm}}\right)\right]\,,\qquad c_{0}=b_{0}\left[\frac{1}{6}-\left(\frac{1}{4}\mp\frac{g}{8}\right)\right]\,.\\
-    {\cal M}=\frac{e}{\pi^{2}}T^{2}\cosh\left(\frac{\mu(T)}{T}\right)
+    c_{1}(x_{\pm})=x_{\pm}\left[\frac{1}{2}-\left(\frac{1}{2}\pm\frac{g}{4}\right)\left(1+\frac{b_{0}^{2}}{12x_{\pm}}\right)\right]\,,\qquad c_{0}=b_{0}\left[\frac{1}{6}-\left(\frac{1}{4}\mp{\color{blue}\pm?}\frac{g}{8}\right)\right]\,.\\
+    {\cal M}=\frac{\sqrt{4\pi\alpha}}{ \pi^{2}}T^{2}\cosh\left(\frac{\mu(T)}{T}\right)\sum_{s}^{\pm}\left[c_{1}(x_{s})K_{1}(x_{s})+c_{0}K_{0}(x_{s})\right]
 \end{align}
 Here $\alpha$ is fine-structure constant. We note that the expression for the magnetization simplifies significantly for $g=2$ which is the \lq\lq cusp\rq\rq\ gyro-magnetic factor~\cite{rafelski2022study} of the Dirac particle.
 
