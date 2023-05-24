@@ -158,14 +158,6 @@ D.~Melrose.
 \newblock Springer, 2013.
 \newblock \doi{10.1007/978-1-4614-4045-1}.
 
-\bibitem[Vazza et~al.(2017)Vazza, Br\"uggen, Gheller, Hackstein, Wittor, and
-  Hinz]{vazza2017simulations}
-F.~Vazza, M.~Br\"uggen, C.~Gheller, S.~Hackstein, D.~Wittor, and P.~M. Hinz.
-\newblock {Simulations of extragalactic magnetic fields and of their
-  observables}.
-\newblock \emph{Class. Quant. Grav.}, 34\penalty0 (23):\penalty0 234001, 2017.
-\newblock \doi{10.1088/1361-6382/aa8e60}.
-
 \bibitem[Steinmetz et~al.(2019)Steinmetz, Formanek, and
   Rafelski]{steinmetz2018magnetic}
 A.~Steinmetz, M.~Formanek, and J.~Rafelski.
@@ -193,5 +185,13 @@ J.~Rafelski, S.~Evans, and L.~Labun.
   $g\simeq 2$}.
 \newblock \emph{Phys. Rev. D}, 107, 2023{\natexlab{b}}.
 \newblock \doi{10.1103/PhysRevD.107.076002}.
+
+\bibitem[Vazza et~al.(2017)Vazza, Br\"uggen, Gheller, Hackstein, Wittor, and
+  Hinz]{vazza2017simulations}
+F.~Vazza, M.~Br\"uggen, C.~Gheller, S.~Hackstein, D.~Wittor, and P.~M. Hinz.
+\newblock {Simulations of extragalactic magnetic fields and of their
+  observables}.
+\newblock \emph{Class. Quant. Grav.}, 34\penalty0 (23):\penalty0 234001, 2017.
+\newblock \doi{10.1088/1361-6382/aa8e60}.
 
 \end{thebibliography}
