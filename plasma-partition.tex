@@ -17,6 +17,25 @@
 \usepackage{float}
 \usepackage{doi}
 
+% Useful macros for equations and units in HEP
+\newcommand*{\TeV}{\text{ TeV}}
+\newcommand*{\GeV}{\text{ GeV}}
+\newcommand*{\MeV}{\text{ MeV}}
+\newcommand*{\keV}{\text{ keV}}
+\newcommand*{\eV}{\text{ eV}}
+\newcommand*{\meV}{\text{ meV}}
+\newcommand*{\bb}{\boldsymbol}
+\newcommand*{\beqn}{\begin{equation}}
+\newcommand*{\eeqn}{\end{equation}}
+\newcommand{\req}[1]{Eq.\,(\ref{#1})}
+\newcommand{\rf}[1]{Fig.~{\ref{#1}}}
+\newcommand{\rsec}[1]{Sect.\,{\ref{#1}}}
+
+% Useful macros for annotation
+\newcommand*{\xred}{\color{red}}
+\newcommand*{\xblue}{\color{blue}}
+\newcommand*{\xgreen}{\color{green}}
+
 \title{\boldmath Magnetic properties of finite temperature primordial electron-positron plasma}
 
 % Author Orcid ID: Define per author
@@ -78,7 +97,7 @@ or almost 1 billion times more abundant than the baryons. Constancy of this rati
     \label{fusion}
     \gamma+\gamma\leftrightarrow e^{+}+e^{-}\,.
 \end{align}
-The comoving density of electrons and positrons fell over eight orders of magnitude as the universe cooled. At $T=20.3\keV$, the lepton asymmetry became evident as the few remaining excess electrons could no longer annihilate as the positrons vanished entirely. This process took no longer than an afternoon lunch break. {\color{blue}By the charge neutrality,} the new comoving ratio is slightly offset by the presence of $\alpha$ particles and the other light elements which contain neutrons.
+The comoving density of electrons and positrons fell over eight orders of magnitude as the universe cooled. At $T=20.3\keV$, the lepton asymmetry became evident as the few remaining excess electrons could no longer annihilate as the positrons vanished entirely. This process took no longer than an afternoon lunch break. Because of charge neutrality, the post-annihilation comoving ratio $n_{e^{-}}/n_{B}=0.87$ is slightly offset from unity by the presence of $\alpha$ particles and the other light elements which contain neutrons.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Electron-positron magnetization}\label{sec:electronPositron}
@@ -139,6 +158,7 @@ yielding
     c_{1}(x_{\pm})=x_{\pm}\left[\frac{1}{2}-\left(\frac{1}{2}\pm\frac{g}{4}\right)\left(1+\frac{b_{0}^{2}}{12x_{\pm}}\right)\right]\,,\qquad c_{0}=b_{0}\left[\frac{1}{6}-\left(\frac{1}{4}\mp{\color{blue}\pm?}\frac{g}{8}\right)\right]\,.\\
     {\cal M}=\frac{\sqrt{4\pi\alpha}}{ \pi^{2}}T^{2}\cosh\left(\frac{\mu(T)}{T}\right)\sum_{s}^{\pm}\left[c_{1}(x_{s})K_{1}(x_{s})+c_{0}K_{0}(x_{s})\right]
 \end{align}
+% The above equation (13) needs a quick check if a factor of 1/2 is missing or not.
 Here $\alpha$ is fine-structure constant. We note that the expression for the magnetization simplifies significantly for $g=2$ which is the \lq\lq cusp\rq\rq\ gyro-magnetic factor~\cite{rafelski2022study} of the Dirac particle.
 
 % For a plot in this section, show susceptibility rather than (M/B) and include several values of b_0 while removing the zero chemical potential lines. Note the paramagnetic regime over the diamagnetic regime which is suppported by the huge density of pairs which overwhelms the suppression of magnetism due to higher temperatures.
@@ -148,6 +168,8 @@ Here $\alpha$ is fine-structure constant. We note that the expression for the ma
 
 \section{Snippets to Place}
 While the universe is nearly homogeneous and isotropic (the Cosmological Principle) on the largest scales, the inhomogeneities of matter (and dark matter) evolution are non-trivial and must generally be solved numerically using magneto-hydrodynamics (MHD)~\cite{melrose2008quantum,vazza2017simulations}.
+
+While an imbalance in electrons and positrons leads to a non-zero particle chemical potential, an imbalance in angular momentum can result in a spin chemical potential. As the universe appears to have zero overall angular momentum, any non-zero spin chemical potential in the electron-positron sector would need to be compensated by either other species in the comoving volume, or it would indicate the presence of angular momentum domains.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
