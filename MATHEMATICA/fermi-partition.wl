@@ -115,19 +115,19 @@
 (* 	GridLines -> Automatic, GridLinesStyle -> LightGray]*)
 
 
-(* ::Text:: *)
-(*And in this plot, we plot the magnetization as a function of magnetic field at fixed temperatures.*)
-
-
 (* ::Input:: *)
 (*g = 2;*)
 (*(T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g], b] + D[lnZ[V, u, T, b, -1, g], b])/Cosh[u/T] /. b -> b/T^(2) // FullSimplify // TraditionalForm*)
 
 
+(* ::Text:: *)
+(*And in this plot, we plot the magnetization as a function of magnetic field at fixed temperatures. The variable "b" is no longer cosmic scale, but magnetic field strength.*)
+
+
 (* ::Input:: *)
 (*f[T_, b_] = (T/V)(q/T^(2))(D[lnZ[V, u, T, b, 1, g],b]+D[lnZ[V,u,T,b,-1, g],b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2)/.b->b/T^(2)/.m->511;*)
-(*TValues = {1, 5,10,20};*)
-(*LogPlot[Evaluate[f[#, b] & /@ TValues], {b,0,1},*)
+(*TValues = {20, 50,100,200};*)
+(*LogPlot[Evaluate[f[#, b] & /@ TValues], {b,0,10^(-3)},*)
 (* 	PlotRange -> All,*)
 (* 	AxesLabel -> {"b", "f[\!\(\*SubscriptBox[\(b\), \(0\)]\)]/\!\(\*SubscriptBox[\(H\), \(c\)]\)"},*)
 (* 	PlotStyle -> {Blue,Red,Black,Orange},*)
@@ -137,4 +137,4 @@
 
 
 (* ::Text:: *)
-(*The thing that is unclear to me is why increased temperatures lead to more magnetization rather than less. Is the partition function sick in some manner? Something feels wrong with this behavior.*)
+(*The thing that is unclear to me is why increased temperatures lead to more magnetization rather than less. Is the partition function sick in some manner? Something feels wrong with this behavior. The Bessel K[x] functions mostly decay to zero for large values of x. Therefore, having x=m/T be the controlling variable leads to situations where for low temperature, the Bessel functions are killed, but for high temperature, they become large. To be fair, in the Boltzmann approximation, you do not expect the low temperature behavior to be correct as the Boltzmann distribution is very unlike the Fermi-Dirac distribution. I think the issue must be that the Boltzmann k=1 approximation must be only valid within a particular domain.*)
