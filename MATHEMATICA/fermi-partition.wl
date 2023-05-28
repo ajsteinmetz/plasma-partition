@@ -121,9 +121,12 @@
 
 (* ::Input:: *)
 (*g = 2;*)
-(*(T/V)(q/T^(2))(D[lnZ[V, u, T, b, 1, g],b]+D[lnZ[V,u,T,b,-1, g],b])/Cosh[u/T]/.b->b/T^(2)//FullSimplify//TraditionalForm*)
+(*(T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g], b] + D[lnZ[V, u, T, b, -1, g], b])/Cosh[u/T] /. b -> b/T^(2) // FullSimplify // TraditionalForm*)
+
+
+(* ::Input:: *)
 (*f[T_, b_] = (T/V)(q/T^(2))(D[lnZ[V, u, T, b, 1, g],b]+D[lnZ[V,u,T,b,-1, g],b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2)/.b->b/T^(2)/.m->511;*)
-(*TValues = {20, 50,100,200};*)
+(*TValues = {1, 5,10,20};*)
 (*LogPlot[Evaluate[f[#, b] & /@ TValues], {b,0,1},*)
 (* 	PlotRange -> All,*)
 (* 	AxesLabel -> {"b", "f[\!\(\*SubscriptBox[\(b\), \(0\)]\)]/\!\(\*SubscriptBox[\(H\), \(c\)]\)"},*)
