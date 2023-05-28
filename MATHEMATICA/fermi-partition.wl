@@ -27,7 +27,8 @@ x[T_,b_,s_,g_]:=Sqrt[m^(2)/T^(2)+b(1-s g/2)];
 (*Define the partition function*)
 
 
-lnZ[V_,u_,T_,b_,s_,g_]:=(T^(3)V/(2Pi)^(2))(2Cosh[u/T])(x[T,b,s,g]^(2)BesselK[2,x[T,b,s,g]]+b x[T,b,s,g]BesselK[1,x[T,b,s,g]]/2+b^(2)BesselK[0,x[T,b,s,g]]/12);
+lnZ[V_,u_,T_,b_,s_,g_]:=(T^(3)V/(2Pi)^(2))(2Cosh[u/T])(x[T,b,s,g]^(2)BesselK[2,x[T,b,s,g]]+\
+b x[T,b,s,g]BesselK[1,x[T,b,s,g]]/2+b^(2)BesselK[0,x[T,b,s,g]]/12);
 
 
 (* ::Subsection::Closed:: *)
@@ -42,7 +43,8 @@ lnZ[V_,u_,T_,b_,s_,g_]:=(T^(3)V/(2Pi)^(2))(2Cosh[u/T])(x[T,b,s,g]^(2)BesselK[2,x
 (*Check that b=0 limit magnetization is zero*)
 
 
-(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2],b]+D[lnZ[V,u,T,b,-1,2],b])/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
+(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2],b]+\
+D[lnZ[V,u,T,b,-1,2],b])/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
 
 
 (* ::Section:: *)
@@ -57,7 +59,8 @@ lnZ[V_,u_,T_,b_,s_,g_]:=(T^(3)V/(2Pi)^(2))(2Cosh[u/T])(x[T,b,s,g]^(2)BesselK[2,x
 (*Perform the magnetization calculation and sum the two polarization*)
 
 
-(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2],b]+D[lnZ[V,u,T,b,-1,2],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
+(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2],b]+\
+D[lnZ[V,u,T,b,-1,2],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
 
 
 (* ::Text:: *)
