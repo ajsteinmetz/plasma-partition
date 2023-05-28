@@ -98,15 +98,19 @@
 (* 	GridLines -> Automatic, GridLinesStyle -> LightGray]*)
 
 
+(* ::Subsection:: *)
+(*Wrangling the behavior of temperature*)
+
+
 (* ::Text:: *)
-(*Here we plot the magnetization versus temperature for a fixed magnetic field, rather than fixed scale. Essentially, we' re allowing the temperature to vary independently of the magnetic field. Below we see the magnetization at high temperature is suppressed compared to the comoving conserved magnetic flux case which has the magnetic field grow with temperature accordingly.*)
+(*Here we plot the magnetization versus temperature for a fixed magnetic field, rather than fixed scale. Essentially, we're allowing the temperature to vary independently while the magnetic field strength remains constant. Below we see the magnetization at high temperature is suppressed compared to the comoving conserved magnetic flux case which has the magnetic field grow with temperature accordingly.*)
 
 
 (* ::Input:: *)
 (*g = {2};*)
-(*f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g], b] + D[lnZ[V, u, T, b, -1, g], b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2) /. m -> 511;*)
 (*bValues = {10^(-3), 10^(-3)*(20)^(2)/T^(2)};*)
-(*LogLogPlot[Evaluate[f[T, #] & /@ bValues], {T,20,2000},*)
+(*f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g], b] + D[lnZ[V, u, T, b, -1, g], b])/Cosh[u/T];*)
+(*LogLogPlot[Evaluate[f[T, #]/. q -> (4 Pi/137)/m^(2) /. m -> 511 & /@ bValues], {T,20,2000},*)
 (* 	PlotRange -> All,*)
 (* 	AxesLabel -> {"T [keV]", "f[T]/\!\(\*SubscriptBox[\(H\), \(c\)]\)"},*)
 (* 	PlotStyle -> {Blue, Red},*)
@@ -115,13 +119,21 @@
 (* 	GridLines -> Automatic, GridLinesStyle -> LightGray]*)
 
 
+(* ::Text:: *)
+(*However, we still have this strange behavior that magnetization increases with temperature, which seems backwards. The magnetic field is no long being "boosted" by the FLRW scale factor a(t) as we travel to higher temperatures. The magnetization should in principle drop as the temperature increases.*)
+
+
+(* ::Text:: *)
+(*In the next input function we determine the magnetization as a function of magnetic field and temperature as independent quantities. The variable "b" is no longer cosmic scale, but magnetic field strength.*)
+
+
 (* ::Input:: *)
 (*g = 2;*)
 (*(T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g], b] + D[lnZ[V, u, T, b, -1, g], b])/Cosh[u/T] /. b -> b/T^(2) // FullSimplify // TraditionalForm*)
 
 
 (* ::Text:: *)
-(*And in this plot, we plot the magnetization as a function of magnetic field at fixed temperatures. The variable "b" is no longer cosmic scale, but magnetic field strength.*)
+(*And using this result, we plot the magnetization as a function of magnetic field at several fixed temperatures. Again note that the variable "b" is no longer cosmic scale, but magnetic field strength.*)
 
 
 (* ::Input:: *)
@@ -129,10 +141,10 @@
 (*TValues = {20, 50,100,200};*)
 (*LogPlot[Evaluate[f[#, b] & /@ TValues], {b,0,10^(-3)},*)
 (* 	PlotRange -> All,*)
-(* 	AxesLabel -> {"b", "f[\!\(\*SubscriptBox[\(b\), \(0\)]\)]/\!\(\*SubscriptBox[\(H\), \(c\)]\)"},*)
+(* 	AxesLabel -> {"eB", "f[eB]/\!\(\*SubscriptBox[\(H\), \(c\)]\)"},*)
 (* 	PlotStyle -> {Blue,Red,Black,Orange},*)
 (* 	PlotLegends -> Placed[LineLegend[{"T = 20 [keV]", "T = 50 [keV]","T = 100 [keV]","T = 200 [keV]"}], {0.8, 0.4}],*)
-(* 	PlotLabel -> "Plot of f[\!\(\*SubscriptBox[\(b\), \(0\)]\)] from \!\(\*SubscriptBox[\(b\), \(0\)]\) = 0 to 1",*)
+(* 	PlotLabel -> "Plot of f[eB] from eB = 0 to \!\(\*SuperscriptBox[\(10\), \(-3\)]\)",*)
 (* 	GridLines -> Automatic, GridLinesStyle -> LightGray]*)
 
 
