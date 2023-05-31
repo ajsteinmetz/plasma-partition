@@ -17,62 +17,56 @@
 
 
 (* ::Text:: *)
-(*Define the Bessel parameter X*)
+(*Define the Bessel parameter X.*)
 
 
 x[T_, b_, s_, g_] := Sqrt[m^(2)/T^(2) + b (1 - s g/2)];
 
 
-x[T,b,-1,2]//TraditionalForm
-x[T,b,1,2]//TraditionalForm
+x[T,b,-1,2]//TraditionalForm;
+x[T,b,1,2]//TraditionalForm;
 
 
 (* ::Text:: *)
-(*Define the partition function*)
+(*Define the partition function.*)
 
 
 lnZ[V_, u_, T_, b_, s_, g_] := (T^(3) V/(2 Pi)^(2)) (2 Cosh[u/T]) (x[T, b, s, g]^(2) BesselK[2, x[T, b, s, g]] + \
-              b x[T, b, s, g] BesselK[1, x[T, b, s, g]]/2 + b^(2) BesselK[0, x[T, b, s, g]]/12);
+              b x[T, b, s, g] BesselK[1, x[T, b, s, g]]/2 + b^(2) BesselK[0, x[T, b, s, g]]/12)
 
 
+lnZ[V,u,T,b,-1,2]+lnZ[V,u,T,b,1,2]//TraditionalForm
 lnZ[V,u,T,b,-1,2]+lnZ[V,u,T,b,1,2]//FullSimplify//TraditionalForm
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Zero B-field limit test*)
 
 
-(T/V)(q/T^(2))D[lnZ[V,u,T,b,1,2],b]/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
-(T/V)(q/T^(2))D[lnZ[V,u,T,b,-1,2],b]/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
+(T/V)(q/T^(2))D[lnZ[V,u,T,b,1,2],b]/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm;
+(T/V)(q/T^(2))D[lnZ[V,u,T,b,-1,2],b]/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm;
 
 
 (* ::Text:: *)
-(*Check that b=0 limit magnetization is zero*)
+(*Check that b=0 limit magnetization is zero.*)
 
 
 (T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2],b]+\
 D[lnZ[V,u,T,b,-1,2],b])/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
 
 
-(m q T BesselK[1, m/T] Cosh[u/T])/(4 \[Pi]^2) Exp[us/T] - (m q T BesselK[1, m/T] Cosh[u/T])/(4 \[Pi]^2) Exp[-us/T] // FullSimplify
-
-
-bT^(2) = (T V Cosh[u/
-                         T] ((b^2 T^2 + 12 m^2) BesselK[0, Sqrt[m^2/T^2]] + 
-                          6 (b + 4) T^2 (Sqrt[2 b + m^2/T^2] BesselK[1, Sqrt[m^2/T^2 + 2 b]] +
-                                          Sqrt[m^2/T^2] BesselK[1, Sqrt[m^2/T^2]]) + (b (b + 24) T^2 + 
-                                         12 m^2) BesselK[0, Sqrt[m^2/T^2 + 2 b]]))/(24 \[Pi]^2)
-
-
 (* ::Text:: *)
-(*Here is my thinking M[=]B/Subscript[\[Mu], 0] and we have b=eB/T^2. So we then need for mean field self magnetization M->Subscript[M, m]=Subscript[B, m]/Subscript[\[Mu], 0]=bT^2/Subscript[e\[Mu], 0]*)
+(*Introduce spin potential as an exponential weight. Doing this, I expect that the spin potential should manifest as a Sinh[us/T] term in the partition function. Here is my thinking: M[=]B/Subscript[\[Mu], 0] and we have b=eB/T^2. So we then need for mean field self magnetization M->Subscript[M, m]=Subscript[B, m]/Subscript[\[Mu], 0]=bT^2/Subscript[e\[Mu], 0].*)
+
+
+(m q T BesselK[1, m/T] Cosh[u/T])/(4 \[Pi]^2) Exp[us/T] - (m q T BesselK[1, m/T] Cosh[u/T])/(4 \[Pi]^2) Exp[-us/T] // FullSimplify
 
 
 (* ::Section:: *)
 (*Magnetization*)
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Evaluating magnetization*)
 
 
@@ -89,6 +83,15 @@ D[lnZ[V,u,T,b,-1,2],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
 
 
 (q/T^(2))D[(q (-4 b T^2 BesselK[0,Sqrt[2 b+m^2/T^2]]+2 b T^2 BesselK[0,m/T]-((6 m^2+b (12+b) T^2) BesselK[1,Sqrt[2 b+m^2/T^2]])/Sqrt[2 b+m^2/T^2]+6 m T BesselK[1,m/T]) Cosh[u/T])/(24 \[Pi]^2),b]//FullSimplify//TraditionalForm;
+
+
+(* ::Text:: *)
+(*Let' s determine the positive polarization magnetization (with g = 2). We've divided out the coefficient (q^2/2 \[Pi]^2)(T^2/m^2) shared between the two expressions. We've also introduced the spin fugacity \[Xi].*)
+
+
+(q^(2)T^(2)/(2 Pi^(2)m^(2)))^(-1)(q/m^(2))(T/V)(q/T^(2))(\[Xi]^(-1) D[lnZ[V,u,T,b,1,2],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
+(q^(2)T^(2)/(2 Pi^(2)m^(2)))^(-1)(q/m^(2))(T/V)(q/T^(2))(\[Xi] D[lnZ[V,u,T,b,-1,2],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
+(q^(2)T^(2)/(2 Pi^(2)m^(2)))^(-1)(q/m^(2))(T/V)(q/T^(2))(\[Xi]^(-1) D[lnZ[V,u,T,b,1,2],b] + \[Xi] D[lnZ[V,u,T,b,-1,2],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
 
 
 (* ::Subsection:: *)
@@ -109,6 +112,31 @@ LogLogPlot[Evaluate[f[T, #] & /@ bValues], {T, 20, 2000},
  	PlotStyle -> {Blue, Red},
  	PlotLegends -> Placed[LineLegend[{"b = \!\(\*SuperscriptBox[\(10\), \(-3\)]\)", "b = \!\(\*SuperscriptBox[\(10\), \(-11\)]\)"}], {0.8, 0.4}],
  	PlotLabel -> "Plot of f[T] from T = 20 to 2,000 keV",
+ 	GridLines -> Automatic, GridLinesStyle -> LightGray]
+
+
+(* ::Text:: *)
+(*Let' s also plot the external fields over the same temperature range. The expressions for the external fields in dimensional units are as follows:*)
+
+
+B[T_, b_] := (T/511)^2 b
+LogLogPlot[{B[T, 10^(-3)], B[T, 10^(-11)]}, {T, 20, 2000},
+  PlotStyle -> {Directive[Dashed, Blue], Directive[Dashed, Red]},
+  PlotLegends -> Placed[LineLegend[{"b = \!\(\*SuperscriptBox[\(10\), \(-3\)]\)", "b = \!\(\*SuperscriptBox[\(10\), \(-11\)]\)"}], {0.8, 0.6}],
+  AxesLabel -> {"T [keV]", "M[T]/\!\(\*SubscriptBox[\(H\), \(c\)]\)"},
+  GridLines -> Automatic, GridLinesStyle -> LightGray,
+  PlotRange -> All]
+
+
+g = {1.18, 2, 5};
+g = 2;
+f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g], b] + D[lnZ[V, u, T, b, -1, g], b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2) /. m -> 511;
+bValues = {10^(-3), 10^(-11)};
+LogLogPlot[Evaluate[{f[T, #],B[T,#]} & /@ bValues], {T, 20, 2000},
+ 	PlotRange -> All,
+ 	AxesLabel -> {"T [keV]", "M[T]/\!\(\*SubscriptBox[\(H\), \(C\)]\)"},
+ 	PlotStyle -> {Blue,Directive[Dashed,Blue],Red,Directive[Dashed, Red]},
+ 	PlotLegends -> Placed[LineLegend[{"M|\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)","B|\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)","M|\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-11\)]\)","B|\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-11\)]\)"}], {0.8, 0.3}],
  	GridLines -> Automatic, GridLinesStyle -> LightGray]
 
 
