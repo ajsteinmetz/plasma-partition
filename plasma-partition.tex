@@ -5,7 +5,7 @@
 
 % Packages
 \usepackage{arxiv}
-\usepackage[colorlinks=true,linkcolor=cyan,citecolor=cyan]{hyperref}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
 \usepackage[numbers]{natbib}
 \usepackage{authblk}
 \usepackage{graphicx}
@@ -112,7 +112,7 @@ where ${\cal B}_{0}$ is the comoving value of the magnetic field defined by the 
 From \req{tscale} and \req{bscale}, we see there is a natural ratio which is conserved over cosmic expansion. For particles (such as $e^{+}e^{-})$ with charge magnitude $q=|e|$ in a homogeneous primordial magnetic field, we can define a dimensionless cosmic magnetic energy scale in natural units ($c=\hbar=k_{B}=1$) as
 \begin{align}
     \label{tbscale}
-    b_{0}\equiv\frac{q{\cal B}(t)}{T^{2}(t)}=\frac{q{\cal B}_{0}}{T_{0}^{2}}={\rm\ const.}\qquad10^{-3}>b_{0}>10^{-11}\,,
+    b_{0}\equiv\frac{q{\cal B}(t)\hbar c^{2}}{k_{B}^{2}T^{2}(t)}\rightarrow\frac{q{\cal B}(t)}{T^{2}(t)}=\frac{q{\cal B}_{0}}{T_{0}^{2}}={\rm\ const.}\qquad10^{-3}>b_{0}>10^{-11}\,,
 \end{align}
 which can be completely prescribed by comoving values. We compute the bounds for this cosmic magnetic scale by using the present day observations given by \req{igmf} and the CMB temperature $T_{0}=2.7{\rm\ K}$~\cite{aghanim2018planck}.
 
@@ -121,57 +121,101 @@ We take inspiration from Ch. 9 of Melrose's treatise on magnetized plasmas~\cite
     \label{kgp}
     E^{\pm}_{n}(p_{z},{\cal B})=\sqrt{m_{e}^{2}+p_{z}^{2}+q{\cal B}\left(2n+1\mp\frac{g}{2}\right)}\,,\qquad n\in0,1,2,\ldots
 \end{align}
-where $p_{z}$ is the momentum parallel to the field axis and $n$ is the Landau orbital quantum number. The subscript $\pm$ refers to the spin polarization along the field axis: aligned $(+)$ or anti-aligned $(-)$. The parameter $g$ is the gyro-magnetic ($g$-factor) of the particle where we note $g_{e^{-}}=-g_{e^{+}}<0$~\cite{tiesinga2021codata}. We rearrange \req{kgp} by pulling the spin dependency and the ground state Landau orbital into the mass writing
+where $p_{z}$ is the momentum parallel to the field axis and $n$ is the Landau orbital quantum number. The subscript $\pm$ refers to the spin polarization along the field axis: parallel $(+)$ or anti-parallel $(-)$. The parameter $g$ is the gyro-magnetic ($g$-factor) of the particle. We rearrange \req{kgp} by pulling the spin dependency and the ground state Landau orbital into the mass writing
 \begin{align}
     \label{effmass}
     E^{\pm}_{n}={\tilde m}_{\pm}\sqrt{1+\frac{p_{z}^{2}}{{\tilde m}_{\pm}^{2}}+\frac{2q{\cal B}n}{{\tilde m}_{\pm}^{2}}}\,,\qquad {\tilde m}_{\pm}^{2}=m_{e}^{2}+q{\cal B}\left(1\mp\frac{g}{2}\right)\,,
 \end{align}
-where we introduced the effective polarized mass ${\tilde m}_{\pm}$ which is distinct for each spin alignment and is a function of magnetic field strength ${\cal B}$. The effective polarized mass ${\tilde m}_{\pm}$ allows us to describe the $e^{+}e^{-}$ plasma with the spin effects almost wholly separated from the Landau characteristics of the gas when considering the thermodynamic properties of the gas.
+where we introduced the effective polarized mass ${\tilde m}_{\pm}$ which is distinct for each spin alignment and is a function of magnetic field strength ${\cal B}$. The effective polarized mass ${\tilde m}_{\pm}$ allows us to describe the $e^{+}e^{-}$ plasma with the spin effects almost wholly separated from the Landau characteristics of the gas when considering plasma thermodynamic properties.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Electron-positron magnetization}
-\label{sec:electronpositron}
+\section{Magnetized fugacity}
+\label{sec:fugacity}
 \noindent The magnetized relativistic fermion partition function is given, in a generalized form, by
 \begin{align}
     \label{partition}
-    \ln{\cal Z}_{e^{+}e^{-}}=\frac{2e{\cal B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm1}\sum_{s}^{\pm}\sum_{n=0}^{\infty}\int_{0}^{\infty}\left[\ln\left(1+\lambda_{\sigma}\lambda_{s}e^{-E_{n}^{s}/T}\right)\right]\,,\qquad\Upsilon_{\sigma}^{s}=\lambda_{\sigma}\lambda_{s}=e^{{\sigma}\mu/T}e^{s\eta/T}\,,
+    \ln{\cal Z}_{e^{+}e^{-}}=\frac{2q{\cal B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm}\sum_{s}^{\pm}\sum_{n=0}^{\infty}\int_{0}^{\infty}\left[\ln\left(1+\lambda_{\sigma}\xi_{s}e^{-E_{n}^{s}/T}\right)\right]\,,\qquad\Upsilon_{\sigma}^{s}=\lambda_{\sigma}\xi_{s}=\exp{\frac{\mu_{\sigma}+\eta_{s}}{T}}\,,
 \end{align}
-where $\sigma$ is a sum over electron and positron states and $s$ is a sum over polarizations. The chemical fugacity $\lambda_{\sigma}$ is defined in terms of the chemical potential $\mu_{\sigma}=\sigma\mu$. Due to charge conservation, $\mu\equiv\mu_{e^{-}}=-\mu_{e^{+}}$~\cite{elze1980relativistic}. While the primordial electron-positron plasma era was overall charge neutral, there was a small asymmetry in the charged leptons from baryon asymmetry~\cite{canetti2012matter} and the presence of protons. Under the condition of charge neutrality, the resulting chemical potential was small~\cite{rafelski2023short} until the universe cooled to a temperature below $T<20\keV$ wherein the positrons vanished from the particle inventory of the universe.
+where $\sigma$ is a sum over electron and positron states and $s$ is a sum over polarizations. We define the generalized fugacity $\Upsilon_{\sigma}^{s}$ as the product of:
+\begin{itemize}
+    \item[a.] Chemical fugacity $\lambda_{\sigma}=e^{\mu_{\sigma}/T}$
+    \item[b.] Spin fugacity $\xi_{s}=e^{\eta_{s}/T}$
+\end{itemize}
+The chemical fugacity $\lambda_{\sigma}$ is defined in terms of the chemical potential $\mu_{\sigma}=\sigma\mu$ and due to charge conservation~\cite{elze1980relativistic} can be written as 
+\begin{align}
+    \label{cpotential}
+    \mu\equiv\mu_{e^{-}}=-\mu_{e^{+}}\,,\qquad
+    \lambda\equiv\lambda_{e^{-}}=\lambda_{e^{+}}^{-1}\,.
+\end{align}
 
-We also introduce a novel spin fugacity $\lambda_{s}$ and spin potential $\eta_{s}=s\eta$. While an imbalance in electrons and positrons leads to a nonzero particle chemical potential $\mu\neq0$, an imbalance in spin angular momentum within a region results in a nonzero spin potential $\eta\neq0$. As the universe appears to have zero overall angular momentum, any nonzero spin potential in the electron-positron sector would need to be compensated by either other species in the comoving volume, other sources of angular momentum, or it would indicate the presence of spin magnetized domains not unlike those found in ferromagnetic materials.
+While the primordial electron-positron plasma era was overall charge neutral, there was a small asymmetry in the charged leptons from baryon asymmetry~\cite{canetti2012matter} and the presence of protons. Under the condition of charge neutrality, the resulting chemical potential was small~\cite{rafelski2023short} until the universe cooled to a temperature below $T<20\keV$ wherein the positrons vanished from the particle inventory of the universe.
 
-We implement the Boltzmann approximation for the limit where $m_e\ll T$ which is approximately true in the temperature range of interest. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration. The resulting partition function can then be written in terms of modified Bessel $K$ functions~\cite{letessier2002hadrons} of the second kind, yielding (for $\lambda_{s}=1$)
+We also introduce a novel spin fugacity $\xi_{s}$ and spin potential $\eta_{s}=s\eta$. While an imbalance in electrons and positrons leads to a nonzero particle chemical potential $\mu\neq0$, an imbalance in spin angular momentum within a region results in a nonzero spin potential $\eta\neq0$. As the universe appears to have zero overall angular momentum, any nonzero spin potential in the electron-positron sector would need to be compensated by either other species in the comoving volume, other sources of angular momentum, or it would indicate the presence of spin magnetized domains not unlike those found in ferromagnetic materials. We propose the spin potential follows analogous expressions as seen in \req{cpotential} obeying
+\begin{align}
+    \label{spotential}
+    \eta\equiv\eta_{-}=-\eta_{+}\,,\qquad
+    \xi\equiv\xi_{-}=\xi_{+}^{-1}\,.
+\end{align}
+
+We implement the Boltzmann approximation for the limit where $m_e\ll T$ which is approximately true in the temperature range of interest. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration. The resulting partition function can then be written in terms of modified Bessel $K$ functions~\cite{letessier2002hadrons} of the second kind, yielding
 \begin{align}
     \label{boltzmann}
-    \ln{\cal Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{2\pi^{2}}\left[2\cosh\left(\frac{\mu}{T}\right)\right]\sum_{s}^{\pm}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\,,\\
+    \ln{\cal Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{2\pi^{2}}\left[2\cosh{\frac{\mu}{T}}\right]\sum_{s}^{\pm}\xi_{s}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\,,\\
     \label{xfunc}
+    2\cosh{\frac{\mu}{T}}=\lambda+\lambda^{-1}\,,\qquad
     x_{\pm}=\frac{{\tilde m}_{\pm}}{T}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+b_{0}\left(1\mp\frac{g}{2}\right)}\,.
 \end{align}
-The latter two terms in \req{boltzmann} (proportional to $b_{0}K_{1}$ and $b_{0}^{2}K_{0}$) are the uniquely magnetic terms present (containing both paramagnetic and diamagnetic influences) in the partition function while the $K_{2}$ term is present for the relativistic free Fermi gas under the same Boltzmann approximation. As the Bessel $K$ functions are evaluated under \req{xfunc}, the \lq\lq free\rq\rq\ part of the partition $K_{2}$ is still subject to spin magnetization effects.
+The latter two terms in \req{boltzmann} (proportional to $b_{0}K_{1}$ and $b_{0}^{2}K_{0}$) are the uniquely magnetic terms present (containing both paramagnetic and diamagnetic influences) in the partition function while the $K_{2}$ term is present for the relativistic free Fermi gas under the same Boltzmann approximation. As the Bessel $K$ functions are evaluated as functions of $x_{\pm}$ in \req{xfunc}, the \lq\lq free\rq\rq\ part of the partition $K_{2}$ is still subject to spin magnetization effects.
 
-{\xred This is as far as I got cleaning things up.}
-As the $e^{+}e^{-}$ density changes dramatically over this period, we use the charge neutrality condition~\cite{rafelski2023short} to parameterize the chemical potential $\mu=\mu(T)$ as a function of temperature. The magnetization of the $e^{+}e^{-}$ plasma described by \req{boltzmann} can be written in terms of the effective mass as
+During the $e^{+}e^{-}$ plasma epoch, the density changed dramatically over time changing the chemical potential. Therefore we can utilize the charge neutrality~\cite{rafelski2023short,letessier2002hadrons} of the universe
 \begin{align}
-    \label{definemagetization}
-    {\cal M}\equiv\frac{T}{V}\frac{\partial\ln{{\cal Z}_{e^{+}e^{-}}}}{\partial{\cal B}}=\sum_{s}^{\pm}\frac{T}{V}\left(\frac{\partial{\tilde m}_{s}}{\partial{\cal B}}\right)\frac{\partial\ln{{\cal Z}_{e^{+}e^{-}}}}{\partial{\tilde m}_{s}}\,,
+    \label{chargeneutrality}
+    n_{p}=n_{e^{-}}-n_{e^{+}}=\frac{1}{V}\lambda\frac{\partial}{\partial\lambda}\ln{\cal Z}_{e^{+}e^{-}}
 \end{align}
-yielding
+to parameterize the chemical potential $\mu=\mu(T)$ as a function of temperature. The parameter $n_{p}$ is the number density of protons which is known in terms of the baryon-to-photon ratio~\cite{workman2022pdg}. The chemical potential is then
 \begin{align}
-    \label{magnetization}
-    \left(\frac{\cal M}{\cal B}\right)=\frac{2\alpha}{\pi b_{0}}\left[2\cosh\left(\frac{\mu(T)}{T}\right)\right]\sum_{s}^{\pm}\left[c_{1}(x_{s})K_{1}(x_{s})+c_{0}K_{0}(x_{s})\right]\,,\\
-    c_{1}(x_{\pm})=x_{\pm}\left[\frac{1}{2}-\left(\frac{1}{2}\pm\frac{g}{4}\right)\left(1+\frac{b_{0}^{2}}{12x_{\pm}}\right)\right]\,,\qquad c_{0}=b_{0}\left[\frac{1}{6}-\left(\frac{1}{4}\mp{\color{blue}\pm?}\frac{g}{8}\right)\right]\,.\\
-    {\cal M}=\frac{\sqrt{4\pi\alpha}}{ \pi^{2}}T^{2}\cosh\left(\frac{\mu(T)}{T}\right)\sum_{s}^{\pm}\left[c_{1}(x_{s})K_{1}(x_{s})+c_{0}K_{0}(x_{s})\right]
+    \label{chem}
+    \sinh{\frac{\mu}{T}}=n_{p}\frac{\pi^{2}}{T^{3}}\left[\sum_{s}^{\pm}\xi_{s}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\right]^{-1}\,.
 \end{align}
-% The above equation (13) needs a quick check if a factor of 1/2 is missing or not.
-Here $\alpha$ is fine-structure constant. We note that the expression for the magnetization simplifies significantly for $g=2$ which is the \lq\lq cusp\rq\rq\ gyro-magnetic factor~\cite{rafelski2022study} of the Dirac particle.
-
-% For a plot in this section, show susceptibility rather than (M/B) and include several values of b_0 while removing the zero chemical potential lines. Note the paramagnetic regime over the diamagnetic regime which is suppported by the huge density of pairs which overwhelms the suppression of magnetism due to higher temperatures.
+\req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\xi=1$ implying an equal number of polarizations both parallel and anti-parallel to the external field. In general however, an additional constraint is required. We note that such a constraint is likely related to the total angular momentum of the considered volume and does not necessarily imply that spin polarizations must be balanced in a single species when the orbital and spin momentum of all species are taken into account.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Closing}\label{sec:conclusions}
+\section{Electron-positron magnetization}
+\label{sec:magnetization}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{Magnetization_paper.jpg}
+    \caption{The dimensionless magnetization ${\cal M}/{\cal H}_{C}$ of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature. The lower (solid red) and upper (solid blue) bounds for cosmic magnetic scale $b_{0}$ are included. The external magnetic field $B/H_{C}$ is also plotted in for lower (dashed red) and upper (dashed blue) bounds. The spin fugacity is set to unity $\xi=1$. {\xred Have this plot replaced with the correct figure! Caption is good.}}
+    \label{magnetization} 
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent The magnetization of the $e^{+}e^{-}$ plasma described by the partition function in \req{boltzmann} can be written as
+\begin{align}
+    \label{defmagetization}
+    {\cal M}\equiv\frac{T}{V}\frac{\partial}{\partial{\cal B}}\ln{{\cal Z}_{e^{+}e^{-}}} = \frac{T}{V}\left(\frac{\partial b_{0}}{\partial{\cal B}}\right)\frac{\partial}{\partial b_{0}}\ln{{\cal Z}_{e^{+}e^{-}}}\,,\qquad\frac{\partial b_{0}}{\partial{\cal B}}=\frac{q}{T^{2}}\,.
+\end{align}
+Magnetization arising from other components in the cosmic gas (protons, neutrinos, etc...) could in principle also be included. In the context of MHD, primordial magnetogenesis from neutrino interactions in the electron-positron epoch was considered in~\cite{perrone2021neutrinoelectron}. We also introduce dimensionless units for magnetization by defining the critical displacement field
+\begin{align}
+    {\cal H}_{C}\equiv\frac{m_{e}^{2}}{q}\,.
+\end{align}
+The total magnetization ${\cal M}$ can be broken into the sum of spin parallel ${\cal M}_{+}$ and spin anti-parallel ${\cal M}_{-}$ magnetization. We note that the expression for the magnetization simplifies significantly for $g=2$ which is the \lq\lq cusp\rq\rq\ gyro-magnetic factor~\cite{rafelski2022study} of the Dirac particle. For illustration, the $g=2$ magnetization from \req{defmagetization} is then
+\begin{align}
+    \label{g2magplus}
+    \frac{{\cal M}_{+}}{{\cal H}_{C}}&=\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi^{-1}\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\qquad x_{+}=\left(\frac{m_{e}}{T}\right)\,,\\
+    \label{g2magminus}
+    \frac{{\cal M}_{-}}{{\cal H}_{C}}&=-\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,,\qquad x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,.
+\end{align}
+The expressions in \req{g2magplus} and \req{g2magminus} are only modified by a small amount by the present of anomalous magnetic moment as the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$~\cite{tiesinga2021codata}.
+ 
+Of interest is the determination of the magnetization per particle
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Closing}
+\label{sec:conclusions}
+\noindent tbw
 \section{Snippets to Place}
-While the universe is nearly homogeneous and isotropic (the Cosmological Principle) on the largest scales, the inhomogeneities of matter (and dark matter) evolution are non-trivial and must generally be solved numerically using magneto-hydrodynamics (MHD)~\cite{melrose2008quantum,vazza2017simulations}. The MHD approach has been used to assess possible primordial magnetogenesis from neutrino interactions in the electron-positron epoch~\cite{perrone2021neutrinoelectron}.
+While the universe is nearly homogeneous and isotropic (the Cosmological Principle) on the largest scales, the inhomogeneities of matter (and dark matter) evolution are non-trivial and must generally be solved numerically using magneto-hydrodynamics (MHD)~\cite{melrose2008quantum,vazza2017simulations}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{unsrtnat}
