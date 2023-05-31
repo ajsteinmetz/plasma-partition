@@ -28,31 +28,38 @@ x[T,b,1,2]//TraditionalForm;
 
 
 (* ::Text:: *)
+(*Define the spin potential and spin fugacity.*)
+
+
+\[Xi][T_,s_,\[Eta]_]:=Exp[s \[Eta]/T];
+
+
+(* ::Text:: *)
 (*Define the partition function.*)
 
 
-lnZ[V_, u_, T_, b_, s_, g_] := (T^(3) V/(2 Pi)^(2)) (2 Cosh[u/T]) (x[T, b, s, g]^(2) BesselK[2, x[T, b, s, g]] + \
+lnZ[V_, u_, T_, b_, s_, g_,\[Eta]_] := (T^(3) V/(2 Pi)^(2)) (2 Cosh[u/T])\[Xi][T,s,\[Eta]](x[T, b, s, g]^(2) BesselK[2, x[T, b, s, g]] + \
               b x[T, b, s, g] BesselK[1, x[T, b, s, g]]/2 + b^(2) BesselK[0, x[T, b, s, g]]/12)
 
 
-lnZ[V,u,T,b,-1,2]+lnZ[V,u,T,b,1,2]//TraditionalForm
-lnZ[V,u,T,b,-1,2]+lnZ[V,u,T,b,1,2]//FullSimplify//TraditionalForm
+lnZ[V,u,T,b,-1,2,0]+lnZ[V,u,T,b,1,2,0]//TraditionalForm
+lnZ[V,u,T,b,-1,2,0]+lnZ[V,u,T,b,1,2,0]//FullSimplify//TraditionalForm
 
 
-(* ::Subsection::Closed:: *)
+(* ::Subsection:: *)
 (*Zero B-field limit test*)
 
 
-(T/V)(q/T^(2))D[lnZ[V,u,T,b,1,2],b]/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm;
-(T/V)(q/T^(2))D[lnZ[V,u,T,b,-1,2],b]/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm;
+(T/V)(q/T^(2))D[lnZ[V,u,T,b,1,2,0],b]/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm;
+(T/V)(q/T^(2))D[lnZ[V,u,T,b,-1,2,0],b]/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm;
 
 
 (* ::Text:: *)
 (*Check that b=0 limit magnetization is zero.*)
 
 
-(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2],b]+\
-D[lnZ[V,u,T,b,-1,2],b])/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
+Clear[\[Eta]];
+(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2,\[Eta]],b]+D[lnZ[V,u,T,b,-1,2,\[Eta]],b])/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
 
 
 (* ::Text:: *)
@@ -74,24 +81,17 @@ D[lnZ[V,u,T,b,-1,2],b])/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalFor
 (*Perform the magnetization calculation and sum the two polarization*)
 
 
-(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2],b]+\
-D[lnZ[V,u,T,b,-1,2],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
-
-
-(* ::Text:: *)
-(*Determine the susceptibility by taking second derivative*)
-
-
-(q/T^(2))D[(q (-4 b T^2 BesselK[0,Sqrt[2 b+m^2/T^2]]+2 b T^2 BesselK[0,m/T]-((6 m^2+b (12+b) T^2) BesselK[1,Sqrt[2 b+m^2/T^2]])/Sqrt[2 b+m^2/T^2]+6 m T BesselK[1,m/T]) Cosh[u/T])/(24 \[Pi]^2),b]//FullSimplify//TraditionalForm;
+(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2,0],b]+\
+D[lnZ[V,u,T,b,-1,2,0],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
 
 
 (* ::Text:: *)
 (*Let' s determine the positive polarization magnetization (with g = 2). We've divided out the coefficient (q^2/2 \[Pi]^2)(T^2/m^2) shared between the two expressions. We've also introduced the spin fugacity \[Xi].*)
 
 
-(q^(2)T^(2)/(2 Pi^(2)m^(2)))^(-1)(q/m^(2))(T/V)(q/T^(2))(\[Xi]^(-1) D[lnZ[V,u,T,b,1,2],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
-(q^(2)T^(2)/(2 Pi^(2)m^(2)))^(-1)(q/m^(2))(T/V)(q/T^(2))(\[Xi] D[lnZ[V,u,T,b,-1,2],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
-(q^(2)T^(2)/(2 Pi^(2)m^(2)))^(-1)(q/m^(2))(T/V)(q/T^(2))(\[Xi]^(-1) D[lnZ[V,u,T,b,1,2],b] + \[Xi] D[lnZ[V,u,T,b,-1,2],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
+(q^(2)T^(2)/(2 Pi^(2)m^(2)))^(-1)(q/m^(2))(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2,0],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
+(q^(2)T^(2)/(2 Pi^(2)m^(2)))^(-1)(q/m^(2))(T/V)(q/T^(2))(D[lnZ[V,u,T,b,-1,2,0],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
+(q^(2)T^(2)/(2 Pi^(2)m^(2)))^(-1)(q/m^(2))(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2,\[Eta]],b]+D[lnZ[V,u,T,b,-1,2,\[Eta]],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
 
 
 (* ::Subsection:: *)
@@ -104,7 +104,8 @@ D[lnZ[V,u,T,b,-1,2],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
 
 g = {1.18, 2, 5};
 g = 2;
-f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g], b] + D[lnZ[V, u, T, b, -1, g], b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2) /. m -> 511;
+\[Eta] = 0;
+f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g, \[Eta]], b] + D[lnZ[V, u, T, b, -1, g, \[Eta]], b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2) /. m -> 511;
 bValues = {10^(-3), 10^(-11)};
 LogLogPlot[Evaluate[f[T, #] & /@ bValues], {T, 20, 2000},
  	PlotRange -> All,
@@ -128,13 +129,13 @@ LogLogPlot[{B[T, 10^(-3)], B[T, 10^(-11)]}, {T, 20, 2000},
   PlotRange -> All]
 
 
-g = {1.18, 2, 5};
 g = 2;
 Bc = 4.41 10^(13);
-f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g], b] + D[lnZ[V, u, T, b, -1, g], b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2) /. m -> 511;
+\[Eta] = 0;
+f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g, \[Eta]], b] + D[lnZ[V, u, T, b, -1, g, \[Eta]], b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2) /. m -> 511;
 bValues = {10^(-3), 10^(-11)};
-Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, 20, 2000},
- 	PlotRange -> All,
+Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, 10, 2000},
+ 	PlotRange -> {{10,2000},{10^(-29),10^(14)}},
  	Frame -> True,
  	FrameLabel -> {"T [keV]", "B [G]"},
  	PlotStyle -> {Blue,Directive[Dashed,Blue],Red,Directive[Dashed, Red]},
@@ -153,8 +154,9 @@ Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, 20, 2000},
 
 
 g = {2};
+\[Eta] = 0;
 bValues = {10^(-3), 10^(-3)*(20)^(2)/T^(2)};
-f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g], b] + D[lnZ[V, u, T, b, -1, g], b])/Cosh[u/T];
+f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g, \[Eta]], b] + D[lnZ[V, u, T, b, -1, g, \[Eta]], b])/Cosh[u/T];
 LogLogPlot[Evaluate[f[T, #]/. q -> (4 Pi/137)/m^(2) /. m -> 511 & /@ bValues], {T,20,2000},
  	PlotRange -> All,
  	AxesLabel -> {"T [keV]", "f[T]/\!\(\*SubscriptBox[\(H\), \(c\)]\)"},
@@ -173,14 +175,17 @@ LogLogPlot[Evaluate[f[T, #]/. q -> (4 Pi/137)/m^(2) /. m -> 511 & /@ bValues], {
 
 
 g = 2;
-f[T_, b_] = (T/V)(q/T^(2))(D[lnZ[V, u, T, b, 1, g],b]+D[lnZ[V,u,T,b,-1, g],b])/Cosh[u/T] /. b->b/T^(2)//FullSimplify//TraditionalForm
+\[Eta] = 0;
+f[T_, b_] = (T/V)(q/T^(2))(D[lnZ[V, u, T, b, 1, g, \[Eta]],b]+D[lnZ[V,u,T,b,-1, g, \[Eta]],b])/Cosh[u/T] /. b->b/T^(2)//FullSimplify//TraditionalForm
 
 
 (* ::Text:: *)
 (*And using this result, we plot the magnetization as a function of magnetic field at several fixed temperatures. Again note that the variable "b" is no longer cosmic scale, but magnetic field strength.*)
 
 
-f[T_, b_] = (T/V)(q/T^(2))(D[lnZ[V, u, T, b, 1, g],b]+D[lnZ[V,u,T,b,-1, g],b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2)/.b->b/T^(2)/.m->511;
+g = 2;
+\[Eta] = 0;
+f[T_, b_] = (T/V)(q/T^(2))(D[lnZ[V, u, T, b, 1, g, \[Eta]],b]+D[lnZ[V,u,T,b,-1, g, \[Eta]],b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2)/.b->b/T^(2)/.m->511;
 TValues = {20, 50,100,200};
 LogPlot[Evaluate[f[#, b] & /@ TValues], {b,0,10^(-3)},
  	PlotRange -> All,
@@ -197,6 +202,67 @@ LogPlot[Evaluate[f[#, b] & /@ TValues], {b,0,10^(-3)},
 
 (* ::Section:: *)
 (*Analysis of the pair effect*)
+
+
+(* ::Subsection:: *)
+(*Spin fugacity sensitivity*)
+
+
+(* ::Text:: *)
+(*If there is even a small asymmetry in the spins of the electron-positron gas, the gas is easily magnetized (and even self magnetizing) for small seed primordial fields. The gas with a small spin asymmetry and small PMF self magnetizes in a similar manner to the non-self magnetized spin symmetric but stronger PMF case. The two become indistinguishable as the temperature cools and the plasma vanishes. The results here, and in the below case, all presume that the spin potential is NOT parameterized to temperature. Whether this is a good assumption is not yet determined.*)
+
+
+g = 2;
+Bc = 4.41 10^(13);
+f[T_, b_,eta_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g, eta], b] + D[lnZ[V, u, T, b, -1, g, eta], b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2) /. m -> 511;
+bValues = {10^(-3), 10^(-11)};
+Manipulate[Plot[Evaluate[{Bc f[T, #,eta],Bc B[T,#]} & /@ bValues], {T, 10, 2000},
+ 	PlotRange -> {{10,2000},{10^(-29),10^(14)}},
+ 	Frame -> True,
+ 	FrameLabel -> {"T [keV]", "B [G]"},
+ 	PlotStyle -> {Blue,Directive[Dashed,Blue],Red,Directive[Dashed, Red]},
+ 	PlotLegends -> Placed[LineLegend[{"M(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","H(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","M(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-11\)]\))","H(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-11\)]\))"}], {0.8, 0.3}],
+ 	Background -> White,
+ 	ScalingFunctions -> {"Log", "Log"},
+ 	GridLines -> Automatic, GridLinesStyle -> LightGray],{eta,0,10^(-3),10^(-4),Appearance->"Labeled"}]
+
+
+(* ::Text:: *)
+(*Conversely, the anti-parallel asymmetric case (with \[Eta]<0) presents very differently between the strong PMF case and the weak PMF case. In the strong case, there exists a critical temperature where, for a given spin potential, the magnetization flips from paramagnetic to diamagnetic. The switch is sudden and dramatic as the whole gas reorients itself to a whole new magnetization. In the weak PMF case, the case is either fully paramagnetic or fully diamagnetic with the spin potential controlling which phase the gas is in over the whole temperature range.*)
+
+
+g = 2;
+Bc = 4.41 10^(13);
+f[T_, b_,eta_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g, eta], b] + D[lnZ[V, u, T, b, -1, g, eta], b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2) /. m -> 511;
+bValues = {10^(-3), 10^(-11)};
+Manipulate[Plot[Evaluate[{Bc Abs[f[T, #,eta]],Bc B[T,#]} & /@ bValues], {T, 10, 2000},
+ 	PlotRange -> {{10,2000},{10^(-29),10^(14)}},
+ 	Frame -> True,
+ 	FrameLabel -> {"T [keV]", "B [G]"},
+ 	PlotStyle -> {Blue,Directive[Dashed,Blue],Red,Directive[Dashed, Red]},
+ 	PlotLegends -> Placed[LineLegend[{"M(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","H(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","M(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-11\)]\))","H(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-11\)]\))"}], {0.8, 0.3}],
+ 	Background -> White,
+ 	ScalingFunctions -> {"Log", "Log"},
+ 	GridLines -> Automatic, GridLinesStyle -> LightGray],{eta,-10^(-3),10^(-3),10^(-4),Appearance->"Labeled"}]
+
+
+(* ::Text:: *)
+(*In the plot below we explore the possibility for self-magnetization with zero externally applied magnetic flux.*)
+
+
+g = 2;
+Bc = 4.41 10^(13);
+f[T_, b_,eta_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g, eta], b] + D[lnZ[V, u, T, b, -1, g, eta], b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2) /. m -> 511;
+bValues = {10^(-3), 0};
+Manipulate[Plot[Evaluate[{Bc f[T, #,eta],Bc B[T,#]} & /@ bValues], {T, 10, 2000},
+ 	PlotRange -> {{10,2000},{10^(-29),10^(14)}},
+ 	Frame -> True,
+ 	FrameLabel -> {"T [keV]", "B [G]"},
+ 	PlotStyle -> {Blue,Directive[Dashed,Blue],Red,Directive[Dashed, Red]},
+ 	PlotLegends -> Placed[LineLegend[{"M(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","H(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","M(\!\(\*SubscriptBox[\(b\), \(0\)]\)=0)","H(\!\(\*SubscriptBox[\(b\), \(0\)]\)=0)"}], {0.8, 0.3}],
+ 	Background -> White,
+ 	ScalingFunctions -> {"Log", "Log"},
+ 	GridLines -> Automatic, GridLinesStyle -> LightGray],{eta,0,10^(-3),10^(-4),Appearance->"Labeled"}]
 
 
 (* ::Subsection:: *)
