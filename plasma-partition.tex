@@ -153,8 +153,8 @@ While the primordial electron-positron plasma era was overall charge neutral, th
 We also introduce a novel spin fugacity $\xi_{s}$ and spin potential $\eta_{s}=s\eta$. While an imbalance in electrons and positrons leads to a nonzero particle chemical potential $\mu\neq0$, an imbalance in spin angular momentum within a region results in a nonzero spin potential $\eta\neq0$. As the universe appears to have zero overall angular momentum, any nonzero spin potential in the electron-positron sector would need to be compensated by either other species in the comoving volume, other sources of angular momentum, or it would indicate the presence of spin magnetized domains not unlike those found in ferromagnetic materials. We propose the spin potential follows analogous expressions as seen in \req{cpotential} obeying
 \begin{align}
     \label{spotential}
-    \eta\equiv\eta_{-}=-\eta_{+}\,,\qquad
-    \xi\equiv\xi_{-}=\xi_{+}^{-1}\,.
+    \eta\equiv\eta_{+}=-\eta_{-}\,,\qquad
+    \xi\equiv\xi_{+}=\xi_{-}^{-1}\,.
 \end{align}
 
 We implement the Boltzmann approximation for the limit where $m_e\ll T$ which is approximately true in the temperature range of interest. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration. The resulting partition function can then be written in terms of modified Bessel $K$ functions~\cite{letessier2002hadrons} of the second kind, yielding
@@ -186,7 +186,7 @@ to parameterize the chemical potential $\mu=\mu(T)$ as a function of temperature
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{magplot.pdf}
-    \caption{The magnetization ${\cal M}/{\cal H}_{C}$ of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature. The lower (solid red) and upper (solid blue) bounds for cosmic magnetic scale $b_{0}$ are included. The external magnetic field $B/H_{C}$ is also plotted in for lower (dashed red) and upper (dashed blue) bounds. The spin fugacity is set to unity $\xi=1$. {\xred Have this plot replaced with non-zero chemical potential. Caption is good.}}
+    \caption{The magnetization ${\cal M}/{\cal H}_{C}$ of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature. The lower (solid red) and upper (solid blue) bounds for cosmic magnetic scale $b_{0}$ are included. The external magnetic field $B/H_{C}$ is also plotted in for lower (dashed red) and upper (dashed blue) bounds. The spin fugacity is set to unity $\xi=1$. {\xred Andrew - Have this plot replaced with non-zero chemical potential. Caption written with dimensionless units in mind, but alternative in Gauss is also an option.}}
     \label{magnetization} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -202,11 +202,11 @@ Magnetization arising from other components in the cosmic gas (protons, neutrino
 The total magnetization ${\cal M}$ can be broken into the sum of spin parallel ${\cal M}_{+}$ and spin anti-parallel ${\cal M}_{-}$ magnetization. We note that the expression for the magnetization simplifies significantly for $g=2$ which is the \lq\lq cusp\rq\rq\ gyro-magnetic factor~\cite{rafelski2022study} of the Dirac particle. For illustration, the $g=2$ magnetization from \req{defmagetization} is then
 \begin{align}
     \label{g2magplus}
-    \frac{{\cal M}_{+}}{{\cal H}_{C}}&=\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi^{-1}\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\qquad x_{+}=\left(\frac{m_{e}}{T}\right)\,,\\
+    \frac{{\cal M}_{+}}{{\cal H}_{C}}&=\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\qquad x_{+}=\left(\frac{m_{e}}{T}\right)\,,\\
     \label{g2magminus}
-    \frac{{\cal M}_{-}}{{\cal H}_{C}}&=-\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,,\qquad x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,.
+    -\frac{{\cal M}_{-}}{{\cal H}_{C}}&=\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi^{-1}\cosh{\frac{\mu}{T}}\left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,,\qquad x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,.
 \end{align}
-The expressions in \req{g2magplus} and \req{g2magminus} are only modified by a small amount by the present of anomalous magnetic moment as the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$~\cite{tiesinga2021codata}.
+The expressions in \req{g2magplus} and \req{g2magminus} are only modified by a small amount by the present of anomalous magnetic moment as the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$~\cite{tiesinga2021codata}. In \rf{magnetization}, we plot the magnetization as given by the above two equations with spin potential set to unity $\xi=1$. We see that the $e^{+}e^{-}$ plasma is overall paramagnetic and yields a positive overall magnetization which is contrary to the traditional assumption that matter-antimatter plasmas lack magnetic responses of their own in the bulk. With that said, the magnetization is certainly suppressed compared to the generating external field only approaching parity at high temperatures.
  
 Of interest is the determination of the magnetization per particle
 
