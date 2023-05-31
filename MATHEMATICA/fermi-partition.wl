@@ -132,11 +132,14 @@ g = {1.18, 2, 5};
 g = 2;
 f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g], b] + D[lnZ[V, u, T, b, -1, g], b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2) /. m -> 511;
 bValues = {10^(-3), 10^(-11)};
-LogLogPlot[Evaluate[{f[T, #],B[T,#]} & /@ bValues], {T, 20, 2000},
+Plot[Evaluate[{f[T, #],B[T,#]} & /@ bValues], {T, 20, 2000},
  	PlotRange -> All,
- 	AxesLabel -> {"T [keV]", "M[T]/\!\(\*SubscriptBox[\(H\), \(C\)]\)"},
+ 	Frame -> True,
+ 	FrameLabel -> {"T [keV]", "M[T]/\!\(\*SubscriptBox[\(H\), \(C\)]\)"},
  	PlotStyle -> {Blue,Directive[Dashed,Blue],Red,Directive[Dashed, Red]},
  	PlotLegends -> Placed[LineLegend[{"M|\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)","B|\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)","M|\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-11\)]\)","B|\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-11\)]\)"}], {0.8, 0.3}],
+ 	Background -> White,
+ 	ScalingFunctions -> {"Log", "Log"},
  	GridLines -> Automatic, GridLinesStyle -> LightGray]
 
 
