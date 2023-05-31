@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{30}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -219,5 +219,11 @@ E.~Tiesinga, P.~J. Mohr, D.~B. Newell, and B.~N. Taylor.
 \newblock \emph{Journal of Physical and Chemical Reference Data}, 50\penalty0
   (3):\penalty0 033105, 2021.
 \newblock \doi{10.1063/5.0064853}.
+
+\bibitem[Huang(1991)]{huang1991statistical}
+K.~Huang.
+\newblock \emph{Statistical Mechanics}.
+\newblock Wiley, 1991.
+\newblock 2nd Ed.
 
 \end{thebibliography}
