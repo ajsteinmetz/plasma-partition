@@ -59,7 +59,9 @@ lnZ[V,u,T,b,-1,2,0]+lnZ[V,u,T,b,1,2,0]//FullSimplify//TraditionalForm
 
 
 Clear[\[Eta]];
-(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2,\[Eta]],b]+D[lnZ[V,u,T,b,-1,2,\[Eta]],b])/.b-> 0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
+(q^(2)T^(2)/(2 Pi^(2)m^(2)))^(-1)(q/m^(2))(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2,\[Eta]],b])/.Sqrt[m^2/T^2]->m/T/.b->0//FullSimplify//TraditionalForm
+(q^(2)T^(2)/(2 Pi^(2)m^(2)))^(-1)(q/m^(2))(T/V)(q/T^(2))(D[lnZ[V,u,T,b,-1,2,\[Eta]],b])/.Sqrt[m^2/T^2]->m/T/.b->0//FullSimplify//TraditionalForm
+(q^(2)T^(2)/(2 Pi^(2)m^(2)))^(-1)(q/m^(2))(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2,\[Eta]],b]+D[lnZ[V,u,T,b,-1,2,\[Eta]],b])/.b->0/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
 
 
 (* ::Text:: *)
@@ -151,6 +153,22 @@ Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, 10, 2000},
 
 (* ::Text:: *)
 (*Here we plot the magnetization versus temperature for a fixed magnetic field, rather than fixed scale. Essentially, we're allowing the temperature to vary independently while the magnetic field strength remains constant. Below we see the magnetization at high temperature is suppressed compared to the comoving conserved magnetic flux case which has the magnetic field grow with temperature accordingly.*)
+
+
+g = 2;
+Bc = 4.41 10^(13);
+\[Eta] = 0;
+f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g, \[Eta]], b] + D[lnZ[V, u, T, b, -1, g, \[Eta]], b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2) /. m -> 511;
+bValues = {10^(-3), 10^(-3)*(10)^(2)/T^(2)};
+Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, 10, 2000},
+ 	PlotRange -> {{10,2000},{10^(-29),10^(14)}},
+ 	Frame -> True,
+ 	FrameLabel -> {"T [keV]", "B [G]"},
+ 	PlotStyle -> {Blue,Directive[Dashed,Blue],Red,Directive[Dashed, Red]},
+ 	PlotLegends -> Placed[LineLegend[{"M(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","H(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","M(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)(\!\(\*SubscriptBox[\(T\), \(0\)]\)/T\!\(\*SuperscriptBox[\()\), \(2\)]\))","H(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)(\!\(\*SubscriptBox[\(T\), \(0\)]\)/T\!\(\*SuperscriptBox[\()\), \(2\)]\))"}], {0.8, 0.3}],
+ 	Background -> White,
+ 	ScalingFunctions -> {"Log", "Log"},
+ 	GridLines -> Automatic, GridLinesStyle -> LightGray]
 
 
 g = {2};
