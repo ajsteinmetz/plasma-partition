@@ -157,18 +157,26 @@ Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, 10, 2000},
 
 g = 2;
 Bc = 4.41 10^(13);
+Bc = 1;
 \[Eta] = 0;
+loT = 10; hiT = 2000;
+Tlist[n_]:=Table[x,{x,n,9n,n}];
+reversal[T_]:=-T+ loT + hiT;
 f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g, \[Eta]], b] + D[lnZ[V, u, T, b, -1, g, \[Eta]], b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2) /. m -> 511;
 bValues = {10^(-3), 10^(-3)*(10)^(2)/T^(2)};
-Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, 10, 2000},
- 	PlotRange -> {{10,2000},{10^(-29),10^(14)}},
+Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, loT, hiT},
+ 	PlotRange -> {{10,1000},{10^(-33),10^(1)}},
  	Frame -> True,
- 	FrameLabel -> {"T [keV]", "B [G]"},
+ 	FrameLabel -> {"T [keV]", "\[ScriptCapitalM] / \!\(\*SubscriptBox[\(\[ScriptCapitalB]\), \(C\)]\)"},
  	PlotStyle -> {Blue,Directive[Dashed,Blue],Red,Directive[Dashed, Red]},
- 	PlotLegends -> Placed[LineLegend[{"M(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","H(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","M(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)(\!\(\*SubscriptBox[\(T\), \(0\)]\)/T\!\(\*SuperscriptBox[\()\), \(2\)]\))","H(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)(\!\(\*SubscriptBox[\(T\), \(0\)]\)/T\!\(\*SuperscriptBox[\()\), \(2\)]\))"}], {0.8, 0.3}],
+ 	PlotLegends -> Placed[LineLegend[{"M(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","H(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","M(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)(\!\(\*SubscriptBox[\(T\), \(0\)]\)/T\!\(\*SuperscriptBox[\()\), \(2\)]\))","H(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)(\!\(\*SubscriptBox[\(T\), \(0\)]\)/T\!\(\*SuperscriptBox[\()\), \(2\)]\))"}],{0.35, 0.35}],
+ 	LabelStyle -> Directive[Black,20,FontFamily -> "Times"],
  	Background -> White,
- 	ScalingFunctions -> {"Log", "Log"},
- 	GridLines -> Automatic, GridLinesStyle -> LightGray]
+ 	ScalingFunctions -> {
+       {-Log[#]&,InverseFunction[-Log[#]&]},
+       {Log,InverseFunction[Log]}},
+ 	GridLines -> {Drop[Flatten[Table[Tlist[n],{n,{10,100,1000}}]],-8],Table[10^(n),{n,1,-33,-1}]},
+ 	GridLinesStyle -> Directive[Line, Lighter[Gray,.9]]]
 
 
 g = {2};
