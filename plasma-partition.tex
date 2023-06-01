@@ -58,7 +58,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 \label{sec:introduction}
-\noindent Macroscopic domains of magnetic fields have been found: around compact objects (stars, planets, etc...), between stars, within galaxies, between galaxies in clusters, and surprisingly in the deep extra-galactic void spaces where little matter exists. Therefore we search for a common mechanism that could produce the magnetic diversity we see in today's contemporary universe. Unlike electric fields which cannot be supported at large scales due to the charge neutrality of the universe, cosmic magnetic fields are easily generated~\cite{kronberg1994extragalactic} by a variety of physicals phenomenon which are difficult to screen. In the early universe above temperature $T>20\keV$ there was an gargantuan density of electron-positron pairs which rapidly vanished as the universe cooled~\cite{rafelski2023short}. We explore the possibility that this phenomenon was responsible for generating primordial magnetic fields (PMF) in the universe. We note that above temperature $T\gtrsim85\keV$, the $e^{+}e^{-}$ primordial plasma density exceeded that of the Sun's core density $n_{e}\simeq6\times10^{26}{\rm\ cm}^{-3}$~\cite{bahcall2001solar}. We analyze the magnetized relativistic fermion partition function focusing on the spin contribution to magnetization showing that magnetization is nonzero even for a nearly symmetric particle-antiparticle gas. At higher electron-positron $e^{+}e^{-}$ pair densities, spin paramagnetism is dominant over the Landau orbital diamagnetism of the gas.
+\noindent Macroscopic domains of magnetic fields have been found: around compact objects (stars, planets, etc...), between stars, within galaxies, between galaxies in clusters, and surprisingly in the deep extra-galactic void spaces where little matter exists. Therefore we search for a common mechanism that could produce the magnetic diversity we see in today's contemporary universe. Unlike electric fields which cannot be supported at large scales due to the charge neutrality of the universe, cosmic magnetic fields are easily generated~\cite{giovannini2003magnetized,kronberg1994extragalactic} by a variety of physicals phenomenon which are difficult to screen. In the early universe above temperature $T>20\keV$ there was an gargantuan density of electron-positron pairs which rapidly vanished as the universe cooled~\cite{rafelski2023short}. We explore the possibility that this phenomenon was responsible for generating primordial magnetic fields (PMF) in the universe. We note that above temperature $T\gtrsim85\keV$, the $e^{+}e^{-}$ primordial plasma density exceeded that of the Sun's core density $n_{e}\simeq6\times10^{26}{\rm\ cm}^{-3}$~\cite{bahcall2001solar}. We analyze the magnetized relativistic fermion partition function focusing on the spin contribution to magnetization showing that magnetization is nonzero even for a nearly symmetric particle-antiparticle gas. At higher electron-positron $e^{+}e^{-}$ pair densities, spin paramagnetism is dominant over the Landau orbital diamagnetism of the gas.
 
 If the early universe was highly magnetized, the rapid $10^{9}$ drop in $e^{+}e^{-}$ density relative to the baryon density in the temperature range $2000\keV>T>20\keV$ likely had a large effect on the overall magnetization of the universe. This combination of strong magnetic fields, high matter-antimatter density, and relatively high temperatures (far higher than the Sun's core temperature~\cite{bahcall2001solar} of $T_{\odot}=1.37\keV$) make this era unique in cosmology and astrophysics. We operate under the assumption that the observed inter-galactic magnetic fields (IGMF) are primordial in nature and are present, if not created fully or in part, during the electron-positron epoch of the early universe. The conventional elaboration of the origins for IGMFs are detailed in~\cite{gaensler2004origin,durrer2013cosmological,batista2021gammaray}.
 
@@ -112,9 +112,9 @@ where ${\cal B}_{0}$ is the comoving value of the magnetic field defined by the 
 From \req{tscale} and \req{bscale}, we see there is a natural ratio which is conserved over cosmic expansion. For particles (such as $e^{+}e^{-})$ with charge magnitude $q=|e|$ in a homogeneous primordial magnetic field, we can define a dimensionless cosmic magnetic energy scale in natural units ($c=\hbar=k_{B}=1$) as
 \begin{align}
     \label{tbscale}
-    b_{0}\equiv\frac{q{\cal B}(t)\hbar c^{2}}{k_{B}^{2}T^{2}(t)}\rightarrow\frac{q{\cal B}(t)}{T^{2}(t)}=\frac{q{\cal B}_{0}}{T_{0}^{2}}={\rm\ const.}\qquad10^{-3}>b_{0}>10^{-11}\,,
+    b_{0}\equiv\frac{q{\cal B}(t)\hbar c^{2}}{k_{B}^{2}T^{2}(t)}\bigg\vert_{\rm\ S.I.}\rightarrow\frac{q{\cal B}(t)}{T^{2}(t)}=\frac{q{\cal B}_{0}}{T_{0}^{2}}={\rm\ const.}\qquad10^{-3}>b_{0}>10^{-11}\,,
 \end{align}
-which can be completely prescribed by comoving values. We compute the bounds for this cosmic magnetic scale by using the present day observations given by \req{igmf} and the CMB temperature $T_{0}=2.7{\rm\ K}$~\cite{aghanim2018planck}.
+which can be completely prescribed by comoving values. We compute the bounds for this cosmic magnetic scale by using the present day observations given by \req{igmf} and the CMB temperature $T_{0}=2.7{\rm\ K}\simeq2.3\times10^{-4}\eV$~\cite{aghanim2018planck}.
 
 We take inspiration from Ch. 9 of Melrose's treatise on magnetized plasmas~\cite{melrose2008quantum}. Our focus however will be on the bulk properties of thermalized plasmas in (near) equilibrium. In considering $e^{+}e^{-}$ plasma, we introduce the microscopic energy of the charged $q$ relativistic fermion within a homogeneous ($z$-direction) magnetic field~\cite{steinmetz2018magnetic}. The energy eigenvalue is given by
 \begin{align}
@@ -157,7 +157,7 @@ We also introduce a novel spin fugacity $\xi_{s}$ and spin potential $\eta_{s}=s
     \xi\equiv\xi_{+}=\xi_{-}^{-1}\,.
 \end{align}
 
-We implement the Boltzmann approximation for the limit where $m_e\ll T$ which is approximately true in the temperature range of interest. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration. The resulting partition function can then be written in terms of modified Bessel $K$ functions~\cite{letessier2002hadrons} of the second kind, yielding
+We implement the Boltzmann approximation for the limit where $T\gg m_e$ which is approximately true in the temperature range of interest. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration. The resulting partition function (after truncation of the error remainder) can then be written in terms of modified Bessel $K$ functions~\cite{abramowitz1988handbook,letessier2002hadrons} of the second kind, yielding
 \begin{align}
     \label{boltzmann}
     \ln{\cal Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{2\pi^{2}}\left[2\cosh{\frac{\mu}{T}}\right]\sum_{s}^{\pm}\xi_{s}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\,,\\
@@ -165,7 +165,7 @@ We implement the Boltzmann approximation for the limit where $m_e\ll T$ which is
     2\cosh{\frac{\mu}{T}}=\lambda+\lambda^{-1}\,,\qquad
     x_{\pm}=\frac{{\tilde m}_{\pm}}{T}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+b_{0}\left(1\mp\frac{g}{2}\right)}\,.
 \end{align}
-The latter two terms in \req{boltzmann} (proportional to $b_{0}K_{1}$ and $b_{0}^{2}K_{0}$) are the uniquely magnetic terms present (containing both paramagnetic and diamagnetic influences) in the partition function while the $K_{2}$ term is present for the relativistic free Fermi gas under the same Boltzmann approximation. As the Bessel $K$ functions are evaluated as functions of $x_{\pm}$ in \req{xfunc}, the \lq\lq free\rq\rq\ part of the partition $K_{2}$ is still subject to spin magnetization effects.
+The latter two terms in \req{boltzmann} (proportional to $b_{0}K_{1}$ and $b_{0}^{2}K_{0}$) are the uniquely magnetic terms present (containing both paramagnetic and diamagnetic influences) in the partition function while the $K_{2}$ term is present for the relativistic free Fermi gas~\cite{greiner2012thermodynamics}. As the Bessel $K$ functions are evaluated as functions of $x_{\pm}$ in \req{xfunc}, the \lq\lq free\rq\rq\ part of the partition $K_{2}$ is still subject to spin magnetization effects.
 
 During the $e^{+}e^{-}$ plasma epoch, the density changed dramatically over time changing the chemical potential. Therefore we can utilize the charge neutrality~\cite{rafelski2023short,letessier2002hadrons} of the universe
 \begin{align}
@@ -177,7 +177,7 @@ to parameterize the chemical potential $\mu=\mu(T)$ as a function of temperature
     \label{chem}
     \sinh{\frac{\mu}{T}}=n_{p}\frac{\pi^{2}}{T^{3}}\left[\sum_{s}^{\pm}\xi_{s}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\right]^{-1}\,.
 \end{align}
-\req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\xi=1$ implying an equal number of polarizations both parallel and anti-parallel to the external field. In general however, an additional constraint is required. We note that such a constraint is likely related to the total angular momentum of the considered volume and does not necessarily imply that spin polarizations must be balanced in a single species when the orbital and spin momentum of all species are taken into account.
+\req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\xi=1$ implying an equal number of polarizations both parallel and anti-parallel to the external field. In general however, an additional physical constraint is required as the chemical $\mu$ and spin $\eta$ potentials have mutual dependency. We note that such a constraint is likely related to the total angular momentum of the considered volume and does not necessarily imply that spin polarizations must be balanced within a single species when the orbital and spin momentum of all species in the plasma are taken into account.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Electron-positron magnetization}
@@ -185,8 +185,8 @@ to parameterize the chemical potential $\mu=\mu(T)$ as a function of temperature
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\textwidth]{magplot.pdf}
-    \caption{The magnetization ${\cal M}{\rm\ [G]}$, with $g=2$, of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature. The lower (solid red) and upper (solid blue) bounds for cosmic magnetic scale $b_{0}$ are included. The external magnetic displacement ${\cal H}$ is also plotted in for lower (dashed red) and upper (dashed blue) bounds. The spin fugacity is set to unity $\xi=1$. {\xred Andrew - Have this plot replaced with non-zero chemical potential.}}
+    \includegraphics[width=\textwidth]{Magnetization_Hc.jpg}
+    \caption{The dimensionless magnetization ${\cal M}/{\cal B}_{C}$, with $g=2$, of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature. The lower (solid red) and upper (solid blue) bounds for cosmic magnetic scale $b_{0}$ are included. The external magnetic displacement ${\cal B}/{\cal B}_{C}$ is also plotted in for lower (dashed red) and upper (dashed blue) bounds. The spin fugacity is set to unity $\xi=1$.}
     \label{magplot} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -195,29 +195,29 @@ to parameterize the chemical potential $\mu=\mu(T)$ as a function of temperature
     \label{defmagetization}
     {\cal M}\equiv\frac{T}{V}\frac{\partial}{\partial{\cal B}}\ln{{\cal Z}_{e^{+}e^{-}}} = \frac{T}{V}\left(\frac{\partial b_{0}}{\partial{\cal B}}\right)\frac{\partial}{\partial b_{0}}\ln{{\cal Z}_{e^{+}e^{-}}}\,,\qquad\frac{\partial b_{0}}{\partial{\cal B}}=\frac{q}{T^{2}}\,.
 \end{align}
-Magnetization arising from other components in the cosmic gas (protons, neutrinos, etc...) could in principle also be included. In the context of MHD, primordial magnetogenesis from neutrino interactions in the electron-positron epoch was considered in~\cite{perrone2021neutrinoelectron}. We also introduce dimensionless units for magnetization by defining the critical displacement field
+Magnetization arising from other components in the cosmic gas (protons, neutrinos, etc...) could in principle also be included. In the context of MHD, primordial magnetogenesis from neutrino interactions in the electron-positron epoch was considered in~\cite{perrone2021neutrinoelectron}. We also introduce dimensionless units for magnetization by defining the critical field
 \begin{align}
-    {\cal H}_{C}\equiv\frac{m_{e}^{2}}{q}\,.
+    {\cal B}_{C}\equiv\frac{m_{e}^{2}}{q}\,.
 \end{align}
 The total magnetization ${\cal M}$ can be broken into the sum of spin parallel ${\cal M}_{+}$ and spin anti-parallel ${\cal M}_{-}$ magnetization. We note that the expression for the magnetization simplifies significantly for $g=2$ which is the \lq\lq cusp\rq\rq\ gyro-magnetic factor~\cite{rafelski2022study} of the Dirac particle. For illustration, the $g=2$ magnetization from \req{defmagetization} is then
 \begin{align}
     \label{g2magplus}
-    \frac{{\cal M}_{+}}{{\cal H}_{C}}&=\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\qquad x_{+}=\left(\frac{m_{e}}{T}\right)\,,\\
+    \frac{{\cal M}_{+}}{{\cal B}_{C}}&=\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\qquad x_{+}=\left(\frac{m_{e}}{T}\right)\,,\\
     \label{g2magminus}
-    -\frac{{\cal M}_{-}}{{\cal H}_{C}}&=\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi^{-1}\cosh{\frac{\mu}{T}}\left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,,\qquad x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,.
+    -\frac{{\cal M}_{-}}{{\cal B}_{C}}&=\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi^{-1}\cosh{\frac{\mu}{T}}\left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,,\qquad x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,.
 \end{align}
 The expressions in \req{g2magplus} and \req{g2magminus} are only modified by a small amount by the present of anomalous magnetic moment as the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$~\cite{tiesinga2021codata}. In \rf{magplot}, we plot the magnetization as given by the above two equations with spin potential set to unity $\xi=1$. We see that the $e^{+}e^{-}$ plasma is overall paramagnetic and yields a positive overall magnetization which is contrary to the traditional assumption that matter-antimatter plasmas lack magnetic responses of their own in the bulk. With that said, the magnetization is certainly suppressed compared to the generating external field only approaching parity at high temperatures.
 
 In the limit the cosmic magnetic scale (and thus external magnetic field) goes to zero, the magnetization is entirely controlled by the spin fugacity $\xi$ asymmetry generated by the spin potential $\eta$ yielding
 \begin{align}
-    \lim_{b_{0}\rightarrow0}\frac{\cal M}{{\cal H}_{C}}=\frac{q^{2}}{2\pi^{2}}\sinh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}\left(\frac{T}{m_{e}}\right)K_{1}\left(\frac{m_{e}}{T}\right)\,.
+    \lim_{b_{0}\rightarrow0}\frac{\cal M}{{\cal B}_{C}}=\frac{q^{2}}{2\pi^{2}}\sinh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}\left(\frac{T}{m_{e}}\right)K_{1}\left(\frac{m_{e}}{T}\right)\,.
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\textwidth]{magfixedplot.pdf}
-    \caption{The magnetization ${\cal M}{\rm\ [G]}$ is plotted (solid red) where the external magnetic displacement (dashed red) is fixed by a value set by the comoving temperature at $T_{0}=10\keV$. The blue curves are defined in \rf{magplot}.}
+    \includegraphics[width=0.5\textwidth]{magfixedplot.pdf}
+    \caption{The magnetization ${\cal M}/{\cal B}_{C}$ is plotted (solid red) where the external magnetic displacement (dashed red) is fixed by a value set by the comoving temperature at $T_{0}=10\keV$. The blue curves are defined in \rf{magplot}.}
     \label{magfixedlot} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
