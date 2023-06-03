@@ -52,7 +52,9 @@
 \maketitle
 
 \begin{abstract}
-    We explore the possibility of magnetization within the primordial electron-positron plasma in the temperature range $2000\keV>T>20\keV$ where the $e^{+}e^{-}$ pair density was up to $10^{9}$ greater than the baryon density. We suggest that primordial magnetization within the plasma is driven by spin paramagnetism. At these high densities, strong dampening by internal scattering needs to be included in any study of magneto-hydrodynamic flow. The rapid disappearance of $e^{+}e^{-}$ at temperatures $T<511\keV$ occured much faster than the corresponding drop in temperature.
+    We explore in the temperature range $200\keV>T>20\keV$ the primordial Universe magnetization driven by spin paramagnetism  of the ultra dense electron-positron plasma. The $e^{+}e^{-}$ pair density was more than $10^{8}$ greater than the baryon density. Pairs fully disappear only below $T=20\keV$. 
+    
+%    At these high densities, strong dampening by internal scattering needs to be included in any study of magneto-hydrodynamic flow. The rapid disappearance of $e^{+}e^{-}$ at temperatures $T<511\keV$ occured much faster than the corresponding drop in temperature.
 \end{abstract}
 
 \keywords{early universe cosmology \and magnetization \and electron-positron plasma \and intergalactic magnetic fields}
@@ -94,7 +96,7 @@ or almost 1 billion times more abundant than the baryons. Constancy of this rati
     \label{fusion}
     e^{+}+e^{-}\leftrightarrow\gamma+\gamma\,.
 \end{align}
-At $T=20.3\keV$, the charged lepton asymmetry (mirrored by the baryon asymmetry) became evident as the few remaining excess electrons could no longer annihilate as the positrons vanished entirely. This process took no longer than an afternoon lunch break. Because of charge neutrality, the post-annihilation comoving ratio $n_{e^{-}}/n_{B}=0.87$~\cite{rafelski2023short} is slightly offset from unity by the presence of $\alpha$ particles and the other neutron containing light elements produced during Big Bang nucleosynthesis (BBN).
+At $T_{\rm split}=20.3\keV$, the charged lepton asymmetry (mirrored by the baryon asymmetry) became evident as the few remaining excess electrons could no longer annihilate as the positrons vanished entirely. This process took no longer than an afternoon lunch break. Because of charge neutrality, the post-annihilation comoving ratio $n_{e^{-}}/n_{B}=0.87$~\cite{rafelski2023short} is slightly offset from unity by the presence of $\alpha$ particles and the other neutron containing light elements produced during Big Bang nucleosynthesis (BBN).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Primordial magnetic fields}
@@ -131,7 +133,7 @@ where $p_{z}$ is the momentum parallel to the field axis and $n$ is the Landau o
 where we introduced the effective polarized mass ${\tilde m}_{\pm}$ which is distinct for each spin alignment and is a function of magnetic field strength ${\cal B}$. The effective polarized mass ${\tilde m}_{\pm}$ allows us to describe the $e^{+}e^{-}$ plasma with the spin effects almost wholly separated from the Landau characteristics of the gas when considering plasma thermodynamic properties.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Fermi statistics}
+\section{Fermi statistics and fugacity}
 \label{sec:fugacity}
 \noindent If the Cosmological Principle is correct~\cite{abdalla2022cosmology}, the universe is nearly homogeneous and isotropic on the largest scales. Localized inhomogeneities of matter evolution are often non-trivial and generally be solved numerically using magneto-hydrodynamics (MHD)~\cite{melrose2008quantum,vazza2017simulations}. Our approach however will be to look at the bulk properties of the relativistic gasses of the early universe via the thermal Fermi-Dirac distribution. The magnetized relativistic fermion partition function is given, in a generalized form, by
 \begin{align}
@@ -189,7 +191,7 @@ to parameterize the chemical potential $\mu=\mu(T)$ as a function of temperature
     \label{defmagetization}
     {\cal M}\equiv\frac{T}{V}\frac{\partial}{\partial{\cal B}}\ln{{\cal Z}_{e^{+}e^{-}}} = \frac{T}{V}\left(\frac{\partial b_{0}}{\partial{\cal B}}\right)\frac{\partial}{\partial b_{0}}\ln{{\cal Z}_{e^{+}e^{-}}}\,,\qquad\frac{\partial b_{0}}{\partial{\cal B}}=\frac{q}{T^{2}}\,.
 \end{align}
-Magnetization arising from other components in the cosmic gas (protons, neutrinos, etc...) could in principle also be included. In the context of MHD, primordial magnetogenesis from neutrino interactions in the electron-positron epoch was considered in~\cite{perrone2021neutrinoelectron}. We also introduce dimensionless units for magnetization by defining the critical field
+Magnetization arising from other components in the cosmic gas (protons, neutrinos, etc...) could in principle also be included. In the context of MHD, primordial magnetogenesis from neutrino interactions in the electron-positron epoch was considered in~\cite{perrone2021neutrinoelectron}. We introduce dimensionless units for magnetization by defining the critical field
 \begin{align}
     {\cal B}_{C}\equiv\frac{m_{e}^{2}}{q}\,,\qquad{\overline{\cal M}}\equiv\frac{\cal M}{{\cal B}_{C}}\,.
 \end{align}
@@ -198,7 +200,7 @@ Magnetization arising from other components in the cosmic gas (protons, neutrino
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{Magnetization_Hc_new.jpg}
-    \caption{The dimensionless magnetization ${\cal M}/{\cal B}_{C}$, with $g=2$, of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature. The lower (solid red) and upper (solid blue) bounds for cosmic magnetic scale $b_{0}$ are included. The external magnetic displacement ${\cal B}/{\cal B}_{C}$ is also plotted in for lower (dashed red) and upper (dashed blue) bounds. The spin fugacity is set to unity $\xi=1$.}
+    \caption{The magnetization ${\cal M}$, with $g=2$, of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature. The lower (solid red) and upper (solid blue) bounds for cosmic magnetic scale $b_{0}$ are included. The external magnetic field strength ${\cal B}/{\cal B}_{C}$ is also plotted in for lower (dashed red) and upper (dashed blue) bounds. The spin fugacity is set to unity $\xi=1$.}
     \label{fig:magnet} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -206,69 +208,91 @@ Magnetization arising from other components in the cosmic gas (protons, neutrino
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \begin{subfigure}[b]{0.49\textwidth}
+    \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=\textwidth]{DensityPairEffect.pdf}
-        \caption{}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.49\textwidth}
+    \begin{subfigure}{0.49\textwidth}
         \includegraphics[width=\textwidth]{ChemicalPotential.pdf}
-        \caption{}
     \end{subfigure}
-    \caption{tbw}
+    \caption{(left) The magnetization ${\cal M}$, with $g=2$, is plotted for the $b_{0}=10^{-3}$ case (solid blue) and the constant magnetic field $b_{0}=10^{-3}(T_{0}/T)^{2}$ case (solid red) where the comoving reference temperature is $T_{0}=10\keV$. The external magnetic field strength is plotted for the conserved flux case (dashed blue) and the constant field case (dashed red). (right) The chemical potential over temperature $\mu/T$ is plotted as a function of temperature with magnetic field $b_{0}=0$ and spin potential $\eta=0$ set to zero.}
     \label{fig:paireffect}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The scale ${\cal B}_{C}$ is where electromagnetism is expected become subject to non-linear effects, though luckily in our regime of interest, electrodynamics should be decidedly linear. We note however that the upper bounds of IGMFs in \req{igmf} (with $b_{0}=10^{-3}$; see \req{tbscale}) brings us to within $1\%$ of that limit for the external field strength in the temperature range considered. The total magnetization ${\cal M}$ can be broken into the sum of spin parallel ${\cal M}_{+}$ and spin anti-parallel ${\cal M}_{-}$ magnetization. We note that the expression for the magnetization simplifies significantly for $g=2$ which is the \lq\lq cusp\rq\rq\ gyro-magnetic factor~\cite{rafelski2022study} for Dirac particles. For illustration, the $g=2$ magnetization from \req{defmagetization} is then
+The scale ${\cal B}_{C}$ is where electromagnetism is expected to become subject to non-linear effects, though luckily in our regime of interest, electrodynamics should be linear. We note however that the upper bounds of IGMFs in \req{igmf} (with $b_{0}=10^{-3}$; see \req{tbscale}) brings us to within $1\%$ of that limit for the external field strength in the temperature range considered. The total magnetization ${\cal M}$ can be broken into the sum of spin parallel ${\cal M}_{+}$ and spin anti-parallel ${\cal M}_{-}$ magnetization. We note that the expression for the magnetization simplifies significantly for $g=2$ which is the \lq\lq cusp\rq\rq\ gyro-magnetic factor~\cite{rafelski2022study} for Dirac particles. For illustration, the $g=2$ magnetization from \req{defmagetization} is then
 \begin{align}
     \label{g2magplus}
-    {\overline{\cal M}}_{+}&=\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\qquad x_{+}=\frac{m_{e}}{T}\,,\\
+    {\overline{\cal M}}_{+}&=\frac{q^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\qquad x_{+}=\frac{m_{e}}{T}\,,\\
     \label{g2magminus}
-    -{\overline{\cal M}}_{-}&=\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi^{-1}\cosh{\frac{\mu}{T}}\left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,,\qquad x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,.
+    -{\overline{\cal M}}_{-}&=\frac{q^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi^{-1}\cosh{\frac{\mu}{T}}\left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,,\qquad x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,.
 \end{align}
-As the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$~\cite{tiesinga2021codata}, the above two expressions for ${\overline{\cal M}}_{+}$ and ${\overline{\cal M}}_{-}$ are only modified by a small amount because of anomalous magnetic moment (AMM). The influence of AMM would be more substantial for the magnetization of baryon gasses since the $g$-factor for protons $(g\approx5.6)$ and neutrons $(g\approx3.8)$ are substantially different from $g=2$.
+As the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$~\cite{tiesinga2021codata}, the above two expressions for ${\overline{\cal M}}_{+}$ and ${\overline{\cal M}}_{-}$ are only modified by a small amount because of anomalous magnetic moment (AMM). The influence of AMM would be more relevant for the magnetization of baryon gasses since the $g$-factor for protons $(g\approx5.6)$ and neutrons $(g\approx3.8)$ are substantially different from $g=2$.
 
-In \rf{fig:magnet}, we plot the magnetization as given by \req{g2magplus} and \req{g2magminus} with the spin potential set to unity $\xi=1$. We see that the $e^{+}e^{-}$ plasma is overall paramagnetic and yields a positive overall magnetization which is contrary to the traditional assumption that matter-antimatter plasmas lack significant magnetic responses of their own in the bulk. With that said, the magnetization is certainly suppressed compared to the generating external field only approaching at temperatures higher than considered.
+In \rf{fig:magnet}, we plot the magnetization as given by \req{g2magplus} and \req{g2magminus} with the spin potential set to unity $\xi=1$. We see that the $e^{+}e^{-}$ plasma is overall paramagnetic and yields a positive overall magnetization which is contrary to the traditional assumption that matter-antimatter plasmas lack significant magnetic responses of their own in the bulk. With that said, the magnetization never exceeds the external field under the parameters considered which shows a lack of ferromagnetic behavior. As the universe cooled, the dropping magnetization slowed at $T_{\rm split}=20.3\keV$ where positrons vanished. Thereafter the remaining electrons density $n_{e^{-}}$ only diluted with cosmic expansion.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{NewMagnetizationDensity001.jpg}
-        \caption{}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.49\textwidth}
         \includegraphics[width=\textwidth]{NewMagnetizationDensity002.jpg}
-        \caption{}
     \end{subfigure}
-    \caption{The dimensionless magnetic moment per lepton $|\vec{m}|/\mu_{B}$ is plotted for (a) $b_{0}=10^{-11}$ and (b) $b_{0}=10^{-3}$ using the Boltzmann approximation (dashed black) and the Fermi-Dirac distribution with (a) solid red and (b) solid blue. Both figures display the constant magnetic field case with the comoving value chosen at temperature $T_{0}~=~10\keV$.}
+    \caption{The magnetic moment per lepton $\langle\vec{m}\rangle_{z}$ along the field axis is plotted for (left) $b_{0}=10^{-11}$ and (right) $b_{0}=10^{-3}$ using the Boltzmann approximation (dashed black) and the Fermi-Dirac distribution (left: solid red; right: solid blue). Both figures display the constant magnetic field case (solid green) with the comoving value chosen at temperature $T_{0}~=~10\keV$.}
     \label{fig:momentperlepton}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-A curious feature of \rf{fig:magnet} is that the magnetization increases as a function of temperature. This is contrary to most systems which lose their magnetization at higher temperatures because of the disordering influence of thermal heat~\cite{huang1991statistical}. A standard feature of paramagnetic systems is that the susceptibility of the material is suppressed as temperature increases, so it is natural ask: Why doesn't this occur for the primordial $e^{+}e^{-}$ plasma?
+Despite the relatively large magnetization seen in \rf{fig:magnet}, the average contribution per lepton is only a small fraction of its overall magnetic moment. Specifically, the magnetization regime we are in is described by
+\begin{align}
+    \label{fractionalmagnetization}
+    {\cal M}V\ll\mu_{B}(N_{e^{+}}+N_{e^{-}})\,,\qquad\mu_{B}=\frac{q}{2m}\,,
+\end{align}
+where $\mu_{B}$ is the Bohr magneton and $N=nV$ is the total particle number in the proper volume. To better demonstrate this, we define the average magnetic moment per lepton given by along the field ($z$-direction) axis as
+\begin{align}
+    \label{momentperlepton}
+    \langle\vec{m}\rangle_{z}\equiv\frac{{\cal M}}{n_{e^{-}}+n_{e^{+}}}\,,\qquad\langle\vec{m}\rangle_{x}=\langle\vec{m}\rangle_{y}=0\,.
+\end{align}
+From the spin eigen-states, we expect the transverse expectation values to be zero. The quantity given in \req{momentperlepton} gives us an insight into the microscopic response of the plasma which we will use below.
+
+A curious feature of \rf{fig:magnet} is that the magnetization increases as a function of temperature. This is contrary to most systems which lose their magnetization at higher temperatures because of the disordering influence of thermal heat~\cite{huang1991statistical}. A standard feature of paramagnetic systems (Curie's law) is that the susceptibility of the material is suppressed as temperature increases, so it is natural ask: Why doesn't this occur for the primordial $e^{+}e^{-}$ plasma?
 
 There are two reasons:
 \begin{itemize}
-    \item[a.] The conservation of magnetic flux, as described in \req{bscale}, through comoving surfaces for the external field ensures that as we travel into the past, the magnetic field increases which enhances the overall magnetization of the gas. This phenomenon is seen in \rf{fig:momentperlepton} where the magnetization curve obtained in \req{g2magplus} and \req{g2magminus} are compared to the magnetization if hypothetically the external magnetic field were constant and did not increase as the proper volume of a given comoving volume was shrunk in the past as $V(t)=L_{0}^{3}a^{3}(t)/a_{0}^{3}$.
-    \item[b.] As we travel into the distance past, the density of electrons $n_{e^{-}}$ and positrons $n_{e^{+}}$ increase to an enormous extent. As discussed in \rsec{sec:abundance}, the late $e^{+}e^{-}$ plasma saw a density decrease of $10^{9}$ as the majority of the gas annihilated leaving behind only a small residual quantity of electrons. When viewed from the perspective of traveling back in time, the magnetization is enhanced despite the temperature increase because the density of matter-antimmatter pairs increases so dramatically.
+    \item[a.] As discussed in \rsec{sec:abundance}, the late $e^{+}e^{-}$ plasma saw its density decrease by a factor of $10^{9}$ as the majority of the gas annihilated leaving behind only a small residual quantity of electrons. As we travel into the distance past, the density of electrons $n_{e^{-}}$ and positrons $n_{e^{+}}$ increases by an enormous extent therefore enhancing the overall magnetization through quantity. This is shown in \rf{fig:paireffect} (left) which compares the magnetization of the gas with conserved magnetic flux $b_{0}={\rm\ const}$ and a constant field $b_{0}\propto1/T^{2}$. If the magnetic field is constant, we see the parameter responsible for magnetization at high temperatures is the pair density. In \rf{fig:paireffect} (right) we plot the chemical potential $\mu/T$ which characterizes the importance of the charged lepton asymmetry as a function of temperature. As an aside, we only plotted the $b_{0}=0$ case as the magnetic field did not visibly influence $\mu/T$ in the regime considered.
+    \item[b.] The conservation of magnetic flux, as described in \req{bscale}, through comoving surfaces for the external field ensures that as we travel into the past, the magnetic field increases which enhances the overall magnetization of the gas. This phenomenon is seen in \rf{fig:paireffect} as the difference between the blue and red curves. However, a more striking visualization of this is plotted in \rf{fig:momentperlepton} where the average magnetic moment $\langle\vec{m}\rangle_{z}$ defined in \req{momentperlepton} displays how essential the external field is on the per lepton magnetization. The average magnetic moment per lepton is suppressed at higher temperatures (as expected for Curie law-like magnetization) if the field strength is held constant. A small difference is seen between the full Fermi distribution analysis and the Boltzmann approximation used in this work.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Spin Potential}
+\section{Spin potential and ferromagnetism}
 \label{sec:spin}
-\noindent In the limit the cosmic magnetic scale (and thus external magnetic field) goes to zero, the magnetization is entirely controlled by the spin fugacity $\xi$ asymmetry generated by the spin potential $\eta$ yielding
+\noindent Up to this point, we have neglected the impact that a nonzero spin potential $\eta\neq0$ (and thus $\xi\neq1$) would have on the primordial $e^{+}e^{-}$ plasma. In the limit the cosmic magnetic scale (and thus external magnetic field) goes to zero, the magnetization given in \req{g2magplus} and \req{g2magminus} is entirely controlled by the spin fugacity $\xi$ asymmetry generated by the spin potential $\eta$ yielding
 \begin{align}
-    \lim_{b_{0}\rightarrow0}{\overline{\cal M}}=\frac{q^{2}}{2\pi^{2}}\sinh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}\left(\frac{T}{m_{e}}\right)K_{1}\left(\frac{m_{e}}{T}\right)\,.
+    \lim_{b_{0}\rightarrow0}{\overline{\cal M}}=\frac{q^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\sinh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}\left[\frac{m_{e}}{T}K_{1}\left(\frac{m_{e}}{T}\right)\right]\,,\qquad2\sinh{\frac{\eta}{T}}=\xi-\xi^{-1}\,.
 \end{align}
-
+Therefore, we can understand the spin potential as a kind of ferromagnetic influence on the primordial gas which allows for magnetization even in the absence of external magnetic fields. As $\sinh{\eta/T}$ is an odd function, the sign of $\eta$ also controls the alignment of the magnetization. In general, $\eta=\eta(\mu,T)$ is a function of the chemical potential and temperature. As discussed in \rsec{sec:fugacity}, the two potentials are mutually related likely would need be simultaneously solved. We will return to the topic of spin potential constraints under separate cover.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{SpinLowFugacity.pdf}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{SpinMidFugacity.pdf}
+    \end{subfigure}
+    \caption{to be written}
+    \label{fig:spin}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Closing}
 \label{sec:conclusions}
-\noindent tbw
+\noindent to be written
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{unsrtnat}
