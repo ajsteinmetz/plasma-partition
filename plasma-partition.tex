@@ -8,6 +8,8 @@
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
 \usepackage[numbers]{natbib}
 \usepackage{authblk}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -76,7 +78,7 @@ Faraday rotation from distant radio active galaxy nuclei (AGN)~\cite{pomakov2022
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\textwidth]{EEPlasmaDensityRatio.jpg}
+    \includegraphics[width=0.8\textwidth]{EEPlasmaDensityRatio_new.jpg}
     \caption{The light charged lepton-to-baryon ratio $n_{e^{\pm}}/n_{B}$ is plotted as a function of temperature. The electron-to-baryon ratio $n_{e^{-}}/n_{B}$ is shown as the solid blue line while the positron-to-baryon ratio $n_{e^{+}}/n_{B}$ is printed as the dashed red line. The two vertical dashed green lines denote temperatures $T=m_{e}\simeq511\keV$ and $T=20.3\keV$. The two horizontal black dashed lines denote the pre-annihilation constant of $n_{e^{\pm}}/n_{B}=4.47\times10^{8}$ and post-annihilation constant of $n_{e^{-}}/n_{B}=0.87$.}
     \label{densityratio} 
 \end{figure}
@@ -138,8 +140,8 @@ where we introduced the effective polarized mass ${\tilde m}_{\pm}$ which is dis
 \end{align}
 where $\sigma$ is a sum over electron and positron states and $s$ is a sum over polarizations. $V$ denotes our proper volume. We define the generalized fugacity $\Upsilon_{\sigma}^{s}$ as the product of:
 \begin{itemize}
-    \item[a.] Chemical fugacity $\lambda_{\sigma}=e^{\mu_{\sigma}/T}$
-    \item[b.] Spin fugacity $\xi_{s}=e^{\eta_{s}/T}$
+    \item[a.] Chemical fugacity $\lambda_{\sigma}=\exp{(\mu_{\sigma}/T)}$
+    \item[b.] Spin fugacity $\xi_{s}=\exp{(\eta_{s}/T)}$
 \end{itemize}
 The chemical fugacity $\lambda_{\sigma}$ is defined in terms of the chemical potential $\mu_{\sigma}=\sigma\mu$ and due to charge conservation~\cite{elze1980relativistic} can be written as 
 \begin{align}
@@ -157,7 +159,7 @@ We also introduce a novel spin fugacity $\xi_{s}$ and spin potential $\eta_{s}=s
     \xi\equiv\xi_{+}=\xi_{-}^{-1}\,.
 \end{align}
 
-We implement the Boltzmann approximation for the limit where $T\gg m_e$ which is approximately true in the temperature range of interest. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration. The resulting partition function (after truncation of the error remainder) can then be written in terms of modified Bessel $K$ functions~\cite{abramowitz1988handbook,letessier2002hadrons} of the second kind, yielding
+We implement the Boltzmann approximation for the limit where $T\lesssim m_e$ which is approximately true in the temperature range of interest. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration. The resulting partition function (after truncation of the error remainder) can then be written in terms of modified Bessel $K$ functions~\cite{abramowitz1988handbook,letessier2002hadrons} of the second kind, yielding
 \begin{align}
     \label{boltzmann}
     \ln{\cal Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{2\pi^{2}}\left[2\cosh{\frac{\mu}{T}}\right]\sum_{s}^{\pm}\xi_{s}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\,,\\
@@ -185,7 +187,7 @@ to parameterize the chemical potential $\mu=\mu(T)$ as a function of temperature
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\textwidth]{Magnetization_Hc.jpg}
+    \includegraphics[width=0.8\textwidth]{Magnetization_Hc_new.jpg}
     \caption{The dimensionless magnetization ${\cal M}/{\cal B}_{C}$, with $g=2$, of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature. The lower (solid red) and upper (solid blue) bounds for cosmic magnetic scale $b_{0}$ are included. The external magnetic displacement ${\cal B}/{\cal B}_{C}$ is also plotted in for lower (dashed red) and upper (dashed blue) bounds. The spin fugacity is set to unity $\xi=1$.}
     \label{magplot} 
 \end{figure}
@@ -197,31 +199,41 @@ to parameterize the chemical potential $\mu=\mu(T)$ as a function of temperature
 \end{align}
 Magnetization arising from other components in the cosmic gas (protons, neutrinos, etc...) could in principle also be included. In the context of MHD, primordial magnetogenesis from neutrino interactions in the electron-positron epoch was considered in~\cite{perrone2021neutrinoelectron}. We also introduce dimensionless units for magnetization by defining the critical field
 \begin{align}
-    {\cal B}_{C}\equiv\frac{m_{e}^{2}}{q}\,.
+    {\cal B}_{C}\equiv\frac{m_{e}^{2}}{q}\,,\qquad{\overline{\cal M}}\equiv\frac{\cal M}{{\cal B}_{C}}\,.
 \end{align}
 The total magnetization ${\cal M}$ can be broken into the sum of spin parallel ${\cal M}_{+}$ and spin anti-parallel ${\cal M}_{-}$ magnetization. We note that the expression for the magnetization simplifies significantly for $g=2$ which is the \lq\lq cusp\rq\rq\ gyro-magnetic factor~\cite{rafelski2022study} of the Dirac particle. For illustration, the $g=2$ magnetization from \req{defmagetization} is then
 \begin{align}
     \label{g2magplus}
-    \frac{{\cal M}_{+}}{{\cal B}_{C}}&=\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\qquad x_{+}=\left(\frac{m_{e}}{T}\right)\,,\\
+    {\overline{\cal M}}_{+}&=\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\qquad x_{+}=\left(\frac{m_{e}}{T}\right)\,,\\
     \label{g2magminus}
-    -\frac{{\cal M}_{-}}{{\cal B}_{C}}&=\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi^{-1}\cosh{\frac{\mu}{T}}\left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,,\qquad x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,.
+    -{\overline{\cal M}}_{-}&=\frac{q^{2}}{2\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi^{-1}\cosh{\frac{\mu}{T}}\left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,,\qquad x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,.
 \end{align}
 The expressions in \req{g2magplus} and \req{g2magminus} are only modified by a small amount by the present of anomalous magnetic moment as the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$~\cite{tiesinga2021codata}. In \rf{magplot}, we plot the magnetization as given by the above two equations with spin potential set to unity $\xi=1$. We see that the $e^{+}e^{-}$ plasma is overall paramagnetic and yields a positive overall magnetization which is contrary to the traditional assumption that matter-antimatter plasmas lack magnetic responses of their own in the bulk. With that said, the magnetization is certainly suppressed compared to the generating external field only approaching parity at high temperatures.
 
 In the limit the cosmic magnetic scale (and thus external magnetic field) goes to zero, the magnetization is entirely controlled by the spin fugacity $\xi$ asymmetry generated by the spin potential $\eta$ yielding
 \begin{align}
-    \lim_{b_{0}\rightarrow0}\frac{\cal M}{{\cal B}_{C}}=\frac{q^{2}}{2\pi^{2}}\sinh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}\left(\frac{T}{m_{e}}\right)K_{1}\left(\frac{m_{e}}{T}\right)\,.
+    \lim_{b_{0}\rightarrow0}{\overline{\cal M}}=\frac{q^{2}}{2\pi^{2}}\sinh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}\left(\frac{T}{m_{e}}\right)K_{1}\left(\frac{m_{e}}{T}\right)\,.
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\textwidth]{magfixedplot.pdf}
-    \caption{The magnetization ${\cal M}/{\cal B}_{C}$ is plotted (solid red) where the external magnetic displacement (dashed red) is fixed by a value set by the comoving temperature at $T_{0}=10\keV$. The blue curves are defined in \rf{magplot}.}
-    \label{magfixedlot} 
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{NewMagnetizationDensity001.jpg}
+        \caption{}
+        \label{fig:one}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \includegraphics[width=\textwidth]{NewMagnetizationDensity002.jpg}
+        \caption{}
+        \label{fig:two}
+    \end{subfigure}
+    \caption{The dimensionless magnetic moment per lepton $|\vec{m}|/\mu_{B}$ is plotted for (a) $b_{0}=10^{-11}$ and (b) $b_{0}=10^{-3}$ using the Boltzmann approximation (dashed black) and the Fermi-Dirac distribution with (a) solid red and (b) solid blue. Both figures display the constant magnetic field case with the comoving value chosen at temperature $T_{0}~=~10\keV$.}
+    \label{magfixedlot}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
+
 Of interest is the determination of the magnetization per particle. A curious feature of \rf{magplot} is that the magnetization increases as a function of temperature. This is contrary to most systems which lose their magnetization at higher temperatures because of the disordering influence of thermal heat~\cite{huang1991statistical}. A standard feature of paramagnetic systems is that the susceptibility of the material is suppressed as temperature increases, so it is natural ask: Why doesn't this occur for the primordial $e^{+}e^{-}$ plasma?
 
 There are two reasons:
