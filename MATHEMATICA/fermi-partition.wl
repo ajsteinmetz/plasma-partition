@@ -28,6 +28,13 @@ x[T,b,1,2]//TraditionalForm;
 
 
 (* ::Text:: *)
+(*Define the magnetic field strength*)
+
+
+B[T_, b_] := (T/511)^2 b
+
+
+(* ::Text:: *)
 (*Define the spin potential and spin fugacity.*)
 
 
@@ -39,14 +46,14 @@ x[T,b,1,2]//TraditionalForm;
 
 
 lnZ[V_, u_, T_, b_, s_, g_,\[Eta]_] := (T^(3) V/(2 Pi)^(2)) (2 Cosh[u/T])\[Xi][T,s,\[Eta]](x[T, b, s, g]^(2) BesselK[2, x[T, b, s, g]] + \
-              b x[T, b, s, g] BesselK[1, x[T, b, s, g]]/2 + b^(2) BesselK[0, x[T, b, s, g]]/12)
+              b x[T, b, s, g] BesselK[1, x[T, b, s, g]]/2 + b^(2) BesselK[0, x[T, b, s, g]]/12);
 
 
-lnZ[V,u,T,b,-1,2,0]+lnZ[V,u,T,b,1,2,0]//TraditionalForm
-lnZ[V,u,T,b,-1,2,0]+lnZ[V,u,T,b,1,2,0]//FullSimplify//TraditionalForm
+lnZ[V,u,T,b,-1,2,0]+lnZ[V,u,T,b,1,2,0]//TraditionalForm;
+lnZ[V,u,T,b,-1,2,0]+lnZ[V,u,T,b,1,2,0]//FullSimplify//TraditionalForm;
 
 
-(* ::Subsection:: *)
+(* ::Subsection::Closed:: *)
 (*Zero B-field limit test*)
 
 
@@ -122,7 +129,6 @@ LogLogPlot[Evaluate[f[T, #] & /@ bValues], {T, 20, 2000},
 (*Let' s also plot the external fields over the same temperature range. The expressions for the external fields in dimensional units are as follows:*)
 
 
-B[T_, b_] := (T/511)^2 b
 LogLogPlot[{B[T, 10^(-3)], B[T, 10^(-11)]}, {T, 20, 2000},
   PlotStyle -> {Directive[Dashed, Blue], Directive[Dashed, Red]},
   PlotLegends -> Placed[LineLegend[{"b = \!\(\*SuperscriptBox[\(10\), \(-3\)]\)", "b = \!\(\*SuperscriptBox[\(10\), \(-11\)]\)"}], {0.8, 0.6}],
@@ -163,14 +169,15 @@ loT = 10; hiT = 2000;
 Tlist[n_]:=Table[x,{x,n,9n,n}];
 reversal[T_]:=-T+ loT + hiT;
 f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g, \[Eta]], b] + D[lnZ[V, u, T, b, -1, g, \[Eta]], b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2) /. m -> 511;
-bValues = {10^(-3), 10^(-3)*(10)^(2)/T^(2)};
+bValues = {10^(-3), 10^(-3)*(1000)^(2)/T^(2)};
 Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, loT, hiT},
- 	PlotRange -> {{10,1000},{10^(-33),10^(1)}},
+ 	PlotRange -> {{10,1000},{10^(-31),10^(1)}},
  	Frame -> True,
  	FrameLabel -> {"T [keV]", "\!\(\*OverscriptBox[\(\[ScriptCapitalM]\), \(_\)]\)"},
  	PlotStyle -> {Blue,Directive[Dashed,Blue],Red,Directive[Dashed, Red]},
- 	PlotLegends -> Placed[LineLegend[{"\[ScriptCapitalM](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","\[ScriptCapitalB](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","\[ScriptCapitalM](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)(\!\(\*SubscriptBox[\(T\), \(0\)]\)/T\!\(\*SuperscriptBox[\()\), \(2\)]\))","\[ScriptCapitalB](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)(\!\(\*SubscriptBox[\(T\), \(0\)]\)/T\!\(\*SuperscriptBox[\()\), \(2\)]\))"}],{0.35, 0.35}],
- 	LabelStyle -> Directive[Black,20,FontFamily -> "Times"],
+ 	PlotLegends -> Placed[LineLegend[{"\[ScriptCapitalM](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","\[ScriptCapitalB](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","\[ScriptCapitalM](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)(\!\(\*SubscriptBox[\(T\), \(0\)]\)/T\!\(\*SuperscriptBox[\()\), \(2\)]\))","\[ScriptCapitalB](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)(\!\(\*SubscriptBox[\(T\), \(0\)]\)/T\!\(\*SuperscriptBox[\()\), \(2\)]\))"}],{0.25, 0.25}],
+ 	LabelStyle -> Directive[Black,14,FontFamily -> "Times"],
+ 	FrameStyle -> Directive[Black,20],
  	Background -> White,
  	ScalingFunctions -> {
        {-Log[#]&,InverseFunction[-Log[#]&]},
@@ -224,6 +231,89 @@ LogPlot[Evaluate[f[#, b] & /@ TValues], {b,0,10^(-3)},
 
 (* ::Text:: *)
 (*The thing that is unclear to me is why increased temperatures lead to more magnetization rather than less. Is the partition function sick in some manner? Something feels wrong with this behavior. The Bessel K[x] functions mostly decay to zero for large values of x. Therefore, having x=m/T be the controlling variable leads to situations where for low temperature, the Bessel functions are killed, but for high temperature, they become large. To be fair, in the Boltzmann approximation, you do not expect the low temperature behavior to be correct as the Boltzmann distribution is very unlike the Fermi-Dirac distribution. I think the issue must be that the Boltzmann k=1 approximation must be only valid within a particular domain.*)
+
+
+(* ::Section:: *)
+(*Chemical Potential*)
+
+
+(* ::Subsection:: *)
+(*Definitions*)
+
+
+(* ::Text:: *)
+(*Define the chemical potential.*)
+
+
+Xp = 0.878;
+nBs = 0.865 10^(-10);
+gs = 3.91;
+entropy[T_]:=T^(3)(2 Pi^(2) gs)/45;
+np[T_] := Xp nBs entropy[T];
+chempot[T_,b_, g_] := ArcSinh[Pi^(2) Xp nBs (2 Pi^(2) gs)/45 (
+			  x[T, b, 1, g]^(2) BesselK[2, x[T, b, 1, g]] + \
+              b x[T, b, 1, g] BesselK[1, x[T, b, 1, g]]/2 + b^(2) BesselK[0, x[T, b, 1, g]]/12 + \
+              x[T, b, -1, g]^(2) BesselK[2, x[T, b, -1, g]] + \
+              b x[T, b, -1, g] BesselK[1, x[T, b, -1, g]]/2 + b^(2) BesselK[0, x[T, b, -1, g]]/12)^(-1)];
+chempot[T,0,2]
+
+
+g = 2;
+Bc = 4.41 10^(13);
+Bc = 1;
+\[Eta] = 0;
+me = 511;
+b0 = 10^(-3);
+loT = 10; hiT = 1000;
+Tlist[n_]:=Table[x,{x,n,9n,n}];
+reversal[T_]:=-T+ loT + hiT;
+bValues = {0};
+Plot[Evaluate[chempot[T, #,g]/.m->me & /@ bValues], {T, loT, hiT},
+ 	PlotRange -> {10^(2),10^(-10)},
+ 	Frame -> True,
+ 	FrameLabel -> {"T [keV]", "\[Mu]/T"},
+ 	PlotStyle -> {Black},
+ 	LabelStyle -> Directive[Black,14,FontFamily -> "Times"],
+ 	FrameStyle -> Directive[Black,20],
+ 	Background -> White,
+ 	ScalingFunctions -> {
+       {-Log[#]&,InverseFunction[-Log[#]&]},
+       {Log,InverseFunction[Log]}},
+     FrameTicks -> {{{#, Superscript[10, Log10@#]} & /@ ({10^2, 10^-2, 10^-6, 10^-10}), None},
+       {{#, Superscript[10, Log10@#]} & /@ ({10^3, 10^2, 10^1}), None}},
+ 	GridLines -> {Drop[Flatten[Table[Tlist[n],{n,{10,100,1000}}]],-8],Table[10^(n),{n,1,-33,-1}]},
+ 	GridLinesStyle -> Directive[Line, Lighter[Gray,.8]]]
+
+
+g = 2;
+Bc = 4.41 10^(13);
+Bc = 1;
+\[Eta] = 0;
+loT = 10; hiT = 2000;
+Tlist[n_]:=Table[x,{x,n,9n,n}];
+reversal[T_]:=-T+ loT + hiT;
+f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, chempot[T,0,1,g]T, T, b, 1, g, \[Eta]], b] + D[lnZ[V, chempot[T,0,-1,g]T, T, b, -1, g, \[Eta]], b])/. q -> (4 Pi/137)/m^(2) /. m -> 511;
+bValues = {10^(-3), 10^(-3)*(10)^(2)/T^(2)};
+Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, loT, hiT},
+ 	PlotRange -> {{10,1000},{10^(-31),10^(1)}},
+ 	Frame -> True,
+ 	FrameLabel -> {"T [keV]", "\!\(\*OverscriptBox[\(\[ScriptCapitalM]\), \(_\)]\)"},
+ 	PlotStyle -> {Blue,Directive[Dashed,Blue],Red,Directive[Dashed, Red]},
+ 	PlotLegends -> Placed[LineLegend[{"\[ScriptCapitalM](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","\[ScriptCapitalB](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","\[ScriptCapitalM](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)(\!\(\*SubscriptBox[\(T\), \(0\)]\)/T\!\(\*SuperscriptBox[\()\), \(2\)]\))","\[ScriptCapitalB](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\)(\!\(\*SubscriptBox[\(T\), \(0\)]\)/T\!\(\*SuperscriptBox[\()\), \(2\)]\))"}],{0.25, 0.25}],
+ 	LabelStyle -> Directive[Black,14,FontFamily -> "Times"],
+ 	FrameStyle -> Directive[Black,20],
+ 	Background -> White,
+ 	ScalingFunctions -> {
+       {-Log[#]&,InverseFunction[-Log[#]&]},
+       {Log,InverseFunction[Log]}},
+     FrameTicks -> {{{#, Superscript[10, Log10@#]} & /@ ({10^0, 10^-10, 10^-20, 10^-30}), None},
+       {{#, Superscript[10, Log10@#]} & /@ ({10^3, 10^2, 10^1}), None}},
+ 	GridLines -> {Drop[Flatten[Table[Tlist[n],{n,{10,100,1000}}]],-8],Table[10^(n),{n,1,-33,-1}]},
+ 	GridLinesStyle -> Directive[Line, Lighter[Gray,.8]]]
+
+
+ScientificForm[{10.,100.,10.^(-2),1000000.}]
+ScientificForm[{123450000.0,0.000012345,123.45}]
 
 
 (* ::Section:: *)
