@@ -269,7 +269,7 @@ Tlist[n_]:=Table[x,{x,n,9n,n}];
 reversal[T_]:=-T+ loT + hiT;
 bValues = {0};
 Plot[Evaluate[chempot[T, #,g]/.m->me & /@ bValues], {T, loT, hiT},
- 	PlotRange -> {10^(2),10^(-10)},
+ 	PlotRange -> {{10,1000},{10^(2),10^(-10)}},
  	Frame -> True,
  	FrameLabel -> {"T [keV]", "\[Mu]/T"},
  	PlotStyle -> {Black},
@@ -295,7 +295,7 @@ reversal[T_]:=-T+ loT + hiT;
 f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, chempot[T,0,1,g]T, T, b, 1, g, \[Eta]], b] + D[lnZ[V, chempot[T,0,-1,g]T, T, b, -1, g, \[Eta]], b])/. q -> (4 Pi/137)/m^(2) /. m -> 511;
 bValues = {10^(-3), 10^(-3)*(10)^(2)/T^(2)};
 Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, loT, hiT},
- 	PlotRange -> {{10,1000},{10^(-31),10^(1)}},
+ 	PlotRange -> {{10,1000},{10^(-25),10^(1)}},
  	Frame -> True,
  	FrameLabel -> {"T [keV]", "\!\(\*OverscriptBox[\(\[ScriptCapitalM]\), \(_\)]\)"},
  	PlotStyle -> {Blue,Directive[Dashed,Blue],Red,Directive[Dashed, Red]},
@@ -306,7 +306,7 @@ Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, loT, hiT},
  	ScalingFunctions -> {
        {-Log[#]&,InverseFunction[-Log[#]&]},
        {Log,InverseFunction[Log]}},
-     FrameTicks -> {{{#, Superscript[10, Log10@#]} & /@ ({10^0, 10^-10, 10^-20, 10^-30}), None},
+     FrameTicks -> {{{#, Superscript[10, Log10@#]} & /@ ({10^0, 10^-5, 10^-10, 10^-15, 10^-20, 10^-25}), None},
        {{#, Superscript[10, Log10@#]} & /@ ({10^3, 10^2, 10^1}), None}},
  	GridLines -> {Drop[Flatten[Table[Tlist[n],{n,{10,100,1000}}]],-8],Table[10^(n),{n,1,-33,-1}]},
  	GridLinesStyle -> Directive[Line, Lighter[Gray,.8]]]
@@ -368,17 +368,48 @@ Manipulate[Plot[Evaluate[{Bc Abs[f[T, #,eta]],Bc B[T,#]} & /@ bValues], {T, 10, 
 
 g = 2;
 Bc = 4.41 10^(13);
-f[T_, b_,eta_] = (T/V) (q/T^(2)) (D[lnZ[V, u, T, b, 1, g, eta], b] + D[lnZ[V, u, T, b, -1, g, eta], b])/Cosh[u/T] /. q -> (4 Pi/137)/m^(2) /. m -> 511;
+Bc = 1;
+f[T_, b_,eta_] = (T/V) (q/T^(2)) (D[lnZ[V, chempot[T,0,1,g]T, T, b, 1, g, eta], b] + D[lnZ[V, chempot[T,0,-1,g]T, T, b, -1, g, eta], b]) /. q -> (4 Pi/137)/m^(2) /. m -> 511;
 bValues = {10^(-3), 0};
-Manipulate[Plot[Evaluate[{Bc f[T, #,eta],Bc B[T,#]} & /@ bValues], {T, 10, 2000},
- 	PlotRange -> {{10,2000},{10^(-29),10^(14)}},
+Manipulate[Plot[{Bc f[T, 10^(-3),0],Evaluate[{Bc f[T, #,eta],Bc B[T,#]} & /@ bValues]}, {T, 10, 2000},
+ 	PlotRange -> {{10,1000},{10^(-25),10^(1)}},
  	Frame -> True,
- 	FrameLabel -> {"T [keV]", "B [G]"},
- 	PlotStyle -> {Blue,Directive[Dashed,Blue],Red,Directive[Dashed, Red]},
- 	PlotLegends -> Placed[LineLegend[{"M(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","H(\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","M(\!\(\*SubscriptBox[\(b\), \(0\)]\)=0)","H(\!\(\*SubscriptBox[\(b\), \(0\)]\)=0)"}], {0.8, 0.3}],
+ 	FrameLabel -> {"T [keV]", "\!\(\*OverscriptBox[\(\[ScriptCapitalM]\), \(_\)]\)"},
+ 	PlotStyle -> {Directive[Black,Dashed],Blue,Directive[Blue,Dashed],Red},
+ 	PlotLegends -> Placed[LineLegend[{"\[ScriptCapitalM](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\); \[Eta]=0)","\[ScriptCapitalM](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\); \[Eta]=\!\(\*SuperscriptBox[\(10\), \(-3\)]\) [keV])","\[ScriptCapitalB](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","\[ScriptCapitalM](\!\(\*SubscriptBox[\(b\), \(0\)]\)=0; \[Eta]=\!\(\*SuperscriptBox[\(10\), \(-3\)]\) [keV])"}],{0.25, 0.25}],
+ 	LabelStyle -> Directive[Black,14,FontFamily -> "Times"],
+ 	FrameStyle -> Directive[Black,20],
  	Background -> White,
- 	ScalingFunctions -> {"Log", "Log"},
- 	GridLines -> Automatic, GridLinesStyle -> LightGray],{eta,0,10^(-3),10^(-4),Appearance->"Labeled"}]
+ 	ScalingFunctions -> {
+       {-Log[#]&,InverseFunction[-Log[#]&]},
+       {Log,InverseFunction[Log]}},
+     FrameTicks -> {{{#, Superscript[10, Log10@#]} & /@ ({10^0, 10^-5, 10^-10, 10^-15, 10^-20, 10^-25}), None},
+       {{#, Superscript[10, Log10@#]} & /@ ({10^3, 10^2, 10^1}), None}},
+ 	GridLines -> {Drop[Flatten[Table[Tlist[n],{n,{10,100,1000}}]],-8],Table[10^(n),{n,1,-33,-1}]},
+ 	GridLinesStyle -> Directive[Line, Lighter[Gray,.8]]],{eta,0,10^(-3),10^(-4),Appearance->"Labeled"}]
+
+
+g = 2;
+Bc = 1;
+eta1 =1 10^(3);
+f[T_, b_,eta_] = (T/V) (q/T^(2)) (D[lnZ[V, chempot[T,0,1,g]T, T, b, 1, g, eta], b] + D[lnZ[V, chempot[T,0,-1,g]T, T, b, -1, g, eta], b]) /. q -> (4 Pi/137)/m^(2) /. m -> 511;
+bValues = {10^(-3)};
+Plot[{Bc B[T,bValues], Bc f[T, bValues,0],Bc f[T, bValues,eta1],Bc f[T, 0,eta1]}, {T, 10, 10000},
+ 	PlotRange -> {{10,10000},{10^(-25),10^(1)}},
+ 	Frame -> True,
+ 	FrameLabel -> {"T [keV]", "\!\(\*OverscriptBox[\(\[ScriptCapitalM]\), \(_\)]\)"},
+ 	PlotStyle -> {Directive[Blue,Dashed],Directive[Black,Dashed],Blue,Red},
+ 	PlotLegends -> Placed[LineLegend[{"\[ScriptCapitalM](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\); \[Eta]=0)","\[ScriptCapitalM](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\); \[Eta]=\!\(\*SuperscriptBox[\(10\), \(-3\)]\) [keV])","\[ScriptCapitalB](\!\(\*SubscriptBox[\(b\), \(0\)]\)=\!\(\*SuperscriptBox[\(10\), \(-3\)]\))","\[ScriptCapitalM](\!\(\*SubscriptBox[\(b\), \(0\)]\)=0; \[Eta]=\!\(\*SuperscriptBox[\(10\), \(-3\)]\) [keV])"}],{0.25, 0.25}],
+ 	LabelStyle -> Directive[Black,14,FontFamily -> "Times"],
+ 	FrameStyle -> Directive[Black,20],
+ 	Background -> White,
+ 	ScalingFunctions -> {
+       {-Log[#]&,InverseFunction[-Log[#]&]},
+       {Log,InverseFunction[Log]}},
+     FrameTicks -> {{{#, Superscript[10, Log10@#]} & /@ ({10^0, 10^-5, 10^-10, 10^-15, 10^-20, 10^-25}), None},
+       {{#, Superscript[10, Log10@#]} & /@ ({10^3, 10^2, 10^1}), None}},
+ 	GridLines -> {Drop[Flatten[Table[Tlist[n],{n,{10,100,1000}}]],-8],Table[10^(n),{n,1,-33,-1}]},
+ 	GridLinesStyle -> Directive[Line, Lighter[Gray,.8]]]
 
 
 (* ::Subsection:: *)
