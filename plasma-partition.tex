@@ -38,14 +38,16 @@
 \newcommand*{\xblue}{\color{blue}}
 \newcommand*{\xgreen}{\color{green}}
 
-\title{\boldmath Magnetic Properties of Finite Temperature Primordial Electron-Positron Plasma}
+%\title{\boldmath Magnetic Properties of Finite Temperature Primordial Electron-Positron Plasma}
+\title{\boldmath Paramagentism in Primordial Universe}
 
 % Author Orcid ID: Define per author
 \newcommand{\orcA}{0000-0001-8217-1484}
 \newcommand{\orcB}{0000-0001-5038-8427}
 \newcommand{\orcC}{0000-0001-5474-2649}
 
-\author{Andrew Steinmetz\orc{\orcC}\thanks{Correspondence: \texttt{ajsteinmetz@arizona.edu}}, Cheng Tao Yang\orc{\orcB}, and Johann Rafelski\orc{\orcA}\\ Department of Physics, The University of Arizona, Tucson, AZ 85721, USA}
+\author{Andrew Steinmetz\orc{\orcC}%\thanks{Correspondence: \texttt{ajsteinmetz@arizona.edu}}
+, Cheng Tao Yang\orc{\orcB}, and Johann Rafelski\orc{\orcA}\\ Department of Physics, The University of Arizona, Tucson, AZ 85721, USA}
 
 \begin{document}
 
@@ -63,119 +65,138 @@
 \section{Introduction}
 \label{sec:introduction}
 \noindent  
-Unlike electric fields which cannot be supported at large scales, cosmic magnetic fields are easily generated~\cite{giovannini2003magnetized,kronberg1994extragalactic} by a variety of physicals phenomena, and once present are difficult to eliminate. As result macroscopic domains of magnetic fields have been found: around compact objects (stars, planets, etc...), between stars, within galaxies, between galaxies in clusters, and surprisingly in the deep extra-galactic void spaces where little matter exists. 
+Considering the ubiquitous  magnetic field in the Universe~\cite{giovannini2003magnetized,kronberg1994extragalactic} we search for a primordial mechanism that could produce the observed magnetic diversity: Macroscopic domains of magnetic fields have been found around compact objects (stars, planets, etc.;, between stars; within galaxies;between galaxies in clusters;and surprisingly in the deep extra-galactic void spaces.   The conventional elaboration of the origins for cosmic  primordial magnetic fields (PMF) are detailed in~\cite{gaensler2004origin,durrer2013cosmological,batista2021gammaray}. 
 
-Considering the ubiquitous  magnetic field  we search for a primordial mechanism that could produce the observed magnetic diversity in the universe. The conventional elaboration of the origins for cosmic  primordial magnetic fields (PMF) are detailed in~\cite{gaensler2004origin,durrer2013cosmological,batista2021gammaray}. We operate under the  assumption that the observed inter-galactic magnetic fields (IGMF) are primordial in nature and are present, if not created fully or in part, during the electron-positron epoch of the early universe. 
-
-Given the extremly large abundance in the pre-BBN environment of particles with largest magnetic moment, electrons $e^{-}$ and positrons  $e^{+}$, we consider in the following the entirely novel hypothesis that primordial magnetization of the Universe could be driven by spin paramagnetism~\cite{rafelski2023short}. We explore the role of the relatively large electron-positron pair abundance, reaching about 100 million pairs per baryon at pre-BBN temperature $T=200\keV$, shown in \rf{fig:densityratio}. How this figure is obtained is described  further below.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.8\textwidth]{EEPlasmaDensityRatio_new.jpg}
-    \caption{The light charged lepton-to-baryon ratio $n_{e^{\pm}}/n_{B}$  as a function of temperature. Note that as is common we show here and elsewhere the time increasing from left to right which means that temperature is decreasing from left to right. See text for further details.}
-    \label{fig:densityratio} 
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-In \rf{fig:densityratio} the electron-to-baryon ratio $n_{e^{-}}/n_{B}$ is shown as the solid blue line while the positron-to-baryon ratio $n_{e^{+}}/n_{B}$ is emerges as the dashed red line below $T=20.3\keV$. The two vertical dashed green lines denote temperatures $T=m_{e}\simeq511\keV$ and $T=20.3\keV$. The two horizontal black dashed lines denote the relativistic $T>>m_e$ abundance of $n_{e^{\pm}}/n_{B}=4.47\times10^{8}$ and post-annihilation  $n_{e^{-}}/n_{B}=0.87$ where deviation from unity arises due to presence of bound neutrons. Above temperature $T\gtrsim85\keV$, the $e^{+}e^{-}$ primordial plasma density exceeded that of the Sun's core density $n_{e}\simeq6\times10^{26}{\rm\ cm}^{-3}$~\cite{bahcall2001solar}. 
-
-If the pre-BBN early universe was highly magnetized, the rapid $10^{8}$ drop in $e^{+}e^{-}$ density relative to the baryon density in the temperature range $200\keV>T>20\keV$ likely had a large effect on the overall magnetization of the universe. This combination of strong magnetic fields, high matter-antimatter density, and relatively high temperatures (far higher than the Sun's core temperature~\cite{bahcall2001solar} of $T_{\odot}=1.37\keV$) make this era unique in cosmology and astrophysics. 
-
-The  intergalactic magnetic fields present a challenge both experimentally and theoretically in that they are (a) difficult to measure and (b) difficult to explain using known physics. The bounds for IGMF at a coherent length scale of $1{\rm\ Mpc}$ are today~\cite{neronov2010evidence,taylor2011extragalactic,pshirkov2015new,vernstrom2021discovery}
+Intergalactic magnetic field (IGMF) are  difficult to measure and difficult to explain. The bounds for IGMF at a   length scale of $1{\rm\ Mpc}$ are today~\cite{neronov2010evidence,taylor2011extragalactic,pshirkov2015new,vernstrom2021discovery}
 \begin{align}
     \label{igmf}
     10^{-8}{\rm\ G}>\mathcal{B}_{\rm IGFM}>10^{-16}{\rm\ G}\,.
 \end{align}
+Faraday rotation from distant radio active galaxy nuclei (AGN)~\cite{pomakov2022redshift} suggest that neither dynamo nor astrophysical processes would sufficiently account for the presence of magnetic fields in the universe today if the IGMF strength was around the upper bound of ${\cal B}_{\rm IGMF}\simeq30-60{\rm\ nG}$ as found in Ref.~\cite{vernstrom2021discovery}. Such strong magnetic fields would then require that at least some portion of the IGMF arise from primordial sources that predate the formation of stars.
 
-Faraday rotation from distant radio active galaxy nuclei (AGN)~\cite{pomakov2022redshift} suggest that neither dynamo nor astrophysical processes would sufficiently account for the presence of magnetic fields in the universe today if the IGMF strength was around the upper bound of ${\cal B}_{\rm IGMF}\simeq30-60{\rm\ nG}$ as found in Ref.~\cite{vernstrom2021discovery}. Such strong magnetic fields would then require that at least some portion of the IGMF arise from primordial sources that predate the formation of stars and galaxies, or the cosmic microwave background (CMB). 
+%Field strengths of around a tenth of a nanoGauss is also near the more stringent upper bound for PMFs found in~\cite{pshirkov2015new,jedamzik2019stringent}. Conversely, measurements of synchrotron radiation from \lq\lq blazar\rq\rq\ AGN whose jets are pointed towards the Earth provide the lower bound~\cite{neronov2010evidence,taylor2011extragalactic} on IGMFs seen in \req{igmf}. Due to cosmological redshift, and the conservation of magnetic flux through a comoving surface, PMFs would have extraordinary field strengths during the various primordial plasmas of the early universe subject to whatever temperature they were initially generated in.
 
-IGMF could be of `use':  Jedamzik and Pogosian~\cite{jedamzik2020relieving} propose  that the presence of ${\cal B}_{\rm PMF}\simeq0.1{\rm\ nG}$ could be sufficient to explain the Hubble tension. One can wonder if excessively large pre-recombination primordial fields would lead to early universe baryon inhomogeneities which in turn would produce anisotropies in the CMB~\cite{jedamzik2013smallscale}. Field strengths of around a tenth of a nanoGauss is also near the more stringent upper bound for PMFs found in~\cite{pshirkov2015new,jedamzik2019stringent}. Conversely, measurements of synchrotron radiation from \lq\lq blazar\rq\rq\ AGN whose jets are pointed towards the Earth provide the lower bound~\cite{neronov2010evidence,taylor2011extragalactic} on IGMFs seen in \req{igmf}. Due to cosmological redshift, and the conservation of magnetic flux through a comoving surface, PMFs would have extraordinary field strengths during the various primordial plasmas of the early universe subject to whatever temperature they were initially generated in.
 
-In this work we analyze the magnetized relativistic fermion partition function focusing on the spin contribution to magnetization showing that magnetization is nonzero even for a nearly symmetric particle-antiparticle gas and can spontanously develop to strength if IGM's intrdduced above. Our work suggsts that at higher electron-positron $e^{+}e^{-}$-pair densities, spin paramagnetism is dominant over the Landau orbital diamagnetism.
+We investigate the hypothesis that the observed  IGMF  are primordial in nature, predating even the recombination epoch. Specifically, we explore the role of the relatively large electron-positron  $e^{+}e^{-}$-pair abundance which only disappears well after Big-Bang nucleosynthesis (BBN). If  pre-BBN early universe became highly magnetized due to appropriate spin orientation of particles with largest known magnetic moment, electrons $e^{-}$ and positrons  $e^{+}$, the rapid $10^{8}$ drop  in their abundance within the narrow temperature range $200\keV>T>20\keV$ in $e^{+}e^{-}$  shown in \rf{fig:densityratio} should be capable to induce field preserving dynamical flow motion on the emerging $p,\alpha,e^-$ plasma.  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{EEPlasmaDensityRatio_new.jpg}
+    \caption{Electron $e^-$ and positron $e^+$ to baryon ratio $n_{e^{\pm}}/n_{B}$  as a function of photon temperature in the Universe. See text for further details.}
+    \label{fig:densityratio} 
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+A large pre-recombination primordial fields could therefore lead to early universe baryon inhomogeneities which in turn would produce anisotropies in the cosmic microwave background (CMB)~\cite{jedamzik2013smallscale}.  Jedamzik and Pogosian~\cite{jedamzik2020relieving} propose further that the presence of ${\cal B}_{\rm PMF}\simeq0.1{\rm\ nG}$ could be sufficient to explain the Hubble tension.  Recognizing primordial paramagnetism impact on understanding of the Universe evolution we consider in the following the entirely novel hypothesis that primordial magnetization of the Universe is driven by primordial spin paramagnetism originating in the relatively large electron-positron  $e^{+}e^{-}$-pair abundance, reaching about 100 million pairs per baryon at pre-BBN temperature $T=200\keV$,  \rf{fig:densityratio}. These results were  obtained assuming charge neutral universe, and baryon content related to photon (entropy) universe content~\cite{rafelski2023short}. 
+
+In \rf{fig:densityratio} the electron-to-baryon ratio $n_{e^{-}}/n_{B}$ is shown as the solid blue line, the positron-to-baryon ratio $n_{e^{+}}/n_{B}$  emerges as the dashed red line below $T=20.3\keV$. The two vertical dashed green lines denote temperatures $T=m_{e}\simeq511\keV$ and $T=20.3\keV$. Note that as is common we show here and elsewhere the time increasing from left to right which means that temperature is decreasing from left to right. The two horizontal black dashed lines denote the relativistic $T>>m_e$ abundance of $n_{e^{\pm}}/n_{B}=4.47\times10^{8}$ and post-annihilation  $n_{e^{-}}/n_{B}=0.87$ where deviation from unity reflects on bound neutrons. Above temperature $T\gtrsim85\keV$, the $e^{+}e^{-}$ primordial plasma density exceeded that of the Sun's core density $n_{e}\simeq6\times10^{26}{\rm\ cm}^{-3}$~\cite{bahcall2001solar}. 
+
+We analyze the magnetized relativistic fermion partition function focusing on the spin contribution to magnetization. At $T\simeq 0.4 m_e$ due to very high  $e^{+}e^{-}$-pair densities we believe that the spin paramagnetism is dominant over the Landau orbital diamagnetism. We show that magnetization is nonzero for a nearly symmetric particle-antiparticle gas arising from matter-antimatter asymmetry ever present in the Universe. We further demonstrate that magnetization  can spontanously increase in strength towards IGMF's  upper limit  seen in \req{igmf}. This is assisted by the fact that antiparticles ($e^+$) have opposite sign of charge and thus of magnetic moment as compared to particles  ($e^-$.). Thus in a $e^{+}e^{-}$-pair  plasma a large magnetic moment is associated with opposite spin orientation for particles and antiparticles, the net magnetization of symmetric pair plasma is not accompanied by a net angular momentum. This is of course very different from situation in the matter dominated Universe below $T=21\keV$ including the current epoch.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Electron-positron abundance and primordial magnetism}
+\section{Electron-positron abundance}
 \label{sec:abundance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent 
+WRITING LESSONS (other than for books, thesis, and long reviews); discussion not printed, percented out below, remove after reading:\\
+% YOU DO NOT QUESTION OR RAISE FUNDAMENTAL PRINCIPLES UNLESS YOU WANT TO CHANGE THESE IN YOUR RESEARCH
+%If the Cosmological Principle is correct~\cite{abdalla2022cosmology}, 
+% UNLESS YOU PLAN TO IMPROVE  OTHER WORK OR SHOW IT IS WRONG  YOU DO NOT DESCRIBE  IN A RESEARCH PUBLICATION OTHER CONTEXT NOT USED 
+% on the largest scales. Localized inhomogeneities of matter evolution are often non-trivial and generally be solved numerically using magneto-hydrodynamics (MHD)~\cite{melrose2008quantum,vazza2017simulations}. 
+%IT IS BEST IN A RESEARCH ARTICLE NOT TO USE SUCH A TURN  ARGUMENT, 
+%Our approach however will be to look at the 
+% 
+As the universe cooled below temperature $T<m_{e}$ (the electron mass), the thermal electron and positron comoving density depleted  falling nearly nine orders of magnitude. At $T_{\rm split}=20.3\keV$, the charged lepton asymmetry (mirrored by the baryon asymmetry) became evident as the remaining excess electron remains while positrons vanished entirely. Conversion of the enormous $e^+e^-$-pair abundance which reheats the residual photon and charged particles took no longer than an afternoon lunch break. Because of charge neutrality, the post-annihilation comoving ratio $n_{e^{-}}/n_{B}=0.87$~\cite{rafelski2023short} is slightly offset from unity in~\rf{fig:densityratio} by the presence of bound neutrons in $\alpha$ particles and  other neutron containing light elements produced during BBN epoch. 
+
+To obtain in quantitative manner a description of the above evolution we study in a  nearly homogeneous and isotropic primordial Universe  the bulk properties of the relativistic charged/magnetic gasses are obtained via the thermal Fermi-Dirac or Bose distributions.  For matter particles there is a chemical potential creating a small matter-antimatter asymmetry $\mu_{\sigma}=\sigma\mu$. Moreover, consideration  reactions such as $e^+e^-\leftrightarrow \gamma\gamma$ constraints the chemical potentials of particles and antiparticles~\cite{elze1980relativistic} 
+\begin{align}
+    \label{cpotential}
+    \mu\equiv\mu_{e^{-}}=-\mu_{e^{+}}\,,\qquad
+    \lambda\equiv\lambda_{e^{-}}=\lambda_{e^{+}}^{-1}=exp(\mu_e/T)\,.
+\end{align}
+While the primordial electron-positron plasma era was overall charge neutral, there was a small asymmetry in the charged leptons from baryon asymmetry~\cite{fromerth2012quarkgluon,canetti2012matter}. 
+
+The charge neutrality of the Universe than implies 
+\begin{align}
+    \label{chargeneutrality}
+    n_{p}=n_{e^{-}}-n_{e^{+}}=\frac{1}{V}\lambda\frac{\partial}{\partial\lambda}\ln{\cal Z}_{e^{+}e^{-}}
+\end{align}
+to parameterize the chemical potential $\mu_e=\mu_e(T)$ as a function of temperature.  Here $n_{p}$ is the actual number density of protons which is known in terms of the baryon-to-photon ratio~\cite{workman2022pdg}.  During the $e^{+}e^{-}$ plasma epoch, the density changed dramatically over time changing the chemical potential, see \rf{fig:densityratio}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+For the $e^+e^-$-pair plasma the chemical potential is obtained from the requirement that the positive charge of baryons (protons, $\alpha's$ etc after BBN) is in our temperature range exactly and locally compensated by a tiny net excess of electrons over positrons.  The abundance of baryons it itself fixed by the known abundance relative to photons.  We employed the contemporary recommended value $n_B/n_\gamma=6.14\times 10^{-10}$ <-- CHENG TAO THAT IS WHAT YOU USED - if not please CORRECT. The resulting chemical potential  needs to be evaluated carefully to obtain the behavior near to $T=20.3\keV$ where the relatively small potential value rises rises rapidly so that positrons  vanish  from the particle inventory of the universe while nearly one electron per baryon remains.   Details of solution of this problem are seen in Refs.\;\cite{fromerth2012quarkgluon,rafelski2023short} leading to the results shown in \rf{fig:densityratio}.These results are obtained allowing for Fermi-Dirac and Bose statistics. However, often it is sufficient to consider  the Boltzmann limit. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In the presence of a magnetic field ${\cal B}$ there is some modification of the usual relativistic Fermion partition function which is now given  by
+\begin{align}
+    \label{partition}
+    \ln{\cal Z}_{e^{+}e^{-}}=\frac{2q{\cal B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm}\sum_{s}^{\pm}\sum_{n=0}^{\infty}\int_{0}^{\infty}\left[\ln\left(1+\lambda_{\sigma}\xi_{s}e^{-E_{n}^{s}/T}\right)\right]\,,\qquad\Upsilon_{\sigma}^{s}=\lambda_{\sigma}\xi_{s}=\exp{\frac{\mu_{\sigma}+\eta_{s}}{T}}\,,
+\end{align}
+where $\sigma$ is a sum over electron and positron states and $s$ is a sum over polarizations. $V$ denotes  proper volume. Since we are interested in small asymmetries (e.g. baryon excess over antibaryons, one spin polarization over another) we introduce the generalized particle fugacity $\Upsilon_{\sigma}^{s}$ as the product of:
+\begin{itemize}
+    \item[a.] Chemical fugacity $\lambda_{\sigma}=\exp{(\mu_{\sigma}/T)}$
+    \item[b.] Spin fugacity $\xi_{s}=\exp{(\eta_{s}/T)}$
+\end{itemize}
+The chemical fugacity $\lambda_{\sigma}$ describes  the particles and antiparticle difference as before $\mu_e$ . We introduce a novel spin fugacity $\xi_{s}$ and spin potential $\eta_{s}=s\eta$. An imbalance in electrons and positrons leads as before to a nonzero particle chemical potential $\mu\neq0$. 
+
+%%%%%%%%%%
+\section{Primordial paramagnetism }
+\label{sec:fugacity}
+\noindent
 As the universe undergoes isotropic expansion, the temperature decreases as 
 \begin{align}
     \label{tscale}
     T(t)=T_{0}\frac{a_{0}}{a(t)}\rightarrow T(z)=T_{0}(1+z)\,,
 \end{align}
-where $a(t)$ is the scale factor defined by the FLRW metric~\cite{weinberg1972gravitation} and $z$ is the redshift. The comoving temperature $T_{0}$ is given by the present day temperature of the CMB and the contemporary scale factor $a_{0}=1$ is usually set to unity. Within a homogeneous magnetic domain, the magnetic field varies~\cite{durrer2013cosmological} over cosmic expansion as
+where $a(t)$ is the scale factor defined by the FLRW metric~\cite{weinberg1972gravitation} and $z$ is the redshift. The comoving temperature $T_{0}$ is given by the present day temperature of the CMB,  contemporary scale factor $a_{0}=1$. Within a homogeneous magnetic domain, the magnetic field varies~\cite{durrer2013cosmological} over cosmic expansion as
 \begin{align}
     \label{bscale}
     {\cal B}(t)={\cal B}_{0}\frac{a_{0}^{2}}{a^{2}(t)}\rightarrow{\cal B}(z)={\cal B}_{0}\left(1+z\right)^{2}\,,
 \end{align}
-where ${\cal B}_{0}$ is the comoving value of the magnetic field defined by the contemporary value of the magnetic field today given in \req{igmf}. Non-primordial magnetic fields which are generated through other mechanisms (such as dynamo or astrophysical sources) will have expressions which differ~\cite{pomakov2022redshift}. The presence of matter and late universe structure formation also serve to contaminate the primordial field evolution in \req{bscale}, therefore it is only in deep intergalactic space where primordial fields would remain preserved over cosmic time.
+where ${\cal B}_{0}$ is the comoving value of the magnetic field obtained from the contemporary value of the magnetic field today  given in \req{igmf}. Non-primordial magnetic fields (which are generated through other mechanisms  such as dynamo or astrophysical sources) do not follow this scaling~\cite{pomakov2022redshift}. The presence of matter and late universe structure formation also  contaminates the primordial field evolution in \req{bscale}. It is only in deep intergalactic space where primordial fields remain preserved and comoving over cosmic time.
 
-From \req{tscale} and \req{bscale}, we see there is a natural ratio which is conserved over cosmic expansion. For particles (such as $e^{+}e^{-})$ with charge magnitude $q=|e|$ in a homogeneous primordial magnetic field, we can define a dimensionless cosmic magnetic energy scale in natural units ($c=\hbar=k_{B}=1$) as
+From \req{tscale} and \req{bscale} emerges a natural ratio of interest here which is conserved over cosmic expansion 
 \begin{align}
     \label{tbscale}
-    b_{0}\equiv\frac{q{\cal B}(t)}{T^{2}(t)}=\frac{q{\cal B}_{0}}{T_{0}^{2}}={\rm\ const.}\qquad10^{-3}>b_{0}>10^{-11}\,,
+    b \equiv\frac{e{\cal B}(t)}{T^{2}(t)}=\frac{e{\cal B}_{0}}{T_{0}^{2}}\equiv b_0={\rm\ const.}\qquad10^{-3}>b_{0}>10^{-11}\,,
 \end{align}
-which can be completely prescribed by comoving values. We compute the bounds for this cosmic magnetic scale by using the present day observations given by \req{igmf} and the CMB temperature $T_{0}=2.7{\rm\ K}\simeq2.3\times10^{-4}\eV$~\cite{aghanim2018planck}.
+given in natural units ($c=\hbar=k_{B}=1$). We computed the bounds for this cosmic magnetic scale ratio by using the present day observations given by \req{igmf} and the present CMB temperature $T_{0}=2.7{\rm\ K}\simeq2.3\times10^{-4}\eV$~\cite{aghanim2018planck}.
 
-We take inspiration from Ch. 9 of Melrose's treatise on magnetized plasmas~\cite{melrose2008quantum}. Our focus however will be on the bulk properties of thermalized plasmas in (near) equilibrium. In considering $e^{+}e^{-}$ plasma, we introduce the microscopic energy of the charged $q$ relativistic fermion within a homogeneous ($z$-direction) magnetic field~\cite{steinmetz2018magnetic}. The energy eigenvalue is given by
+To evaluate paramagnetic properties of the $e^-e^+$-pair plasma We take inspiration from Ch. 9 of Melrose's treatise on magnetized plasmas~\cite{melrose2008quantum}. We focus  on the bulk properties of thermalized plasmas in (near) equilibrium. In considering $e^{+}e^{-}$-pair plasma, we introduce the microscopic energy of the charged $q=\pm e$ relativistic fermion within a homogeneous ($z$-direction) magnetic field~\cite{steinmetz2018magnetic}. The energy eigenvalue is given by
 \begin{align}
     \label{kgp}
-    E^{\pm}_{n}(p_{z},{\cal B})=\sqrt{m_{e}^{2}+p_{z}^{2}+q{\cal B}\left(2n+1\mp\frac{g}{2}\right)}\,,\qquad n\in0,1,2,\ldots
+    E^{\pm}_{n}(p_{z},{\cal B})=\sqrt{m_{e}^{2}+p_{z}^{2}+e{\cal B}\left(2n+1\mp\frac{g}{2}\right)}\,,\qquad n\in0,1,2,\ldots
 \end{align}
-where $p_{z}$ is the momentum parallel to the field axis and $n$ is the Landau orbital quantum number. The subscript $\pm$ refers to the spin polarization along the field axis: parallel $(+)$ or anti-parallel $(-)$. The parameter $g$ is the gyro-magnetic ($g$-factor) of the particle. We rearrange \req{kgp} by pulling the spin dependency and the ground state Landau orbital into the mass writing
+where $p_{z}$ is the momentum parallel to the field axis and $n$ is the Landau orbital quantum number. The subscript $\pm$ refers to the spin polarization along the field axis: parallel $(+)$ or anti-parallel $(-)$ (AND OPPOSITE FOR ANTIPARTICLES???). The parameter $g$ is the gyro-magnetic ($g$-factor) of the particle. We rearrange \req{kgp} by pulling the spin dependency and the ground state Landau orbital into the mass writing
 \begin{align}
     \label{effmass}
-    E^{\pm}_{n}={\tilde m}_{\pm}\sqrt{1+\frac{p_{z}^{2}}{{\tilde m}_{\pm}^{2}}+\frac{2q{\cal B}n}{{\tilde m}_{\pm}^{2}}}\,,\qquad {\tilde m}_{\pm}^{2}=m_{e}^{2}+q{\cal B}\left(1\mp\frac{g}{2}\right)\,,
+    E^{\pm}_{n}={\tilde m}_{\pm}\sqrt{1+\frac{p_{z}^{2}}{{\tilde m}_{\pm}^{2}}+\frac{2e{\cal B}n}{{\tilde m}_{\pm}^{2}}}\,,\qquad {\tilde m}_{\pm}^{2}=m_{e}^{2}+q{\cal B}\left(1\mp\frac{g}{2}\right)\,,
 \end{align}
 where we introduced the effective polarized mass ${\tilde m}_{\pm}$ which is distinct for each spin alignment and is a function of magnetic field strength ${\cal B}$. The effective polarized mass ${\tilde m}_{\pm}$ allows us to describe the $e^{+}e^{-}$ plasma with the spin effects almost wholly separated from the Landau characteristics of the gas when considering plasma thermodynamic properties.
  The electron-positron number density ratio relative to the baryon number density in the temperature range $2000\keV>T>20\keV$the  $e^{+}e^{-}$ results we have shown in~\rf{fig:densityratio},    . 
 
-After neutrino freeze-out~\cite{birrell2014relic}, around $T=2\MeV$, the comoving density of $e^{+}e^{-}$ remained constant fixed to a value of 
+In presence of magnetic field in Boltzmann approximation the charge neutrality condition \req{chargeneutrality} becomes
 \begin{align}
-    \label{comovingdensity}
-    \frac{n_{e^{+}}+n_{e^{-}}}{n_{B}}\simeq0.9\times10^{9}\,,
+    \label{chem}
+    \sinh{\frac{\mu}{T}}=n_{p}\frac{\pi^{2}}{T^{3}}\left[\sum_{s}^{\pm}\xi_{s}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\right]^{-1}\,.
 \end{align}
-or almost 1 billion times more abundant than the baryons. Constancy of this ratio for temperature above $T\gtrsim500\keV$ originates from the conserved entropy-per-baryon ratio~\cite{fromerth2012quarkgluon}. This indicates that the entropy content in the light charged leptons was also constant and conserved during this period. 
+\req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\xi=1$ implying an equal number of polarizations both parallel and anti-parallel to the external field. 
 
-As the universe cooled below temperature $T<m_{e}$ (the electron mass), the electron and positron comoving density depleted (falling nine orders of magnitude) as the annihilation process outpaced the photon fusion pair production process via
-\begin{align}
-    \label{fusion}
-    e^{+}+e^{-}\leftrightarrow\gamma+\gamma\,.
-\end{align}
-At $T_{\rm split}=20.3\keV$, the charged lepton asymmetry (mirrored by the baryon asymmetry) became evident as the few remaining excess electrons could no longer annihilate as the positrons vanished entirely. This process took no longer than an afternoon lunch break. Because of charge neutrality, the post-annihilation comoving ratio $n_{e^{-}}/n_{B}=0.87$~\cite{rafelski2023short} is slightly offset from unity by the presence of $\alpha$ particles and the other neutron containing light elements produced during Big Bang nucleosynthesis (BBN).
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Fermi statistics and fugacity}
-\label{sec:fugacity}
-\noindent If the Cosmological Principle is correct~\cite{abdalla2022cosmology}, the universe is nearly homogeneous and isotropic on the largest scales. Localized inhomogeneities of matter evolution are often non-trivial and generally be solved numerically using magneto-hydrodynamics (MHD)~\cite{melrose2008quantum,vazza2017simulations}. Our approach however will be to look at the bulk properties of the relativistic gasses of the early universe via the thermal Fermi-Dirac distribution. The magnetized relativistic fermion partition function is given, in a generalized form, by
-\begin{align}
-    \label{partition}
-    \ln{\cal Z}_{e^{+}e^{-}}=\frac{2q{\cal B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm}\sum_{s}^{\pm}\sum_{n=0}^{\infty}\int_{0}^{\infty}\left[\ln\left(1+\lambda_{\sigma}\xi_{s}e^{-E_{n}^{s}/T}\right)\right]\,,\qquad\Upsilon_{\sigma}^{s}=\lambda_{\sigma}\xi_{s}=\exp{\frac{\mu_{\sigma}+\eta_{s}}{T}}\,,
-\end{align}
-where $\sigma$ is a sum over electron and positron states and $s$ is a sum over polarizations. $V$ denotes our proper volume. We define the generalized fugacity $\Upsilon_{\sigma}^{s}$ as the product of:
-\begin{itemize}
-    \item[a.] Chemical fugacity $\lambda_{\sigma}=\exp{(\mu_{\sigma}/T)}$
-    \item[b.] Spin fugacity $\xi_{s}=\exp{(\eta_{s}/T)}$
-\end{itemize}
-The chemical fugacity $\lambda_{\sigma}$ is defined in terms of the chemical potential $\mu_{\sigma}=\sigma\mu$ and due to charge conservation~\cite{elze1980relativistic} can be written as 
-\begin{align}
-    \label{cpotential}
-    \mu\equiv\mu_{e^{-}}=-\mu_{e^{+}}\,,\qquad
-    \lambda\equiv\lambda_{e^{-}}=\lambda_{e^{+}}^{-1}\,.
-\end{align}
+In general however, an additional physical constraint is required as the chemical $\mu$ and spin $\eta$ potentials have mutual dependency. We note that such a constraint is likely related to the total angular momentum of the considered volume and does not necessarily imply that spin polarizations must be balanced within a single species when the orbital and spin momentum of all species in the plasma are taken into account.
 
-While the primordial electron-positron plasma era was overall charge neutral, there was a small asymmetry in the charged leptons from baryon asymmetry~\cite{canetti2012matter} and the presence of protons. Under the condition of charge neutrality, the resulting chemical potential was small~\cite{rafelski2023short} until the universe cooled to a temperature below $T<20\keV$ wherein the positrons vanished from the particle inventory of the universe.
-
-We also introduce a novel spin fugacity $\xi_{s}$ and spin potential $\eta_{s}=s\eta$. While an imbalance in electrons and positrons leads to a nonzero particle chemical potential $\mu\neq0$, an imbalance in spin angular momentum within a region results in a nonzero spin potential $\eta\neq0$. As the universe appears to have zero overall angular momentum, any nonzero spin potential in the electron-positron sector would need to be compensated by either other species in the comoving volume, other sources of angular momentum, or it would indicate the presence of spin magnetized domains not unlike those found in ferromagnetic materials. We propose the spin potential follows analogous expressions as seen in \req{cpotential} obeying
+An imbalance in spin polarization within a region results in a nonzero spin potential $\eta\neq0$. Conveniently since antiparticles have opposite sign of charge and magnetic moment the same magnetic moment is associated with opposite spin orientation for particles and antiparticles so independent of degree of spin-magnetization  a completely particle-antiparticle symmetric magnetized plasma will have zero spin. This is of course very different from situation in the matter dominated Universe of the current epoch.  We propose the spin potential follows analogous expressions as seen in \req{cpotential} obeying
 \begin{align}
     \label{spotential}
     \eta\equiv\eta_{+}=-\eta_{-}\,,\qquad
-    \xi\equiv\xi_{+}=\xi_{-}^{-1}\,.
+    \xi\equiv\xi_{+}=\xi_{-}^{-1}= \exp{(\eta_+/T})\,.
 \end{align}
 
-We implement the Boltzmann approximation for the limit where $T\lesssim m_e$ which is approximately true in the temperature range of interest. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration. The resulting partition function (after truncation of the error remainder) can then be written in terms of modified Bessel $K$ functions~\cite{abramowitz1988handbook,letessier2002hadrons} of the second kind, yielding
+SOME MORE REFERENCES OR/AND DETAIL\\
+
+Since our arguments address the temperature interval  where for the  $e^{+}e^{-}$-pair plasma effects of quantum Fermi statistics are relatively small we employ throughout the Boltzmann approximation. However, we extrapolate our results for presentation completeness up to $T\simeq 4m$. In general modifications due to quantum statistical phase space reduction for fermions are expected to reduce by about 20\% such extrapolated results and perhaps by  a lesser amount the relative values. We continue to search for semi-analytical solutions allowing spin ferromagnetism for Fermi statistics in relativistic  $e^{+}e^{-}$-pair abundance akin to the Boltzmann solution here offered. 
+
+We proceed now with the Boltzmann approximation for the limit where $T\lesssim m_e$. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration. The resulting partition function (after truncation of the error remainder) can then be written in terms of modified Bessel $K$ functions~\cite{abramowitz1988handbook,letessier2002hadrons} of the second kind, yielding
 \begin{align}
     \label{boltzmann}
     \ln{\cal Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{2\pi^{2}}\left[2\cosh{\frac{\mu}{T}}\right]\sum_{s}^{\pm}\xi_{s}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\,,\\
@@ -184,19 +205,6 @@ We implement the Boltzmann approximation for the limit where $T\lesssim m_e$ whi
     x_{\pm}=\frac{{\tilde m}_{\pm}}{T}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+b_{0}\left(1\mp\frac{g}{2}\right)}\,.
 \end{align}
 The latter two terms in \req{boltzmann} (proportional to $b_{0}K_{1}$ and $b_{0}^{2}K_{0}$) are the uniquely magnetic terms present (containing both paramagnetic and diamagnetic influences) in the partition function while the $K_{2}$ term is present for the relativistic free Fermi gas~\cite{greiner2012thermodynamics}. As the Bessel $K$ functions are evaluated as functions of $x_{\pm}$ in \req{xfunc}, the \lq\lq free\rq\rq\ part of the partition $K_{2}$ is still subject to spin magnetization effects.
-
-During the $e^{+}e^{-}$ plasma epoch, the density changed dramatically over time changing the chemical potential. Therefore we can utilize the charge neutrality~\cite{rafelski2023short,letessier2002hadrons} of the universe
-\begin{align}
-    \label{chargeneutrality}
-    n_{p}=n_{e^{-}}-n_{e^{+}}=\frac{1}{V}\lambda\frac{\partial}{\partial\lambda}\ln{\cal Z}_{e^{+}e^{-}}
-\end{align}
-to parameterize the chemical potential $\mu=\mu(T)$ as a function of temperature. The parameter $n_{p}$ is the number density of protons which is known in terms of the baryon-to-photon ratio~\cite{workman2022pdg}. The chemical potential is then
-\begin{align}
-    \label{chem}
-    \sinh{\frac{\mu}{T}}=n_{p}\frac{\pi^{2}}{T^{3}}\left[\sum_{s}^{\pm}\xi_{s}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\right]^{-1}\,.
-\end{align}
-\req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\xi=1$ implying an equal number of polarizations both parallel and anti-parallel to the external field. In general however, an additional physical constraint is required as the chemical $\mu$ and spin $\eta$ potentials have mutual dependency. We note that such a constraint is likely related to the total angular momentum of the considered volume and does not necessarily imply that spin polarizations must be balanced within a single species when the orbital and spin momentum of all species in the plasma are taken into account.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Electron-positron magnetization}
 \label{sec:magnetization}
@@ -205,7 +213,7 @@ to parameterize the chemical potential $\mu=\mu(T)$ as a function of temperature
     \label{defmagetization}
     {\cal M}\equiv\frac{T}{V}\frac{\partial}{\partial{\cal B}}\ln{{\cal Z}_{e^{+}e^{-}}} = \frac{T}{V}\left(\frac{\partial b_{0}}{\partial{\cal B}}\right)\frac{\partial}{\partial b_{0}}\ln{{\cal Z}_{e^{+}e^{-}}}\,,\qquad\frac{\partial b_{0}}{\partial{\cal B}}=\frac{q}{T^{2}}\,.
 \end{align}
-Magnetization arising from other components in the cosmic gas (protons, neutrinos, etc...) could in principle also be included. In the context of MHD, primordial magnetogenesis from neutrino interactions in the electron-positron epoch was considered in~\cite{perrone2021neutrinoelectron}. We introduce dimensionless units for magnetization by defining the critical field
+Magnetization arising from other components in the cosmic gas (protons, neutrinos, etc.) could in principle also be included. In the context of MHD, primordial magnetogenesis from neutrino interactions in the electron-positron epoch was considered in~\cite{perrone2021neutrinoelectron}. We introduce dimensionless units for magnetization by defining the critical field
 \begin{align}
     {\cal B}_{C}\equiv\frac{m_{e}^{2}}{q}\,,\qquad{\overline{\cal M}}\equiv\frac{\cal M}{{\cal B}_{C}}\,.
 \end{align}
@@ -307,6 +315,9 @@ Therefore, we can understand the spin potential as a kind of ferromagnetic influ
 \section{Closing}
 \label{sec:conclusions}
 \noindent to be written
+ 
+MOVE TO CONCLUSIONSS\\
+This combination of strong magnetic fields, high matter-antimatter density, and relatively high temperatures (far higher than the Sun's core temperature~\cite{bahcall2001solar} of $T_{\odot}=1.37\keV$) make this Universe era unique in cosmology and astrophysics. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{unsrtnat}
