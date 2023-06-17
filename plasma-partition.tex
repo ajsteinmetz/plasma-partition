@@ -5,7 +5,7 @@
 
 % Packages
 \usepackage{arxiv}
-\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+\usepackage[colorlinks=true,linkcolor=cyan,citecolor=cyan]{hyperref}
 \usepackage[numbers]{natbib}
 \usepackage{authblk}
 \usepackage{caption}
@@ -98,7 +98,7 @@ Large pre-recombination primordial fields could therefore lead to early universe
 \begin{align}
     \label{cpotential}
     \mu\equiv\mu_{e^{-}}=-\mu_{e^{+}}\,,\qquad
-    \lambda\equiv\lambda_{e^{-}}=\lambda_{e^{+}}^{-1}=\exp\frac{\mu_e}{T}\,,
+    \lambda\equiv\lambda_{e^{-}}=\lambda_{e^{+}}^{-1}=\exp\frac{\mu}{T}\,,
 \end{align}
 where $\lambda$ is the fugacity of the system.} 
 
@@ -107,26 +107,33 @@ where $\lambda$ is the fugacity of the system.}
     \label{chargeneutrality}
     n_{p}=n_{e^{-}}-n_{e^{+}}=\frac{1}{V}\lambda\frac{\partial}{\partial\lambda}\ln{\cal Z}_{e^{+}e^{-}}\,.
 \end{align}
-{\xblue In \req{chargeneutrality}, $n_{p}$ is the observed total number density of protons in all baryon species. The parameter $V$ relays the proper volume under consideration and $\ln{\cal Z}_{e^{+}e^{-}}$ is the partition function for the electron-positron gas. The chemical potential defined in \req{cpotential} is obtained from the requirement that the positive charge of baryons (protons, $\alpha$ particles, etc... produced after BBN in our temperature range) is exactly and locally compensated by a tiny net excess of electrons over positrons.} 
+{\xblue In \req{chargeneutrality}, $n_{p}$ is the observed total number density of protons in all baryon species. The parameter $V$ relays the proper volume under consideration and $\ln{\cal Z}_{e^{+}e^{-}}$ is the partition function for the electron-positron gas. The chemical potential defined in \req{cpotential} is obtained from the requirement that the positive charge of baryons (protons, $\alpha$ particles, light nuclei produced after BBN) is exactly and locally compensated by a tiny net excess of electrons over positrons.}
 
-{\xblue The abundance of baryons is itself fixed by the known abundance relative to photons~\cite{workman2022pdg} and we employed the contemporary recommended value $n_B/n_\gamma=6.09\times 10^{-10}$.} The resulting chemical potential  needs to be evaluated carefully to obtain the behavior near to $T=20.3\keV$ where the relatively small potential value rises rises rapidly so that positrons  vanish  from the particle inventory of the universe while nearly one electron per baryon remains.   Details of solution of this problem are seen in Refs.\;\cite{fromerth2012quarkgluon,rafelski2023short} leading to the results shown in \rf{fig:densityratio}.These results are obtained allowing for Fermi-Dirac and Bose statistics. However, often it is sufficient to consider  the Boltzmann limit. 
+{\xblue The abundance of baryons is itself fixed by the known abundance relative to photons~\cite{workman2022pdg} and we employed the contemporary recommended value $n_B/n_\gamma=6.09\times 10^{-10}$.} The resulting chemical potential  needs to be evaluated carefully to obtain the behavior near to $T_{\rm split}=20.3\keV$ where the relatively {\xblue small value of chemical potential $\mu$} rises rises rapidly so that positrons vanish from the particle inventory of the universe while nearly one electron per baryon remains. The detailed solution of this problem is found in Refs.\;\cite{fromerth2012quarkgluon,rafelski2023short} leading to the results shown in \rf{fig:densityratio}. These results are obtained allowing for Fermi-Dirac and Bose statistics, however it is often numerically sufficient to consider the Boltzmann distribution limit.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-In the presence of a magnetic field ${\cal B}$ there is some modification of the usual relativistic Fermion partition function which is now given  by
+In the presence of a magnetic field ${\cal B}$ there is some modification of the usual relativistic fermion partition function which is now given  by
 \begin{align}
     \label{partition}
-    \ln{\cal Z}_{e^{+}e^{-}}=\frac{2q{\cal B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm}\sum_{s}^{\pm}\sum_{n=0}^{\infty}\int_{0}^{\infty}\left[\ln\left(1+\lambda_{\sigma}\xi_{s}e^{-E_{n}^{s}/T}\right)\right]\,,\qquad\Upsilon_{\sigma}^{s}=\lambda_{\sigma}\xi_{s}=\exp{\frac{\mu_{\sigma}+\eta_{s}}{T}}\,,
+    \ln{\cal Z}_{e^{+}e^{-}}=\frac{e{\cal B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm}\sum_{s}^{\pm}\sum_{n=0}^{\infty}\int_{-\infty}^{\infty}{\rm d}p_{z}\left[\ln\left(1+\lambda_{\sigma}\xi_{s}e^{-E_{n}^{s}/T}\right)\right]\,,\qquad\Upsilon_{\sigma}^{s}=\lambda_{\sigma}\xi_{s}=\exp{\frac{\mu_{\sigma}+\eta_{s}}{T}}\,,
 \end{align}
-where $\sigma$ is a sum over electron and positron states and $s$ is a sum over polarizations. $V$ denotes  proper volume. Since we are interested in small asymmetries (e.g. baryon excess over antibaryons, one spin polarization over another) we introduce the generalized particle fugacity $\Upsilon_{\sigma}^{s}$ as the product of:
+{\xblue with electric charge $e\equiv q_{e^{+}}=-q_{e^{-}}$.} The index $\sigma$ in \req{partition} is a sum over electron and positron states while $s$ is a sum over polarizations. Since we are interested in small asymmetries (e.g. baryon excess over antibaryons, one spin polarization over another) we introduce the generalized particle fugacity $\Upsilon_{\sigma}^{s}$ as the product of:
 \begin{itemize}
-    \item[a.] Chemical fugacity $\lambda_{\sigma}=\exp{(\mu_{\sigma}/T)}$
-    \item[b.] Spin fugacity $\xi_{s}=\exp{(\eta_{s}/T)}$
+    \item[a.] Chemical fugacity $\lambda_{\sigma}$
+    \item[b.] Spin fugacity $\xi_{s}$
 \end{itemize}
-The chemical fugacity $\lambda_{\sigma}$ describes  the particles and antiparticle difference as before $\mu_e$ . We introduce a novel spin fugacity $\xi_{s}$ and spin potential $\eta_{s}=s\eta$. An imbalance in electrons and positrons leads as before to a nonzero particle chemical potential $\mu\neq0$. 
+The chemical fugacity $\lambda_{\sigma}$ {\xblue (defined in \req{cpotential} above) describes deformation of the Fermi-Dirac distribution due to nonzero chemical potential $\mu$.} An imbalance in electrons and positrons leads {\xblue as discussed earlier} to a nonzero particle chemical potential $\mu\neq0$. We then introduce a novel spin fugacity $\xi_{s}$ and spin potential $\eta_{s}=s\eta$. {\xblue We propose the spin potential follows analogous expressions as seen in \req{cpotential} obeying
+\begin{align}
+    \label{spotential}
+    \eta\equiv\eta_{+}=-\eta_{-}\,,\qquad
+    \xi\equiv\xi_{+}=\xi_{-}^{-1}= \exp{\frac{\eta}{T}}\,.
+\end{align}
 
-%%%%%%%%%%
+An imbalance in spin polarization within a region of volume $V$ results in a nonzero spin potential $\eta\neq0$. Conveniently since antiparticles have opposite sign of charge and magnetic moment, the same magnetic moment is associated with opposite spin orientation for particles and antiparticles independent of degree of spin-magnetization. A completely particle-antiparticle symmetric magnetized plasma will have therefore zero total spin angular momentum and zero spin potential $\eta=0$. This is of course very different from situation in the matter dominated universe of the current epoch.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Primordial paramagnetism }
 \label{sec:fugacity}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent
 As the universe undergoes isotropic expansion, the temperature decreases as 
 \begin{align}
@@ -168,13 +175,6 @@ In presence of magnetic field in Boltzmann approximation the charge neutrality c
 \req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\xi=1$ implying an equal number of polarizations both parallel and anti-parallel to the external field. 
 
 In general however, an additional physical constraint is required as the chemical $\mu$ and spin $\eta$ potentials have mutual dependency. We note that such a constraint is likely related to the total angular momentum of the considered volume and does not necessarily imply that spin polarizations must be balanced within a single species when the orbital and spin momentum of all species in the plasma are taken into account.
-
-An imbalance in spin polarization within a region results in a nonzero spin potential $\eta\neq0$. Conveniently since antiparticles have opposite sign of charge and magnetic moment the same magnetic moment is associated with opposite spin orientation for particles and antiparticles so independent of degree of spin-magnetization  a completely particle-antiparticle symmetric magnetized plasma will have zero spin. This is of course very different from situation in the matter dominated universe of the current epoch.  We propose the spin potential follows analogous expressions as seen in \req{cpotential} obeying
-\begin{align}
-    \label{spotential}
-    \eta\equiv\eta_{+}=-\eta_{-}\,,\qquad
-    \xi\equiv\xi_{+}=\xi_{-}^{-1}= \exp{(\eta_+/T})\,.
-\end{align}
 
 SOME MORE REFERENCES OR/AND DETAIL\\
 
