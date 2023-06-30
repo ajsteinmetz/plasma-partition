@@ -166,18 +166,18 @@ where $p_{z}$ is the momentum parallel to the field axis and $n$ is the Landau o
 \end{align}
 where we introduced the effective polarized mass ${\tilde m}_{\pm}$ which is distinct for each spin alignment and is a function of magnetic field strength ${\cal B}$. The effective polarized mass ${\tilde m}_{\pm}$ allows us to describe the $e^{+}e^{-}$ plasma with the spin effects almost wholly separated from the Landau characteristics of the gas when considering plasma thermodynamic properties.
 
-In presence of magnetic field in Boltzmann approximation the charge neutrality condition \req{chargeneutrality} becomes
+Since {\xblue we address} the temperature interval where {\xblue the effects of quantum Fermi statistics on the $e^{+}e^{-}$ pair plasma} are relatively small we therefore employ the Boltzmann approximation throughout. However, we extrapolate our results for presentation completeness up to $T\simeq 4m_{e}$. In general, modifications due to quantum statistical phase-space reduction for fermions are expected to {\xblue suppress results} by about 20\% {\xblue in the extrapolated regions}. We will continue to search for semi-analytical solutions for Fermi statistics in relativistic $e^{+}e^{-}$ pair gasses {\xblue to compliment the} Boltzmann solution offered here. 
+
+We proceed now with the Boltzmann approximation for the limit where $T\lesssim m_e$. {\xblue The partition function shown in equation \req{partition} can be written removing the logarithm as
 \begin{align}
-    \label{chem}
-    \sinh{\frac{\mu}{T}}=n_{p}\frac{\pi^{2}}{T^{3}}\left[\sum_{s}^{\pm}\xi_{s}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\right]^{-1}\,.
+    \label{partitionpower}
+    \ln{{\cal Z}_{e^{+}e^{-}}}=\frac{2{\cal B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm}\sum_{s}^{\pm}\sum_{n}^{\infty}\int^{\infty}_{\infty}{\rm d}p_{z}
 \end{align}
-\req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\xi=1$ implying an equal number of polarizations both parallel and anti-parallel to the external field. 
 
-In general however, an additional physical constraint is required as the chemical $\mu$ and spin $\eta$ potentials have mutual dependency. We note that such a constraint is likely related to the total angular momentum of the considered volume and does not necessarily imply that spin polarizations must be balanced within a single species when the orbital and spin momentum of all species in the plasma are taken into account.
 
-Since our arguments addresses the temperature interval where {\xblue the effects of quantum Fermi statistics on the $e^{+}e^{-}$ pair plasma} are relatively small we employ throughout the Boltzmann approximation. However, we extrapolate our results for presentation completeness up to $T\simeq 4m$. In general modifications due to quantum statistical phase space reduction for fermions are expected to reduce by about 20\% such extrapolated results and perhaps by  a lesser amount the relative values. We continue to search for semi-analytical solutions allowing spin ferromagnetism for Fermi statistics in relativistic  $e^{+}e^{-}$-pair abundance akin to the Boltzmann solution here offered. 
 
-We proceed now with the Boltzmann approximation for the limit where $T\lesssim m_e$. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration. The resulting partition function (after truncation of the error remainder) can then be written in terms of modified Bessel $K$ functions~\cite{abramowitz1988handbook,letessier2002hadrons} of the second kind, yielding
+}
+The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration. The resulting partition function (after truncation of the error remainder) can then be written in terms of modified Bessel $K$ functions~\cite{abramowitz1988handbook,letessier2002hadrons} of the second kind, yielding
 \begin{align}
     \label{boltzmann}
     \ln{\cal Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{2\pi^{2}}\left[2\cosh{\frac{\mu}{T}}\right]\sum_{s}^{\pm}\xi_{s}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\,,\\
@@ -186,6 +186,15 @@ We proceed now with the Boltzmann approximation for the limit where $T\lesssim m
     x_{\pm}=\frac{{\tilde m}_{\pm}}{T}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+b_{0}\left(1\mp\frac{g}{2}\right)}\,.
 \end{align}
 The latter two terms in \req{boltzmann} (proportional to $b_{0}K_{1}$ and $b_{0}^{2}K_{0}$) are the uniquely magnetic terms present (containing both paramagnetic and diamagnetic influences) in the partition function while the $K_{2}$ term is present for the relativistic free Fermi gas~\cite{greiner2012thermodynamics}. As the Bessel $K$ functions are evaluated as functions of $x_{\pm}$ in \req{xfunc}, the \lq\lq free\rq\rq\ part of the partition $K_{2}$ is still subject to spin magnetization effects.
+
+In presence of magnetic field in Boltzmann approximation the charge neutrality condition \req{chargeneutrality} becomes
+\begin{align}
+    \label{chem}
+    \sinh{\frac{\mu}{T}}=n_{p}\frac{\pi^{2}}{T^{3}}\left[\sum_{s}^{\pm}\xi_{s}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\right]^{-1}\,.
+\end{align}
+\req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\xi=1$ implying an equal number of polarizations both parallel and anti-parallel to the external field. 
+
+In general however, an additional physical constraint is required as the chemical $\mu$ and spin $\eta$ potentials have mutual dependency. We note that such a constraint is likely related to the total angular momentum of the considered volume and does not necessarily imply that spin polarizations must be balanced within a single species when the orbital and spin momentum of all species in the plasma are taken into account.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Electron-positron magnetization}
 \label{sec:magnetization}
