@@ -219,6 +219,17 @@ In presence of a magnetic field in the Boltzmann approximation, the charge neutr
 \end{align}
 \req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\xi=1$ implying {\xblue no external bias to the number of polarizations (both parallel and anti-parallel) except as a consequence of the difference in energy eigenvalues. In practice, the latter two terms in \req{chem} are negligible to chemical potential in the primordial cosmic plasma considered, though not magnetization as will be explored below.}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ChemicalPotential_02.jpg}
+    \caption{The chemical potential over temperature $\mu/T$ is plotted as a function of temperature with differing values of spin potential $\eta$.}
+    \label{fig:chemicalpotential}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In \rf{fig:chemicalpotential} we plot the chemical potential $\mu/T$ (black line) which characterizes the importance of the charged lepton asymmetry as a function of temperature. Since the baryon (and thus charged lepton) asymmetry remains fixed, the suppression of $\mu/T$ at high temperatures indicates a large pair density. Only the $b_{0}=0$ case was plotted as the para-diamagnetic contribution from \req{paradia} did not appreciably influence $\mu/T$ in the regime considered. Various chemical potential curves are also plotted for differing amounts of spin polarization asymmetry determined by $\eta$.
+
 In general, an additional physical constraint is required to fully determine $\mu$ and spin $\eta$ as both potentials have mutual dependency. We note that such a constraint is likely related to the total angular momentum of the considered volume and does not necessarily imply that spin polarizations must be balanced within a single species when the orbital and spin momentum of all species in the plasma are taken into account. {\xblue In the situation of magnetized domains or finite volumes, boundary/surface conditions would also need to be considered.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Electron-positron magnetization}
@@ -261,24 +272,7 @@ There are two reasons:
     \item[b.] Conservation of magnetic flux
 \end{itemize}
 
- As discussed in \rsec{sec:abundance}, the late $e^{+}e^{-}$ plasma saw its density decrease by a factor of $10^{8}$ as the majority of the gas annihilated leaving behind only a small residual quantity of electrons. As we travel into the distance past, the density of electrons $n_{e^{-}}$ and positrons $n_{e^{+}}$ increases by an enormous amount therefore enhancing the overall magnetization through sheer quantity. This is shown in \rf{fig:paireffect} (left) which compares the magnetization of the gas with conserved magnetic flux $b_{0}=10^{-3}={\rm\ const}$ during expansion (solid blue) and the constant magnetic field $b_{0}=10^{-3}(T_{0}/T)^{2}\propto1/T^{2}$ (solid red) case. In the constant field case, the comoving reference temperature is $T_{0}=10\keV$. The external magnetic field strength is plotted for the conserved flux case (dotted blue) and the constant field case (dotted red). As before, the dashed lines indicate extrapolation. In both cases, the magnetization is maintained at high temperatures due to the large pair density of the plasma.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-    \centering
-    \begin{subfigure}{0.49\textwidth}
-        \includegraphics[width=\textwidth]{Magnetization_Hc_constant.jpg}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.49\textwidth}
-        \includegraphics[width=\textwidth]{ChemicalPotential_new.jpg}
-    \end{subfigure}
-    \caption{(left) The magnetization ${\cal M}$, with $g=2$, is plotted for flux conserving and constant fields. (right) The chemical potential over temperature $\mu/T$ is plotted as a function of temperature.}
-    \label{fig:paireffect}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
-In \rf{fig:paireffect} (right) we plot the chemical potential $\mu/T$ (black line) which characterizes the importance of the charged lepton asymmetry as a function of temperature. Since the baryon (and thus charged lepton) asymmetry remains fixed, the suppression of $\mu/T$ at high temperatures indicates a large pair density. As an aside, only the $b_{0}=0$ case was plotted as the para-diamagnetic contribution from \req{paradia} did not appreciably influence $\mu/T$ in the regime considered.
+As discussed in \rsec{sec:abundance}, the late $e^{+}e^{-}$ plasma saw its density decrease by a factor of $10^{8}$ as the majority of the gas annihilated leaving behind only a small residual quantity of electrons. As we travel into the distance past, the density of electrons $n_{e^{-}}$ and positrons $n_{e^{+}}$ increases by an enormous amount therefore enhancing the overall magnetization through sheer quantity. This is shown in \rf{fig:paireffect} (left) which compares the magnetization of the gas with conserved magnetic flux $b_{0}=10^{-3}={\rm\ const}$ during expansion (solid blue) and the constant magnetic field $b_{0}=10^{-3}(T_{0}/T)^{2}\propto1/T^{2}$ (solid red) case. In the constant field case, the comoving reference temperature is $T_{0}=10\keV$. The external magnetic field strength is plotted for the conserved flux case (dotted blue) and the constant field case (dotted red). As before, the dashed lines indicate extrapolation. In both cases, the magnetization is maintained at high temperatures due to the large pair density of the plasma.
 
 Despite the relatively large magnetization seen in \rf{fig:magnet}, the average contribution per lepton is only a small fraction of its overall magnetic moment indicating the magnetization is only loosely organized. Specifically, the magnetization regime we are in is described by
 \begin{align}
