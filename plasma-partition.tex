@@ -160,23 +160,25 @@ To evaluate paramagnetic properties of the $e^-e^+$ pair plasma we take inspirat
     \label{kgp}
     E^{\pm}_{n}(p_{z},{\cal B})=\sqrt{m_{e}^{2}+p_{z}^{2}+e{\cal B}\left(2n+1\mp\frac{g}{2}\right)}\,,\qquad n\in0,1,2,\ldots
 \end{align}
-where $p_{z}$ is the momentum parallel to the field axis and $n$ is the Landau orbital quantum number. The {\xblue superscript} $\pm$ refers to the spin polarization along the field axis: parallel $(s=+1)$ or anti-parallel $(s=-1)$ {\xblue for both particle and antiparticle species.} The parameter $g$ is the gyro-magnetic ($g$-factor) of the particle. We rearrange \req{kgp} by pulling the spin dependency and the ground state Landau orbital into the mass writing
+where $p_{z}$ is the momentum parallel to the field axis and $n$ is the Landau orbital quantum number. The {\xblue superscript} $\pm$ refers to the spin polarization along the field axis: parallel $(s=+1)$ or anti-parallel $(s=-1)$ {\xblue for both particle and antiparticle species.} The parameter $g$ is the gyro-magnetic ($g$-factor) of the particle. As statistical properties depend on the characteristic Boltzmann factor $E/T$, another interpretation of \req{tbscale} in the context of energy eigenvalues (such as those given in \req{kgp}) is the preservation of magnetic moment energy relative to momentum under adiabatic cosmic expansion.
+
+We rearrange \req{kgp} by pulling the spin dependency and the ground state Landau orbital into the mass writing
 \begin{align}
     \label{effmass}
     E^{\pm}_{n}={\tilde m}_{\pm}\varepsilon_{n}^{\pm}(p_{z},{\cal B})={\tilde m}_{\pm}\sqrt{1+\frac{p_{z}^{2}}{{\tilde m}_{\pm}^{2}}+\frac{2e{\cal B}n}{{\tilde m}_{\pm}^{2}}}\,,\qquad {\tilde m}_{\pm}^{2}=m_{e}^{2}+q{\cal B}\left(1\mp\frac{g}{2}\right)\,,
 \end{align}
-where we introduced the {\xblue dimensionless energy $\varepsilon^{\pm}_{n}$ and} effective polarized mass ${\tilde m}_{\pm}$ which is distinct for each spin alignment and is a function of magnetic field strength ${\cal B}$. The effective polarized mass ${\tilde m}_{\pm}$ allows us to describe the $e^{+}e^{-}$ plasma with the spin effects almost wholly separated from the Landau characteristics of the gas when considering plasma thermodynamic properties.
+where we introduced the {\xblue dimensionless energy $\varepsilon^{\pm}_{n}$ and} effective polarized mass ${\tilde m}_{\pm}$ which is distinct for each spin alignment and is a function of magnetic field strength ${\cal B}$. The effective polarized mass ${\tilde m}_{\pm}$ allows us to describe the $e^{+}e^{-}$ plasma with the spin effects almost wholly separated from the Landau characteristics of the gas when considering the plasma's thermodynamic properties.
 
 Since {\xblue we address} the temperature interval where {\xblue the effects of quantum Fermi statistics on the $e^{+}e^{-}$ pair plasma} are relatively small we therefore employ the Boltzmann approximation throughout. However, we extrapolate our results for presentation completeness up to $T\simeq 4m_{e}$. In general, modifications due to quantum statistical phase-space reduction for fermions are expected to {\xblue suppress results} by about 20\% {\xblue in the extrapolated regions}. We will continue to search for semi-analytical solutions for Fermi statistics in relativistic $e^{+}e^{-}$ pair gasses {\xblue to compliment the} Boltzmann solution offered here. 
 
-We now proceed with the Boltzmann approximation for the limit where $T\lesssim m_e$. {\xblue The partition function shown in equation \req{partition} can be written removing the logarithm as
+We now proceed with the Boltzmann approximation for the limit where $T\lesssim m_e$. The partition function shown in equation \req{partition} can be written removing the logarithm as
 \begin{align}
     \label{partitionpower}
     \ln{{\cal Z}_{e^{+}e^{-}}}=\frac{2{\cal B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm}\sum_{s}^{\pm}\sum_{n}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}{\rm d}p_{z}\frac{(-1)^{k+1}}{k}\exp\left({k\frac{\sigma\mu+s\xi-{\tilde m}_{s}\varepsilon^{s}_{n}}{T}}\right)\,,\\
     \label{bapprox}
      \sigma\mu+s\eta-{\tilde m}_{s}\varepsilon_{n}^{s}<0\,,
 \end{align}
-which is well behaved as long as the factor in \req{bapprox} remains negative. This is true in the region in interest as the potentials are themselves a function of temperature which is demonstrated below. The standard Boltzmann distribution is obtained by summing only $k=1$ and neglecting the higher order terms. We introduce the Bessel function $K_{\nu}$ (See Ch. 10 of~\cite{letessier2002hadrons}) of the second kind
+which is well behaved as long as the factor in \req{bapprox} remains negative. This is true in the region in interest as the potentials are themselves a function of temperature which is demonstrated below. The standard Boltzmann distribution is obtained by summing only $k=1$ and neglecting the higher order terms. We introduce the Bessel function $K_{\nu}$ (see: Ch. 10 of~\cite{letessier2002hadrons}) of the second kind
 \begin{align}
     \label{besselk}
     K_{\nu}\left(\frac{m}{T}\right)=\frac{\sqrt{\pi}}{\Gamma(\nu-1/2)}\frac{1}{m}\left(\frac{1}{2mT}\right)^{\nu-1}\int_{0}^{\infty}{\rm d}p\,p^{2\nu-2}\exp\left({-\frac{m\varepsilon}{T}}\right)\,,\\
@@ -187,13 +189,12 @@ allowing us to rewrite the integral over momentum in \req{partitionpower} as
     \label{besselkint}
     \frac{1}{T}\int_{0}^{\infty}{\rm d}p_{z}\exp\left({-\frac{k{\tilde m}_{\pm}\varepsilon_{n}^{\pm}}{T}}\right)=\left(\frac{k{\tilde m}_{\pm}\varepsilon_{n}^{\pm}(0,B)}{T}\right)K_{1}\left(\frac{k{\tilde m}_{\pm}\varepsilon_{n}^{\pm}(0,B)}{T}\right)=W_{1}\left(\frac{k{\tilde m}_{\pm}\varepsilon_{n}^{\pm}(0,B)}{T}\right)\,.
 \end{align}
-}
-The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration {\xblue given by
+The function $W_{\nu}$ serves as an auxiliary function of the form $W_{\nu}(x)=xK_{\nu}(x)$. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration given by
 \begin{align}
     \label{eulermaclaurin}
     \sum_{n=0}^{\infty}W_{1}(n)=\int_{0}^{\infty}{\rm d}n\,W_{1}(n)+\frac{1}{2}\left[W_{1}(\infty)+W_{1}(0)\right]+\frac{1}{12}\left[\frac{\partial W_{1}}{\partial n}\bigg\vert_{\infty}-\frac{\partial W_{1}}{\partial n}\bigg\vert_{0}\right]+{\cal R}
 \end{align}
-where ${\cal R}$ is the error remainder of the integration defined in terms of Bernoulli polynomials. Euler-Maclaurin integration is rarely convergent, and in this case serves only as an approximation within the domain where the error remainder remains small and bounded.} After truncation of the error remainder and combining \req{partitionpower} - \req{eulermaclaurin}, the partition function can then be written in terms of modified Bessel $K_{\nu}$ functions of the second kind, yielding
+where ${\cal R}$ is the error remainder of the integration defined in terms of Bernoulli polynomials. Euler-Maclaurin integration is rarely convergent, and in this case serves only as an approximation within the domain where the error remainder remains small and bounded. In this analysis, we keep the zeroth and first order terms in the Euler-Maclaurin formula. After truncation of the error remainder and combining \req{partitionpower} - \req{eulermaclaurin}, the partition function can then be written in terms of modified Bessel $K_{\nu}$ functions of the second kind, yielding
 \begin{align}
     \label{boltzmann}
     \ln{\cal Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{2\pi^{2}}\left[2\cosh{\frac{\mu}{T}}\right]\sum_{s}^{\pm}\xi_{s}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\,,\\
@@ -208,29 +209,34 @@ The latter two terms in \req{boltzmann} (proportional to $b_{0}K_{1}$ and $b_{0}
     \label{paradia}
     \ln{\cal Z}_{P,D}&=\frac{T^{3}V}{2\pi^{2}}\left[2\cosh{\frac{\mu}{T}}\right]\sum_{s}^{\pm}\xi_{s}\left(\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\,,
 \end{align}
-where the paramagnetic (P) and para-diamagnetic (P,D) partition functions are considered separately. When the magnetic scale $b_{0}$ is small, the para-diamagnetic term \req{paradia} becomes negligible leaving only the paramagnetic effects in \req{para} due to spin. In the non-relativistic limit, \req{para} reproduces a quantum gas whose Hamiltonian is defined as the free particle Hamiltonian plus the magnetic dipole Hamiltonian which span two independent Hilbert spaces.
+where the paramagnetic (P) and para-diamagnetic (P,D) partition functions can be considered independently. When the magnetic scale $b_{0}$ is small, the para-diamagnetic term \req{paradia} becomes negligible leaving only the paramagnetic effects in \req{para} due to spin. In the non-relativistic limit, \req{para} reproduces a quantum gas whose Hamiltonian is defined as the free particle Hamiltonian plus the magnetic dipole Hamiltonian which span two independent Hilbert spaces.
 
-Writing the partition function as \req{boltzmann} instead of \req{partitionpower} has the additional benefit that the partition function remains finite in the free gas $({\cal B}=0)$ case as the free Fermi gas and \req{para} are mathematically the same functional form.} As the Bessel $K_{\nu}$ functions are evaluated as functions of $x_{\pm}$ in \req{xfunc}, the \lq\lq free\rq\rq\ part of the partition $K_{2}$ is still subject to spin magnetization effects. {\xblue In the limit where ${\cal B}\rightarrow0$, the free Fermi gas (in both the Boltzmann approximation $k=1$ as well as the general case) is recovered.}
+Writing the partition function as \req{boltzmann} instead of \req{partitionpower} has the additional benefit that the partition function remains finite in the free gas $({\cal B}=0)$ case. This is because the free Fermi gas and \req{para} are mathematically analogous to one another.} As the Bessel $K_{\nu}$ functions are evaluated as functions of $x_{\pm}$ in \req{xfunc}, the \lq\lq free\rq\rq\ part of the partition $K_{2}$ is still subject to spin magnetization effects. In the limit where ${\cal B}\rightarrow0$, the free Fermi gas is recovered in both the Boltzmann approximation $k=1$ and the general case $\sum_{k=1}^{\infty}$.
 
 In presence of a magnetic field in the Boltzmann approximation, the charge neutrality condition \req{chargeneutrality} becomes
 \begin{align}
     \label{chem}
     \sinh{\frac{\mu}{T}}=n_{p}\frac{\pi^{2}}{T^{3}}\left[\sum_{s}^{\pm}\xi_{s}\left(x_{s}^{2}K_{2}(x_{s})+\frac{b_{0}}{2}x_{s}K_{1}(x_{s})+\frac{b_{0}^{2}}{12}K_{0}(x_{s})\right)\right]^{-1}\,.
 \end{align}
-\req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\xi=1$ implying {\xblue no external bias to the number of polarizations (both parallel and anti-parallel) except as a consequence of the difference in energy eigenvalues. In practice, the latter two terms in \req{chem} are negligible to chemical potential in the primordial cosmic plasma considered, though not magnetization as will be explored below.}
+\req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\xi=1$ implying no external bias to the number of polarizations (both parallel and anti-parallel) except as a consequence of the difference in energy eigenvalues. In practice, the latter two terms in \req{chem} are negligible to chemical potential in the bounds of the primordial electron-positron plasma considered and only becomes relevant for extreme (see: \rf{fig:chemicalpotential}) magnetic field strengths well outside our scope.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{ChemicalPotential_02.jpg}
-    \caption{The chemical potential over temperature $\mu/T$ is plotted as a function of temperature with differing values of spin potential $\eta$.}
+    \includegraphics[width=0.5\textwidth]{ChemicalPotential_03.jpg}
+    \caption{The chemical potential over temperature $\mu/T$ is plotted as a function of temperature with differing values of spin potential $\eta$ and magnetic scale $b_{0}$.}
     \label{fig:chemicalpotential}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In \rf{fig:chemicalpotential} we plot the chemical potential $\mu/T$ (black line) which characterizes the importance of the charged lepton asymmetry as a function of temperature. Since the baryon (and thus charged lepton) asymmetry remains fixed, the suppression of $\mu/T$ at high temperatures indicates a large pair density. Only the $b_{0}=0$ case was plotted as the para-diamagnetic contribution from \req{paradia} did not appreciably influence $\mu/T$ in the regime considered. Various chemical potential curves are also plotted for differing amounts of spin polarization asymmetry determined by $\eta$.
+In \rf{fig:chemicalpotential} we plot the chemical potential $\mu/T$ which characterizes the importance of the charged lepton asymmetry as a function of temperature. Since the baryon (and thus charged lepton) asymmetry remains fixed, the suppression of $\mu/T$ at high temperatures indicates a large pair density which is seen explicitly in \rf{fig:densityratio}. The black line corresponds to the $b_{0}=0$ and $\eta=0$ case. The para-diamagnetic contribution from \req{paradia} does not appreciably influence $\mu/T$ until the magnetic scales involved become incredibly large well outside the observational bounds defined in \req{igmf} and \req{tbscale} as seen by the dotted blue curves of various large values $b_{0}=\{25,\ 50,\ 100,\ 300\}$. The chemical potential is also insensitive to forcing by the spin potential until $\eta$ reaches a significant fraction of the electron mass $m_{e}$ in size. The chemical potential for large values of spin potential $\eta=\{100,\ 200,\ 300,\ 400,\ 500\}\ \keV$ are also plotted as dashed black lines with $b_{0}=0$. It is interesting to note that there are crossing points where a given chemical potential can be described as either an imbalance in spin-polarization or presence of external magnetic field. While spin potential suppresses the chemical potential at low temperatures, external magnetic fields only suppress the chemical potential at high temperatures. For the remainder of this paper, we are justified in using the free particle chemical potential (black line) in the ranges of magnetic field strength considered.
 
-In general, an additional physical constraint is required to fully determine $\mu$ and spin $\eta$ as both potentials have mutual dependency. We note that such a constraint is likely related to the total angular momentum of the considered volume and does not necessarily imply that spin polarizations must be balanced within a single species when the orbital and spin momentum of all species in the plasma are taken into account. {\xblue In the situation of magnetized domains or finite volumes, boundary/surface conditions would also need to be considered.}
+In general, an additional physical constraint is required to fully determine $\mu$ and $\eta$ simultaneously as both potentials have mutual dependency. We note that such a constraint is likely related to the total angular momentum of the considered volume. This does not necessarily imply that spin polarizations must be balanced within a single species when the orbital and spin momentum of all species in the plasma are taken into account as helicity flipping collisions between species become biased in the presence of external fields. For magnetized domains or finite volumes, boundary/surface conditions would also need to be considered.
+
+The measured anisotropies in the CMB~\cite{aghanim2018planck} also indicate that the early universe was home to domains of slightly higher and lower baryon densities~\cite{grayson2023electronpositron} making the proton density spatially dependant $n_{p}\rightarrow n_{p}(x)$ which would directly affect the potentials $\mu(x)$ and $\eta(x)$ and thus density of electrons and positrons locally. This would lead to regions of the primordial plasma with higher or lower magnetization and nonzero local angular momentum within those domains providing a natural mechanism for the small but nonzero angular momentum matter clumps must have possessed to form the spinning galaxies of today. Recent measurements by the James Webb Space Telescope (JWST)~\cite{yan2022first,adams2023discovery,arrabal2023spectroscopic} indicate that galaxy formation began surprisingly early at large redshift values of $z\gtrsim10$ within the first 500 million years of the universe. Additionally the observation of supermassive black holes being already present~\cite{larson2023ceers} in this period with masses of millions of Suns indicates the need for exceptionally high density local regions in the early universe.
+
+% Rework the above pararaph to separate the scales of spatial anisotropies e.g. CMB is LARGE SCALE inhomogenieities while we're discussing the need for SMALL SCALE "dust" inhomogenieities which also may hide additional baryon number. Mention how LOCAL spatial effects are needed to seed early galaxies and SMBHs primordially.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Electron-positron magnetization}
 \label{sec:magnetization}
@@ -241,13 +247,14 @@ In general, an additional physical constraint is required to fully determine $\m
 \end{align}
 Magnetization arising from other components in the cosmic gas (protons, neutrinos, etc.) could in principle also be included. Localized inhomogeneities of matter evolution are often non-trivial and generally be solved numerically using magneto-hydrodynamics (MHD)~\cite{melrose2008quantum,vazza2017simulations}. In the context of MHD, primordial magnetogenesis from neutrino interactions in the electron-positron epoch was considered in~\cite{perrone2021neutrinoelectron}. We introduce dimensionless units for magnetization by defining the critical field strength
 \begin{align}
-    {\cal B}_{C}\equiv\frac{m_{e}^{2}}{e}\,,\qquad{\overline{\cal M}}\equiv\frac{\cal M}{{\cal B}_{C}}\,.
+    {\cal B}_{C}\equiv\frac{m_{e}^{2}}{e}\,,\qquad{\mathfrak M}\equiv\frac{\cal M}{{\cal B}_{C}}\,.
 \end{align}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{Magnetization_Hc_new002.jpg}
+    \includegraphics[width=0.5\textwidth]{Magnetization_Hc_new004.png}
+    %{Magnetization_Hc_new002.jpg}
     \caption{The magnetization ${\cal M}$, with $g=2$, of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature.}
     \label{fig:magnet} 
 \end{figure}
@@ -272,7 +279,7 @@ There are two reasons:
     \item[b.] Conservation of magnetic flux
 \end{itemize}
 
-As discussed in \rsec{sec:abundance}, the late $e^{+}e^{-}$ plasma saw its density decrease by a factor of $10^{8}$ as the majority of the gas annihilated leaving behind only a small residual quantity of electrons. As we travel into the distance past, the density of electrons $n_{e^{-}}$ and positrons $n_{e^{+}}$ increases by an enormous amount therefore enhancing the overall magnetization through sheer quantity. This is shown in \rf{fig:paireffect} (left) which compares the magnetization of the gas with conserved magnetic flux $b_{0}=10^{-3}={\rm\ const}$ during expansion (solid blue) and the constant magnetic field $b_{0}=10^{-3}(T_{0}/T)^{2}\propto1/T^{2}$ (solid red) case. In the constant field case, the comoving reference temperature is $T_{0}=10\keV$. The external magnetic field strength is plotted for the conserved flux case (dotted blue) and the constant field case (dotted red). As before, the dashed lines indicate extrapolation. In both cases, the magnetization is maintained at high temperatures due to the large pair density of the plasma.
+As discussed in \rsec{sec:abundance}, the late $e^{+}e^{-}$ plasma saw its density decrease by a factor of $10^{8}$ as the majority of the gas annihilated leaving behind only a small residual quantity of electrons. As we travel into the distance past, the density of electrons $n_{e^{-}}$ and positrons $n_{e^{+}}$ increases by an enormous amount therefore enhancing the overall magnetization through sheer quantity. This is shown in THIS FIGURE IS MISSING JR \rf{fig:paireffect} (left) which compares the magnetization of the gas with conserved magnetic flux $b_{0}=10^{-3}={\rm\ const}$ during expansion (solid blue) and the constant magnetic field $b_{0}=10^{-3}(T_{0}/T)^{2}\propto1/T^{2}$ (solid red) case. In the constant field case, the comoving reference temperature is $T_{0}=10\keV$. The external magnetic field strength is plotted for the conserved flux case (dotted blue) and the constant field case (dotted red). As before, the dashed lines indicate extrapolation. In both cases, the magnetization is maintained at high temperatures due to the large pair density of the plasma.
 
 Despite the relatively large magnetization seen in \rf{fig:magnet}, the average contribution per lepton is only a small fraction of its overall magnetic moment indicating the magnetization is only loosely organized. Specifically, the magnetization regime we are in is described by
 \begin{align}
@@ -286,23 +293,31 @@ where $\mu_{B}$ is the Bohr magneton and $N=nV$ is the total particle number in 
 \end{align}
 From spin statistics, we expect the transverse expectation values to be zero. The quantity defined in \req{momentperlepton} gives us an insight into the microscopic response of the plasma.
 
-The conservation of magnetic flux, required by \req{bscale}, through comoving surfaces for the external field ensures that as we travel into the past, the magnetic field increases which enhances the overall magnetization of the gas. This phenomenon is seen in \rf{fig:paireffect} as the difference between the blue and red curves. However, a more striking visualization of this is plotted in \rf{fig:momentperlepton} where the average magnetic moment $\vert\vec{m}\vert_{z}$ defined in \req{momentperlepton} displays how essential the external field is on the per lepton magnetization. Both the lower $b_{0}=10^{-11}$ (left, red curve) and upper $b_{0}=10^{-3}$ (right, blue curve) cosmic magnetic scale bounds are plotted in the Boltzmann approximation. Both figures display the constant magnetic field case (solid green) with the comoving value chosen at temperature $T_{0}=10\keV$. The average magnetic moment per lepton is suppressed at higher temperatures (as expected for magnetization satisfying Curie's law) if the field strength is held constant.
+The conservation of magnetic flux, required by \req{bscale}, through comoving surfaces for the external field ensures that as we travel into the past, the magnetic field increases which enhances the overall magnetization of the gas. This phenomenon is seen in  THIS FIGURE IS MISSING JR \rf{fig:paireffect} as the difference between the blue and red curves. However, a more striking visualization of this is plotted in \rf{fig:momentperlepton} where the average magnetic moment $\vert\vec{m}\vert_{z}$ defined in \req{momentperlepton} displays how essential the external field is on the per lepton magnetization. Both the lower $b_{0}=10^{-11}$ (left, red curve) and upper $b_{0}=10^{-3}$ (right, blue curve) cosmic magnetic scale bounds are plotted in the Boltzmann approximation. Both figures display the constant magnetic field case (solid green) with the comoving value chosen at temperature $T_{0}=10\keV$. The average magnetic moment per lepton is suppressed at higher temperatures (as expected for magnetization satisfying Curie's law) if the field strength is held constant.
 
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}[ht]
+%    \centering
+%    \begin{subfigure}[b]{0.49\textwidth}
+%        \includegraphics[width=\textwidth]{NewMagnetizationDensity001_Boltz.jpg}
+%    \end{subfigure}
+%    \hfill
+%    \begin{subfigure}[b]{0.49\textwidth}
+%        \includegraphics[width=\textwidth]{NewMagnetizationDensity002_Boltz.jpg}
+%    \end{subfigure}
+%    \caption{The magnetic moment per lepton $\vert\vec{m}\vert_{z}$ along the field axis.}
+%    \label{fig:momentperlepton}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{NewMagnetizationDensity001_Boltz.jpg}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.49\textwidth}
-        \includegraphics[width=\textwidth]{NewMagnetizationDensity002_Boltz.jpg}
-    \end{subfigure}
+    \includegraphics[width=0.5\textwidth]{NewMagnetizationDensity003_Boltz.png}
+
     \caption{The magnetic moment per lepton $\vert\vec{m}\vert_{z}$ along the field axis.}
     \label{fig:momentperlepton}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Spin potential and ferromagnetism}
 \label{sec:spin}
