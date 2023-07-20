@@ -75,7 +75,7 @@ Faraday rotation from distant radio active galaxy nuclei (AGN)~\cite{pomakov2022
 
 We investigate the hypothesis that the observed  IGMF  are primordial in nature, predating even the recombination epoch. Specifically, we explore the role of the relatively large electron-positron $(e^{+}e^{-})$ pair abundance which only disappears well after Big Bang nucleosynthesis (BBN). {\xblue Electrons and positrons, having the largest magnetic moments in nature, are likely to have been magnetized in the pre-BBN early universe due to spin orientation. The rapid $10^{8}$ drop in $e^{+}e^{-}$ abundance within the narrow temperature range $200\keV>T>20\keV$ shown in \rf{fig:densityratio} should then be capable of inducing dynamical currents preserving magnetic flux} in the emerging $p,\alpha,e^-$ plasma.  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.8\textwidth]{plots/EEPlasmaDensityRatio_new.jpg}
     \caption{Electron $e^-$ and positron $e^+$ to baryon ratio $n_{e^{\pm}}/n_{B}$  as a function of photon temperature in the universe. See text for further details.}
@@ -223,13 +223,13 @@ In presence of a magnetic field in the Boltzmann approximation, the charge neutr
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\textwidth]{ChemicalPotential_04.jpg}
-    \caption{The chemical potential over temperature $\mu/T$ is plotted as a function of temperature with differing values of spin potential $\eta$ and magnetic scale $b_{0}$.}
+    \includegraphics[width=0.5\textwidth]{plots/ChemicalPotential_04.jpg}
+    \caption{The chemical potential over temperature $\mu/T$ is plotted as a function of temperature with differing values of spin potential $\eta$ (black dashed curves) and magnetic scale $b_{0}$ (blue dotted curves).}
     \label{fig:chemicalpotential}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In \rf{fig:chemicalpotential} we plot the chemical potential $\mu/T$ which characterizes the importance of the charged lepton asymmetry as a function of temperature. Since the baryon (and thus charged lepton) asymmetry remains fixed, the suppression of $\mu/T$ at high temperatures indicates a large pair density which is seen explicitly in \rf{fig:densityratio}. The black line corresponds to the $b_{0}=0$ and $\eta=0$ case. The para-diamagnetic contribution from \req{paradia} does not appreciably influence $\mu/T$ until the magnetic scales involved become incredibly large well outside the observational bounds defined in \req{igmf} and \req{tbscale} as seen by the dotted blue curves of various large values $b_{0}=\{25,\ 50,\ 100,\ 300\}$. The chemical potential is also insensitive to forcing by the spin potential until $\eta$ reaches a significant fraction of the electron mass $m_{e}$ in size. The chemical potential for large values of spin potential $\eta=\{100,\ 200,\ 300,\ 400,\ 500\}\ \keV$ are also plotted as dashed black lines with $b_{0}=0$. It is interesting to note that there are crossing points where a given chemical potential can be described as either an imbalance in spin-polarization or presence of external magnetic field. While spin potential suppresses the chemical potential at low temperatures, external magnetic fields only suppress the chemical potential at high temperatures. The profound insensitivity of the chemical potential to these parameters justifies the use of the free particle chemical potential (black line) in the ranges of magnetic field strength considered.
+In \rf{fig:chemicalpotential} we plot the chemical potential $\mu/T$ which characterizes the importance of the charged lepton asymmetry as a function of temperature. Since the baryon (and thus charged lepton) asymmetry remains fixed, the suppression of $\mu/T$ at high temperatures indicates a large pair density which is seen explicitly in \rf{fig:densityratio}. The black line corresponds to the $b_{0}=0$ and $\eta=0$ case. The para-diamagnetic contribution from \req{paradia} does not appreciably influence $\mu/T$ until the magnetic scales involved become incredibly large well outside the observational bounds defined in \req{igmf} and \req{tbscale} as seen by the dotted blue curves of various large values $b_{0}=\{25,\ 50,\ 100,\ 300\}$. The chemical potential is also insensitive to forcing by the spin potential until $\eta$ reaches a significant fraction of the electron mass $m_{e}$ in size. The chemical potential for large values of spin potential $\eta=\{100,\ 200,\ 300,\ 400,\ 500\}\ \keV$ are also plotted as dashed black lines with $b_{0}=0$. It is interesting to note that there are crossing points where a given chemical potential can be described as either an imbalance in spin-polarization or presence of external magnetic field. While spin potential suppresses the chemical potential at low temperatures, external magnetic fields only suppress the chemical potential at high temperatures. The profound insensitivity of the chemical potential to these parameters justifies the use of the free particle chemical potential (black line) in the ranges of magnetic field strength considered for cosmology. Mathematically this can be understood as $\xi$ and $b_{0}$ act as small corrections in the denominator of \req{chem} if expanded in powers of these two parameters.
 
 In general, an additional physical constraint is required to fully determine $\mu$ and $\eta$ simultaneously as both potentials have mutual dependency. We note that such a constraint is likely related to the total angular momentum of the considered volume. This does not necessarily imply that spin polarizations must be balanced within a single species when the orbital and spin momentum of all species in the plasma are taken into account as helicity flipping collisions between species become biased in the presence of external fields. For magnetized domains or finite volumes, boundary/surface conditions would also need to be considered.
 
@@ -245,7 +245,7 @@ Measurements of the CMB~\cite{aghanim2018planck} indicates that the early univer
     \label{defmagetization}
     {\cal M}\equiv\frac{T}{V}\frac{\partial}{\partial{\cal B}}\ln{{\cal Z}_{e^{+}e^{-}}} = \frac{T}{V}\left(\frac{\partial b_{0}}{\partial{\cal B}}\right)\frac{\partial}{\partial b_{0}}\ln{{\cal Z}_{e^{+}e^{-}}}\,,\qquad\frac{\partial b_{0}}{\partial{\cal B}}=\frac{e}{T^{2}}\,.
 \end{align}
-Magnetization arising from other components in the cosmic gas (protons, neutrinos, etc.) could in principle also be included. Localized inhomogeneities of matter evolution are often non-trivial and generally be solved numerically using magneto-hydrodynamics (MHD)~\cite{melrose2008quantum,vazza2017simulations}. In the context of MHD, primordial magnetogenesis from neutrino interactions in the electron-positron epoch was considered in~\cite{perrone2021neutrinoelectron}. We introduce dimensionless units for magnetization by defining the critical field strength
+Magnetization arising from other components in the cosmic gas (protons, neutrinos, etc.) could in principle also be included. Localized inhomogeneities of matter evolution are often non-trivial and generally be solved numerically using magneto-hydrodynamics (MHD)~\cite{melrose2008quantum,vazza2017simulations}. In the context of MHD, primordial magnetogenesis from neutrino interactions in the electron-positron epoch was considered in~\cite{perrone2021neutrinoelectron}. We introduce dimensionless units for magnetization ${\mathfrak M}$ by defining the critical field strength
 \begin{align}
     {\cal B}_{C}\equiv\frac{m_{e}^{2}}{e}\,,\qquad{\mathfrak M}\equiv\frac{\cal M}{{\cal B}_{C}}\,.
 \end{align}
@@ -254,7 +254,6 @@ Magnetization arising from other components in the cosmic gas (protons, neutrino
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.5\textwidth]{Magnetization_Hc_new004.png}
-    %{Magnetization_Hc_new002.jpg}
     \caption{The magnetization ${\mathfrak M}$, with $g=2$, of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature.}
     \label{fig:magnet} 
 \end{figure}
@@ -293,45 +292,33 @@ where $\mu_{B}$ is the Bohr magneton and $N=nV$ is the total particle number in 
 \end{align}
 From spin statistics, we expect the transverse expectation values to be zero. The quantity defined in \req{momentperlepton} gives us an insight into the microscopic response of the plasma.
 
-This feature is plotted in \rf{fig:momentperlepton} where the average magnetic moment $\vert\vec{m}\vert_{z}$ defined in \req{momentperlepton} displays how essential the external field is on the \lq per lepton\rq\ magnetization. Both the $b_{0}=10^{-11}$ (lower plot, red curve) and $b_{0}=10^{-3}$ (upper plot, blue curve) cosmic magnetic scale bounds are plotted in the Boltzmann approximation. The constant magnetic field case (solid green) with the comoving value chosen at temperature $T_{0}=10\keV$. The average magnetic moment per lepton is suppressed at higher temperatures (as expected for magnetization satisfying Curie's law) if the field strength is held constant. This demonstrates the importance of the conservation of primordial magnetic flux in the plasma, required by \req{bscale}, through comoving surfaces for the external field ensures that as we travel into the past, the magnetic field increases which enhances the overall magnetization of the gas. 
+The average magnetic moment $\vert\vec{m}\vert_{z}$ defined in \req{momentperlepton} is plotted in \rf{fig:momentperlepton} which displays how essential the external field is on the \lq per lepton\rq\ magnetization. Both the $b_{0}=10^{-11}$ (lower plot, red curve) and $b_{0}=10^{-3}$ (upper plot, blue curve) cosmic magnetic scale bounds are plotted in the Boltzmann approximation. The dashed lines indicate where this approximation is only qualitatively correct. For illustration, a constant magnetic field case (solid green line) with a comoving reference value chosen at temperature $T_{0}=10\keV$ is also plotted. If the field strength is held constant, then the average magnetic moment per lepton is suppressed at higher temperatures as expected for magnetization satisfying Curie's law. The difference between the non-constant (red and blue solid curves) case and the constant field (solid green curve) case demonstrates the importance of the conservation of primordial magnetic flux in the plasma, required by \req{bscale}. The conservation of flux through comoving surfaces for the external field ensures that as we travel into the past, the increasing magnetic field enhances the overall magnetization of the gas. While not shown, if \rf{fig:momentperlepton} was extended to lower temperatures, the magnetization per lepton of the constant field case would be greater than the non-constant case which agrees with our intuition that magnetization is easier to achieve at lower temperatures.
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{figure}[ht]
-%    \centering
-%    \begin{subfigure}[b]{0.49\textwidth}
-%        \includegraphics[width=\textwidth]{NewMagnetizationDensity001_Boltz.jpg}
-%    \end{subfigure}
-%    \hfill
-%    \begin{subfigure}[b]{0.49\textwidth}
-%        \includegraphics[width=\textwidth]{NewMagnetizationDensity002_Boltz.jpg}
-%    \end{subfigure}
-%    \caption{The magnetic moment per lepton $\vert\vec{m}\vert_{z}$ along the field axis.}
-%    \label{fig:momentperlepton}
-%\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\textwidth]{NewMagnetizationDensity003_Boltz.png}
-
+    \includegraphics[width=0.5\textwidth]{plots/NewMagnetizationDensity004_Boltz.png}
     \caption{The magnetic moment per lepton $\vert\vec{m}\vert_{z}$ along the field axis.}
     \label{fig:momentperlepton}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Spin potential and ferromagnetism}
 \label{sec:spin}
-\noindent Up to this point, we have neglected the impact that a nonzero spin potential $\eta\neq0$ (and thus $\xi\neq1$) would have on the primordial $e^{+}e^{-}$ plasma. In the limit the cosmic magnetic scale (and thus external magnetic field) goes to zero, the magnetization given in \req{g2magplus} and \req{g2magminus} is entirely controlled by the spin fugacity $\xi$ asymmetry generated by the spin potential $\eta$ yielding
+\noindent Up to this point, we have neglected the impact that a nonzero spin potential $\eta\neq0$ (and thus $\xi\neq1$) would have on the primordial $e^{+}e^{-}$ plasma magnetization. In the limit that the cosmic magnetic scale $b_{0}$ (and thus external magnetic field) goes to zero, the magnetization given in \req{g2magplus} and \req{g2magminus} is entirely controlled by the spin fugacity $\xi$ asymmetry generated by the spin potential $\eta$ yielding
 \begin{align}
-    \lim_{b_{0}\rightarrow0}{\mathfrak M}=\frac{q^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\sinh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}\left[\frac{m_{e}}{T}K_{1}\left(\frac{m_{e}}{T}\right)\right]\,,\qquad2\sinh{\frac{\eta}{T}}=\xi-\xi^{-1}\,.
+    \label{ferro}
+    \lim_{b_{0}\rightarrow0}{\mathfrak M}=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\sinh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}\left[\frac{m_{e}}{T}K_{1}\left(\frac{m_{e}}{T}\right)\right]\,,\qquad2\sinh{\frac{\eta}{T}}=\xi-\xi^{-1}\,.
 \end{align}
-Therefore, we can understand the spin potential as a kind of ferromagnetic influence on the primordial gas which allows for magnetization even in the absence of external magnetic fields. As $\sinh{\eta/T}$ is an odd function, the sign of $\eta$ also controls the alignment of the magnetization. In general, $\eta=\eta(\mu,T)$ is a function of the chemical potential and temperature. As discussed in \rsec{sec:fugacity}, the two potentials are mutually related likely would need be simultaneously solved. We will return to the topic of spin potential constraints under separate cover.
+Therefore, we can understand the spin potential as a kind of ferromagnetic influence on the primordial gas which allows for magnetization even in the absence of external magnetic fields. As $\sinh{\eta/T}$ is an odd function, the sign of $\eta$ also controls the alignment of the magnetization. In general, $\eta=\eta(\mu,T)$ is a function of the chemical potential and temperature. As discussed in \rsec{sec:fugacity}, the two potentials are mutually related and likely would need be simultaneously solved.
+
+In \rf{fig:ferro} we plot this \lq\lq ferromagnetic\rq\rq\ forced magnetization for various values of spin potential $\eta=\{10^{-9},\ 10^{-6},\ 10^{-3},\ 10^{-2},\ 10^{-1},\ 10^{0},\ 10^{1}\}\keV$ (dashed black curves) in comparison to the magnetization upper and lower bounds (blue and red curves) suggested by \req{tbscale}. Unsurprisingly, we see that unlike the chemical potential which is insensitive to $\eta$, the magnetization is strongly dependant on any external forcing of spin polarization asymmetry. What is of more interest is the natural scale of the magnetization that even a small spin fugacity ($\eta<1\eV$) fits easily within the bounds of the predicted magnetization during this era if the IGMF measured today was of primordial origin. The reason for this is that the magnetization seen in \req{g2magplus} - \req{g2magminus} and \req{ferro} are scaled by $\alpha{\cal B}_{C}$ where $\alpha\propto e^{2}$ is the fine structure constant.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\textwidth]{SpinPolarizationEffect_02.jpg}
+    \includegraphics[width=0.5\textwidth]{plots/SpinPolarizationEffect_03.jpg}
     \caption{The magnetization ${\mathfrak M}$ for various values of $\eta$ (dashed black lines) with zero external field are compared to the magnetization with external fields (blue and red) with $\eta=0$.}
     \label{fig:ferro} 
 \end{figure}
