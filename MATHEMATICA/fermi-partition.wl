@@ -359,7 +359,7 @@ reversal[T_]:=-T+ loT + hiT;
 ff[T_, b_,eta_] = (T/V) (q/T^(2)) (D[lnZ[V, chempot[T,0,g,\[Eta]]T, T, b, 1, g, eta], b] + D[lnZ[V, chempot[T,0,g,\[Eta]]T, T, b, -1, g, eta], b])/. q -> (4 Pi/137)/m^(2) /. m -> 511;
 bValues = {10^(-3),10^(-11)};
 Plot[Evaluate[{Bc ff[T, bValues, 0],Bc ff[T, 0, #] & /@ etaValues}], {T, loT, hiT},
- 	PlotRange -> {{10,2000},{10^(-30),10^(0)}},
+ 	PlotRange -> {{10,1000},{10^(-30),10^(0)}},
  	Frame -> True,
  	AspectRatio -> 3/2,
  	FrameLabel -> {"T [keV]", "M"},
@@ -479,3 +479,19 @@ Plot[Bc f[T, bValues,eta1], {T, 10, 10000},
 
 (* ::Text:: *)
 (*In this section, we explore the number (pair) density of electron and positrons in the early universe. An explanation for why increased temperature leads paradoxically to higher magnetization is the overwhelming growth of pairs within the hot dense electron-positron plasma. To prove that however, let's obtain the numerical density and plot the magnetization per electron-positron pair.*)
+
+
+(* ::Subsection:: *)
+(*Energy density of the gas*)
+
+
+Clear[B]
+
+
+lnZx[x_,m_,B_]:=x^(3)((m/x)^2 BesselK[2, m/x]+(1/2)(B/x^(2))(m/x)BesselK[1,m/x]+(1/12)(B^(2)/x^(4))BesselK[0,m/x]);
+
+
+x^(2)D[lnZx[x,m,B], x]/lnZx[x,m,B]//FullSimplify
+
+
+Series[x^(2)D[lnZx[x,m,B], x]/lnZx[x,m,B],{B,0,1}]//FullSimplify
