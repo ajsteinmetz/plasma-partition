@@ -317,7 +317,7 @@ Plot[Evaluate[chempot[T, #,g,\[Eta]]/.m->me & /@ bValues], {T, loT, hiT},
 (**)
 
 
-g = 2;
+g = {2};
 Bc = 4.41 10^(13);
 Bc = 1;
 \[Eta] = 0;
@@ -348,7 +348,7 @@ ScientificForm[{10.,100.,10.^(-2),1000000.}]
 ScientificForm[{123450000.0,0.000012345,123.45}]
 
 
-g = {2.2};
+g = {2};
 Bc = 4.41 10^(13);
 Bc = 1;
 \[Eta] = 0;
@@ -373,6 +373,26 @@ Plot[Evaluate[{Bc ff[T, bValues, 0],Bc ff[T, 0, #] & /@ etaValues}], {T, loT, hi
      FrameTicks -> {{{#, Superscript[10, Log10@#]} & /@ ({10^0, 10^-5, 10^-10, 10^-15, 10^-20, 10^-25,10^-30}), None},
        {{#, Superscript[10, Log10@#]} & /@ ({10^3, 10^2, 10^1}), None}},
  	GridLines -> {Drop[Flatten[Table[Tlist[n],{n,{10,100,1000}}]],-8],Table[10^(n),{n,1,-33,-1}]},
+ 	GridLinesStyle -> Directive[Line, Lighter[Gray,.8]]]
+
+
+g = {2};
+Bc = 4.41 10^(13);
+Bc = 1;
+\[Eta] = 0;
+bValues = {10^(-3)};
+Tlist[n_]:=Table[x,{x,n,9n,n}];
+ff[T_, b_,eta_,gee_] = (T/V) (q/T^(2)) (D[lnZ[V, chempot[T,0,gee,\[Eta]]T, T, b, 1, gee, eta], b] + D[lnZ[V, chempot[T,0,gee,\[Eta]]T, T, b, -1, gee, eta], b])/. q -> (4 Pi/137)/m^(2) /. m -> 511;
+Plot[{Bc ff[150, bValues, 0, gee],Bc ff[120, bValues, 0, gee],Bc ff[100, bValues, 0, gee],Bc ff[80, bValues, 0, gee]}, {gee, -4, 4},
+ 	PlotRange -> {Automatic,{-2 10^(-9),10^(-8)}},
+ 	Frame -> True,
+ 	AspectRatio -> 3/2,
+ 	FrameLabel -> {"g-factor", "\[GothicCapitalM]"},
+ 	PlotStyle -> {Black,Red,Blue,Green},
+ 	LabelStyle -> Directive[Black,24,FontFamily -> "Times"],
+ 	FrameStyle -> Directive[Black,22],
+ 	Background -> White,
+     GridLines->Automatic,
  	GridLinesStyle -> Directive[Line, Lighter[Gray,.8]]]
 
 
