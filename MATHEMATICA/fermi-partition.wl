@@ -90,8 +90,41 @@ Clear[\[Eta]];
 (*Perform the magnetization calculation and sum the two polarization*)
 
 
-(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,2,0],b]+\
-D[lnZ[V,u,T,b,-1,2,0],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
+Clear[g];
+(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,g,0],b]+\
+D[lnZ[V,u,T,b,-1,g,0],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
+
+
+Clear[g];
+g=1.1547;
+2 b (3 g - 2) T^2 BesselK[0,Sqrt[m^2/T^2 + b - (b g)/2]] - 2 b (3 g + 2) T^2 BesselK[0,Sqrt[m^2/T^2 + b + (b g)/2]]
+((b (g - 2) T^2 (b - 6 g) + 12 g m^2) BesselK[1,Sqrt[m^2/T^2 + b - (b g)/2]])/Sqrt[-((b g)/2) + b + m^2/T^2] - \
+((b (g + 2) T^2 (b + 6 g) + 12 g m^2) BesselK[1,Sqrt[m^2/T^2 + b + (b g)/2]])/Sqrt[(b g)/2 + b + m^2/T^2]
+
+
+Clear[g];
+(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,g,0],b])/(Cosh[u/T])/.q->(4 Pi/137)/m^(2)/.Sqrt[m^2/T^2]->m/T/.m->500/.T->250//FullSimplify//TraditionalForm
+(T/V)(q/T^(2))(D[lnZ[V,u,T,b,-1,g,0],b])/(Cosh[u/T])/.q->(4 Pi/137)/m^(2)/.Sqrt[m^2/T^2]->m/T/.m->500/.T->250//FullSimplify//TraditionalForm
+
+
+x[T, b, 1, g]^(2)//FullSimplify//TraditionalForm
+x[T, b,-1, g]^(2)//FullSimplify//TraditionalForm
+
+
+(T)(q/T^(2))(D[lnZ[V,u,T,b,1,g,0],b]+D[lnZ[V,u,T,b,-1,g,0],b])/(Cosh[u/T])/.q->(4 Pi/137)/m^(2)/.m->500/.T->250/.b->10^(-3)
+
+
+g=1.3;
+N[BesselK[1,x[250,10^(-3),1,g]]-BesselK[1,x[250,10^(-3),-1,g]]/.m->500]
+N[x[250,10^(-3),1,g]-x[250,10^(-3),-1,g]/.m->500]
+
+
+c1[T_, b_, s_, g_] := (1/2-(1/2+s g/4)(1+b^(2)/(12 x[T,b,s,g]^(2))))x[T,b,s,g];
+c0[b_,s_,g_] := (1/6-(1/4 s g/8))b;
+g=2.2;
+tt=250;
+bb=10^(-3);
+c1[tt,bb,1,g]BesselK[1,x[tt,bb,1,g]]-c1[tt,bb,-1,g]BesselK[1,x[tt,bb,-1,g]]+c0[bb,1,g]BesselK[0,x[tt,bb,1,g]]-c0[bb,-1,g]BesselK[0,x[tt,bb,-1,g]]/.m->500
 
 
 (* ::Text:: *)
@@ -348,7 +381,7 @@ ScientificForm[{10.,100.,10.^(-2),1000000.}]
 ScientificForm[{123450000.0,0.000012345,123.45}]
 
 
-g = {2};
+g = {1.16};
 Bc = 4.41 10^(13);
 Bc = 1;
 \[Eta] = 0;
@@ -384,13 +417,33 @@ bValues = {10^(-3)};
 Tlist[n_]:=Table[x,{x,n,9n,n}];
 ff[T_, b_,eta_,gee_] = (T/V) (q/T^(2)) (D[lnZ[V, chempot[T,0,gee,\[Eta]]T, T, b, 1, gee, eta], b] + D[lnZ[V, chempot[T,0,gee,\[Eta]]T, T, b, -1, gee, eta], b])/. q -> (4 Pi/137)/m^(2) /. m -> 511;
 Plot[{Bc ff[150, bValues, 0, gee],Bc ff[120, bValues, 0, gee],Bc ff[100, bValues, 0, gee],Bc ff[80, bValues, 0, gee]}, {gee, -4, 4},
+ 	PlotRange -> {{-4,4},{-2 10^(-9), 10^(-8)}},
+ 	Frame -> True,
+ 	AspectRatio -> 2/3,
+ 	FrameLabel -> {"g-factor", "\[GothicCapitalM]"},
+ 	PlotStyle -> {Black,Red,Blue,Green},
+ 	LabelStyle -> Directive[Black,24,FontFamily -> "Times"],
+ 	FrameStyle -> Directive[Black,22],
+ 	Background -> White,
+     GridLines->Automatic,
+ 	GridLinesStyle -> Directive[Line, Lighter[Gray,.8]]]
+
+
+g = {2};
+Bc = 4.41 10^(13);
+Bc = 1;
+\[Eta] = 0;
+bValues = {10^(-3)};
+Tlist[n_]:=Table[x,{x,n,9n,n}];
+ff[T_, b_,eta_,gee_] = (T/V) (q/T^(2)) (D[lnZ[V, chempot[T,0,gee,\[Eta]]T, T, b, 1, gee, eta], b] + D[lnZ[V, chempot[T,0,gee,\[Eta]]T, T, b, -1, gee, eta], b])/. q -> (4 Pi/137)/m^(2) /. m -> 511;
+Plot[{Bc ff[150, bValues, 0, gee],Bc ff[120, bValues, 0, gee],Bc ff[100, bValues, 0, gee],Bc ff[80, bValues, 0, gee]}, {gee, -4, 4},
  	PlotRange -> {Automatic,{-2 10^(-9),10^(-8)}},
  	Frame -> True,
  	AspectRatio -> 3/2,
  	FrameLabel -> {"g-factor", "\[GothicCapitalM]"},
  	PlotStyle -> {Black,Red,Blue,Green},
  	LabelStyle -> Directive[Black,24,FontFamily -> "Times"],
- 	FrameStyle -> Directive[Black,22],
+ 	FrameStyle -> Directive[Black,20],
  	Background -> White,
      GridLines->Automatic,
  	GridLinesStyle -> Directive[Line, Lighter[Gray,.8]]]
