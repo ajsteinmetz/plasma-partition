@@ -316,7 +316,7 @@ Plot[{Evaluate[chempot[T, #,g,\[Eta]]/.m->me & /@ bzero],Evaluate[chempot[T, #,g
      FrameTicks -> {{{#, Superscript[10, Log10@#]} & /@ ({10^2, 10^-2, 10^-6, 10^-10}), None},
        {{#, Superscript[10, Log10@#]} & /@ ({10^3, 10^2, 10^1}), None}},
  	GridLines -> {Drop[Flatten[Table[Tlist[n],{n,{10,100,1000}}]],-8],Table[10^(n),{n,1,-33,-1}]},
- 	GridLinesStyle -> Directive[Line, Lighter[Gray,.8]]]
+ 	GridLinesStyle -> Directive[Line, Lighter[Gray,.9]]]
 
 
 g = 2;
