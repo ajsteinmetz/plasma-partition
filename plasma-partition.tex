@@ -195,6 +195,10 @@ where we introduced the {\xblue dimensionless energy $\varepsilon^{\pm}_{n}$ and
 
 Since {\xblue we address} the temperature interval where {\xblue the effects of quantum Fermi statistics on the $e^{+}e^{-}$ pair plasma} are relatively small we therefore employ the Boltzmann approximation throughout. However, we extrapolate our results for presentation completeness up to $T\simeq 4m_{e}$. In general, modifications due to quantum statistical phase-space reduction for fermions are expected to {\xblue suppress results} by about 20\% {\xblue in the extrapolated regions}. We will continue to search for semi-analytical solutions for Fermi statistics in relativistic $e^{+}e^{-}$ pair gasses {\xblue to compliment the} Boltzmann solution offered here. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Para and diamagnetic partition functions}
+\label{sec:paradia}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 We now proceed with the Boltzmann approximation for the limit where $T\lesssim m_e$. The partition function shown in equation \req{partition} can be written removing the logarithm as
 \begin{multline}
     \label{partitionpower}
@@ -205,7 +209,7 @@ We now proceed with the Boltzmann approximation for the limit where $T\lesssim m
    \label{bapprox} 
    \sigma\mu+s\eta-{\tilde m}_{s}\varepsilon_{n}^{s}<0\,,
 \end{align}
-which is well behaved as long as the factor in \req{bapprox} remains negative. This is true in the region in interest as the potentials are themselves a function of temperature which is demonstrated below. The standard Boltzmann distribution is obtained by summing only $k=1$ and neglecting the higher order terms. We introduce the Bessel function $K_{\nu}$ (see: Ch. 10 of~\cite{letessier2002hadrons}) of the second kind
+which is well behaved as long as the factor in \req{bapprox} remains negative. This is true in the region in interest as the potentials are themselves a function of temperature which is demonstrated below. We introduce the Bessel function $K_{\nu}$ (see: Ch. 10 of~\cite{letessier2002hadrons}) of the second kind
 \begin{multline}
     \label{besselk}
     K_{\nu}\left(\frac{m}{T}\right)=\frac{\sqrt{\pi}}{\Gamma(\nu-1/2)}\frac{1}{m}\left(\frac{1}{2mT}\right)^{\nu-1}\\
@@ -219,13 +223,13 @@ allowing us to rewrite the integral over momentum in \req{partitionpower} as
     \label{besselkint}
     \frac{1}{T}\int_{0}^{\infty}{\rm d}p_{z}\exp\left({-\frac{k{\tilde m}_{\pm}\varepsilon_{n}^{\pm}}{T}}\right)=W_{1}\left(\frac{k{\tilde m}_{\pm}\varepsilon_{n}^{\pm}(0,B)}{T}\right)\,,
 \end{align}
-The function $W_{\nu}$ serves as an auxiliary function of the form $W_{\nu}(x)=xK_{\nu}(x)$. The notation $\varepsilon(0,B)$ in \req{besselkint} refers to the definition of dimensionless energy found in \req{effmass} with $p_{z}=0$. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration given by
+The function $W_{\nu}$ serves as an auxiliary function of the form $W_{\nu}(x)=xK_{\nu}(x)$. The notation $\varepsilon(0,B)$ in \req{besselkint} refers to the definition of dimensionless energy found in \req{effmass} with $p_{z}=0$. The standard Boltzmann distribution is obtained by summing only $k=1$ and neglecting the higher order terms. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration given by
 \begin{multline}
     \label{eulermaclaurin}
     \sum_{n=0}^{\infty}W_{1}(n)=\int_{0}^{\infty}{\rm d}n\,W_{1}(n)+\frac{1}{2}\left[W_{1}(\infty)+W_{1}(0)\right]\\
     +\frac{1}{12}\left[\frac{\partial W_{1}}{\partial n}\bigg\vert_{\infty}-\frac{\partial W_{1}}{\partial n}\bigg\vert_{0}\right]+{\cal R}
 \end{multline}
-where ${\cal R}$ is the error remainder of the integration defined in terms of Bernoulli polynomials. Euler-Maclaurin integration is rarely convergent, and in this case serves only as an approximation within the domain where the error remainder remains small and bounded. In this analysis, we keep the zeroth and first order terms in the Euler-Maclaurin formula. After truncation of the error remainder and combining \req{partitionpower} - \req{eulermaclaurin}, the partition function can then be written in terms of modified Bessel $K_{\nu}$ functions of the second kind, yielding
+where ${\cal R}$ is the error remainder of the integration defined in terms of Bernoulli polynomials. Euler-Maclaurin integration is rarely convergent, and in this case serves only as an approximation within the domain where the error remainder remains small and bounded. In this analysis, we keep the zeroth and first order terms in the Euler-Maclaurin formula. After truncation of the error remainder and combining \req{partitionpower} through \req{eulermaclaurin}, the partition function can then be written in terms of modified Bessel $K_{\nu}$ functions of the second kind, yielding
 \begin{multline}
     \label{boltzmann}
     \ln{\cal Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{2\pi^{2}}\left[2\cosh{\frac{\mu}{T}}\right]\sum_{s}^{\pm}\xi_{s}\\
@@ -250,6 +254,10 @@ where the paramagnetic (P) and para-diamagnetic (P,D) partition functions can be
 
 Writing the partition function as \req{boltzmann} instead of \req{partitionpower} has the additional benefit that the partition function remains finite in the free gas $({\cal B}=0)$ case. This is because the free Fermi gas and \req{para} are mathematically analogous to one another.} As the Bessel $K_{\nu}$ functions are evaluated as functions of $x_{\pm}$ in \req{xfunc}, the \lq\lq free\rq\rq\ part of the partition $K_{2}$ is still subject to spin magnetization effects. In the limit where ${\cal B}\rightarrow0$, the free Fermi gas is recovered in both the Boltzmann approximation $k=1$ and the general case $\sum_{k=1}^{\infty}$.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Chemical potential}
+\label{sec:chem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In presence of a magnetic field in the Boltzmann approximation, the charge neutrality condition \req{chargeneutrality} becomes
 \begin{multline}
     \label{chem}
@@ -332,6 +340,10 @@ There are two reasons:
 
 As discussed in \rsec{sec:abundance}, the late $e^{+}e^{-}$ plasma saw its density decrease by a factor of $10^{8}$ as the majority of the gas annihilated (seen direction in the density plotted in \rf{fig:densityratio} and indirectly through chemical potential in \rf{fig:chemicalpotential}) leaving behind only a small residual quantity of electrons. As we travel into the distance past, the overall magnetization of the plasma is supported by the density of electrons $n_{e^{-}}$ and positrons $n_{e^{+}}$ through sheer quantity.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Magnetization per lepton}
+\label{sec:perlepton}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Despite the relatively large magnetization seen in \rf{fig:magnet}, the average contribution per lepton is only a small fraction of its overall magnetic moment indicating the magnetization is only loosely organized. Specifically, the magnetization regime we are in is described by
 \begin{align}
     \label{fractionalmagnetization}
@@ -374,15 +386,22 @@ Given \req{ferro}, we can understand the spin potential as a kind of \lq ferroma
     \label{hiTferro}
     \lim_{T\rightarrow\infty}{\mathfrak M}=\frac{e^{2}}{\pi^{2}}\frac{T\eta}{m_{e}^{2}}+{\cal O}\left(\frac{m_{e}}{T}\right)
 \end{align}
-While the limit in \req{hiTferro} was calculated in only the Boltzmann limit, it is noteworthy that the high temperature (and $m\rightarrow0$) limit of Fermi-Dirac distributions only differs from the Boltzmann result by a proportionality factor. The natural scale of the $e^{+}e^{-}$ magnetization with only a small spin fugacity ($\eta<1\eV$) fits easily within the bounds of the predicted magnetization during this era if the IGMF measured today was of primordial origin. The reason for this is that the magnetization seen in \req{g2magplus} - \req{g2magminus} and \req{ferro} are scaled by $\alpha{\cal B}_{C}$ where $\alpha\propto e^{2}$ is the fine structure constant. In general, $\eta=\eta(\mu,T)$ is a function of the chemical potential and temperature. As discussed in \rsec{sec:fugacity}, the two potentials are mutually related and likely would need be simultaneously solved.
+While the limit in \req{hiTferro} was calculated in only the Boltzmann limit, it is noteworthy that the high temperature (and $m\rightarrow0$) limit of Fermi-Dirac distributions only differs from the Boltzmann result by a proportionality factor. The natural scale of the $e^{+}e^{-}$ magnetization with only a small spin fugacity ($\eta<1\eV$) fits easily within the bounds of the predicted magnetization during this era if the IGMF measured today was of primordial origin. The reason for this is that the magnetization seen in \req{g2magplus}, \req{g2magminus} and \req{ferro} are scaled by $\alpha{\cal B}_{C}$ where $\alpha\propto e^{2}$ is the fine structure constant. In general, $\eta=\eta(\mu,T)$ is a function of the chemical potential and temperature. As discussed in \rsec{sec:fugacity}, the two potentials are mutually related and likely would need be simultaneously solved.
 
-One exploratory model we propose is to describe the required spin polarization asymmetry, described in \req{spotential}, to generate a homogeneous magnetic field which dissipates as the universe cools down. In this model, there is no external primordial magnetic field generated by some unrelated physics, but rather the $e^{+}e^{-}$ plasma itself is responsible for the field by virtue of spin polarization. This would obey the following assumption of
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Self-magnetization}
+\label{sec:self}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+One exploratory model we propose is to fix the spin polarization asymmetry, described in \req{spotential}, to generate a homogeneous magnetic field which dissipates as the universe cools down. In this model, there is no external primordial magnetic field generated by some unrelated physics, but rather the $e^{+}e^{-}$ plasma itself is responsible for the field by virtue of spin polarization. This would obey the following assumption of
 \begin{align}
     \label{selfmag}
-    {\mathfrak M}\leftrightarrow\frac{\cal B}{{\cal B}_{C}}=\frac{b_{0}T^{2}}{e{\cal B}_{C}}\,.
+    {\mathfrak M}(b_{0})\leftrightarrow\frac{\cal B}{{\cal B}_{C}}=b_{0}\frac{T^{2}}{m_{e}^{2}}\,,
 \end{align}
+which sets the total magnetization as a function of itself. The spin polarization described by $\eta\rightarrow\eta(b_{0},T)$ then becomes a fixed function of the temperature and required magnetic scale. The underlying assumption would be the preservation of the homogeneous field would be maintained by scattering within the gas (as it is still in thermal equilibrium) modulating the polarization to conserve total magnetic flux.
 
-The result of the self-magnetization assumption in \req{selfmag} is plotted in \rf{fig:self}. The solid lines indicate the curves for $\eta/T$ which become dashed above $T=300\keV$ to indicate that the Boltzmann approximation is no longer appropriate. The dashed lines are the curves for the chemical potential $\mu/T$. We note that unlike the chemical potential which is insensitive to $\eta$ until it reaches larger values, the magnetization is strongly dependant on any external forcing of spin polarization asymmetry.
+The result of the self-magnetization assumption in \req{selfmag} is plotted in \rf{fig:self}. The solid lines indicate the curves for $\eta/T$ which become dashed above $T=300\keV$ to indicate that the Boltzmann approximation is no longer appropriate though the general trend should remain unchanged. The dotted lines are the curves for the chemical potential $\mu/T$. At high temperatures we see that a relatively small $\eta/T$ is needed to produce magnetization owing to the large densities present. \rf{fig:self} also shows that the chemical potential does not deviate from the free particle case until the spin polarization becomes sufficiently high which indicates that this form of self-magnetization would require the annihilation of positrons to be incomplete even at lower temperatures. A more complete analysis involving transport theory or a numerical fluid simulation would likely be needed in this regime as inhomogeneities and current flows likely become the dominant mechanism for magnetization. A future extension of this work would be to consider the transition from a thermally homogeneous but magnetized gas, to an inhomogeneous described by MHD.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
@@ -405,8 +424,8 @@ The result of the self-magnetization assumption in \req{selfmag} is plotted in \
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.4\textwidth]{plots/GFactor_03.png}
-    \caption{The magnetization $\mathfrak M$ as a function of g-factor plotted for several temperatures.}
+    \includegraphics[width=0.4\textwidth]{plots/GFactor_04.png}
+    \caption{The magnetization $\mathfrak M$ as a function of g-factor plotted for several temperatures with $b_{0}=10^{-3}$.}
     \label{fig:gfac} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
