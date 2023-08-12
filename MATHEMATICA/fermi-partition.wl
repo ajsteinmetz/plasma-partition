@@ -302,7 +302,7 @@ reversal[T_]:=-T+ loT + hiT;
 bzero = {0};
 etaValues = {0};
 Plot[{Evaluate[chempot[T, #,g,\[Eta]]/.m->me & /@ bzero],Evaluate[chempot[T, #,g,etaValues]/.m->me & /@ bValues]}, {T, loT, hiT},
- 	PlotRange -> {{10,200},{10^(2),10^(-12)}},
+ 	PlotRange -> {{10,300},{10^(2),10^(-12)}},
  	Frame -> True,
  	AspectRatio -> 3/2,
  	FrameLabel -> {"T [keV]", "\[Mu]/T"},
@@ -316,7 +316,7 @@ Plot[{Evaluate[chempot[T, #,g,\[Eta]]/.m->me & /@ bzero],Evaluate[chempot[T, #,g
      FrameTicks -> {{{#, Superscript[10, Log10@#]} & /@ ({10^2, 10^-2, 10^-6, 10^-10}), None},
        {{#, Superscript[10, Log10@#]} & /@ ({10^3, 10^2, 10^1}), None}},
  	GridLines -> {Drop[Flatten[Table[Tlist[n],{n,{10,100,1000}}]],-8],Table[10^(n),{n,1,-33,-1}]},
- 	GridLinesStyle -> Directive[Line, Lighter[Gray,.9]]]
+ 	GridLinesStyle -> Directive[Line, Lighter[Gray,.65]]]
 
 
 g = 2;
@@ -436,12 +436,12 @@ Bc = 1;
 bValues = {10^(-3)};
 Tlist[n_]:=Table[x,{x,n,9n,n}];
 ff[T_, b_,eta_,gee_] = (T/V) (q/T^(2)) (D[lnZ[V, chempot[T,0,gee,\[Eta]]T, T, b, 1, gee, eta], b] + D[lnZ[V, chempot[T,0,gee,\[Eta]]T, T, b, -1, gee, eta], b])/. q -> (4 Pi/137)/m^(2) /. m -> 511;
-Plot[{Bc ff[150, bValues, 0, gee],Bc ff[120, bValues, 0, gee],Bc ff[100, bValues, 0, gee],Bc ff[80, bValues, 0, gee]}, {gee, -4, 4},
- 	PlotRange -> {Automatic,{-2 10^(-9),10^(-8)}},
+Plot[{Bc ff[511, bValues, 0, gee],Bc ff[300, bValues, 0, gee],Bc ff[150, bValues, 0, gee],Bc ff[70, bValues, 0, gee]}, {gee, -4, 4},
+ 	PlotRange -> {Automatic,{-4 10^(-7),6 10^(-7)}},
  	Frame -> True,
  	AspectRatio -> 3/2,
  	FrameLabel -> {"g-factor", "\[GothicCapitalM]"},
- 	PlotStyle -> {Black,Red,Blue,Green},
+ 	PlotStyle -> {Red,Green,Blue,Black},
  	LabelStyle -> Directive[Black,24,FontFamily -> "Times"],
  	FrameStyle -> Directive[Black,20],
  	Background -> White,
@@ -568,3 +568,14 @@ x^(2)D[lnZx[x,m,B], x]/lnZx[x,m,B]//FullSimplify
 
 
 Series[x^(2)D[lnZx[x,m,B], x]/lnZx[x,m,B],{B,0,1}]//FullSimplify
+
+
+N[Pi^(2) 10^(-11)]
+
+
+LogLogPlot[{1/Log[x],10/Log[x],100/Log[x],1000/Log[x]}, {x, 1, 1000000},
+  PlotStyle -> Blue, 
+  PlotRange->{{1,1000000},{10^(-2),10^(5)}},
+  AxesLabel -> {"x", "1/x"}, 
+  PlotLabel -> "Log-Log Plot of 1/x"]
+
