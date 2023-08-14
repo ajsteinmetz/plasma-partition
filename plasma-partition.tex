@@ -1,4 +1,4 @@
-\documentclass[reprint]{revtex4-2}
+\documentclass[aps,prd,floatfix,reprint]{revtex4-2}
 % Leave uncommented if the LaTeX file is uploaded to arXiv.org
 \pdfoutput=1
 \pdfminorversion=7
@@ -19,7 +19,7 @@
 \usepackage{epstopdf}
 \usepackage{comment}
 \usepackage{xcolor}
-\usepackage{float}
+%\usepackage{float}
 %\usepackage{doi}
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\modulolinenumbers[5]% Line numbers with a gap of 5 lines
@@ -70,7 +70,7 @@
 \affiliation{Department of Physics, The University of Arizona, Tucson, AZ 85721, USA}
 
 %\date{\today}
-\date{August 12, 2023}
+\date{August 14, 2023}
 
 \begin{abstract}
     We explore the hypothesis that the abundant presence of relativistic antimatter (positrons) in the primordial universe is responsible for the inter-galactic magnetic fields we observe in the universe today. We evaluate in quantitative terms the magnitude of  relatively small electron-positron $e^{+}e^{-}$ polarization asymmetry  required to produce a consistent self-magnetization.
@@ -86,18 +86,18 @@
 \noindent  
 Considering the ubiquity of magnetic fields~\cite{giovannini2018probing,giovannini2003magnetized,kronberg1994extragalactic} in the universe, we search for a primordial mechanism which could produce the diversity of magnetism observed today. Macroscopic domains of magnetic fields have been found around compact objects (stars, planets, etc.); between stars; within galaxies; between galaxies in clusters; and surprisingly in deep extra-galactic void spaces.
 
-We investigate the hypothesis that the observed intergalactic magnetic fields (IGMF) are primordial in nature, predating the recombination epoch. Specifically, we explore the role of the extremely large electron-positron $(e^{+}e^{-})$ pair abundance which only disappeared after Big Bang nucleosynthesis (BBN). We consider the $e^{+}e^{-}$ plasma in the temperature range of $2000\keV>T>20\keV$. This is notably the final epoch where antimatter exists in large quantities in the cosmos~\cite{rafelski2023short}. In this work, IGMF will refer to experimentally observed intergalactic fields of any origin while primordial magnetic fields (PMF) refers to fields generated via early universe processes possibly as far back as inflation. The conventional elaboration of the origins for cosmic PMFs are detailed in~\cite{gaensler2004origin,durrer2013cosmological,batista2021gammaray}.
+We investigate the hypothesis that the observed intergalactic magnetic fields (IGMF) are primordial in nature, predating the recombination epoch. Specifically, we explore the role of the extremely large electron-positron $(e^{+}e^{-})$ pair abundance which only {\color{blue}disappeared after Big Bang nucleosynthesis (BBN)(Instead of mention after BBN, maybe we can just point out T=20keV directly here. Otherwise we should point out the BBN temperature range so that reader can have some idea)}. We consider the $e^{+}e^{-}$ plasma in the temperature range of $2000\keV>T>20\keV$. This is notably the final epoch where antimatter exists in large quantities in the cosmos~\cite{rafelski2023short}. In this work, IGMF will refer to experimentally observed intergalactic fields of any origin while primordial magnetic fields (PMF) refers to fields generated via early universe processes possibly as far back as inflation. The conventional elaboration of the origins for cosmic PMFs are detailed in~\cite{gaensler2004origin,durrer2013cosmological,batista2021gammaray}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
 \includegraphics[width=0.48\textwidth]{plots/EEPlasmaDensityRatio_new01.jpg}
-    \caption{Electron $e^{-}$ and positron $e^{+}$ to baryon ratio $n_{e^{\pm}}/n_{B}$ as a function of photon temperature in the universe. See text in \rsec{sec:abundance} for further details.}
+    \caption{{\color{blue} Number density of }electron $e^{-}$ and positron $e^{+}$ to baryon ratio $n_{e^{\pm}}/n_{B}$ as a function of photon temperature in the universe. See text in \rsec{sec:abundance} for further details.}
     \label{fig:densityratio} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We consider a novel hypothesis that the magnetization of the early universe is driven by spin paramagnetism originating in the dense electron-positron $e^{+}e^{-}$ plasma which was about 100 million pairs per baryon at the pre-BBN temperature $T=200\keV$ (see: \rf{fig:densityratio}) and nearly 450 million pairs per baryon above temperature $T>511\keV$. We note at high temperatures that electrons and positrons dominated not only numerically, compared to baryons, but also in mass density with an asymptotic ratio of $d_{e^{+}}/d_{B}\simeq2.43\times10^{5}$ making antimatter far more dominant than baryons in this era. The abundance of $e^{+}e^{-}$ is discussed in more detail in \rsec{sec:abundance}. Electrons and positrons, having the largest magnetic moments in nature, are likely to have been magnetized in the pre-BBN early universe due to spin orientation. The rapid $10^{8}$ drop in $e^{+}e^{-}$ abundance within the narrow temperature range $100\keV>T>20\keV$ shown in \rf{fig:densityratio} should then be capable of inducing dynamical currents preserving magnetic flux in the emerging $p,\alpha,e^-$ plasma.
+We consider a novel hypothesis that the magnetization of the early universe is driven by spin paramagnetism originating in the dense electron-positron $e^{+}e^{-}$ plasma which was about 100 million pairs per baryon at the pre-BBN temperature $T=200\keV$ (see: \rf{fig:densityratio}) and nearly 450 million pairs per baryon above temperature ${\color{blue}T>m_e=511\keV}$. We note at high temperatures that electrons and positrons dominated not only numerically, compared to baryons, but also in mass density with an asymptotic ratio of $d_{e^{+}}/d_{B}\simeq2.43\times10^{5}$ {\color{blue}(Here is a liitle bit unclear for me what is the defintion of $d_e$ and $d_B$)} making antimatter far more dominant than baryons in this era. The abundance of $e^{+}e^{-}$ is discussed in more detail in \rsec{sec:abundance}. Electrons and positrons, having the largest magnetic moments in nature, are likely to have been magnetized in the pre-BBN early universe due to spin orientation. The rapid $10^{8}$ drop in $e^{+}e^{-}$ abundance within the narrow temperature range $100\keV>T>20\keV$ shown in \rf{fig:densityratio} should then be capable of inducing dynamical currents preserving magnetic flux in the emerging $p,\alpha,e^-$ plasma.
 
 Large pre-recombination primordial fields could therefore lead to early universe baryon inhomogeneities which in turn would produce anisotropies in the cosmic microwave background (CMB)~\cite{jedamzik2013smallscale,abdalla2022cosmology}. Jedamzik and Pogosian~\cite{jedamzik2020relieving} propose further that the presence of a magnetic field of ${\cal B}_{\rm PMF}\simeq0.1{\rm\ nG}$ could be sufficient to explain the Hubble tension.  IGMF are notably difficult to measure and difficult to explain. The bounds for IGMF at a length scale of $1{\rm\ Mpc}$ are today~\cite{neronov2010evidence,taylor2011extragalactic,pshirkov2015new,jedamzik2019stringent,vernstrom2021discovery}
 \begin{align}
@@ -114,9 +114,9 @@ This is assisted by the fact that antiparticles $(e^{+})$ have the opposite sign
 \section{Electron-positron abundance}
 \label{sec:abundance}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent As the universe cooled below temperature $T=m_{e}$ (the electron mass), the thermal electron and positron comoving density depleted by over eight orders of magnitude. At $T_{\rm split}=20.3\keV$, the charged lepton asymmetry (mirrored by baryon asymmetry and enforced by charge neutrality) became evident as the surviving excess electrons persisted while positrons vanished entirely from the particle inventory of the universe.
+\noindent As the universe cooled below temperature $T=m_{e}$ (the electron mass), the thermal electron and positron comoving density depleted by over eight orders of magnitude. At $T_{\rm split}=20.3\keV$, the charged lepton asymmetry (mirrored by baryon asymmetry and enforced by charge neutrality) became evident as the surviving excess electrons persisted while positrons vanished {\color{blue} due to annihilation} entirely from the particle inventory of the universe.
 
-The electron-to-baryon ratio $n_{e^{-}}/n_{B}$ is shown in \rf{fig:densityratio} as the solid blue line while the positron-to-baryon ratio $n_{e^{+}}/n_{B}$ is represented by the dashed red line. These two lines overlap the until the temperature drops below $T_{\rm split}=20.3\keV$ as positrons vanish from the universe marking the end of the $e^{+}e^{-}$ plasma and the dominance of the electron-proton $(e^{-}p)$ plasma. The two vertical dashed green lines denote temperatures $T=m_{e}\simeq511\keV$ and $T_{\rm split}=20.3\keV$. These results were obtained using charge neutrality and the baryon-to-photon content (entropy) of the universe~\cite{rafelski2023short}. It is customary to show time as increasing from left to right which corresponds to a decreasing temperature. All figures in this paper will plot temperature as the $x$-axis. The two horizontal black dashed lines denote the relativistic $T\gg m_e$ abundance of $n_{e^{\pm}}/n_{B}=4.47\times10^{8}$ and post-annihilation abundance of  $n_{e^{-}}/n_{B}=0.87$. The deviation from unity in the post-annihilation abundance reflects the presence of bound neutrons in the baryon content. Above temperature $T\simeq85\keV$, the $e^{+}e^{-}$ primordial plasma density exceeded that of the Sun's core density $n_{e}\simeq6\times10^{26}{\rm\ cm}^{-3}$~\cite{bahcall2001solar}. 
+The electron-to-baryon {\color{blue} density} ratio $n_{e^{-}}/n_{B}$ is shown in \rf{fig:densityratio} as the solid blue line while the positron-to-baryon ratio $n_{e^{+}}/n_{B}$ is represented by the dashed red line. These two lines overlap until the temperature drops below $T_{\rm split}=20.3\keV$ as positrons vanish from the universe marking the end of the $e^{+}e^{-}$ plasma and the dominance of the electron-proton $(e^{-}p)$ plasma. The two vertical dashed green lines denote temperatures $T=m_{e}\simeq511\keV$ and $T_{\rm split}=20.3\keV$. These results were obtained using charge neutrality and the baryon-to-photon content (entropy) of the universe~\cite{rafelski2023short}. It is customary to show time as increasing from left to right which corresponds to a decreasing temperature. {\color{blue}All figures in this paper will plot temperature as the $x$-axis.(I think we can remove this setenece)} The two horizontal black dashed lines denote the relativistic $T\gg m_e$ abundance of $n_{e^{\pm}}/n_{B}=4.47\times10^{8}$ and post-annihilation abundance of  $n_{e^{-}}/n_{B}=0.87$. {\color{blue}The deviation from unity in the post-annihilation abundance reflects the presence of bound neutrons in the baryon content.(I think we can remove this sentence, because we explain the deviation in next paragraph in detail)} Above temperature $T\simeq85\keV$, the $e^{+}e^{-}$ primordial plasma density exceeded that of the Sun's core density $n_{e}\simeq6\times10^{26}{\rm\ cm}^{-3}$~\cite{bahcall2001solar}. 
 
 Conversion of the dense $e^{+}e^{-}$ pair plasma into photons reheated the photon background~\cite{birrell2014relic} separating the photon and neutrino temperatures. The $e^{+}e^{-}$ annihilation and photon reheating period lasted no longer than an afternoon lunch break. Because of charge neutrality, the post-annihilation comoving ratio $n_{e^{-}}/n_{B}=0.87$~\cite{rafelski2023short} is slightly offset from unity in~\rf{fig:densityratio} by the presence of bound neutrons in $\alpha$ particles and  other neutron containing light elements produced during BBN epoch. 
 
@@ -135,7 +135,7 @@ During the $e^{+}e^{-}$ plasma epoch, the density changed dramatically over time
 \end{align}
 In \req{chargeneutrality}, $n_{p}$ is the observed total number density of protons in all baryon species. The parameter $V$ relays the proper volume under consideration and $\ln{\cal Z}_{e^{+}e^{-}}$ is the partition function for the electron-positron gas. The chemical potential defined in \req{cpotential} is obtained from the requirement that the positive charge of baryons (protons, $\alpha$ particles, light nuclei produced after BBN) is exactly and locally compensated by a tiny net excess of electrons over positrons.
 
-The abundance of baryons is itself fixed by the known abundance relative to photons~\cite{workman2022pdg} and we employed the contemporary recommended value $n_B/n_\gamma=6.09\times 10^{-10}$. The resulting chemical potential  needs to be evaluated carefully to obtain the behavior near to $T_{\rm split}=20.3\keV$ where the relatively small value of chemical potential $\mu$ rises rises rapidly so that positrons vanish from the particle inventory of the universe while nearly one electron per baryon remains. The detailed solution of this problem is found in Refs.\;\cite{fromerth2012quarkgluon,rafelski2023short} leading to the results shown in \rf{fig:densityratio}. These results are obtained allowing for Fermi-Dirac and Bose statistics, however it is often numerically sufficient to consider the Boltzmann distribution limit.
+The abundance of baryons is itself fixed by the known abundance relative to photons~\cite{workman2022pdg} and we employed the contemporary recommended value $n_B/n_\gamma=6.09\times 10^{-10}$. The resulting chemical potential  needs to be evaluated carefully to obtain the behavior near to $T_{\rm split}=20.3\keV$ where the relatively small value of chemical potential $\mu$ rises rapidly so that positrons vanish from the particle inventory of the universe while nearly one electron per baryon remains. The detailed solution of this problem is found in Refs.\;\cite{fromerth2012quarkgluon,rafelski2023short} leading to the results shown in \rf{fig:densityratio}. These results are obtained allowing for Fermi-Dirac and Bose statistics, however it is often numerically sufficient to consider the Boltzmann distribution limit.
 
 In the presence of a magnetic field ${\cal B}$ there is some modification of the usual relativistic fermion partition function which is now given  by
 \begin{multline}
@@ -146,7 +146,7 @@ In the presence of a magnetic field ${\cal B}$ there is some modification of the
 \begin{align}
     \Upsilon_{\sigma}^{s}=\lambda_{\sigma}\xi_{s} = \exp{\frac{\mu_{\sigma}+\eta_{s}}{T}}\,,
 \end{align}
-with electric charge $e\equiv q_{e^{+}}=-q_{e^{-}}$. The index $\sigma$ in \req{partition} is a sum over electron and positron states while $s$ is a sum over polarizations. Since we are interested in small asymmetries (e.g. baryon excess over antibaryons, one spin polarization over another) we introduce the generalized particle fugacity $\Upsilon_{\sigma}^{s}$ as the product of:
+with electric charge $e\equiv q_{e^{+}}=-q_{e^{-}}$. The index $\sigma$ in \req{partition} is a sum over electron and positron states while $s$ is a sum over polarizations. Since we are interested in small asymmetries (e.g. baryon excess over antibaryons, one spin polarization over another){\color{blue} we introduce the generalized particle fugacity $\Upsilon_{\sigma}^{s}$ as the product of:(Do we really need to introduce the general fugacity Eq.(5)? Because in our following we didn't use the notation $\Upsilon_{\sigma}^{s}$ at all)}
 \begin{itemize}
     \item[a.] Chemical fugacity $\lambda_{\sigma}$
     \item[b.] Spin fugacity $\xi_{s}$
@@ -183,9 +183,9 @@ From \req{tscale} and \req{bscale} emerges a natural ratio of interest here whic
     b \equiv\frac{e{\cal B}(t)}{T^{2}(t)}=\frac{e{\cal B}_{0}}{T_{0}^{2}}\equiv b_0={\rm\ const.}\\
     10^{-3}>b_{0}>10^{-11}\,,
 \end{align}
-given in natural units ($c=\hbar=k_{B}=1$). We computed the bounds for this cosmic magnetic scale ratio by using the present day observations given by \req{igmf} and the present CMB temperature $T_{0}=2.7{\rm\ K}\simeq2.3\times10^{-4}\eV$~\cite{aghanim2018planck}.
+given in natural units ($c=\hbar=k_{B}=1$). We computed the bounds for this cosmic magnetic scale ratio by using the present day {\color{blue}IGMF} observations given by \req{igmf} and the present CMB temperature $T_{0}=2.7{\rm\ K}\simeq2.3\times10^{-4}\eV$~\cite{aghanim2018planck}.
 
-To evaluate magnetic properties of the thermal $e^-e^+$ pair plasma we take inspiration from Ch. 9 of Melrose's treatise on magnetized plasmas~\cite{melrose2008quantum}. We focus  on the bulk properties of thermalized plasmas in (near) equilibrium. In considering $e^{+}e^{-}$ pair plasma, we introduce the microscopic energy of the charged $\pm e$ relativistic fermion within a homogeneous ($z$-direction) magnetic field~\cite{steinmetz2018magnetic}. The energy eigenvalue is given by
+To evaluate magnetic properties of the thermal $e^-e^+$ pair plasma we take inspiration from Ch. 9 of Melrose's treatise on magnetized plasmas~\cite{melrose2008quantum}. We focus  on the bulk properties of thermalized plasmas in (near) equilibrium. In considering $e^{+}e^{-}$ pair plasma, we introduce the microscopic energy of the charged {\color{blue}$\pm e$ (A little bit confuse here, we just define the notation $e\equiv q_{e^{+}}=-q_{e^{-}}$ earlier)} relativistic fermion within a homogeneous ($z$-direction) magnetic field~\cite{steinmetz2018magnetic}. The energy eigenvalue is given by
 \begin{align}
     \label{kgp}
     E^{\pm}_{n}(p_{z},{\cal B})=\sqrt{m_{e}^{2}+p_{z}^{2}+e{\cal B}\left(2n+1\mp\frac{g}{2}\right)}\,,
@@ -196,11 +196,11 @@ We rearrange \req{kgp} by pulling the spin dependency and the ground state Landa
 \begin{align}
     \label{effmass}
     E^{\pm}_{n}={\tilde m}_{\pm}\varepsilon_{n}^{\pm}(p_{z},{\cal B})={\tilde m}_{\pm}\sqrt{1+\frac{p_{z}^{2}}{{\tilde m}_{\pm}^{2}}+\frac{2e{\cal B}n}{{\tilde m}_{\pm}^{2}}}\,,\\
-    {\tilde m}_{\pm}^{2}=m_{e}^{2}+q{\cal B}\left(1\mp\frac{g}{2}\right)\,,
+    {\color{blue}{\tilde m}_{\pm}^{2}=m_{e}^{2}+e{\cal B}\left(1\mp\frac{g}{2}\right)}\,,
 \end{align}
 where we introduced the dimensionless energy $\varepsilon^{\pm}_{n}$ and effective polarized mass ${\tilde m}_{\pm}$ which is distinct for each spin alignment and is a function of magnetic field strength ${\cal B}$. The effective polarized mass ${\tilde m}_{\pm}$ allows us to describe the $e^{+}e^{-}$ plasma with the spin effects almost wholly separated from the Landau characteristics of the gas when considering the plasma's thermodynamic properties.
 
-Since we address the temperature interval where the effects of quantum Fermi statistics on the $e^{+}e^{-}$ pair plasma are relatively small we therefore employ the Boltzmann approximation throughout. However, we extrapolate our results for presentation completeness up to $T\simeq 4m_{e}$. In general, modifications due to quantum statistical phase-space reduction for fermions are expected to suppress results by about 20\% in the extrapolated regions. We will continue to search for semi-analytical solutions for Fermi statistics in relativistic $e^{+}e^{-}$ pair gasses to compliment the Boltzmann solution offered here. 
+Since we address the temperature interval {\color{blue}$2000\keV>T>20\keV$} where the effects of quantum Fermi statistics on the $e^{+}e^{-}$ pair plasma are relatively small we therefore employ the Boltzmann approximation throughout. However, we extrapolate our results for presentation completeness up to $T\simeq 4m_{e}$. In general, modifications due to quantum statistical phase-space reduction for fermions are expected to suppress results by about 20\% in the extrapolated regions. We will continue to search for semi-analytical solutions for Fermi statistics in relativistic $e^{+}e^{-}$ pair gasses to compliment the Boltzmann solution offered here. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Para and diamagnetic partition functions}
@@ -228,7 +228,7 @@ which is well behaved as long as the factor in \req{bapprox} remains negative. T
 allowing us to rewrite the integral over momentum in \req{partitionpower} as
 \begin{align}
     \label{besselkint}
-    \frac{1}{T}\int_{0}^{\infty}{\rm d}p_{z}\exp\left({-\frac{k{\tilde m}_{\pm}\varepsilon_{n}^{\pm}}{T}}\right)=W_{1}\left(\frac{k{\tilde m}_{\pm}\varepsilon_{n}^{\pm}(0,B)}{T}\right)\,,
+    \frac{1}{T}\int_{0}^{\infty}\!\!{\rm d}p_{z}\exp\!\left(\!{-\frac{k{\tilde m}_{\pm}\varepsilon_{n}^{\pm}}{T}}\!\right)\!=\!W_{1}\!\!\left(\frac{k{\tilde m}_{\pm}\varepsilon_{n}^{\pm}(0,B)}{T}\right)\,,
 \end{align}
 The function $W_{\nu}$ serves as an auxiliary function of the form $W_{\nu}(x)=xK_{\nu}(x)$. The notation $\varepsilon(0,B)$ in \req{besselkint} refers to the definition of dimensionless energy found in \req{effmass} with $p_{z}=0$. The standard Boltzmann distribution is obtained by summing only $k=1$ and neglecting the higher order terms. The Euler-Maclaurin formula~\cite{abramowitz1988handbook} is used to convert the summation over Landau levels into an integration given by
 \begin{multline}
@@ -348,18 +348,21 @@ As the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In \rf{fig:magnet}, we plot the magnetization as given by \req{g2magplus} and \req{g2magminus} with the spin potential set to unity $\xi=1$. The lower (solid red) and upper (solid blue) bounds for cosmic magnetic scale $b_{0}$ are included. The external magnetic field strength ${\cal B}/{\cal B}_{C}$ is also plotted for lower (dotted red) and upper (dotted blue) bounds. The dashed lines indicate extrapolation outside the Boltzmann limit. We place the regions outside the Boltzmann domain in dashed lines as the magnetization depends on the derivative of the partition function which may manifest differences more acutely. We see that the $e^{+}e^{-}$ plasma is overall paramagnetic and yields a positive overall magnetization which is contrary to the traditional assumption that matter-antimatter plasmas lack significant magnetic responses of their own in the bulk. With that said, the magnetization never exceeds the external field under the parameters considered which shows a lack of ferromagnetic behavior. As the universe cooled, the dropping magnetization slowed at $T_{\rm split}=20.3\keV$ where positrons vanished. Thereafter the remaining electrons density $n_{e^{-}}$ dilutes with cosmic expansion.
+In \rf{fig:magnet}, we plot the magnetization as given by \req{g2magplus} and \req{g2magminus} with the spin potential set to unity $\xi=1$. The lower (solid red) and upper (solid blue) bounds for cosmic magnetic scale $b_{0}$ are included. The external magnetic field strength ${\cal B}/{\cal B}_{C}$ is also plotted for lower (dotted red) and upper (dotted blue) bounds. 
+{\color{red}Since the derivative of the partition function governing magnetization  may manifest differences between Fermi-Dirac and the here used Boltzmann limit more acutely, out of abundance of caution the dashes indicate extrapolation outside the domain of validity of the Boltzmann limit.
 
-A curious feature of \rf{fig:magnet} is that the magnetization increases as a function of temperature. This is contrary to most systems which lose their magnetization at higher temperatures because of the disordering influence of thermal heat~\cite{greiner2012thermodynamics}. A standard feature of paramagnetic systems (Curie's law) is that the susceptibility of the material is suppressed as temperature increases. It is then natural to ask: Why doesn't doesn't temperature suppress magnetization in the primordial $e^{+}e^{-}$ plasma?
+We see  in \rf{fig:magnet} }%%%%%%%%%%%%
+that the $e^{+}e^{-}$ plasma is overall paramagnetic and yields a positive overall magnetization which is contrary to the traditional assumption that matter-antimatter plasma lack significant magnetic responses of their own in the bulk. With that said, the magnetization never exceeds the external field under the parameters considered which shows a lack of ferromagnetic behavior. As the universe cooled, the dropping magnetization slowed at $T_{\rm split}=20.3\keV$ where positrons vanished. Thereafter the remaining electrons density $n_{e^{-}}$ dilutes with cosmic expansion.
 
-There are two reasons:
-\begin{itemize}
-    \item[a.] Amplification through large $n_{e^{\pm}}$ densities
-    \item[b.] Conservation of magnetic flux
-\end{itemize}
+{\color{red}
+An interesting feature of \rf{fig:magnet} is that the magnetization in the full temperature range increases as a function of temperature. This is contrary to Curie's law~\cite{greiner2012thermodynamics} which stipulates that paramagnetic susceptibility of a laboratory material is inversely proportional to  temperature. However, Curie's law applies to systems with fixed number of particles.
+In our case, as the Universe expands and temperature decreases, there is a rapid decrease of the density  $n_{e^{\pm}}$ of  $e^{+}e^{-}$  pairs. This decrease is primary cause of the rapid paramagnetic susceptibility decrease seen in  \rf{fig:magnet} above $T=21$\,keV. At the low temperature there remains a small electron excess, see~\rf{fig:densityratio}, needed to neutralize proton charge. The large abundance of pairs causes the  smallness of the chemical potential seen in~\rf{fig:chemicalpotential} at high temperature.
+}{\color{green} We need to explain continued decrease seen in this figure between 10 and 20 keV} {\color{red}
 
-As discussed in \rsec{sec:abundance}, the late $e^{+}e^{-}$ plasma saw its density decrease by a factor of $10^{8}$ as the majority of the gas annihilated (seen direction in the density plotted in \rf{fig:densityratio} and indirectly through chemical potential in \rf{fig:chemicalpotential}) leaving behind only a small residual quantity of electrons. As we travel into the distance past, the overall magnetization of the plasma is supported by the density of electrons $n_{e^{-}}$ and positrons $n_{e^{+}}$ through sheer quantity. The conservation of flux (further elaborated in \rsec{sec:perlepton}) through comoving surfaces for the external field ensures that as we travel into the past, the increasing magnetic field enhances the overall magnetization of the gas.
+If the very large paramagnetic  susceptibility present for $T\simeq m_ec^2$ is the origin of an overall magnetization of the plasma the conservation of magnetic flux   through comoving surface  further elaborated in \rsec{sec:perlepton}  ensures that the initial residual magnetization is preserved at a lower temperature by induced kinetic flow processes. 
 
+This consideration of the early Universe conditions may also apply to some extreme stellar objects in the Universe. Therefore let us discuss some additional physical attributes arising from rapid change in $n_{e^{\pm}}$ with temperature above $T=21$\,keV. end JR revision
+}%end red
 A further consideration is possible hysteresis as the $e^{+}e^{-}$ density drops with temperature. It is not immediately obvious the gas's magnetization should simply \lq\lq degauss\rq\rq\ so rapidly without further consequence. In general, it is difficult to exterminate magnetic flux because of its conservation in electrodynamics. While flux may be overall conserved in microscopic domains, like momentum conservation being preserved in situations of friction, an overall retained field from spin-torque exchange merits further study. Additionally, if the flux within the rapidly diminishing $e^{+}e^{-}$ plasma did occur, this would induce curling electrical fields through Faraday induction which would serve to generate electrical currents within the plasma.  Some consequences of enforced magnetization are considered in \rsec{sec:ferro}. Rapid production and annihilation of $e^{+}e^{-}$ plasmas is also predicted around compact stellar objects~\cite{ruffini2009electron,ruffini2012electron} potentially as a source of gamma-ray bursts (GRB). This feature however is outside the scope of the model considered.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -471,10 +474,10 @@ Further extensions would be to improve the high temperature domain by computing 
 Recent measurements by the JWST indicate that large-scale structure, galactic, and supermassive black hole formation occurred earlier than expected which may indicate unusual matter agglomeration in even primordial eras. As the chemical potential of the $e^{+}e^{-}$ plasma is sensitive to the baryon density, any local spatial variations can effect magnetization substantially. Spin polarization domains may then provide the necessary seeds to generate collapsing (and rotating) cosmic structure and galaxies.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\acknowledgements
+\acknowledgments
 \label{sec:ack}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent Johann Rafelski would like to acknowledge the fruitful discussions with Massimo Giovannini at CERN which partly inspired this work.
+\noindent Johann Rafelski would like to acknowledge the fruitful discussions with Massimo Giovannini at CERN which partly inspired this work. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliographystyle{unsrtnat}
