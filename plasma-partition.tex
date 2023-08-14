@@ -91,7 +91,7 @@ We investigate the hypothesis that the observed intergalactic magnetic fields (I
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-\includegraphics[width=0.5\textwidth]{plots/EEPlasmaDensityRatio_new01.jpg}
+\includegraphics[width=0.48\textwidth]{plots/EEPlasmaDensityRatio_new01.jpg}
     \caption{Electron $e^{-}$ and positron $e^{+}$ to baryon ratio $n_{e^{\pm}}/n_{B}$ as a function of photon temperature in the universe. See text in \rsec{sec:abundance} for further details.}
     \label{fig:densityratio} 
 \end{figure}
@@ -104,7 +104,7 @@ Large pre-recombination primordial fields could therefore lead to early universe
     \label{igmf}
     10^{-8}{\rm\ G}>\mathcal{B}_{\rm IGMF}>10^{-16}{\rm\ G}\,.
 \end{align}
-We note that generating PMFs with such large coherent length scales is nontrivial~\cite{giovannini2023scaling}. Faraday rotation from distant radio active galaxy nuclei (AGN)~\cite{pomakov2022redshift} suggest that neither dynamo nor astrophysical processes would sufficiently account for the presence of magnetic fields in the universe today if the IGMF strength was around the upper bound of ${\cal B}_{\rm IGMF}\simeq30-60{\rm\ nG}$ as found in Ref.~\cite{vernstrom2021discovery}. Such strong magnetic fields would then require that at least some portion of the IGMF arise from primordial sources that predate the formation of stars.
+We note that generating PMFs with such large coherent length scales is nontrivial~\cite{giovannini2023scaling} though currently the length scale for PMFs are not well contrainted~\cite{batista2021gammaray}. Faraday rotation from distant radio active galaxy nuclei (AGN)~\cite{pomakov2022redshift} suggest that neither dynamo nor astrophysical processes would sufficiently account for the presence of magnetic fields in the universe today if the IGMF strength was around the upper bound of ${\cal B}_{\rm IGMF}\simeq30-60{\rm\ nG}$ as found in Ref.~\cite{vernstrom2021discovery}. Such strong magnetic fields would then require that at least some portion of the IGMF arise from primordial sources that predate the formation of stars.
 
 Our analysis in \rsec{sec:expansion} of the relativistic fermion partition function focuses on the spin contribution to magnetization. At $T\simeq200\keV$, due to very high $e^{+}e^{-}$ pair densities, we believe that spin paramagnetism is dominant over Landau orbital diamagnetism. We show in \rsec{sec:magnetization} that magnetization is nonzero even for a nearly symmetric particle-antiparticle gas as well as account for the matter-antimatter asymmetry present in the universe. We further demonstrate in \rsec{sec:ferro} that magnetization can be spontaneously increased in strength near the IGMF upper limit seen in \req{igmf} given sufficient spin polarization.
 
@@ -323,15 +323,6 @@ Magnetization arising from other components in the cosmic gas (protons, neutrino
     {\cal B}_{C}\equiv\frac{m_{e}^{2}}{e}\,,\qquad{\mathfrak M}\equiv\frac{\cal M}{{\cal B}_{C}}\,.
 \end{align}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.45\textwidth]{Magnetization_Hc_new004.png}
-    \caption{The magnetization ${\mathfrak M}$, with $g=2$, of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature.}
-    \label{fig:magnet} 
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 The scale ${\cal B}_{C}$ is where electromagnetism is expected to become subject to non-linear effects, though luckily in our regime of interest, electrodynamics should be linear. We note however that the upper bounds of IGMFs in \req{igmf} (with $b_{0}=10^{-3}$; see \req{tbscale}) brings us to within $1\%$ of that limit for the external field strength in the temperature range considered. The total magnetization ${\cal M}$ can be broken into the sum of spin parallel ${\cal M}_{+}$ and spin anti-parallel ${\cal M}_{-}$ magnetization. We note that the expression for the magnetization simplifies significantly for $g=2$ which is the \lq\lq singular\rq\rq\ gyro-magnetic factor~\cite{evans2022emergence,rafelski2022study} for Dirac particles. For illustration, the $g=2$ magnetization from \req{defmagetization} is then
 \begin{align}
     \label{g2magplus}
@@ -347,6 +338,15 @@ The scale ${\cal B}_{C}$ is where electromagnetism is expected to become subject
     x_{-}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}\,.
 \end{align}
 As the $g$-factor of the electron is only slightly above two at $g\simeq2.00232$~\cite{tiesinga2021codata}, the above two expressions for ${\mathfrak M}_{+}$ and ${\mathfrak M}_{-}$ are only modified by a small amount because of anomalous magnetic moment (AMM) and would be otherwise invisible on our figures. The influence of AMM would be more relevant for the magnetization of baryon gasses since the $g$-factor for protons $(g\approx5.6)$ and neutrons $(g\approx3.8)$ are substantially different from $g=2$. The influence of AMM on the magnetization of thermal systems with large baryon content (neutron stars, magnetars, hypothetical bose stars, etc.) is therefore also of interest~\cite{ferrer2019thermodynamics,ferrer2023importance}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.48\textwidth]{plots/Magnetization_Hc_new004.png}
+    \caption{The magnetization ${\mathfrak M}$, with $g=2$, of the primordial $e^{+}e^{-}$ plasma is plotted as a function of temperature.}
+    \label{fig:magnet} 
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In \rf{fig:magnet}, we plot the magnetization as given by \req{g2magplus} and \req{g2magminus} with the spin potential set to unity $\xi=1$. The lower (solid red) and upper (solid blue) bounds for cosmic magnetic scale $b_{0}$ are included. The external magnetic field strength ${\cal B}/{\cal B}_{C}$ is also plotted for lower (dotted red) and upper (dotted blue) bounds. The dashed lines indicate extrapolation outside the Boltzmann limit. We place the regions outside the Boltzmann domain in dashed lines as the magnetization depends on the derivative of the partition function which may manifest differences more acutely. We see that the $e^{+}e^{-}$ plasma is overall paramagnetic and yields a positive overall magnetization which is contrary to the traditional assumption that matter-antimatter plasmas lack significant magnetic responses of their own in the bulk. With that said, the magnetization never exceeds the external field under the parameters considered which shows a lack of ferromagnetic behavior. As the universe cooled, the dropping magnetization slowed at $T_{\rm split}=20.3\keV$ where positrons vanished. Thereafter the remaining electrons density $n_{e^{-}}$ dilutes with cosmic expansion.
 
@@ -396,18 +396,18 @@ where $\mu_{B}$ is the Bohr magneton and $N=nV$ is the total particle number in 
 \end{align}
 From spin statistics, we expect the transverse expectation values to be zero. The quantity defined in \req{momentperlepton} gives us an insight into the microscopic response of the plasma.
 
-The average magnetic moment $\vert\vec{m}\vert_{z}$ defined in \req{momentperlepton} is plotted in \rf{fig:momentperlepton} which displays how essential the external field is on the \lq per lepton\rq\ magnetization. Both the $b_{0}=10^{-11}$ (lower plot, red curve) and $b_{0}=10^{-3}$ (upper plot, blue curve) cosmic magnetic scale bounds are plotted in the Boltzmann approximation. The dashed lines indicate where this approximation is only qualitatively correct. For illustration, a constant magnetic field case (solid green line) with a comoving reference value chosen at temperature $T_{0}=10\keV$ is also plotted.
-
-If the field strength is held constant, then the average magnetic moment per lepton is suppressed at higher temperatures as expected for magnetization satisfying Curie's law. The difference in \rf{fig:momentperlepton} between the non-constant (red and blue solid curves) case and the constant field (solid green curve) case demonstrates the importance of the conservation of primordial magnetic flux in the plasma, required by \req{bscale}. While not shown, if \rf{fig:momentperlepton} was extended to lower temperatures, the magnetization per lepton of the constant field case would be greater than the non-constant case which agrees with our intuition that magnetization is easier to achieve at lower temperatures. This feature again highlights the importance of flux conservation in the system.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.45\textwidth]{plots/NewMagnetizationDensity004_Boltz.png}
-    \caption{The magnetic moment per lepton $\vert\vec{m}\vert_{z}$ along the field axis.}
+    \caption{The magnetic moment per lepton $\vert\vec{m}\vert_{z}$ along the field axis as a function of temperature.}
     \label{fig:momentperlepton}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The average magnetic moment $\vert\vec{m}\vert_{z}$ defined in \req{momentperlepton} is plotted in \rf{fig:momentperlepton} which displays how essential the external field is on the \lq per lepton\rq\ magnetization. Both the $b_{0}=10^{-11}$ (lower plot, red curve) and $b_{0}=10^{-3}$ (upper plot, blue curve) cosmic magnetic scale bounds are plotted in the Boltzmann approximation. The dashed lines indicate where this approximation is only qualitatively correct. For illustration, a constant magnetic field case (solid green line) with a comoving reference value chosen at temperature $T_{0}=10\keV$ is also plotted.
+
+If the field strength is held constant, then the average magnetic moment per lepton is suppressed at higher temperatures as expected for magnetization satisfying Curie's law. The difference in \rf{fig:momentperlepton} between the non-constant (red and blue solid curves) case and the constant field (solid green curve) case demonstrates the importance of the conservation of primordial magnetic flux in the plasma, required by \req{bscale}. While not shown, if \rf{fig:momentperlepton} was extended to lower temperatures, the magnetization per lepton of the constant field case would be greater than the non-constant case which agrees with our intuition that magnetization is easier to achieve at lower temperatures. This feature again highlights the importance of flux conservation in the system.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Spin potential and ferromagnetism}
@@ -433,6 +433,7 @@ While the limit in \req{hiTferro} was calculated in only the Boltzmann limit, it
 \subsection{Self-magnetization}
 \label{sec:self}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \noindent One exploratory model we propose is to fix the spin polarization asymmetry, described in \req{spotential}, to generate a homogeneous magnetic field which dissipates as the universe cools down. In this model, there is no external primordial magnetic field generated by some unrelated physics, but rather the $e^{+}e^{-}$ plasma itself is responsible for the field by virtue of spin polarization. This would obey the following assumption of
 \begin{align}
     \label{selfmag}
@@ -444,7 +445,7 @@ which sets the total magnetization as a function of itself. The spin polarizatio
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.45\textwidth]{plots/Spinchemical_03.png}
-    \caption{The spin potential $\eta$ (solid lines) and chemical potential $\mu$ (dotted lines) are plotted under the assumption of self-magnetization through a nonzero spin polarization in bulk of the plasma.}
+    \caption{The spin potential $\eta$ and chemical potential $\mu$ are plotted under the assumption of self-magnetization through a nonzero spin polarization in bulk of the plasma.}
     \label{fig:self} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -454,20 +455,20 @@ The result of the self-magnetization assumption in \req{selfmag} is plotted in \
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary and Outlook}
 \label{sec:conclusions}
-\noindent In this work, we explored the primarily paramagnetic magnetization of the $e^{+}e^{-}$ thermal Fermi gas in the temperature range of the early universe between $2000\keV>T>20\keV$ expanding on our work in~\cite{rafelski2023short}. The combination of strong magnetic fields, high matter-antimatter density, and relatively high temperatures (far higher than the Sun's core temperature~\cite{bahcall2001solar} of $T_{\odot}=1.37\keV$) make this universe era unique in cosmology and astrophysics.
+\noindent In this work, we explored the paramagnetic magnetization of the $e^{+}e^{-}$ thermal Fermi gas in the temperature range of the early universe between $2000\keV>T>20\keV$ expanding on our work in~\cite{rafelski2023short}. The combination of strong magnetic fields, high matter-antimatter density, and relatively high temperatures (far higher than the Sun's core temperature~\cite{bahcall2001solar} of $T_{\odot}=1.37\keV$) makes this era of the universe unique in cosmology and astrophysics.
 
-We determined that the electron/positron-to-baryon ratio before BBN was $n_{e^{\pm}}/n_{B}=4.47\times10^{8}$. We showed that the primordial universe $e^{+}e^{-}$ plasma has paramagnetic properties when subjected to an external field. Our analysis shows this paramagnetism surprisingly does not diminish in the distant past with high temperature unlike most magnetic phenomenon, but is enhanced due to
+We determined that the electron/positron-to-baryon ratio before BBN was $n_{e^{\pm}}/n_{B}=4.47\times10^{8}$. We showed that the primordial universe $e^{+}e^{-}$ plasma has paramagnetic properties when subjected to an external field. Our analysis shows this paramagnetism does not diminish in the distant past with high temperature unlike most magnetic phenomenon, but is enhanced due to
 \begin{itemize}
     \item[a.] the high density of electron-positron pairs which exist in the plasma during this era and
     \item[b.] the conservation of magnetic flux in an expanding universe which helps maintain the polarization of the plasma.
 \end{itemize}
 Despite this, the plasma is only ever weakly magnetized as most of the spins are highly disorganized.
 
-We introduced a statistical potential which characterizes the spin polarization within the gas. This model was then used to analyze the required polarization necessary to match the expected magnetic flux of the era if today's IGMF could be extrapolated. While this is an incomplete model, it does demonstrate that the early universe only requires a small asymmetry in spin polarization to produce significant magnetic fields. We suggest further efforts to connect the bulk magnetization of a polarized gas to Amp{\`e}rian magnetization generated through currents and inhomogeneous flows. As the chemical potential of $e^{+}e^{-}$ is sensitive to the baryon density, any local spatial variations can effect magnetization substantially. Spin polarization domains may then provide the necessary seeds to generate collapsing (and rotating) cosmic structure and galaxies.
+We introduced a statistical potential which characterizes the spin polarization within the gas. This model was then used to analyze the required polarization necessary to match the expected magnetic flux of the era if today's IGMF could be extrapolated. While this is an incomplete model, it does demonstrate that the early universe only required a small asymmetry in spin polarization to produce significant magnetic fields. We suggest further efforts to connect the bulk magnetization of a polarized gas to Amp{\`e}rian magnetization generated through currents and inhomogeneous flows. 
 
-Further extensions would be to improve the high temperature domain by computing the full partition function instead of the Boltzmann approximated form. At higher temperatures, more particles such as neutrinos would need to be included as they become thermally coupled. Adding in the heavier baryons such as protons and neutrons may also be needed. Even in a universe with overall zero angular momentum, imbalances in angular momentum and spin polarization among thermally active species should be studied. 
+Further extensions would be to improve the high temperature domain by computing the full partition function instead of the Boltzmann approximated form. At higher temperatures, more particles such as neutrinos would need to be included as they become thermally coupled. Adding in the baryons such as protons and neutrons may also be needed. Even in a universe with overall zero angular momentum, tiny localized imbalances in angular momentum in the primordial era likely consequences on observed large-scale structure today. 
 
-An additional avenue of research is studying spatial homogeneities. Recent measurements by the JWST indicate that large-scale structure, galactic, and supermassive black hole formation occurred earlier than expected which may indicate unusual matter agglomeration in even primordial eras.
+Recent measurements by the JWST indicate that large-scale structure, galactic, and supermassive black hole formation occurred earlier than expected which may indicate unusual matter agglomeration in even primordial eras. As the chemical potential of the $e^{+}e^{-}$ plasma is sensitive to the baryon density, any local spatial variations can effect magnetization substantially. Spin polarization domains may then provide the necessary seeds to generate collapsing (and rotating) cosmic structure and galaxies.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \acknowledgements
