@@ -45,7 +45,7 @@ B[T_, b_] := (T/511)^2 b
 (*Define the partition function.*)
 
 
-lnZ[V_, u_, T_, b_, s_, g_,\[Eta]_] := (T^(3) V/(2 Pi)^(2)) (2 Cosh[u/T])\[Xi][T,s,\[Eta]](x[T, b, s, g]^(2) BesselK[2, x[T, b, s, g]] + \
+lnZ[V_, u_, T_, b_, s_, g_,\[Eta]_] := (T^(3) V/(Pi)^(2)) (Cosh[u/T])\[Xi][T,s,\[Eta]](x[T, b, s, g]^(2) BesselK[2, x[T, b, s, g]] + \
               b x[T, b, s, g] BesselK[1, x[T, b, s, g]]/2 + b^(2) BesselK[0, x[T, b, s, g]]/12);
 
 
@@ -91,8 +91,17 @@ Clear[\[Eta]];
 
 
 Clear[g];
-(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,g,0],b]+\
-D[lnZ[V,u,T,b,-1,g,0],b])/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
+Clear[\[Eta]];
+
+
+g=2;
+\[Eta]=0;
+
+
+(T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,g,\[Eta]],b]+D[lnZ[V,u,T,b,-1,g,\[Eta]],b])(q/m^(2))/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
+
+
+Series[Out[33],{b,0,0}]/.Sqrt[m^2/T^2]->m/T
 
 
 Clear[g];
@@ -436,14 +445,14 @@ Bc = 1;
 bValues = {10^(-3)};
 Tlist[n_]:=Table[x,{x,n,9n,n}];
 ff[T_, b_,eta_,gee_] = (T/V) (q/T^(2)) (D[lnZ[V, chempot[T,0,gee,\[Eta]]T, T, b, 1, gee, eta], b] + D[lnZ[V, chempot[T,0,gee,\[Eta]]T, T, b, -1, gee, eta], b])/. q -> (4 Pi/137)/m^(2) /. m -> 511;
-Plot[{Bc ff[511, bValues, 0, gee],Bc ff[300, bValues, 0, gee],Bc ff[150, bValues, 0, gee],Bc ff[70, bValues, 0, gee]}, {gee, -4, 4},
- 	PlotRange -> {Automatic,{-4 10^(-7),6 10^(-7)}},
+Plot[{Bc ff[511, bValues, 0, gee],Bc ff[300, bValues, 0, gee],Bc ff[150, bValues, 0, gee],Bc ff[70, bValues, 0, gee]}, {gee, -12, 12},
+ 	PlotRange -> {{-4,4},{-7 10^(-7),7 10^(-7)}},
  	Frame -> True,
  	AspectRatio -> 3/2,
  	FrameLabel -> {"g-factor", "\[GothicCapitalM]"},
  	PlotStyle -> {Red,Green,Blue,Black},
  	LabelStyle -> Directive[Black,24,FontFamily -> "Times"],
- 	FrameStyle -> Directive[Black,20],
+ 	FrameStyle -> Directive[Black,16],
  	Background -> White,
      GridLines->Automatic,
  	GridLinesStyle -> Directive[Line, Lighter[Gray,.8]]]
@@ -578,4 +587,26 @@ LogLogPlot[{1/Log[x],10/Log[x],100/Log[x],1000/Log[x]}, {x, 1, 1000000},
   PlotRange->{{1,1000000},{10^(-2),10^(5)}},
   AxesLabel -> {"x", "1/x"}, 
   PlotLabel -> "Log-Log Plot of 1/x"]
+
+
+
+ClearAll[xdp];
+
+
+xkgp[ma_] := Sqrt[((ma)/T)^(2)+(pz/T)^(2)+2 (eB/T^(2))(\[Nu]-g s/2)];
+xdp[ma_] := Sqrt[(Sqrt[((ma)/T)^(2)+2(eB/T^(2))(\[Nu]-s)]-(eB/(2 (ma) T))(g-2)s)^(2)+(pz/T)^(2)];
+
+
+Limit[xdp[ma]/ma,ma->\[Infinity]]
+Limit[xkgp[ma]/ma,ma->\[Infinity]]
+
+
+xkgp[ma]//FullSimplify
+xdp[ma]//FullSimplify
+
+
+Series[xkgp[ma],{ma,Infinity,2}]/.Sqrt[ma^2/T^2]->ma/T
+Series[xdp[ma],{ma,Infinity,2}]/.Sqrt[ma^2/T^2]->ma/T
+
+
 
