@@ -20,11 +20,16 @@
 (*Define the Bessel parameter X.*)
 
 
-x[T_, b_, s_, g_] := Sqrt[m^(2)/T^(2) + b (1 - s g/2)];
+x[T_, b_, s_, g_] := Sqrt[m^(2)/T^(2) + b(1 - s g/2)];
+
+
+xalt[T_,b_,s_,g_] := Sqrt[m^(2)/T^(2) + b(1 + s g/2)];
 
 
 x[T,b,-1,2]//TraditionalForm;
 x[T,b,1,2]//TraditionalForm;
+xalt[T,b,1,2]//TraditionalForm
+xalt[T,b,-1,2]//TraditionalForm
 
 
 (* ::Text:: *)
@@ -45,12 +50,20 @@ B[T_, b_] := (T/511)^2 b
 (*Define the partition function.*)
 
 
-lnZ[V_, u_, T_, b_, s_, g_,\[Eta]_] := (T^(3) V/(Pi)^(2)) (Cosh[u/T])\[Xi][T,s,\[Eta]](x[T, b, s, g]^(2) BesselK[2, x[T, b, s, g]] + \
+lnZ[V_, u_, T_, b_, s_, g_,\[Eta]_] := (T^(3) V/(2 Pi)^(2)) (2 Cosh[u/T])\[Xi][T,s,\[Eta]](x[T, b, s, g]^(2) BesselK[2, x[T, b, s, g]] + \
               b x[T, b, s, g] BesselK[1, x[T, b, s, g]]/2 + b^(2) BesselK[0, x[T, b, s, g]]/12);
 
 
+lnZalt[V_, u_, T_, b_, s_, g_,\[Eta]_] := (T^(3) V/(2 Pi)^(2)) (2 Cosh[(u+(s \[Eta]))/T]) (xalt[T, b, s, g]^(2) BesselK[2, xalt[T, b, s, g]] + \
+              b xalt[T, b, s, g] BesselK[1, xalt[T, b, s, g]]/2 + b^(2) BesselK[0, xalt[T, b, s, g]]/12);
+
+
 lnZ[V,u,T,b,-1,2,0]+lnZ[V,u,T,b,1,2,0]//TraditionalForm;
-lnZ[V,u,T,b,-1,2,0]+lnZ[V,u,T,b,1,2,0]//FullSimplify//TraditionalForm;
+lnZ[V,u,T,b,-1,2,0]+lnZ[V,u,T,b,1,2,0]//FullSimplify//TraditionalForm
+
+
+Clear[\[Eta]];
+lnZalt[V, u, T, b, 1, 2,\[Eta]]+lnZalt[V, u, T, b, -1, 2,\[Eta]]//FullSimplify//TraditionalForm
 
 
 (* ::Subsection::Closed:: *)
@@ -101,7 +114,19 @@ g=2;
 (T/V)(q/T^(2))(D[lnZ[V,u,T,b,1,g,\[Eta]],b]+D[lnZ[V,u,T,b,-1,g,\[Eta]],b])(q/m^(2))/.Sqrt[m^2/T^2]->m/T//FullSimplify//TraditionalForm
 
 
-Series[Out[33],{b,0,0}]/.Sqrt[m^2/T^2]->m/T
+Series[Out[438],{b,0,3}]/.Sqrt[m^2/T^2]->(m/T)/.(1/Sqrt[m^2/T^2])->(T/m)//FullSimplify
+
+
+Series[Out[195]/.u->0,{T,Infinity,0}]//FullSimplify
+
+
+Series[Out[175],{b,0,0}]/.Sqrt[m^2/T^2]->(m/T)/.(1/Sqrt[m^2/T^2])->(T/m)//FullSimplify
+
+
+Series[Out[216]/.u->0,{T,Infinity,2}]//FullSimplify
+
+
+Series[(T/m)^(2)(m/T)Sinh[\[Eta]/T]BesselK[1,m/T],{m,0,1}]//FullSimplify//TraditionalForm
 
 
 Clear[g];
@@ -305,13 +330,13 @@ Bc = 1;
 me = 511;
 b0 = 10^(-3);
 bValues = {25,50,100,300};
-loT = 10; hiT = 1000;
+loT = 0.1; hiT = 1000;
 Tlist[n_]:=Table[x,{x,n,9n,n}];
 reversal[T_]:=-T+ loT + hiT;
 bzero = {0};
 etaValues = {0};
-Plot[{Evaluate[chempot[T, #,g,\[Eta]]/.m->me & /@ bzero],Evaluate[chempot[T, #,g,etaValues]/.m->me & /@ bValues]}, {T, loT, hiT},
- 	PlotRange -> {{10,300},{10^(2),10^(-12)}},
+Plot[{Evaluate[T chempot[T, #,g,\[Eta]]/.m->me & /@ bzero],Evaluate[chempot[T, #,g,etaValues]/.m->me & /@ bValues]}, {T, loT, hiT},
+ 	PlotRange -> {{.1,300},{10^(3),10^(-12)}},
  	Frame -> True,
  	AspectRatio -> 3/2,
  	FrameLabel -> {"T [keV]", "\[Mu]/T"},
@@ -386,8 +411,30 @@ Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, loT, hiT},
  	GridLinesStyle -> Directive[Line, Lighter[Gray,.8]]]
 
 
-ScientificForm[{10.,100.,10.^(-2),1000000.}]
-ScientificForm[{123450000.0,0.000012345,123.45}]
+g = {2};
+Bc = 4.41 10^(13);
+Bc = 1;
+\[Eta] = 0;
+loT = 10; hiT = 2000;
+Tlist[n_]:=Table[x,{x,n,9n,n}];
+reversal[T_]:=-T+ loT + hiT;
+f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, chempot[T,0,1,g]T, T, b, 1, g, \[Eta]], b] + D[lnZ[V, chempot[T,0,-1,g]T, T, b, -1, g, \[Eta]], b])/. q -> (4 Pi/137)/m^(2) /. m -> 511;
+bValues = {10^(-3), 10^(-11)};
+Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, loT, hiT},
+ 	PlotRange -> {{10,1000},{10^(-30),10^(1)}},
+ 	Frame -> True,
+ 	FrameLabel -> {"T [keV]", "\!\(\*OverscriptBox[\(\[ScriptCapitalM]\), \(_\)]\)"},
+ 	PlotStyle -> {Blue,Directive[Dashed,Blue],Red,Directive[Dashed, Red]},
+ 	LabelStyle -> Directive[Black,14,FontFamily -> "Times"],
+ 	FrameStyle -> Directive[Black,20],
+ 	Background -> White,
+ 	ScalingFunctions -> {
+       {-Log[#]&,InverseFunction[-Log[#]&]},
+       {Log,InverseFunction[Log]}},
+     FrameTicks -> {{{#, Superscript[10, Log10@#]} & /@ ({10^0, 10^-5, 10^-10, 10^-15, 10^-20, 10^-25}), None},
+       {{#, Superscript[10, Log10@#]} & /@ ({10^3, 10^2, 10^1}), None}},
+ 	GridLines -> {Drop[Flatten[Table[Tlist[n],{n,{10,100,1000}}]],-8],Table[10^(n),{n,1,-33,-1}]},
+ 	GridLinesStyle -> Directive[Line, Lighter[Gray,.8]]]
 
 
 g = {1.16};
