@@ -95,9 +95,9 @@ Moreover, the required polarization is tiny at high $T$ since the $e^{+}e^{-}$ p
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Our analysis in \rsec{sec:thermal} of the relativistic fermion partition function focuses on the spin contribution to magnetization. At $T\simeq200\keV$, due to very high $e^{+}e^{-}$ pair densities, we believe that spin paramagnetism is dominant over Landau orbital diamagnetism. We show in \rsec{sec:magnetization} that magnetization is nonzero even for a nearly symmetric particle-antiparticle gas as well as account for the matter-antimatter asymmetry present in the universe. Our description of relativistic paramagnetism is covered in \rsec{sec:paramagnetism}. We further demonstrate in \rsec{sec:ferro} that magnetization can be spontaneously increased in strength near the IGMF upper limit seen in \req{igmf} given sufficient spin polarization.
+Our analysis in \rsec{sec:thermal} of the relativistic fermion partition function focuses on the spin contribution to magnetization. At $T\simeq200\keV$, due to very high $e^{+}e^{-}$ pair densities, we believe that spin paramagnetism is dominant over Landau orbital diamagnetism. We show in \rsec{sec:magnetization} that magnetization is nonzero even for a nearly symmetric particle-antiparticle gas as well as account for the matter-antimatter asymmetry present in the universe. Our description of relativistic paramagnetism is covered in \rsec{sec:paramagnetism}. We further demonstrate in \rsec{sec:ferro} that magnetization can be spontaneously increased in strength near the IGMF upper limit seen in \req{igmf} given sufficient polarization.
 
-We do not address here the origin of the spin polarization phenomena but recall that the $e^{+}e^{-}$ pair plasma decouples from the neutrino background near to $T=2000\keV$~\cite{Birrell:2014uka}. Therefore
+We do not address here the origin of the polarization phenomena but recall that the $e^{+}e^{-}$ pair plasma decouples from the neutrino background near to $T=2000\keV$~\cite{Birrell:2014uka}. Therefore
 we consider the magnetic properties of the $e^{+}e^{-}$ pair plasma in the temperature range  $2000\keV>T>21\keV$ and focus on the range $200\keV>T>21\keV$ where the most rapid antimatter abundance changes occurs and where the Boltzmann approximation is valid. This is notably the final epoch where antimatter exists in large quantities in the cosmos~\cite{Rafelski:2023emw}. 
 
 This is assisted by the fact that antiparticles $(e^{+})$ have the opposite sign of charge, and thus magnetic moment, compared to particles $(e^{-})$. Therefore in an $e^{+}e^{-}$ pair plasma, net magnetization can be associated with opposite spin orientations for particles and antiparticles without the accompaniment of a net angular momentum in the volume considered. This is of course very different from the the matter dominated universe arising below $T\simeq20\keV$ which includes the current epoch. Our findings are summarized in \rsec{sec:conclusions} and further research avenues are commented upon.
@@ -148,27 +148,26 @@ In the presence of a magnetic field ${\cal B}$ along a primary axis, there is so
 \begin{multline}
  \label{partition:1}
  \ln{\cal Z}_{e^{+}e^{-}}=\frac{e{\cal B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm1}\sum_{s}^{\pm1}\sum_{n=0}^{\infty}\int_{-\infty}^{\infty}{\rm d}p_{z}\\
- \left[\ln\left(1+\lambda_{\sigma}\xi_{s}\exp\left(-\frac{E}{T}\right)\right)\right]\,
+ \left[\ln\left(1+\lambda_{\sigma}\xi_{\sigma,s}\exp\left(-\frac{E}{T}\right)\right)\right]\,
 \end{multline}
 \begin{align}
     \label{partition:2}    
-    \lambda_{\sigma}\xi_{s} = \exp{\frac{\mu_{\sigma}+\eta_{s}}{T}}\,,
+    \lambda_{\sigma}\xi_{s} = \exp{\frac{\mu_{\sigma}+\eta_{\sigma,s}}{T}}\,,
 \end{align}
-where $p_{z}$ is the momentum parallel to the field axis and electric charge is $e\equiv q_{e^{+}}=-q_{e^{-}}$. The index $\sigma$ in \req{partition:1} is a sum over electron and positron states while $s$ is a sum over polarizations. The index $s$ refers to the spin polarization along the field axis: parallel $(s=+1)$ or anti-parallel $(s=-1)$ for both particle and antiparticle species. The quantum numbers of the energy eigenstate $E$ will be elaborated on in \rsec{sec:thermal}.
+where $p_{z}$ is the momentum parallel to the field axis and electric charge is $e\equiv q_{e^{+}}=-q_{e^{-}}$. The index $\sigma$ in \req{partition:1} is a sum over electron and positron states while $s$ is a sum over polarizations. The index $s$ refers to the spin along the field axis: parallel $(s=+1)$ or anti-parallel $(s=-1)$ for both particle and antiparticle species. The quantum numbers of the energy eigenstate $E$ will be elaborated on in \rsec{sec:thermal}.
 
-We are explicitly interesting in small asymmetries such as baryon excess over antibaryons, or one spin polarization over another. These are described by \req{partition:2} as the following two fugacities:
+We are explicitly interesting in small asymmetries such as baryon excess over antibaryons, or one polarization over another. These are described by \req{partition:2} as the following two fugacities:
 \begin{itemize}
  \item[a.] Chemical fugacity $\lambda_{\sigma}$
- \item[b.] Spin fugacity $\xi_{s}$
+ \item[b.] Polarization fugacity $\xi_{\sigma,s}$
 \end{itemize}
-The chemical fugacity $\lambda_{\sigma}$ (defined in \req{cpotential} above) describes deformation of the Fermi-Dirac distribution due to nonzero chemical potential $\mu$. An imbalance in electrons and positrons leads as discussed earlier to a nonzero particle chemical potential $\mu\neq0$. We then introduce a novel spin fugacity $\xi_{s}$ and spin potential $\eta_{s}=s\eta$. We propose the spin potential follows analogous expressions as seen in \req{cpotential} obeying
+The chemical fugacity $\lambda_{\sigma}$ (defined in \req{cpotential} above) describes deformation of the Fermi-Dirac distribution due to nonzero chemical potential $\mu$. An imbalance in electrons and positrons leads as discussed earlier to a nonzero particle chemical potential $\mu\neq0$. We then introduce a novel polarization fugacity $\xi_{\sigma,s}$ and polarization potential $\eta_{\sigma,s}=\sigma s\eta$. We propose the polarization potential follows analogous expressions as seen in \req{cpotential} obeying
 \begin{align}
  \label{spotential}
- \eta\equiv\eta_{+}=-\eta_{-}\,,\qquad
- \xi\equiv\xi_{+}=\xi_{-}^{-1}= \exp{\frac{\eta}{T}}\,.
+ \eta\equiv\eta_{+,+}=\eta_{-,-}\,,\quad\eta=-\eta_{\pm,\mp}\,,\quad\xi_{\sigma,s}\equiv\exp{\frac{\eta_{\sigma,s}}{T}}\,.
 \end{align}
 
-An imbalance in spin polarization within a region of volume $V$ results in a nonzero spin potential $\eta\neq0$. Conveniently since antiparticles have opposite sign of charge and magnetic moment, the same magnetic moment is associated with opposite spin orientation for particles and antiparticles independent of degree of spin-magnetization. A completely particle-antiparticle symmetric magnetized plasma will have therefore zero total spin angular momentum and zero spin potential $\eta=0$. This is of course very different from the situation today of a matter dominated universe.
+An imbalance in polarization within a region of volume $V$ results in a nonzero spin potential $\eta\neq0$. Conveniently since antiparticles have opposite sign of charge and magnetic moment, the same magnetic moment is associated with opposite spin orientation for particles and antiparticles independent of degree of spin-magnetization. A completely particle-antiparticle symmetric magnetized plasma will have therefore zero total angular momentum. This is of course very different from the situation today of a matter dominated universe.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Theory of thermal matter-antimatter plasmas}
@@ -238,21 +237,21 @@ In general, modifications due to quantum statistical phase-space reduction for f
 \noindent We will proceed in this section with the Boltzmann approximation for the limit where $T\lesssim m_e$. The partition function shown in equation \req{partition:1} can be rewritten removing the logarithm as
 \begin{multline}
  \label{partitionpower:1}
- \ln{{\cal Z}_{e^{+}e^{-}}}=\frac{2{\cal B}V}{(2\pi)^{2}}\sum_{\sigma,s}^{\pm1}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}{\rm d}p_{z}\\
- \frac{(-1)^{k+1}}{k}\exp\left({k\frac{\sigma\mu+s\eta-{\tilde m}_{\sigma,s}\varepsilon^{n}_{\sigma,s}}{T}}\right)\,,
+ \ln{{\cal Z}_{e^{+}e^{-}}}=\frac{e{\cal B}V}{(2\pi)^{2}}\sum_{\sigma,s}^{\pm1}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}{\rm d}p_{z}\\
+ \frac{(-1)^{k+1}}{k}\exp\left({k\frac{\sigma\mu+\sigma s\eta-{\tilde m}_{\sigma,s}\varepsilon^{n}_{\sigma,s}}{T}}\right)\,,
 \end{multline}
 \begin{align}
  \label{bapprox} 
- \sigma\mu+s\eta-{\tilde m}_{\sigma,s}\varepsilon_{\sigma,s}^{n}<0\,,
+ \sigma\mu+\sigma s\eta-{\tilde m}_{\sigma,s}\varepsilon_{\sigma,s}^{n}<0\,,
 \end{align}
 which is well behaved as long as the factor in \req{bapprox} remains negative. We evaluate the sums over $\sigma$ and $s$ as
 \begin{multline}
     \label{partitionpower:2}
-    \ln{{\cal Z}_{e^{+}e^{-}}}=\frac{2{\cal B}V}{(2\pi)^{2}}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}{\rm d}p_{z}\frac{(-1)^{k+1}}{k}\\
+    \ln{{\cal Z}_{e^{+}e^{-}}}=\frac{e{\cal B}V}{(2\pi)^{2}}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}{\rm d}p_{z}\frac{(-1)^{k+1}}{k}\\
     \left(\ \exp\left(k\frac{+\mu+\eta}{T}\right)\exp\left(-k\frac{{\tilde m}_{+,+}\varepsilon_{+,+}^{n}}{T}\right)\right.\\
     +\exp\left(k\frac{+\mu-\eta}{T}\right)\exp\left(-k\frac{{\tilde m}_{+,-}\varepsilon_{+,-}^{n}}{T}\right)\\
-    +\exp\left(k\frac{-\mu+\eta}{T}\right)\exp\left(-k\frac{{\tilde m}_{-,+}\varepsilon_{-,+}^{n}}{T}\right)\\
-    +\left.\exp\left(k\frac{-\mu-\eta}{T}\right)\exp\left(-k\frac{{\tilde m}_{-,-}\varepsilon_{-,-}^{n}}{T}\right)\right)
+    +\exp\left(k\frac{-\mu-\eta}{T}\right)\exp\left(-k\frac{{\tilde m}_{-,+}\varepsilon_{-,+}^{n}}{T}\right)\\
+    +\left.\exp\left(k\frac{-\mu+\eta}{T}\right)\exp\left(-k\frac{{\tilde m}_{-,-}\varepsilon_{-,-}^{n}}{T}\right)\right)
 \end{multline}
 We note from \rt{tab:1} that the first and forth terms and the second and third terms share the same energies via
 \begin{align}
@@ -265,12 +264,13 @@ We note from \rt{tab:1} that the first and forth terms and the second and third 
 \req{partitionpower:3} allows us to reorganize the partition function with a new magnetization quantum number $s'$ which characterizes paramagnetic flux increasing states $(s'=+1)$ and diamagnetic flux decreasing states $(s'=-1)$. This recasts \req{partitionpower:2} as
 \begin{multline}
     \label{partitionpower:4}
-    \ln{{\cal Z}_{e^{+}e^{-}}}=\frac{2{\cal B}V}{(2\pi)^{2}}\sum_{s'}^{\pm1}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}{\rm d}p_{z}\frac{(-1)^{k+1}}{k}\\
-    \left[2\cosh\left(k\frac{\mu-s'\eta}{T}\right)\right]\exp\left(-k\frac{{\tilde m}_{s'}\varepsilon_{s'}^{n}}{T}\right)
+    \ln{{\cal Z}_{e^{+}e^{-}}}=\frac{e{\cal B}V}{(2\pi)^{2}}\sum_{s'}^{\pm1}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}{\rm d}p_{z}\frac{(-1)^{k+1}}{k}\\
+    \left[2\xi_{s'}\cosh\frac{k\mu}{T}\right]\exp\left(-k\frac{{\tilde m}_{s'}\varepsilon_{s'}^{n}}{T}\right)
 \end{multline}
-with dimensionless energies redefined in terms of the polarization mass
+with dimensionless energy, polarization mass, and polarization redefined in terms of $s'$
 \begin{gather}
-    {\tilde m}_{s'}^{2}=m_{e}^{2}+e{\cal B}\left(1-\frac{g}{2}s'\right)\,.
+    {\tilde m}_{s'}^{2}=m_{e}^{2}+e{\cal B}\left(1-\frac{g}{2}s'\right)\,,\\
+    \eta\equiv\eta_{+}=-\eta_{-}\qquad\xi\equiv\xi_{+}=\xi_{-}^{-1}\,.
 \end{gather}
 
 We introduce the modified Bessel function $K_{\nu}$ (see Ch. 10 of~\cite{Letessier:2002ony}) of the second kind
@@ -300,7 +300,7 @@ where ${\cal R}$ is the resulting power series and error remainder of the integr
 After truncation of the series and error remainder and combining \req{partitionpower:1} through \req{eulermaclaurin}, the partition function can then be written in terms of modified Bessel $K_{\nu}$ functions of the second kind, yielding
 \begin{multline}
  \label{boltzmann}
- \ln{\cal Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm1}\left[\cosh{\frac{\mu-s'\eta}{T}}\right]\\
+ \ln{\cal Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm1}\left[\xi_{s'}\cosh{\frac{\mu}{T}}\right]\\
  \left(x_{s'}^{2}K_{2}(x_{s'})+\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})+\frac{b_{0}^{2}}{12}K_{0}(x_{s'})\right)\,,
 \end{multline}
 \begin{align}
@@ -312,11 +312,11 @@ The latter two terms in \req{boltzmann} proportional to $b_{0}K_{1}$ and $b_{0}^
 This \lq separation of concerns\rq\ can be rewritten as
 \begin{align}
  \label{spin}
- \ln{\cal Z}_{\rm S}=\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm1}\left[\cosh{\frac{\mu-s'\eta}{T}}\right]\left(x_{s'}^{2}K_{2}(x_{s'})\right)\,,
+ \ln{\cal Z}_{\rm S}=\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm1}\left[\xi_{s'}\cosh{\frac{\mu}{T}}\right]\left(x_{s'}^{2}K_{2}(x_{s'})\right)\,,
 \end{align}
 \begin{multline}
  \label{spinorbit}
- \ln{\cal Z}_{\rm SO}=\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm}\left[\cosh{\frac{\mu-s'\eta}{T}}\right]\\
+ \ln{\cal Z}_{\rm SO}=\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm}\left[\xi_{s'}\cosh{\frac{\mu}{T}}\right]\\
  \left(\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})+\frac{b_{0}^{2}}{12}K_{0}(x_{s'})\right)\,,
 \end{multline}
 where the spin (S) and spin-orbit (SO) partition functions can be considered independently. When the magnetic scale $b_{0}$ is small, the spin-orbit term \req{spinorbit} becomes negligible leaving only paramagnetic effects in \req{spin} due to spin. In the non-relativistic limit, \req{spin} reproduces a quantum gas whose Hamiltonian is defined as the free particle (FP) Hamiltonian plus the magnetic dipole (MD) Hamiltonian which span two independent Hilbert spaces ${\cal H}_{\rm FP}\otimes{\cal H}_{\rm MD}$.
@@ -330,23 +330,16 @@ Writing the partition function as \req{boltzmann} instead of \req{partitionpower
 \noindent In presence of a magnetic field in the Boltzmann approximation, the charge neutrality condition \req{chargeneutrality} becomes
 \begin{multline}
  \label{chem}
- n_{p}\frac{\pi^{2}}{T^{3}}=\sum_{s'}^{\pm1}\sinh\left(\frac{\mu-s'\eta}{T}\right)\\
- \left(x_{s'}^{2}K_{2}(x_{s'})+\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})+\frac{b_{0}^{2}}{12}K_{0}(x_{s'})\right)\,.
+ \sinh\frac{\mu}{T}=n_{p}\frac{\pi^{2}}{T^{3}}\\
+ \left[\sum_{s'}^{\pm1}\xi_{s'}\!\left(\!x_{s'}^{2}K_{2}(x_{s'})\!+\!\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})\!+\!\frac{b_{0}^{2}}{12}K_{0}(x_{s'}\!)\!\right)\!\right]^{-1}\!.
 \end{multline}
-\req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\eta=0$ implying no external bias to the number of polarizations (both parallel and anti-parallel) except as a consequence of the difference in energy eigenvalues. In practice, the latter two terms in \req{chem} are negligible to chemical potential in the bounds of the primordial $e^{+}e^{-}$ plasma considered and only becomes relevant for extreme (see \rf{fig:chemicalpotential}) magnetic field strengths well outside our scope.
+\req{chem} is fully determined by the right-hand-side expression if the spin fugacity is set to unity $\eta=0$ implying no external bias to the number of polarizations except as a consequence of the difference in energy eigenvalues. In practice, the latter two terms in \req{chem} are negligible to chemical potential in the bounds of the primordial $e^{+}e^{-}$ plasma considered and only becomes relevant for extreme (see \rf{fig:chemicalpotential}) magnetic field strengths well outside our scope.
 
 \req{chem} simplifies if there is no external magnetic field $b_{0}=0$ into
 \begin{align}
     \label{simpchem:1}
     \sinh\frac{\mu}{T}=n_{p}\frac{\pi^{2}}{T^{3}}\left[2\cosh\frac{\eta}{T}\left(\frac{m_{e}}{T}\right)^{2}K_{2}\left(\frac{m_{e}}{T}\right)\right]^{-1}\,.
 \end{align}
-If instead $\eta=0$ indicating zero spin asymmetry, we arrive at
-\begin{multline}
-    \label{simpchem:2}
-    \sinh\frac{\mu}{T}=n_{p}\frac{\pi^{2}}{T^{3}}\\
-    \left[\sum_{s'}^{\pm1}\left(x_{s'}^{2}K_{2}(x_{s'})+\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})+\frac{b_{0}^{2}}{12}K_{0}(x_{s'})\right)\right]^{-1}\,.
-\end{multline}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
@@ -357,7 +350,7 @@ If instead $\eta=0$ indicating zero spin asymmetry, we arrive at
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In \rf{fig:chemicalpotential} we plot the chemical potential $\mu/T$ in \req{simpchem:1} and \req{simpchem:2} which characterizes the importance of the charged lepton asymmetry as a function of temperature. Since the baryon (and thus charged lepton) asymmetry remains fixed, the suppression of $\mu/T$ at high temperatures indicates a large pair density which is seen explicitly in \rf{fig:densityratio}. The black line corresponds to the $b_{0}=0$ and $\eta=0$ case. 
+In \rf{fig:chemicalpotential} we plot the chemical potential $\mu/T$ in \req{chem} and \req{simpchem:1} which characterizes the importance of the charged lepton asymmetry as a function of temperature. Since the baryon (and thus charged lepton) asymmetry remains fixed, the suppression of $\mu/T$ at high temperatures indicates a large pair density which is seen explicitly in \rf{fig:densityratio}. The black line corresponds to the $b_{0}=0$ and $\eta=0$ case. 
 
 The para-diamagnetic contribution from \req{spinorbit} does not appreciably influence $\mu/T$ until the magnetic scales involved become incredibly large well outside the observational bounds defined in \req{igmf} and \req{tbscale} as seen by the dotted blue curves of various large values $b_{0}=\{25,\ 50,\ 100,\ 300\}$. The chemical potential is also insensitive to forcing by the spin potential until $\eta$ reaches a significant fraction of the electron mass $m_{e}$ in size. The chemical potential for large values of spin potential $\eta=\{100,\ 200,\ 300,\ 400,\ 500\}\ \keV$ are also plotted as dashed black lines with $b_{0}=0$.
 
@@ -409,10 +402,10 @@ The total magnetization ${\mathfrak M}$ can be broken into the sum of magnetic m
 We note that the expression for the magnetization simplifies significantly for $g=2$ which is the \lq natural\rq\ gyro-magnetic factor~\cite{Evans:2022fsu,Rafelski:2022bsv} for Dirac particles. For illustration, the $g=2$ magnetization from \req{defmagetization} is then
 \begin{align}
  \label{g2magplus}
- {\mathfrak M}_{+}&=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\cosh{\frac{\mu-\eta}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\\
+ {\mathfrak M}_{+}&=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\left[\frac{1}{2}x_{+}K_{1}(x_{+})+\frac{b_{0}}{6}K_{0}(x_{+})\right]\,,\\
 \begin{split}  
  \label{g2magminus}
- -{\mathfrak M}_{-}&=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\cosh{\frac{\mu+\eta}{T}}\\
+ -{\mathfrak M}_{-}&=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi^{-1}\cosh{\frac{\mu}{T}}\\
  &\left[\left(\frac{1}{2}+\frac{b_{0}^{2}}{12x_{-}^{2}}\right)x_{-}K_{1}(x_{-})+\frac{b_{0}}{3}K_{0}(x_{-})\right]\,,
 \end{split}\\
  x_{+}&=\frac{m_{e}}{T}\,,\qquad
@@ -449,7 +442,7 @@ Early universe conditions may also apply to some extreme stellar objects with ra
 \begin{figure}[ht]
  \centering
  \includegraphics[width=0.45\textwidth]{plots/GFactor_05.png}
- \caption{The magnetization $\mathfrak M$ as a function of $g$-factor plotted for several temperatures with magnetic scale $b_{0}=10^{-3}$ and spin fugacity $\xi=1$.}
+ \caption{The magnetization $\mathfrak M$ as a function of $g$-factor plotted for several temperatures with magnetic scale $b_{0}=10^{-3}$ and polarization fugacity $\xi=1$.}
  \label{fig:gfac} 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -466,15 +459,15 @@ The influence of AMM would be more relevant for the magnetization of baryon gass
 \req{g2magplus} and \req{g2magminus} with arbitrary $g$ reintroduced is given by
 \begin{multline}
     \label{arbg:1}
-    {\mathfrak M}_{\pm}=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\cosh{\frac{\mu\mp\eta}{T}}\\
-    \left[C_{1}^{\pm}(x_{\pm})K_{1}(x_{\pm})+C_{0}^{\pm}K_{0}(x_{\pm})\right]\,,
+    {\mathfrak M}=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\sum_{s'}^{\pm1}\xi_{s'}\cosh{\frac{\mu}{T}}\\
+    \left[C^{1}_{s'}(x_{s'})K_{1}(x_{s'})+C^{0}_{s'}K_{0}(x_{s'})\right]\,,
 \end{multline}
 \begin{align}
     \label{arbg:2}
-    C_{1}^{\pm}(x_{\pm}) &= \left[\frac{1}{2}-\left(\frac{1}{2}\mp\frac{g}{4}\right)\left(1+\frac{b^2_0}{12x^2_\pm}\right)\right]x_\pm\,,\\
-    C_{0}^{\pm} &= \left[\frac{1}{6}-\left(\frac{1}{4}\mp\frac{g}{8}\right)\right]b_0\,.
+    C^{1}_{s'}(x_{\pm}) &= \left[\frac{1}{2}-\left(\frac{1}{2}-\frac{g}{4}s'\right)\left(1+\frac{b^2_0}{12x^{2}_{s'}}\right)\right]x_{s'}\,,\\
+    C^{0}_{s'} &= \left[\frac{1}{6}-\left(\frac{1}{4}-\frac{g}{8}s'\right)\right]b_0\,.
 \end{align}
-where $x_{\pm}$ was previously defined in \req{xfunc}.
+where $x_{s'}$ was previously defined in \req{xfunc}.
 
 In \rf{fig:gfac}, we plot the magnetization as a function of $g$-factor between $4>g>-4$ for temperatures $T=\{511,\ 300,\ 150,\ 70\}\keV$. We find that the magnetization is sensitive to the value of AMM revealing a transition point between paramagnetic $({\mathfrak M}>0)$ and diamagnetic gasses $({\mathfrak M}<0)$. 
 
@@ -520,7 +513,7 @@ While not shown, if \rf{fig:momentperlepton} was extended to lower temperatures,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Spin potential and ferromagnetism}
 \label{sec:ferro}
-\noindent Up to this point, we have neglected the impact that a nonzero spin potential $\eta\neq0$ (and thus $\xi\neq1$) would have on the primordial $e^{+}e^{-}$ plasma magnetization. In the limit that $(m_{e}/T)^2\gg b_0$ the magnetization for $g=2$ given in \req{g2magplus} and \req{g2magminus} is entirely controlled by the spin fugacity $\xi$ asymmetry generated by the spin potential $\eta$ yielding up to first order ${\cal O}(b_{0})$ in magnetic scale
+\noindent Up to this point, we have neglected the impact that a nonzero spin potential $\eta\neq0$ (and thus $\xi\neq1$) would have on the primordial $e^{+}e^{-}$ plasma magnetization. In the limit that $(m_{e}/T)^2\gg b_0$ the magnetization given in \req{arbg:1} and \req{arbg:2} is entirely controlled by the spin fugacity $\xi$ asymmetry generated by the spin potential $\eta$ yielding up to first order ${\cal O}(b_{0})$ in magnetic scale
 \begin{multline}
  \label{ferro}
  \lim_{b_{0}\rightarrow0}{\mathfrak M}=\frac{g}{2}\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\sinh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}\left[\frac{m_{e}}{T}K_{1}\left(\frac{m_{e}}{T}\right)\right]\\
