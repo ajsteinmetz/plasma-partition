@@ -19,6 +19,7 @@
 \usepackage{epstopdf}
 \usepackage{comment}
 \usepackage{xcolor}
+\usepackage{multirow}
 %\usepackage{float}
 %\usepackage{doi}
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
@@ -102,7 +103,7 @@ we consider the magnetic properties of the $e^{+}e^{-}$ pair plasma in the tempe
 
 This is assisted by the fact that antiparticles $(e^{+})$ have the opposite sign of charge, and thus magnetic moment, compared to particles $(e^{-})$. Therefore in an $e^{+}e^{-}$ pair plasma, net magnetization can be associated with opposite spin orientations for particles and antiparticles without the accompaniment of a net angular momentum in the volume considered. This is of course very different from the the matter dominated universe arising below $T\simeq20\keV$ which includes the current epoch. Our findings are summarized in \rsec{sec:conclusions} and further research avenues are commented upon.
 
-As the Universe evolved, the primordial magnetization due to relativistic spin polarization has further dynamical consequences which are beyond the scope of this presentation: The rapid $10^{8}$ drop in $e^{+}e^{-}$ abundance within the temperature range $100\keV>T>21\keV$ shown in \rf{fig:densityratio} could be inducing dynamical currents preserving (comoving) magnetic flux in the emerging $p,\alpha,e^-$ plasma. Large primordial polarization sourced magnetic fields could therefore lead to plasma flow maintaining fields. Such rotational dynamics, baryon inhomogeneities could in turn produce anisotropies in the cosmic microwave background (CMB)~\cite{Jedamzik:2013gua,Abdalla:2022yfr}.
+As the Universe evolved, the primordial magnetization due to relativistic spin polarization has further dynamical consequences which are beyond the scope of this presentation: The rapid $10^{8}$ drop in $e^{+}e^{-}$ abundance within the temperature range $100\keV>T>21\keV$ shown in \rf{fig:densityratio} could be inducing dynamical currents preserving (comoving) magnetic flux in the emerging $p,\alpha,e^{-}$ plasma. Large primordial polarization sourced magnetic fields could therefore lead to plasma flow maintaining fields. Such rotational dynamics, baryon inhomogeneities could in turn produce anisotropies in the cosmic microwave background (CMB)~\cite{Jedamzik:2013gua,Abdalla:2022yfr}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Short survey of observational cosmic magnetism}
@@ -127,7 +128,7 @@ The electron-to-baryon density ratio $n_{e^{-}}/n_{B}$ is shown in \rf{fig:densi
 
 Conversion of the dense $e^{+}e^{-}$ pair plasma into photons reheated the photon background~\cite{Birrell:2014uka} separating the photon and neutrino temperatures. The $e^{+}e^{-}$ annihilation and photon reheating period lasted no longer than an afternoon lunch break. Because of charge neutrality, the post-annihilation comoving ratio $n_{e^{-}}/n_{B}=0.87$~\cite{Rafelski:2023emw} is slightly offset from unity in~\rf{fig:densityratio} by the presence of bound neutrons in $\alpha$ particles and other neutron containing light elements produced during BBN epoch. 
 
-To obtain a quantitative description of the above evolution, we study the bulk properties of the relativistic charged/magnetic gasses in a nearly homogeneous and isotropic primordial universe via the thermal Fermi-Dirac or Bose distributions. For matter $(\sigma=+1)$ and antimatter $(\sigma=-1)$ particles, a nonzero relativistic chemical potential $\mu_{\sigma}=\sigma\mu$ is caused by an imbalance of matter and antimatter. While the primordial electron-positron plasma era was overall charge neutral, there was a small asymmetry in the charged leptons from baryon asymmetry~\cite{Fromerth:2012fe,Canetti:2012zc} in the universe. Consideration of reactions such as $e^+e^-\leftrightarrow\gamma\gamma$ constrains the chemical potentials of electrons and positrons~\cite{Elze:1980er} as 
+To obtain a quantitative description of the above evolution, we study the bulk properties of the relativistic charged/magnetic gasses in a nearly homogeneous and isotropic primordial universe via the thermal Fermi-Dirac or Bose distributions. For matter $(\sigma=+1)$ and antimatter $(\sigma=-1)$ particles, a nonzero relativistic chemical potential $\mu_{\sigma}=\sigma\mu$ is caused by an imbalance of matter and antimatter. While the primordial electron-positron plasma era was overall charge neutral, there was a small asymmetry in the charged leptons from baryon asymmetry~\cite{Fromerth:2012fe,Canetti:2012zc} in the universe. Consideration of reactions such as $e^{+}e^{-}\leftrightarrow\gamma\gamma$ constrains the chemical potentials of electrons and positrons~\cite{Elze:1980er} as 
 \begin{align}
  \label{cpotential}
  \mu\equiv\mu_{e^{-}}=-\mu_{e^{+}}\,,\qquad
@@ -213,16 +214,17 @@ where we introduced the dimensionless energy $\varepsilon^{n}_{\sigma,s}$ and ef
 
 \begin{table}
     \centering
-    \begin{tabular}{|c||c|c|} 
-        \hline
-        $\sigma/s$ & aligned: $+1$ & anti-aligned: $-1$ \\ 
-        \hline\hline
-        electron: $+1$ & $+|\vec{\mu}\cdot\vec{\cal B}|$ & $-|\vec{\mu}\cdot\vec{\cal B}|$ \\ 
-        \hline
-        positron: $-1$ & $-|\vec{\mu}\cdot\vec{\cal B}|$ & $+|\vec{\mu}\cdot\vec{\cal B}|$ \\
-        \hline
+    \begin{tabular}{ r|c|c| }
+    \multicolumn{1}{r}{}
+     &  \multicolumn{1}{c}{aligned: $s=+1$}
+     & \multicolumn{1}{c}{anti-aligned: $s=-1$} \\
+    \cline{2-3}
+    electron: $\sigma=+1$ & $+|\vec{\mu}\cdot\vec{\cal B}|$ & $-|\vec{\mu}\cdot\vec{\cal B}|$ \\
+    \cline{2-3}
+    positron: $\sigma=-1$ & $-|\vec{\mu}\cdot\vec{\cal B}|$ & $+|\vec{\mu}\cdot\vec{\cal B}|$ \\
+    \cline{2-3}
     \end{tabular}
-    \caption{Organization of matter-antimatter $(\sigma)$ and polarization $(s)$ states with respect to the sign of the magnetic dipole energy.}
+        \caption{Organization of matter-antimatter $(\sigma)$ and polarization $(s)$ states with respect to the sign of the magnetic dipole energy.}
     \label{tab:1}
 \end{table}
 
@@ -516,8 +518,8 @@ While not shown, if \rf{fig:momentperlepton} was extended to lower temperatures,
 \noindent Up to this point, we have neglected the impact that a nonzero spin potential $\eta\neq0$ (and thus $\xi\neq1$) would have on the primordial $e^{+}e^{-}$ plasma magnetization. In the limit that $(m_{e}/T)^2\gg b_0$ the magnetization given in \req{arbg:1} and \req{arbg:2} is entirely controlled by the spin fugacity $\xi$ asymmetry generated by the spin potential $\eta$ yielding up to first order ${\cal O}(b_{0})$ in magnetic scale
 \begin{multline}
  \label{ferro}
- \lim_{b_{0}\rightarrow0}{\mathfrak M}=\frac{g}{2}\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\sinh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}\left[\frac{m_{e}}{T}K_{1}\left(\frac{m_{e}}{T}\right)\right]\\
- +b_{0}\left(g^{2}-\frac{4}{3}\right)\frac{e^{2}}{8\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\cosh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}K_{0}\left(\frac{m_{e}}{T}\right)\\
+ \lim_{m_{e}^{2}/T^{2}\gg b_0}{\mathfrak M}=\frac{g}{2}\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\sinh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}\left[\frac{m_{e}}{T}K_{1}\left(\frac{m_{e}}{T}\right)\right]\\
+ +b_{0}\left(g^{2}-\frac{4}{3}\right)\frac{e^{2}}{8\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\cosh{\frac{\eta}{T}}\cosh{\frac{\mu}{T}}K_{0}\left(\frac{m_{e}}{T}\right)
  +{\cal O}\left(b_{0}^{2}\right)
 \end{multline}
 
@@ -525,14 +527,11 @@ Given \req{ferro}, we can understand the spin potential as a kind of \lq ferroma
 
 We suggest that a variety of physics could produce a small nonzero $\eta$ within a domain of the gas. Such asymmetries could also originate statistically as while the expectation value of free gas polarization is zero, the variance is likely not.
 
-As $\sinh{\eta/T}$ is an odd function, the sign of $\eta$ also controls the alignment of the magnetization. In the high temperature limit \req{ferro} with strictly $b_{0}=0$ assumes a form of to first order in ${\cal O}(m_{e}/T)$ for brevity
-\begin{multline}
+As $\sinh{\eta/T}$ is an odd function, the sign of $\eta$ also controls the alignment of the magnetization. In the high temperature limit \req{ferro} with strictly $b_{0}=0$ assumes a form of to lowest order for brevity
+\begin{align}
  \label{hiTferro}
- \lim_{m_{e}/T\rightarrow0}{\mathfrak M}\vert_{b_{0}=0}=\frac{g}{2}\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\frac{\eta}{T}\\
- +\frac{g}{4}\frac{e^{2}}{\pi^{2}}\frac{\eta}{T}\left(\frac{1}{3}\frac{\eta^{2}}{m_{e}^{2}}+\ln\left(\frac{m_{e}}{2T}\right)+\gamma_{\rm E}-\frac{1}{2}\right)\\
- +{\cal O}\left(\frac{m_{e}}{T}\right)^{3}\,,
-\end{multline}
-where $\gamma_{\rm E}$ is Euler's constant.
+ \lim_{m_{e}/T\rightarrow0}{\mathfrak M}\vert_{b_{0}=0}=\frac{g}{2}\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\frac{\eta}{T}\,,
+\end{align}
 
 While the limit in \req{hiTferro} was calculated in only the Boltzmann limit, it is noteworthy that the high temperature (and $m\rightarrow0$) limit of Fermi-Dirac distributions only differs from the Boltzmann result by a proportionality factor. 
 
