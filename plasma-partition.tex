@@ -50,6 +50,12 @@
 \newcommand{\rt}[1]{Table~{\ref{#1}}}
 \newcommand{\rsec}[1]{Sect.\,{\ref{#1}}}
 
+% Struts for tables 
+\newcommand\Tstrut{\rule{0pt}{2.6ex}}       % "top" strut
+\newcommand\Bstrut{\rule[-0.9ex]{0pt}{0pt}} % "bottom" strut
+\newcommand{\TBstrut}{\Tstrut\Bstrut} % top&bottom struts
+
+
 % Useful macros for annotation
 \newcommand*{\xred}{\color{red}}
 \newcommand*{\xblue}{\color{blue}}
@@ -65,7 +71,7 @@
 \affiliation{Department of Physics, The University of Arizona, Tucson, AZ 85721, USA}
 
 %\date{\today}
-\date{August 20, 2023}
+\date{August 22, 2023}
 
 \begin{abstract}
 We explore the hypothesis that the abundant presence of relativistic antimatter (positrons) in the primordial universe is responsible for the inter-galactic magnetic fields we observe in the universe today. We evaluate the magnetic properties of the primordial electron-positron $e^{+}e^{-}$ plasma, and obtain in quantitative terms the magnitude of the relatively small $e^{+}e^{-}$ polarization asymmetry required to produce a consistent self-magnetization.
@@ -128,7 +134,7 @@ The electron-to-baryon density ratio $n_{e^{-}}/n_{B}$ is shown in \rf{fig:densi
 
 Conversion of the dense $e^{+}e^{-}$ pair plasma into photons reheated the photon background~\cite{Birrell:2014uka} separating the photon and neutrino temperatures. The $e^{+}e^{-}$ annihilation and photon reheating period lasted no longer than an afternoon lunch break. Because of charge neutrality, the post-annihilation comoving ratio $n_{e^{-}}/n_{B}=0.87$~\cite{Rafelski:2023emw} is slightly offset from unity in~\rf{fig:densityratio} by the presence of bound neutrons in $\alpha$ particles and other neutron containing light elements produced during BBN epoch. 
 
-To obtain a quantitative description of the above evolution, we study the bulk properties of the relativistic charged/magnetic gasses in a nearly homogeneous and isotropic primordial universe via the thermal Fermi-Dirac or Bose distributions. For matter $(\sigma=+1)$ and antimatter $(\sigma=-1)$ particles, a nonzero relativistic chemical potential $\mu_{\sigma}=\sigma\mu$ is caused by an imbalance of matter and antimatter. While the primordial electron-positron plasma era was overall charge neutral, there was a small asymmetry in the charged leptons from baryon asymmetry~\cite{Fromerth:2012fe,Canetti:2012zc} in the universe. Consideration of reactions such as $e^{+}e^{-}\leftrightarrow\gamma\gamma$ constrains the chemical potentials of electrons and positrons~\cite{Elze:1980er} as 
+To obtain a quantitative description of the above evolution, we study the bulk properties of the relativistic charged/magnetic gasses in a nearly homogeneous and isotropic primordial universe via the thermal Fermi-Dirac or Bose distributions. For matter $(e^{-};\ \sigma=+1)$ and antimatter $(e^{+};\ \sigma=-1)$ particles, a nonzero relativistic chemical potential $\mu_{\sigma}=\sigma\mu$ is caused by an imbalance of matter and antimatter. While the primordial electron-positron plasma era was overall charge neutral, there was a small asymmetry in the charged leptons from baryon asymmetry~\cite{Fromerth:2012fe,Canetti:2012zc} in the universe. Reactions such as $e^{+}e^{-}\leftrightarrow\gamma\gamma$ constrains the chemical potential of electrons and positrons~\cite{Elze:1980er} as 
 \begin{align}
  \label{cpotential}
  \mu\equiv\mu_{e^{-}}=-\mu_{e^{+}}\,,\qquad
@@ -145,17 +151,24 @@ In \req{chargeneutrality}, $n_{p}$ is the observed total number density of proto
 
 The abundance of baryons is itself fixed by the known abundance relative to photons~\cite{ParticleDataGroup:2022pth} and we employed the contemporary recommended value $n_B/n_\gamma=6.09\times 10^{-10}$. The resulting chemical potential needs to be evaluated carefully to obtain the behavior near to $T_{\rm split}=20.3\keV$ where the relatively small value of chemical potential $\mu$ rises rapidly so that positrons vanish from the particle inventory of the universe while nearly one electron per baryon remains. The detailed solution of this problem is found in Refs.\;\cite{Fromerth:2012fe,Rafelski:2023emw} leading to the results shown in \rf{fig:densityratio}. These results are obtained allowing for Fermi-Dirac and Bose statistics, however it is often numerically sufficient to consider the Boltzmann distribution limit; see \rsec{sec:paradia}.
 
-In the presence of a magnetic field ${\cal B}$ along a primary axis, there is some modification of the usual relativistic fermion partition function which is now given by
-\begin{multline}
- \label{partition:1}
- \ln{\cal Z}_{e^{+}e^{-}}=\frac{e{\cal B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm1}\sum_{s}^{\pm1}\sum_{n=0}^{\infty}\int_{-\infty}^{\infty}{\rm d}p_{z}\\
- \left[\ln\left(1+\lambda_{\sigma}\xi_{\sigma,s}\exp\left(-\frac{E}{T}\right)\right)\right]\,
-\end{multline}
+The partition function of the $e^{+}e^{-}$ plasma can be understood as the sum of four gaseous species
 \begin{align}
-    \label{partition:2}    
-    \lambda_{\sigma}\xi_{s} = \exp{\frac{\mu_{\sigma}+\eta_{\sigma,s}}{T}}\,,
+    \label{partition:0}    
+    \ln{\cal Z}_{e^{+}e^{-}}=\ln{\cal Z}_{e^{+}}^{\uparrow}+\ln{\cal Z}_{e^{+}}^{\downarrow}+\ln{\cal Z}_{e^{-}}^{\uparrow}+\ln{\cal Z}_{e^{-}}^{\downarrow}\,,
 \end{align}
-where $p_{z}$ is the momentum parallel to the field axis and electric charge is $e\equiv q_{e^{+}}=-q_{e^{-}}$. The index $\sigma$ in \req{partition:1} is a sum over electron and positron states while $s$ is a sum over polarizations. The index $s$ refers to the spin along the field axis: parallel $(s=+1)$ or anti-parallel $(s=-1)$ for both particle and antiparticle species. The quantum numbers of the energy eigenstate $E$ will be elaborated on in \rsec{sec:thermal}.
+of electrons and positrons of both polarizations. In the presence of a magnetic field ${\cal B}$ along a primary axis, there is some modification of the usual relativistic fermion partition function which is now given by
+\begin{align}
+    \begin{split}
+         \label{partition:1}
+         \ln{\cal Z}_{e^{+}e^{-}}&=\frac{e{\cal B}V}{(2\pi)^{2}}\sum_{\sigma}^{\pm1}\sum_{s}^{\pm1}\sum_{n=0}^{\infty}\int_{-\infty}^{\infty}{\rm d}p_{z}\\
+         &\left[\ln\left(1+\lambda_{\sigma}\xi_{\sigma,s}\exp\left(-\frac{E}{T}\right)\right)\right]\,        
+    \end{split}\\
+    \label{partition:2}    
+    \lambda_{\sigma}\xi_{s} &= \exp{\frac{\mu_{\sigma}+\eta_{\sigma,s}}{T}}\,,
+\end{align}
+where $p_{z}$ is the momentum parallel to the field axis and electric charge is $e\equiv q_{e^{+}}=-q_{e^{-}}$. The index $\sigma$ in \req{partition:1} is a sum over electron and positron states while $s$ is a sum over polarizations. The index $s$ refers to the spin along the field axis: parallel $(\uparrow;\ s=+1)$ or anti-parallel $(\downarrow;\ s=-1)$ for both particle and antiparticle species.
+
+As the gas is electrically neutral, we will for the time being ignore charge-charge interactions. There is an additional deformation of the distribution from particle creation and destruction correlations; see Ch.~11 of \cite{Letessier:2002ony} in the context of quark flavors. These will be not included as the considering volume is always large. The quantum numbers of the energy eigenstate $E$ will be elaborated on in \rsec{sec:thermal}.
 
 We are explicitly interesting in small asymmetries such as baryon excess over antibaryons, or one polarization over another. These are described by \req{partition:2} as the following two fugacities:
 \begin{itemize}
@@ -199,7 +212,7 @@ To evaluate magnetic properties of the thermal $e^{+}e^{-}$ pair plasma we take 
  \label{kgp}
  E^{n}_{\sigma,s}(p_{z},{\cal B})=\sqrt{m_{e}^{2}+p_{z}^{2}+e{\cal B}\left(2n+1+\frac{g}{2}\sigma s\right)}\,,
 \end{align}
-where $n\in0,1,2,\ldots$ is the Landau orbital quantum number. \req{kgp} differentiates between electrons and positrons which is to ensure the correct non-relativistic limit is reached; see \rt{tab:1}. The parameter $g$ is the gyro-magnetic ($g$-factor) of the particle. Following the conventions found in \cite{Tiesinga:2021myr}, we set $g\equiv g_{e^{+}}=-g_{e^{-}}>0$ such that electrons and positrons have opposite $g$-factors and opposite magnetic moments.
+where $n\in0,1,2,\ldots$ is the Landau orbital quantum number. \req{kgp} differentiates between electrons and positrons which is to ensure the correct non-relativistic limit is reached; see \rf{tab:1}. The parameter $g$ is the gyro-magnetic ($g$-factor) of the particle. Following the conventions found in \cite{Tiesinga:2021myr}, we set $g\equiv g_{e^{+}}=-g_{e^{-}}>0$ such that electrons and positrons have opposite $g$-factors and opposite magnetic moments.
 
 As statistical properties depend on the characteristic Boltzmann factor $E/T$, another interpretation of \req{tbscale} in the context of energy eigenvalues (such as those given in \req{kgp}) is the preservation of magnetic moment energy relative to momentum under adiabatic cosmic expansion.
 
@@ -215,15 +228,15 @@ where we introduced the dimensionless energy $\varepsilon^{n}_{\sigma,s}$ and ef
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.3\textwidth]{plots/schematic.png}
+    \includegraphics[width=0.4\textwidth]{plots/schematic.png}\Bstrut\\
     \begin{tabular}{ r|c|c| }
     \multicolumn{1}{r}{}
      &  \multicolumn{1}{c}{aligned: $s=+1$}
      & \multicolumn{1}{c}{anti-aligned: $s=-1$} \\
     \cline{2-3}
-    electron: $\sigma=+1$ & $+|\vec{\mu}\cdot\vec{\cal B}|$ & $-|\vec{\mu}\cdot\vec{\cal B}|$ \\
+    electron: $\sigma=+1$ & $+|\vec{\mu}\cdot\vec{\cal B}|$ & $-|\vec{\mu}\cdot\vec{\cal B}|$ \TBstrut\\
     \cline{2-3}
-    positron: $\sigma=-1$ & $-|\vec{\mu}\cdot\vec{\cal B}|$ & $+|\vec{\mu}\cdot\vec{\cal B}|$ \\
+    positron: $\sigma=-1$ & $-|\vec{\mu}\cdot\vec{\cal B}|$ & $+|\vec{\mu}\cdot\vec{\cal B}|$ \TBstrut\\
     \cline{2-3}
     \end{tabular}
         \caption{Organizational schematic of matter-antimatter $(\sigma)$ and polarization $(s)$ states with respect to the sign of the magnetic dipole energy.}
@@ -240,14 +253,14 @@ In general, modifications due to quantum statistical phase-space reduction for f
 \label{sec:paradia}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent We will proceed in this section with the Boltzmann approximation for the limit where $T\lesssim m_e$. The partition function shown in equation \req{partition:1} can be rewritten removing the logarithm as
-\begin{multline}
- \label{partitionpower:1}
- \ln{{\cal Z}_{e^{+}e^{-}}}=\frac{e{\cal B}V}{(2\pi)^{2}}\sum_{\sigma,s}^{\pm1}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}{\rm d}p_{z}\\
- \frac{(-1)^{k+1}}{k}\exp\left({k\frac{\sigma\mu+\sigma s\eta-{\tilde m}_{\sigma,s}\varepsilon^{n}_{\sigma,s}}{T}}\right)\,,
-\end{multline}
 \begin{align}
- \label{bapprox} 
- \sigma\mu+\sigma s\eta-{\tilde m}_{\sigma,s}\varepsilon_{\sigma,s}^{n}<0\,,
+\begin{split}
+\label{partitionpower:1}
+\ln{{\cal Z}_{e^{+}e^{-}}}&=\frac{e{\cal B}V}{(2\pi)^{2}}\sum_{\sigma,s}^{\pm1}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}{\rm d}p_{z}\\
+&\frac{(-1)^{k+1}}{k}\exp\left({k\frac{\sigma\mu+\sigma s\eta-{\tilde m}_{\sigma,s}\varepsilon^{n}_{\sigma,s}}{T}}\right)\,,    
+\end{split}\\
+\label{bapprox} 
+&\sigma\mu+\sigma s\eta-{\tilde m}_{\sigma,s}\varepsilon_{\sigma,s}^{n}<0\,,
 \end{align}
 which is well behaved as long as the factor in \req{bapprox} remains negative. We evaluate the sums over $\sigma$ and $s$ as
 \begin{multline}
@@ -258,7 +271,7 @@ which is well behaved as long as the factor in \req{bapprox} remains negative. W
     +\exp\left(k\frac{-\mu-\eta}{T}\right)\exp\left(-k\frac{{\tilde m}_{-,+}\varepsilon_{-,+}^{n}}{T}\right)\\
     +\left.\exp\left(k\frac{-\mu+\eta}{T}\right)\exp\left(-k\frac{{\tilde m}_{-,-}\varepsilon_{-,-}^{n}}{T}\right)\right)
 \end{multline}
-We note from \rt{tab:1} that the first and forth terms and the second and third terms share the same energies via
+We note from \rf{tab:1} that the first and forth terms and the second and third terms share the same energies via
 \begin{align}
     \label{partitionpower:3}
     \varepsilon_{+,+}^{n}=\varepsilon_{-,-}^{n}\,,\qquad
@@ -279,13 +292,13 @@ with dimensionless energy, polarization mass, and polarization redefined in term
 \end{gather}
 
 We introduce the modified Bessel function $K_{\nu}$ (see Ch. 10 of~\cite{Letessier:2002ony}) of the second kind
-\begin{multline}
- \label{besselk}
- K_{\nu}\left(\frac{m}{T}\right)=\frac{\sqrt{\pi}}{\Gamma(\nu-1/2)}\frac{1}{m}\left(\frac{1}{2mT}\right)^{\nu-1}\\
- \int_{0}^{\infty}{\rm d}p\,p^{2\nu-2}\exp\left({-\frac{m\varepsilon}{T}}\right)\,,
-\end{multline}
 \begin{align}
- \nu>1/2\,,\qquad\varepsilon=\sqrt{1+p^{2}/m^{2}}\,,
+\begin{split}
+\label{besselk}
+K_{\nu}\left(\frac{m}{T}\right)&=\frac{\sqrt{\pi}}{\Gamma(\nu-1/2)}\frac{1}{m}\left(\frac{1}{2mT}\right)^{\nu-1}\\
+&\int_{0}^{\infty}{\rm d}p\,p^{2\nu-2}\exp\left({-\frac{m\varepsilon}{T}}\right)\,,
+\end{split}\\
+\nu&>1/2\,,\qquad\varepsilon=\sqrt{1+p^{2}/m^{2}}\,,
 \end{align}
 allowing us to rewrite the integral over momentum in \req{partitionpower:4} as
 \begin{align}
@@ -303,27 +316,28 @@ The standard Boltzmann distribution is obtained by summing only $k=1$ and neglec
 where ${\cal R}$ is the resulting power series and error remainder of the integration defined in terms of Bernoulli polynomials. Euler-Maclaurin integration is rarely convergent, and in this case serves only as an approximation within the domain where the error remainder is small and bounded; see Ref.~\cite{greiner2012thermodynamics} for the non-relativistic case. In this analysis, we keep the zeroth and first order terms in the Euler-Maclaurin formula. We note that regularization of the excess terms in \req{eulermaclaurin} is done in the context of strong field QED~\cite{greiner2008quantum} though that is outside our scope.
 
 After truncation of the series and error remainder and combining \req{partitionpower:1} through \req{eulermaclaurin}, the partition function can then be written in terms of modified Bessel $K_{\nu}$ functions of the second kind, yielding
-\begin{multline}
- \label{boltzmann}
- \ln{\cal Z}_{e^{+}e^{-}}\simeq\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm1}\left[\xi_{s'}\cosh{\frac{\mu}{T}}\right]\\
- \left(x_{s'}^{2}K_{2}(x_{s'})+\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})+\frac{b_{0}^{2}}{12}K_{0}(x_{s'})\right)\,,
-\end{multline}
 \begin{align}
+    \begin{split}
+        \label{boltzmann}
+        \ln{\cal Z}_{e^{+}e^{-}}&\simeq\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm1}\left[\xi_{s'}\cosh{\frac{\mu}{T}}\right]\\
+        &\left(x_{s'}^{2}K_{2}(x_{s'})+\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})+\frac{b_{0}^{2}}{12}K_{0}(x_{s'})\right)\,,
+    \end{split}\\
     \label{xfunc}
-    x_{s'}=\frac{{\tilde m}_{s'}}{T}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+b_{0}\left(1-\frac{g}{2}s'\right)}\,.
+    x_{s'}&=\frac{{\tilde m}_{s'}}{T}=\sqrt{\frac{m_{e}^{2}}{T^{2}}+b_{0}\left(1-\frac{g}{2}s'\right)}\,.
 \end{align}
 The latter two terms in \req{boltzmann} proportional to $b_{0}K_{1}$ and $b_{0}^{2}K_{0}$ are the uniquely magnetic terms present containing both spin and Landau orbital influences in the partition function. The $K_{2}$ term is analogous to the free Fermi gas~\cite{greiner2012thermodynamics} being modified only by spin effects.
 
 This \lq separation of concerns\rq\ can be rewritten as
 \begin{align}
- \label{spin}
- \ln{\cal Z}_{\rm S}=\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm1}\left[\xi_{s'}\cosh{\frac{\mu}{T}}\right]\left(x_{s'}^{2}K_{2}(x_{s'})\right)\,,
+     \label{spin}
+     \ln{\cal Z}_{\rm S}&=\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm1}\left[\xi_{s'}\cosh{\frac{\mu}{T}}\right]\left(x_{s'}^{2}K_{2}(x_{s'})\right)\,,\\
+    \begin{split}
+        \label{spinorbit}
+        \ln{\cal Z}_{\rm SO}&=\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm}\left[\xi_{s'}\cosh{\frac{\mu}{T}}\right]\\
+        &\left(\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})+\frac{b_{0}^{2}}{12}K_{0}(x_{s'})\right)\,,        
+    \end{split}
 \end{align}
-\begin{multline}
- \label{spinorbit}
- \ln{\cal Z}_{\rm SO}=\frac{T^{3}V}{\pi^{2}}\sum_{s'}^{\pm}\left[\xi_{s'}\cosh{\frac{\mu}{T}}\right]\\
- \left(\frac{b_{0}}{2}x_{s'}K_{1}(x_{s'})+\frac{b_{0}^{2}}{12}K_{0}(x_{s'})\right)\,,
-\end{multline}
+
 where the spin (S) and spin-orbit (SO) partition functions can be considered independently. When the magnetic scale $b_{0}$ is small, the spin-orbit term \req{spinorbit} becomes negligible leaving only paramagnetic effects in \req{spin} due to spin. In the non-relativistic limit, \req{spin} reproduces a quantum gas whose Hamiltonian is defined as the free particle (FP) Hamiltonian plus the magnetic dipole (MD) Hamiltonian which span two independent Hilbert spaces ${\cal H}_{\rm FP}\otimes{\cal H}_{\rm MD}$.
 
 Writing the partition function as \req{boltzmann} instead of \req{partitionpower:1} has the additional benefit that the partition function remains finite in the free gas $({\cal B}\rightarrow0)$ limit. This is because the free Fermi gas and \req{spin} are mathematically analogous to one another. As the Bessel $K_{\nu}$ functions are evaluated as functions of $x_{\pm}$ in \req{xfunc}, the \lq free\rq\ part of the partition $K_{2}$ is still subject to spin magnetization effects. In the limit where ${\cal B}\rightarrow0$, the free Fermi gas is recovered in both the Boltzmann approximation $k=1$ and the general case $\sum_{k=1}^{\infty}$.
@@ -462,15 +476,15 @@ Early universe conditions may also apply to some extreme stellar objects with ra
 The influence of AMM would be more relevant for the magnetization of baryon gasses since the $g$-factor for protons $(g\approx5.6)$ and neutrons $(g\approx3.8)$ are substantially different from $g=2$. The influence of AMM on the magnetization of thermal systems with large baryon content (neutron stars, magnetars, hypothetical bose stars, etc.) is therefore also of interest~\cite{Ferrer:2019xlr,Ferrer:2023pgq}.
 
 \req{g2magplus} and \req{g2magminus} with arbitrary $g$ reintroduced is given by
-\begin{multline}
-    \label{arbg:1}
-    {\mathfrak M}=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\sum_{s'}^{\pm1}\xi_{s'}\cosh{\frac{\mu}{T}}\\
-    \left[C^{1}_{s'}(x_{s'})K_{1}(x_{s'})+C^{0}_{s'}K_{0}(x_{s'})\right]\,,
-\end{multline}
 \begin{align}
-    \label{arbg:2}
-    C^{1}_{s'}(x_{\pm}) &= \left[\frac{1}{2}-\left(\frac{1}{2}-\frac{g}{4}s'\right)\left(1+\frac{b^2_0}{12x^{2}_{s'}}\right)\right]x_{s'}\,,\\
-    C^{0}_{s'} &= \left[\frac{1}{6}-\left(\frac{1}{4}-\frac{g}{8}s'\right)\right]b_0\,.
+\begin{split}
+\label{arbg:1}
+{\mathfrak M}&=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\sum_{s'}^{\pm1}\xi_{s'}\cosh{\frac{\mu}{T}}\\
+&\left[C^{1}_{s'}(x_{s'})K_{1}(x_{s'})+C^{0}_{s'}K_{0}(x_{s'})\right]\,,
+\end{split}\\
+\label{arbg:2}
+C^{1}_{s'}(x_{\pm}) &= \left[\frac{1}{2}-\left(\frac{1}{2}-\frac{g}{4}s'\right)\left(1+\frac{b^2_0}{12x^{2}_{s'}}\right)\right]x_{s'}\,,\\
+C^{0}_{s'} &= \left[\frac{1}{6}-\left(\frac{1}{4}-\frac{g}{8}s'\right)\right]b_0\,.
 \end{align}
 where $x_{s'}$ was previously defined in \req{xfunc}.
 
@@ -584,9 +598,11 @@ This is seen explicitly in~\rf{fig:polarswap} where we plot the numerical densit
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent In general, an additional physical constraint is required to fully determine $\mu$ and $\eta$ simultaneously as both potentials have mutual dependency (see \rsec{sec:ferro}). We note that spin polarizations are not required to be in balanced within a single species to preserve angular momentum. For magnetized domains or finite volumes, boundary/surface conditions would also need to be considered.
 
-Measurements of the CMB~\cite{Planck:2018vyg} indicates that the early universe was home to domains of slightly higher and lower baryon densities which resulted in the presence of galactic super-clusters, cosmic filaments, and great voids seen today. However, the CMB, as measured today, is blind to the localized inhomogeneities required for gravity to begin galaxy and supermassive black hole formation. Such acute inhomogeneities distributed like a dust~\cite{Grayson:2023flr} in the plasma would make the proton density sharply and spatially dependant $n_{p}\rightarrow n_{p}(x)$ which would directly affect the potentials $\mu(x)$ and $\eta(x)$ and thus the density of electrons and positrons locally. This suggests that $e^{+}e^{-}$ may play a role in the initial seeding of gravitationally collapsing systems.
+The CMB~\cite{Planck:2018vyg} indicates that the early universe was home to domains of slightly higher and lower baryon densities which resulted in the presence of galactic super-clusters, cosmic filaments, and great voids seen today. However, the CMB, as measured today, is blind to the localized inhomogeneities required for gravity to begin galaxy and supermassive black hole formation.
 
-If the primordial plasma were home to such small localized magnetic domains, the associated nonzero local angular momentum within these domains would provide a natural mechanism for the formation of rotating galaxies today. Recent measurements by the James Webb Space Telescope (JWST)~\cite{Yan:2022sxd,adams2023discovery,arrabal2023spectroscopic} indicate that galaxy formation began surprisingly early at large redshift values of $z\gtrsim10$ within the first 500 million years of the universe requiring gravitational collapse to begin in a hotter environment than expected. Additionally the observation of supermassive black holes already present~\cite{CEERSTeam:2023qgy} in this same high redshift period (with millions of solar masses) indicates the need for exceptionally local high density regions in the early universe whose generation is not yet explained and likely need to exist long before the recombination epoch.
+Such acute inhomogeneities distributed like a dust~\cite{Grayson:2023flr} in the plasma would make the proton density sharply and spatially dependant $n_{p}\rightarrow n_{p}(x)$ which would directly affect the potentials $\mu(x)$ and $\eta(x)$ and thus the density of electrons and positrons locally. This suggests that $e^{+}e^{-}$ may play a role in the initial seeding of gravitationally collapsing systems. If the primordial plasma were home to such small localized magnetic domains, the associated nonzero local angular momentum within these domains would provide a natural mechanism for the formation of rotating galaxies today.
+
+Recent measurements by the James Webb Space Telescope (JWST)~\cite{Yan:2022sxd,adams2023discovery,arrabal2023spectroscopic} indicate that galaxy formation began surprisingly early at large redshift values of $z\gtrsim10$ within the first 500 million years of the universe requiring gravitational collapse to begin in a hotter environment than expected. Additionally the observation of supermassive black holes already present~\cite{CEERSTeam:2023qgy} in this same high redshift period (with millions of solar masses) indicates the need for exceptionally local high density regions in the early universe whose generation is not yet explained and likely need to exist long before the recombination epoch.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary and Outlook}
