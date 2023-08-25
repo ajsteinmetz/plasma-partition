@@ -89,7 +89,7 @@ We explore the hypothesis that the abundant presence of relativistic antimatter 
 
 We investigate the hypothesis that the observed intergalactic magnetic fields (IGMF) predate the recombination epoch. In this work, IGMF will refer to experimentally observed intergalactic fields of any origin while primordial magnetic fields (PMF) refers to fields generated via early universe processes possibly as far back as inflation.
 
-We consider in this work a novel hypothesis that the magnetization of the early universe is driven by relativistic spin paramagnetism originating in the dense electron-positron $e^{+}e^{-}$ plasma shown in \rf{fig:densityratio} in terms of the antimatter (positron) abundance ratio to the prevailing baryon density. Our hypothesis coincidentally occurs around the era of Big Bang Nucleosynthesis (BBN). Electrons and positrons (having the largest magnetic moments in nature) in the pre-BBN early universe could induce a magnetic field in presence of a tiny spin orientation polarization. Since electrons and positrons have opposite magnetic moments, the induced magnetization does not entail a net local spin density statistical average.
+We consider in this work a novel hypothesis that the magnetization of the early universe is driven by relativistic spin paramagnetism originating in the dense electron-positron $e^{+}e^{-}$ plasma shown in \rf{fig:densityratio} in terms of the antimatter (positron) abundance ratio to the prevailing baryon density. Our hypothesis coincidentally occurs around the era $(T\sim80\keV)$ of Big Bang Nucleosynthesis (BBN). Electrons and positrons (having the largest magnetic moments in nature) in the pre-BBN early universe could induce a magnetic field in presence of a tiny spin orientation polarization. Since electrons and positrons have opposite magnetic moments, the induced magnetization does not entail a net local spin density statistical average.
 
 Moreover, the required polarization is tiny at high $T$ since the $e^{+}e^{-}$ pair abundance was nearly 450 million pairs per baryon above temperature $T>m_ec^2=511\keV$ dropping to about 100 million pairs per baryon at the pre-BBN temperature $T=100\keV$. Antimatter therefore dominated not only numerically over the baryon content, but also in terms of energy density and even in terms of mass density. Massive dark matter is a negligible component in the Universe in this considered epoch; see Fig.\,2 in Ref.~\cite{Rafelski:2023emw}. The abundance of $e^{+}e^{-}$  is discussed in more detail in \rsec{sec:abundance} where more details leading to results shown in \rf{fig:densityratio} are also presented. Pair abundance fully disappears below  $T=21\keV$ long after the BBN era ended. 
 
@@ -234,15 +234,27 @@ where we introduced the dimensionless energy $\varepsilon^{n}_{\sigma,s}$ and ef
      &  \multicolumn{1}{c}{aligned: $s=+1$}
      & \multicolumn{1}{c}{anti-aligned: $s=-1$} \\
     \cline{2-3}
-    electron: $\sigma=+1$ & $+|\vec{\mu}\cdot\vec{\cal B}|$ & $-|\vec{\mu}\cdot\vec{\cal B}|$ \TBstrut\\
+    electron: $\sigma=+1$ & $U_{\rm Mag}>0$ & $U_{\rm Mag}<0$ \TBstrut\\
     \cline{2-3}
-    positron: $\sigma=-1$ & $-|\vec{\mu}\cdot\vec{\cal B}|$ & $+|\vec{\mu}\cdot\vec{\cal B}|$ \TBstrut\\
+    positron: $\sigma=-1$ & $U_{\rm Mag}<0$ & $U_{\rm Mag}>0$ \TBstrut\\
+    \cline{2-3}
+    \end{tabular}\\\,\TBstrut\\
+    \begin{tabular}{ r|c|c| }
+    \multicolumn{1}{r}{}
+     &  \multicolumn{1}{c}{aligned: $s=+1$}
+     & \multicolumn{1}{c}{anti-aligned: $s=-1$} \\
+    \cline{2-3}
+    electron: $\sigma=+1$ & $+\mu+\eta$ & $+\mu-\eta$ \TBstrut\\
+    \cline{2-3}
+    positron: $\sigma=-1$ & $-\mu-\eta$ & $-\mu+\eta$ \TBstrut\\
     \cline{2-3}
     \end{tabular}
-        \caption{Organizational schematic of matter-antimatter $(\sigma)$ and polarization $(s)$ states with respect to the sign of the magnetic dipole energy.}
+    \caption{Organizational schematic of matter-antimatter $(\sigma)$ and polarization $(s)$ states with respect to the sign of the non-relativistic magnetic dipole energy $U_{\rm Mag}$ (obtainable from \req{kgp}) and the chemical $\mu$ and polarization $\eta$ potentials as seen in \req{partitionpower:2}.}
     \label{tab:1}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Add output to figure. E.g. List the fugacity combinations.
 
 Since we address the temperature interval $200\keV>T>20\keV$ where the effects of quantum Fermi statistics on the $e^{+}e^{-}$ pair plasma are relatively small, but the gas is still considered relativistic, we will employ the Boltzmann approximation to the partition function in \req{partition:1}. However, we extrapolate our results for presentation completeness up to $T\simeq 4m_{e}$.
 
@@ -279,7 +291,7 @@ We note from \rf{tab:1} that the first and forth terms and the second and third 
     \varepsilon_{+,-}^{n}<\varepsilon_{+,+}^{n}\,,
 \end{align}
 
-\req{partitionpower:3} allows us to reorganize the partition function with a new magnetization quantum number $s'$ which characterizes paramagnetic flux increasing states $(s'=+1)$ and diamagnetic flux decreasing states $(s'=-1)$. This recasts \req{partitionpower:2} as
+\req{partitionpower:3} allows us to reorganize the partition function with a new magnetization quantum number $s'$ which characterizes paramagnetic flux increasing states $(s'=+1)$ and diamagnetic flux decreasing states $(s'=-1)$. This recasts \req{partitionpower:2} as {\color{red}(maybe we should show $\epsilon_{s^\prime}=\epsilon_{++},\epsilon_{+-}$ clear )}
 \begin{multline}
     \label{partitionpower:4}
     \ln{{\cal Z}_{e^{+}e^{-}}}=\frac{e{\cal B}V}{(2\pi)^{2}}\sum_{s'}^{\pm1}\sum_{n=0}^{\infty}\sum_{k=1}^{\infty}\int_{-\infty}^{+\infty}{\rm d}p_{z}\frac{(-1)^{k+1}}{k}\\
@@ -607,20 +619,22 @@ Recent measurements by the James Webb Space Telescope (JWST)~\cite{Yan:2022sxd,a
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary and Outlook}
 \label{sec:conclusions}
-\noindent In this work, we explored the paramagnetic magnetization of the $e^{+}e^{-}$ thermal Fermi gas in the temperature range of the early universe between $2000\keV>T>20\keV$ expanding on our work in~\cite{Rafelski:2023emw}. The combination of strong magnetic fields, high matter-antimatter density, and relatively high temperatures (far higher than the Sun's core temperature~\cite{Bahcall:2000nu} of $T_{\odot}=1.37\keV$) makes this era of the universe unique in cosmology and astrophysics.
+\noindent Expanding on our work in~\cite{Rafelski:2023emw}, we explored the paramagnetic magnetization of the $e^{+}e^{-}$ thermal Fermi gas in the temperature range of the early universe between $2000\keV>T>20\keV$: At the lower limit far higher than the Sun's core temperature~\cite{Bahcall:2000nu} of $T_{\odot}=1.37\keV$ the last $e^{+}e^{-}$ pair disappeared. This era of the universe combines strong magnetic fields, high matter-antimatter density, and relatively high temperature well beyond reach of all laboratory and astrophysics environments.
 
-We determined that the electron/positron-to-baryon density ratio before BBN was $n_{e^{\pm}}/n_{B}=4.47\times10^{8}$. We showed that the primordial universe $e^{+}e^{-}$ plasma has paramagnetic properties when subjected to an external field. Our analysis shows this paramagnetism does not diminish in the distant past with high temperature unlike most magnetic phenomenon, but is enhanced due to
-\begin{itemize}
- \item[a.] the high density of electron-positron pairs which exist in the plasma during this era and
- \item[b.] the conservation of magnetic flux in an expanding universe which helps maintain the polarization of the plasma.
-\end{itemize}
-Despite this, the plasma is only ever weakly magnetized as most of the spins are highly disorganized.
+In this work we studied paramagnetic properties of the primordial universe $e^{+}e^{-}$ plasma. Our analysis shows that  $e^{+}e^{-}$  plasma paramagnetic response is dominated by the varying abundance of electron-positron pairs and decreases with decreasing $T$ unlike laboratory cases where number of magnetic particles is constant. 
 
-We introduced a statistical potential which characterizes the spin polarization within the gas. This model was then used to analyze the required polarization necessary to match the expected magnetic flux of the era if today's IGMF could be extrapolated. While this is an incomplete model, it does demonstrate that the early universe only required a small asymmetry in spin polarization to produce significant magnetic fields. We suggest further efforts to connect the bulk magnetization of a polarized gas to Amp{\`e}rian magnetization generated through currents and inhomogeneous flows. 
+Because $b_0$, the scaled magnetic field in the universe is unchanged, this implies conservation of magnetic flux. We showed how this can be  realized introducing spin polarization. Spin polarization within the $e^{+}e^{-}$ pair plasma is characterized introducing a chemical potential. We obtained the required primordial degree of spin polarization necessary to understand today's IGMF. Our study demonstrates that the early universe only required a small asymmetry in spin polarization to produce required magnetic fields. 
 
-Further extensions would be to improve the high temperature domain by computing the full partition function instead of the Boltzmann approximated form. At higher temperatures, more particles such as neutrinos would need to be included as they become thermally coupled. Adding in the baryons such as protons and neutrons may also be needed. Even in a universe with overall zero angular momentum, tiny localized imbalances in angular momentum in the primordial era likely consequences on observed large-scale structure today. 
+ 
+%Forward
+Our results can be both improved and lead to extension of present day paradigms. Addressing first high temperature domain, an  improvement  on the here presented results would be to introduce a full inventory of particles including neutrinos before these disappear or decouple at lower temperatures and to do this using  Fermi-Dirac and Bose-Einstein statistics instead of the Boltzmann approximation here employed.
 
-Recent measurements by the JWST indicate that large-scale structure, galactic, and supermassive black hole formation occurred earlier than expected which may indicate unusual matter agglomeration in even primordial eras. As the chemical potential of the $e^{+}e^{-}$ plasma is sensitive to the baryon density, any local spatial variations can effect magnetization substantially. Spin polarization domains may then provide the necessary seeds to generate collapsing (and rotating) cosmic structure and galaxies.
+Near to $T=80$\,keV just prior to BBN we have $4.47\times10^{8}$ $e^{+}e^{-}$ pairs per baryon and a magnetic field in range $10^{-4}$--$10^4$ Tesla. BBN thus occurs in an environment as different as can be imagined from the empty space network of nuclear reactions explored.  Our work creates the question in what way presence of a primordial magnetic field impacts BBN. The $e^{+}e^{-}$ pair plasma has been considered before, for contemporary study see Ref.\,\cite{Grayson:2023flr}.
+ 
+Below $T=20$\,keV the universe contents inventory is dominated by electrons, protons, and $\alpha$-particles. In order to conserve in time the magnetic flux originating in the polarized homogeneous $e^{+}e^{-}$ pair plasma a very different model will need to be developed allowing for fragmentation of the homogeneouse polarized $e^{+}e^{-}$ pair plasma universe into  polarization domains along with substitution of Gilbertian magnetic dipole moment source of magnetic field by Amp{\`e}rian kinetic current curl response.  
+The effort to connect the bulk magnetization due to Gilbertian by Amp{\`e}rian magnetization sources generated through currents and inhomogeneous flows will require creation of kinetic matter flow model  allowing for spin polarization. A mechanism could be found in the kinetic coupling between the two chemical potentials of  the $e^{+}e^{-}$ plasma. The local charge neutrality than creates response of the baryon density to magnetization. This model could provide mechanism  necessary  to generate collapsing (and rotating) cosmic structure and galaxies.
+
+The consideration of such primordial magnetic flux related  large scale structure is supported by the recognition of the very early large-scale structure, galactic, and supermassive black hole formation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \acknowledgments
