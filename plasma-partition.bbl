@@ -1,66 +1,31 @@
-\begin{thebibliography}{32}
+\begin{thebibliography}{48}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Giovannini(2004)]{giovannini2003magnetized}
-M.~Giovannini.
-\newblock {The Magnetized universe}.
-\newblock \emph{Int. J. Mod. Phys. D}, 13:\penalty0 391--502, 2004.
-\newblock \doi{10.1142/S0218271804004530}.
-
-\bibitem[Kronberg(1994)]{kronberg1994extragalactic}
-P.~P. Kronberg.
-\newblock Extragalactic magnetic fields.
-\newblock \emph{Reports on Progress in Physics}, 57\penalty0 (4):\penalty0 325,
-  1994.
-\newblock \doi{10.1088/0034-4885/57/4/001}.
-
-\bibitem[Gaensler et~al.(2004)Gaensler, Beck, and Feretti]{gaensler2004origin}
-B.~M. Gaensler, R.~Beck, and L.~Feretti.
-\newblock The origin and evolution of cosmic magnetism.
-\newblock \emph{New Astronomy Reviews}, 48\penalty0 (11-12):\penalty0
-  1003--1012, 2004.
-\newblock \doi{10.1016/j.newar.2004.09.003}.
-
-\bibitem[Durrer and Neronov(2013)]{durrer2013cosmological}
-R.~Durrer and A.~Neronov.
-\newblock Cosmological magnetic fields: their generation, evolution and
-  observation.
-\newblock \emph{The Astronomy and Astrophysics Review}, 21:\penalty0 1--109,
-  2013.
-\newblock \doi{10.1007/s00159-013-0062-7}.
-
-\bibitem[Batista and Saveliev(2021)]{batista2021gammaray}
-R.~A. Batista and A.~Saveliev.
-\newblock The gamma-ray window to intergalactic magnetism.
-\newblock \emph{Universe}, 7\penalty0 (7), 2021.
-\newblock ISSN 2218-1997.
-\newblock \doi{10.3390/universe7070223}.
-
-\bibitem[Neronov and Vovk(2010)]{neronov2010evidence}
+\bibitem[Neronov and Vovk(2010)]{Neronov:2010gir}
 A.~Neronov and I.~Vovk.
 \newblock Evidence for strong extragalactic magnetic fields from fermi
   observations of tev blazars.
 \newblock \emph{Science}, 328\penalty0 (5974):\penalty0 73--75, 2010.
 \newblock \doi{10.1126/science.1184192}.
 
-\bibitem[Taylor et~al.(2011)Taylor, Vovk, and Neronov]{taylor2011extragalactic}
+\bibitem[Taylor et~al.(2011)Taylor, Vovk, and Neronov]{Taylor:2011bn}
 A.~M. Taylor, I.~Vovk, and A.~Neronov.
 \newblock Extragalactic magnetic fields constraints from simultaneous gev--tev
   observations of blazars.
 \newblock \emph{Astronomy \& Astrophysics}, 529:\penalty0 A144, 2011.
 \newblock \doi{10.1051/0004-6361/201116441}.
 
-\bibitem[Pshirkov et~al.(2016)Pshirkov, Tinyakov, and Urban]{pshirkov2015new}
+\bibitem[Pshirkov et~al.(2016)Pshirkov, Tinyakov, and Urban]{Pshirkov:2015tua}
 M.~S. Pshirkov, P.~G. Tinyakov, and F.~R. Urban.
 \newblock {New limits on extragalactic magnetic fields from rotation measures}.
 \newblock \emph{Phys. Rev. Lett.}, 116\penalty0 (19):\penalty0 191302, 2016.
 \newblock \doi{10.1103/PhysRevLett.116.191302}.
 
-\bibitem[Jedamzik and Saveliev(2019)]{jedamzik2019stringent}
+\bibitem[Jedamzik and Saveliev(2019)]{Jedamzik:2018itu}
 K.~Jedamzik and A.~Saveliev.
 \newblock Stringent limit on primordial magnetic fields from the cosmic
   microwave background radiation.
@@ -69,7 +34,7 @@ K.~Jedamzik and A.~Saveliev.
 \newblock \doi{10.1103/PhysRevLett.123.021301}.
 
 \bibitem[Vernstrom et~al.(2021)Vernstrom, Heald, Vazza, Galvin, West,
-  Locatelli, Fornengo, and Pinetti]{vernstrom2021discovery}
+  Locatelli, Fornengo, and Pinetti]{Vernstrom:2021hru}
 T.~Vernstrom, G.~Heald, F.~Vazza, T.~J. Galvin, J.~L. West, N.~Locatelli,
   N.~Fornengo, and E.~Pinetti.
 \newblock {Discovery of magnetic fields along stacked cosmic filaments as
@@ -78,26 +43,147 @@ T.~Vernstrom, G.~Heald, F.~Vazza, T.~J. Galvin, J.~L. West, N.~Locatelli,
   505\penalty0 (3):\penalty0 4178--4196, 05 2021.
 \newblock \doi{10.1093/mnras/stab1301}.
 
+\bibitem[Giovannini(2018)]{Giovannini:2017rbc}
+M.~Giovannini.
+\newblock {Probing large-scale magnetism with the Cosmic Microwave Background}.
+\newblock \emph{Class. Quant. Grav.}, 35\penalty0 (8):\penalty0 084003, 2018.
+\newblock \doi{10.1088/1361-6382/aab17d}.
+
+\bibitem[Giovannini(2004)]{Giovannini:2003yn}
+M.~Giovannini.
+\newblock {The Magnetized universe}.
+\newblock \emph{Int. J. Mod. Phys. D}, 13:\penalty0 391--502, 2004.
+\newblock \doi{10.1142/S0218271804004530}.
+
+\bibitem[Kronberg(1994)]{Kronberg:1993vk}
+P.~P. Kronberg.
+\newblock Extragalactic magnetic fields.
+\newblock \emph{Reports on Progress in Physics}, 57\penalty0 (4):\penalty0 325,
+  1994.
+\newblock \doi{10.1088/0034-4885/57/4/001}.
+
+\bibitem[Rafelski et~al.(2023{\natexlab{a}})Rafelski, Birrell, Steinmetz, and
+  Yang]{Rafelski:2023emw}
+J.~Rafelski, J.~Birrell, A.~Steinmetz, and C.~T. Yang.
+\newblock {A Short Survey of Matter-Antimatter Evolution in the Primordial
+  Universe}.
+\newblock \emph{Universe}, 9\penalty0 (7):\penalty0 309, 2023{\natexlab{a}}.
+\newblock \doi{10.3390/universe9070309}.
+
+\bibitem[Grayson et~al.(2023)Grayson, Yang, Formanek, and
+  Rafelski]{Grayson:2023flr}
+C.~Grayson, C.~T. Yang, M.~Formanek, and J.~Rafelski.
+\newblock Electron-positron plasma in \uppercase{BBN}: damped-dynamic
+  screening.
+\newblock \emph{arXiv preprint}, 2023.
+\newblock \doi{10.48550/arXiv.2307.11264}.
+\newblock [in press in Annals of Physics].
+
+\bibitem[Rafelski et~al.(2018)Rafelski, Formanek, and
+  Steinmetz]{Rafelski:2017hce}
+J.~Rafelski, M.~Formanek, and A.~Steinmetz.
+\newblock {Relativistic Dynamics of Point Magnetic Moment}.
+\newblock \emph{Eur. Phys. J. C}, 78\penalty0 (1):\penalty0 6, 2018.
+\newblock \doi{10.1140/epjc/s10052-017-5493-2}.
+
+\bibitem[Giovannini(2023)]{Giovannini:2022rrl}
+M.~Giovannini.
+\newblock The scaling of primordial gauge fields.
+\newblock \emph{Physics Letters B}, 842:\penalty0 137967, 2023.
+\newblock ISSN 0370-2693.
+\newblock \doi{10.1016/j.physletb.2023.137967}.
+
+\bibitem[Batista and Saveliev(2021)]{AlvesBatista:2021sln}
+R.~A. Batista and A.~Saveliev.
+\newblock The gamma-ray window to intergalactic magnetism.
+\newblock \emph{Universe}, 7\penalty0 (7), 2021.
+\newblock ISSN 2218-1997.
+\newblock \doi{10.3390/universe7070223}.
+
+\bibitem[Gaensler et~al.(2004)Gaensler, Beck, and Feretti]{Gaensler:2004gk}
+B.~M. Gaensler, R.~Beck, and L.~Feretti.
+\newblock The origin and evolution of cosmic magnetism.
+\newblock \emph{New Astronomy Reviews}, 48\penalty0 (11-12):\penalty0
+  1003--1012, 2004.
+\newblock \doi{10.1016/j.newar.2004.09.003}.
+
+\bibitem[Durrer and Neronov(2013)]{Durrer:2013pga}
+R.~Durrer and A.~Neronov.
+\newblock Cosmological magnetic fields: their generation, evolution and
+  observation.
+\newblock \emph{The Astronomy and Astrophysics Review}, 21:\penalty0 1--109,
+  2013.
+\newblock \doi{10.1007/s00159-013-0062-7}.
+
 \bibitem[{Pomakov} et~al.(2022){Pomakov}, {O'Sullivan}, {Br{\"u}ggen}, {Vazza},
   {Carretti}, {Heald}, {Horellou}, {Shimwell}, {Shulevski}, and
-  {Vernstrom}]{pomakov2022redshift}
+  {Vernstrom}]{Pomakov:2022cem}
 V.~P. {Pomakov}, S.~P. {O'Sullivan}, M.~{Br{\"u}ggen}, F.~{Vazza},
   E.~{Carretti}, G.~H. {Heald}, C.~{Horellou}, T.~{Shimwell}, A.~{Shulevski},
   and T.~{Vernstrom}.
 \newblock {The redshift evolution of extragalactic magnetic fields}.
 \newblock \emph{Monthly Notices of the Royal Astronomical Society},
-  515\penalty0 (1):\penalty0 256--270, September 2022.
+  515\penalty0 (1):\penalty0 256--270, 2022.
 \newblock \doi{10.1093/mnras/stac1805}.
 
-\bibitem[Jedamzik and Abel(2013)]{jedamzik2013smallscale}
-K.~Jedamzik and T.~Abel.
-\newblock {Small-scale primordial magnetic fields and anisotropies in the
-  cosmic microwave background radiation}.
-\newblock \emph{JCAP}, 10:\penalty0 050, 2013.
-\newblock \doi{10.1088/1475-7516/2013/10/050}.
+\bibitem[Jedamzik and Pogosian(2020)]{Jedamzik:2020krr}
+K.~Jedamzik and L.~Pogosian.
+\newblock Relieving the hubble tension with primordial magnetic fields.
+\newblock \emph{Physical Review Letters}, 125\penalty0 (18):\penalty0 181302,
+  2020.
+\newblock \doi{10.1103/PhysRevLett.125.181302}.
+
+\bibitem[Birrell et~al.(2014)Birrell, Yang, and Rafelski]{Birrell:2014uka}
+J.~Birrell, C.~T. Yang, and J.~Rafelski.
+\newblock {Relic Neutrino Freeze-out: Dependence on Natural Constants}.
+\newblock \emph{Nucl. Phys. B}, 890:\penalty0 481--517, 2014.
+\newblock \doi{10.1016/j.nuclphysb.2014.11.020}.
+
+\bibitem[Bahcall et~al.(2001)Bahcall, Pinsonneault, and Basu]{Bahcall:2000nu}
+J.~N. Bahcall, M.~H. Pinsonneault, and S.~Basu.
+\newblock Solar models: Current epoch and time dependences, neutrinos, and
+  helioseismological properties.
+\newblock \emph{The Astrophysical Journal}, 555\penalty0 (2):\penalty0 990, jul
+  2001.
+\newblock \doi{10.1086/321493}.
+
+\bibitem[Fromerth et~al.(2012)Fromerth, Kuznetsova, Labun, Letessier, and
+  Rafelski]{Fromerth:2012fe}
+M.~J. Fromerth, I.~Kuznetsova, L.~Labun, J.~Letessier, and J.~Rafelski.
+\newblock {From Quark-Gluon Universe to Neutrino Decoupling: 200 \ensuremath{<}
+  T \ensuremath{<} 2MeV}.
+\newblock \emph{Acta Phys. Polon. B}, 43\penalty0 (12):\penalty0 2261--2284,
+  2012.
+\newblock \doi{10.5506/APhysPolB.43.2261}.
+
+\bibitem[Canetti et~al.(2012)Canetti, Drewes, and Shaposhnikov]{Canetti:2012zc}
+L.~Canetti, M.~Drewes, and M.~Shaposhnikov.
+\newblock {Matter and Antimatter in the Universe}.
+\newblock \emph{New J. Phys.}, 14:\penalty0 095012, 2012.
+\newblock \doi{10.1088/1367-2630/14/9/095012}.
+
+\bibitem[Elze et~al.(1980)Elze, Greiner, and Rafelski]{Elze:1980er}
+H.~T. Elze, W.~Greiner, and J.~Rafelski.
+\newblock {The relativistic Fermi gas revisited}.
+\newblock \emph{J. Phys. G}, 6:\penalty0 L149--L153, 1980.
+\newblock \doi{10.1088/0305-4616/6/9/003}.
+
+\bibitem[Workman et~al.(2022)]{ParticleDataGroup:2022pth}
+R.~L. Workman et~al.
+\newblock {Review of Particle Physics}.
+\newblock \emph{PTEP}, 2022:\penalty0 083C01, 2022.
+\newblock \doi{10.1093/ptep/ptac097}.
+
+\bibitem[Letessier and Rafelski(2023)]{Letessier:2002ony}
+J.~Letessier and J.~Rafelski.
+\newblock \emph{Hadrons and Quark–Gluon Plasma}.
+\newblock Cambridge Monographs on Particle Physics, Nuclear Physics and
+  Cosmology. Cambridge University Press, 2023.
+\newblock \doi{10.1017/9781009290753}.
+\newblock \emph{Open access.} [Orig. pub. year: 2002].
 
 \bibitem[Abdalla et~al.(2022)Abdalla, Abell{\'a}n, Aboubrahim, Agnello, Akarsu,
-  Akrami, Alestas, Aloni, Amendola, Anchordoqui, et~al.]{abdalla2022cosmology}
+  Akrami, Alestas, Aloni, Amendola, Anchordoqui, et~al.]{Abdalla:2022yfr}
 E.~Abdalla, G.~F. Abell{\'a}n, A.~Aboubrahim, A.~Agnello, {\"O}.~Akarsu,
   Y.~Akrami, G.~Alestas, D.~Aloni, L.~Amendola, L.~A. Anchordoqui, et~al.
 \newblock Cosmology intertwined: A review of the particle physics,
@@ -107,70 +193,13 @@ E.~Abdalla, G.~F. Abell{\'a}n, A.~Aboubrahim, A.~Agnello, {\"O}.~Akarsu,
   2022.
 \newblock \doi{10.1016/j.jheap.2022.04.002}.
 
-\bibitem[Jedamzik and Pogosian(2020)]{jedamzik2020relieving}
-K.~Jedamzik and L.~Pogosian.
-\newblock Relieving the hubble tension with primordial magnetic fields.
-\newblock \emph{Physical Review Letters}, 125\penalty0 (18):\penalty0 181302,
-  2020.
-\newblock \doi{10.1103/PhysRevLett.125.181302}.
-
-\bibitem[Rafelski et~al.(2023{\natexlab{a}})Rafelski, Birrell, Steinmetz, and
-  Yang]{rafelski2023short}
-J.~Rafelski, J.~Birrell, A.~Steinmetz, and C.~T. Yang.
-\newblock A short survey of matter-antimatter evolution in the primordial
-  universe.
-\newblock \emph{MDPI Universe}, 2023{\natexlab{a}}.
-\newblock \doi{10.48550/arXiv.2305.09055}.
-
-\bibitem[Bahcall et~al.(2001)Bahcall, Pinsonneault, and Basu]{bahcall2001solar}
-J.~N. Bahcall, M.~H. Pinsonneault, and S.~Basu.
-\newblock Solar models: Current epoch and time dependences, neutrinos, and
-  helioseismological properties.
-\newblock \emph{The Astrophysical Journal}, 555\penalty0 (2):\penalty0 990, jul
-  2001.
-\newblock \doi{10.1086/321493}.
-
-\bibitem[Birrell et~al.(2014)Birrell, Yang, and Rafelski]{birrell2014relic}
-J.~Birrell, C.~T. Yang, and J.~Rafelski.
-\newblock {Relic Neutrino Freeze-out: Dependence on Natural Constants}.
-\newblock \emph{Nucl. Phys. B}, 890:\penalty0 481--517, 2014.
-\newblock \doi{10.1016/j.nuclphysb.2014.11.020}.
-
-\bibitem[Fromerth et~al.(2012)Fromerth, Kuznetsova, Labun, Letessier, and
-  Rafelski]{fromerth2012quarkgluon}
-M.~J. Fromerth, I.~Kuznetsova, L.~Labun, J.~Letessier, and J.~Rafelski.
-\newblock {From Quark-Gluon Universe to Neutrino Decoupling: 200 \ensuremath{<}
-  T \ensuremath{<} 2MeV}.
-\newblock \emph{Acta Phys. Polon. B}, 43\penalty0 (12):\penalty0 2261--2284,
-  2012.
-\newblock \doi{10.5506/APhysPolB.43.2261}.
-
-\bibitem[Canetti et~al.(2012)Canetti, Drewes, and
-  Shaposhnikov]{canetti2012matter}
-L.~Canetti, M.~Drewes, and M.~Shaposhnikov.
-\newblock {Matter and Antimatter in the Universe}.
-\newblock \emph{New J. Phys.}, 14:\penalty0 095012, 2012.
-\newblock \doi{10.1088/1367-2630/14/9/095012}.
-
-\bibitem[Elze et~al.(1980)Elze, Greiner, and Rafelski]{elze1980relativistic}
-H.~T. Elze, W.~Greiner, and J.~Rafelski.
-\newblock {The relativistic Fermi gas revisited}.
-\newblock \emph{J. Phys. G}, 6:\penalty0 L149--L153, 1980.
-\newblock \doi{10.1088/0305-4616/6/9/003}.
-
-\bibitem[Workman et~al.(2022)]{workman2022pdg}
-R.~L. Workman et~al.
-\newblock {Review of Particle Physics}.
-\newblock \emph{PTEP}, 2022:\penalty0 083C01, 2022.
-\newblock \doi{10.1093/ptep/ptac097}.
-
 \bibitem[Weinberg(1972)]{weinberg1972gravitation}
 S.~Weinberg.
 \newblock \emph{Gravitation and cosmology: principles and applications of the
   general theory of relativity}.
 \newblock John Wiley \& Sons, 1972.
 
-\bibitem[Aghanim et~al.(2020)]{aghanim2018planck}
+\bibitem[Aghanim et~al.(2020)]{Planck:2018vyg}
 N.~Aghanim et~al.
 \newblock {Planck 2018 results. VI. Cosmological parameters}.
 \newblock \emph{Astron. Astrophys.}, 641:\penalty0 A6, 2020.
@@ -184,11 +213,19 @@ D.~Melrose.
 \newblock \doi{10.1007/978-1-4614-4045-1}.
 
 \bibitem[Steinmetz et~al.(2019)Steinmetz, Formanek, and
-  Rafelski]{steinmetz2018magnetic}
+  Rafelski]{Steinmetz:2018ryf}
 A.~Steinmetz, M.~Formanek, and J.~Rafelski.
 \newblock {Magnetic Dipole Moment in Relativistic Quantum Mechanics}.
 \newblock \emph{Eur. Phys. J. A}, 55\penalty0 (3):\penalty0 40, 2019.
 \newblock \doi{10.1140/epja/i2019-12715-5}.
+
+\bibitem[Tiesinga et~al.(2021)Tiesinga, Mohr, Newell, and
+  Taylor]{Tiesinga:2021myr}
+Eite Tiesinga, Peter~J. Mohr, David~B. Newell, and Barry~N. Taylor.
+\newblock {CODATA recommended values of the fundamental physical constants:
+  2018}.
+\newblock \emph{Rev. Mod. Phys.}, 93\penalty0 (2):\penalty0 025010, 2021.
+\newblock \doi{10.1103/RevModPhys.93.025010}.
 
 \bibitem[Abramowitz et~al.(1988)Abramowitz, Stegun, and
   Romer]{abramowitz1988handbook}
@@ -197,51 +234,129 @@ M.~Abramowitz, I.~A. Stegun, and R.~H. Romer.
   mathematical tables}.
 \newblock American Association of Physics Teachers, 1988.
 
-\bibitem[Letessier and Rafelski(2023)]{letessier2002hadrons}
-J.~Letessier and J.~Rafelski.
-\newblock \emph{Hadrons and Quark–Gluon Plasma}.
-\newblock Cambridge Monographs on Particle Physics, Nuclear Physics and
-  Cosmology. Cambridge University Press, 2023.
-\newblock \doi{10.1017/9781009290753}.
-\newblock [Orig. pub. year: 2002].
-
 \bibitem[Greiner et~al.(2012)Greiner, Neise, and
   St{\"o}cker]{greiner2012thermodynamics}
 W.~Greiner, L.~Neise, and H.~St{\"o}cker.
 \newblock \emph{Thermodynamics and statistical mechanics}.
 \newblock Springer Science \& Business Media, 2012.
 \newblock \doi{10.1007/978-1-4612-0827-3}.
+\newblock [Orig. pub. year: 1995].
+
+\bibitem[Greiner and Reinhardt(2008)]{greiner2008quantum}
+W.~Greiner and J.~Reinhardt.
+\newblock \emph{Quantum electrodynamics}.
+\newblock Springer Science \& Business Media, 2008.
+\newblock \doi{10.1007/978-3-540-87561-1}.
+
+\bibitem[Vazza et~al.(2017)Vazza, Br\"uggen, Gheller, Hackstein, Wittor, and
+  Hinz]{Vazza:2017qge}
+F.~Vazza, M.~Br\"uggen, C.~Gheller, S.~Hackstein, D.~Wittor, and P.~M. Hinz.
+\newblock {Simulations of extragalactic magnetic fields and of their
+  observables}.
+\newblock \emph{Class. Quant. Grav.}, 34\penalty0 (23):\penalty0 234001, 2017.
+\newblock \doi{10.1088/1361-6382/aa8e60}.
+
+\bibitem[Vachaspati(2021)]{Vachaspati:2020blt}
+T.~Vachaspati.
+\newblock {Progress on cosmological magnetic fields}.
+\newblock \emph{Rept. Prog. Phys.}, 84\penalty0 (7):\penalty0 074901, 2021.
+\newblock \doi{10.1088/1361-6633/ac03a9}.
+
+\bibitem[Gopal and Sethi(2005)]{Gopal:2004ut}
+R.~Gopal and S.~Sethi.
+\newblock {Generation of magnetic field in the pre-recombination era}.
+\newblock \emph{Mon. Not. Roy. Astron. Soc.}, 363:\penalty0 521--528, 2005.
+\newblock \doi{10.1111/j.1365-2966.2005.09442.x}.
 
 \bibitem[Perrone et~al.(2021)Perrone, Gregori, Reville, Silva, and
-  Bingham]{perrone2021neutrinoelectron}
+  Bingham]{Perrone:2021srr}
 L.~M. Perrone, G.~Gregori, B.~Reville, L.~O. Silva, and R.~Bingham.
 \newblock {Neutrino-electron magnetohydrodynamics in an expanding universe}.
 \newblock \emph{Phys. Rev. D}, 104\penalty0 (12):\penalty0 123013, 2021.
 \newblock \doi{10.1103/PhysRevD.104.123013}.
 
+\bibitem[Evans and Rafelski(2022)]{Evans:2022fsu}
+S.~Evans and J.~Rafelski.
+\newblock {Emergence of periodic in magnetic moment effective QED action}.
+\newblock \emph{Phys. Lett. B}, 831:\penalty0 137190, 2022.
+\newblock \doi{10.1016/j.physletb.2022.137190}.
+
 \bibitem[Rafelski et~al.(2023{\natexlab{b}})Rafelski, Evans, and
-  Labun]{rafelski2022study}
+  Labun]{Rafelski:2022bsv}
 J.~Rafelski, S.~Evans, and L.~Labun.
 \newblock {Study of QED singular properties for variable gyromagnetic ratio
   $g\simeq 2$}.
 \newblock \emph{Phys. Rev. D}, 107, 2023{\natexlab{b}}.
 \newblock \doi{10.1103/PhysRevD.107.076002}.
 
-\bibitem[Tiesinga et~al.(2021)Tiesinga, Mohr, Newell, and
-  Taylor]{tiesinga2021codata}
-E.~Tiesinga, P.~J. Mohr, D.~B. Newell, and B.~N. Taylor.
-\newblock Codata recommended values of the fundamental physical constants:
-  2018.
-\newblock \emph{Journal of Physical and Chemical Reference Data}, 50\penalty0
-  (3):\penalty0 033105, 2021.
-\newblock \doi{10.1063/5.0064853}.
+\bibitem[Ruffini et~al.(2010)Ruffini, Vereshchagin, and Xue]{Ruffini:2009hg}
+R.~Ruffini, G.~Vereshchagin, and S.~S. Xue.
+\newblock {Electron-positron pairs in physics and astrophysics: from heavy
+  nuclei to black holes}.
+\newblock \emph{Phys. Rept.}, 487:\penalty0 1--140, 2010.
+\newblock \doi{10.1016/j.physrep.2009.10.004}.
 
-\bibitem[Vazza et~al.(2017)Vazza, Br\"uggen, Gheller, Hackstein, Wittor, and
-  Hinz]{vazza2017simulations}
-F.~Vazza, M.~Br\"uggen, C.~Gheller, S.~Hackstein, D.~Wittor, and P.~M. Hinz.
-\newblock {Simulations of extragalactic magnetic fields and of their
-  observables}.
-\newblock \emph{Class. Quant. Grav.}, 34\penalty0 (23):\penalty0 234001, 2017.
-\newblock \doi{10.1088/1361-6382/aa8e60}.
+\bibitem[Ruffini and Vereshchagin(2013)]{Ruffini:2012it}
+R.~Ruffini and G.~Vereshchagin.
+\newblock {Electron-positron plasma in GRBs and in cosmology}.
+\newblock \emph{Nuovo Cim. C}, 036\penalty0 (s01):\penalty0 255--266, 2013.
+\newblock \doi{10.1393/ncc/i2013-11500-0}.
+
+\bibitem[Ferrer and Hackebill(2019)]{Ferrer:2019xlr}
+E.~J. Ferrer and A.~Hackebill.
+\newblock {Thermodynamics of Neutrons in a Magnetic Field and its Implications
+  for Neutron Stars}.
+\newblock \emph{Phys. Rev. C}, 99\penalty0 (6):\penalty0 065803, 2019.
+\newblock \doi{10.1103/PhysRevC.99.065803}.
+
+\bibitem[Ferrer and Hackebill(2023)]{Ferrer:2023pgq}
+E.~J. Ferrer and A.~Hackebill.
+\newblock {The Importance of the Pressure Anisotropy Induced by Strong Magnetic
+  Fields on Neutron Star Physics}.
+\newblock \emph{J. Phys. Conf. Ser.}, 2536\penalty0 (1):\penalty0 012007, 2023.
+\newblock \doi{10.1088/1742-6596/2536/1/012007}.
+
+\bibitem[Yan et~al.(2023)Yan, Ma, Ling, Cheng, and Huang]{Yan:2022sxd}
+H.~Yan, Z.~Ma, C.~Ling, C.~Cheng, and J.~Huang.
+\newblock {First Batch of z \ensuremath{\approx} 11\textendash{}20 Candidate
+  Objects Revealed by the James Webb Space Telescope Early Release Observations
+  on SMACS 0723-73}.
+\newblock \emph{Astrophys. J. Lett.}, 942\penalty0 (1):\penalty0 L9, 2023.
+\newblock \doi{10.3847/2041-8213/aca80c}.
+
+\bibitem[Adams et~al.(2023)Adams, Conselice, Ferreira,
+  et~al.]{adams2023discovery}
+N.~J. Adams, C.~J. Conselice, L.~Ferreira, et~al.
+\newblock Discovery and properties of ultra-high redshift galaxies $(9<z<12)$
+  in the \uppercase{JWST} \uppercase{ERO} \uppercase{SMACS} 0723 field.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  518\penalty0 (3):\penalty0 4755--4766, 2023.
+\newblock \doi{10.1093/mnras/stac3347}.
+
+\bibitem[Haro et~al.(2023)Haro, Dickinson, Finkelstein,
+  et~al.]{arrabal2023spectroscopic}
+P.~A. Haro, M.~Dickinson, S.~L. Finkelstein, et~al.
+\newblock Confirmation and refutation of very luminous galaxies in the early
+  universe.
+\newblock \emph{Nature}, 2023.
+\newblock \doi{10.1038/s41586-023-06521-7}.
+
+\bibitem[Larson et~al.(2023)Larson, Finkelstein, Kocevski, Hutchison, Trump,
+  Haro, Bromm, Cleri, Dickinson, Fujimoto, et~al.]{CEERSTeam:2023qgy}
+R.~L. Larson, S.~L. Finkelstein, D.~D. Kocevski, T.~A. Hutchison, J.~R. Trump,
+  P.~A. Haro, V.~Bromm, N.~J. Cleri, M.~Dickinson, S.~Fujimoto, et~al.
+\newblock A \uppercase{CEERS} discovery of an accreting supermassive black hole
+  570 myr after the big bang: Identifying a progenitor of massive $z>6$
+  quasars.
+\newblock \emph{arXiv preprint}, 2023.
+\newblock \doi{10.48550/arXiv.2303.08918}.
+\newblock [submitted to ApJ].
+
+\bibitem[Jedamzik and Abel(2013)]{Jedamzik:2013gua}
+K.~Jedamzik and T.~Abel.
+\newblock {Small-scale primordial magnetic fields and anisotropies in the
+  cosmic microwave background radiation}.
+\newblock \emph{JCAP}, 10:\penalty0 050, 2013.
+\newblock \doi{10.1088/1475-7516/2013/10/050}.
 
 \end{thebibliography}
