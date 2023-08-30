@@ -6,4 +6,8 @@ We explore the hypothesis that the abundant presence of relativistic antimatter 
 ## authors
 Andrew Steinmetz, Cheng Tao Yang, and Johann Rafelski
 
+## cite as
+Steinmetz, A., Yang, C. T. & Rafelski, J. Matter-antimatter origin of cosmic magnetism. arXiv preprint arXiv:2308.14818 [hep-ph] (2023).
+
 ## doi/arXiv id
+- https://arxiv.org/abs/2308.14818
