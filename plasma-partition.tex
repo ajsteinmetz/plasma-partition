@@ -412,7 +412,7 @@ In our analysis, the external magnetic field always appears within the context o
 \end{align}
 The magnetization of the $e^{+}e^{-}$-plasma described by the partition function in~\req{boltzmann} can then be written as
 \begin{align}
- \label{defmagetization}
+\label{defmagetization}
  {\cal M}\equiv\frac{T}{V}\frac{\partial}{\partial{\cal B}}\ln{{\cal Z}_{e^{+}e^{-}}} = \frac{T}{V}\left(\frac{\partial b_{0}}{\partial{\cal B}}\right)\frac{\partial}{\partial b_{0}}\ln{{\cal Z}_{e^{+}e^{-}}}\,,
 \end{align}
 Magnetization arising from other components in the cosmic gas (protons, neutrinos, etc.) could in principle also be included. Localized inhomogeneities of matter evolution are often non-trivial and generally be solved numerically using magneto-hydrodynamics (MHD)~\cite{melrose2008quantum,Vazza:2017qge,Vachaspati:2020blt}. In the context of MHD, primordial magnetogenesis from fluid flows in the electron-positron epoch was considered in~\cite{Gopal:2004ut,Perrone:2021srr}.
@@ -612,32 +612,44 @@ The low $T$-behavior of~\rf{fig:polarswap} will need further corroboration after
 \section{Magnetization coherent length scale and fluctuations}
 \label{sec:lengthscale}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\noindent It is of interest to consider the coherent length scale $\lambda_\mathfrak{M}$ of the Gilbertian induced magnetization in the $e^{+}e^{-}$ medium and the size of thermal fluctuations $\langle(\Delta\mathfrak{M})^{2}\rangle$ present. As mentioned prior in \rsec{sec:introduction}, we expect that the two different mechanisms for magnetogenesis produce different spectra of magnetic fields across differing length scales. 
+\noindent It is of interest to consider the coherent length scale $\lambda_\mathfrak{M}$ of the Gilbertian induced magnetization in the $e^{+}e^{-}$ medium and the size of thermal fluctuations $\langle(\Delta\mathfrak{M})^{2}\rangle$ present. This is a first look at characterizing these quantities and further effort is required in the future. As mentioned prior in \rsec{sec:introduction}, we expect that the two different mechanisms for magnetogenesis produce different spectra of magnetic fields across differing length scales. 
 
-%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{General limitations}
-The observational restriction on the  length scale of both Gilbertian and Amperian IGMF is  not well constrained~\cite{Giovannini:2022rrl,Durrer:2013pga,AlvesBatista:2021sln}, a range of coherence lengths  $\lambda_{B}\sim10^{-2}-10^{3}$ Mpc for the field strengths were considered. Inhomogeneous PMFs of $\lambda_{B}\lesssim400$ pc are subject to dissipating effects~\cite{Jedamzik:1999bm}. Inhomogeneous field dissipation would affect not only the external PMFs, but also the induced magnetization as well restricting the spectrum of fluctuations. However, length scales above $\lambda_{B}\gtrsim10^{3}$ are not disallowed, if generated during an sufficiently early epoch such as inflation, but would require that the coherence of the PMF is beyond the size of the present day visible universe.
+\label{sec:limitations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent In principle there are two field scales, the one associated with support of `external' field which we call $\lambda_B$ and the other related to the possibly spontaneously occurring magnetization in the plasma, $\lambda_\mathfrak{M}$. Should the spontaneous and external fields be the same these scales and associated spectra would be the same. Literature in general refers to $\lambda_B$ and in following discussion we address this quantity.
 
-%%%%%%%%%%%%%%%%%%%
+The observational restriction on the  length scale of both Gilbertian and Amperian type IGMF is  not well constrained~\cite{Giovannini:2022rrl,Durrer:2013pga,AlvesBatista:2021sln}, a range of coherence lengths  $\lambda_{B}\sim10^{-2}-10^{3}$ Mpc for the field strengths were considered. Inhomogeneous PMFs of $\lambda_{B}\lesssim400$ pc are subject to dissipating effects~\cite{Jedamzik:1999bm}. Inhomogeneous field dissipation would affect not only the external PMFs, but also the induced magnetization as well restricting the spectrum of fluctuations. However, length scales above $\lambda_{B}\gtrsim10^{3}$ are not disallowed, if generated during an sufficiently early epoch such as inflation, but would require that the coherence of the PMF is beyond the size of the present day visible universe.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Magnetic thermal field fluctuations}
-In general, given the magnetic moment $\mu$ the magnetization density of the quantum system is defined as
+\label{sec:fluc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent  We return to consider \req{defmagetization} which originates in the inherent extensive magnetic moment $\tilde\mu$. The statistical average of the magnetization density $\mathcal{M}$ of the quantum system is defined as
 \begin{align}
-\langle \mathcal M\rangle\equiv\frac{\langle \mu\rangle}{V}=\frac{1}{V}\left(T\frac{\partial \ln\mathcal Z}{\partial B}\right),\quad \langle\mu\rangle=\left(T\frac{\partial \ln\mathcal Z}{\partial B}\right)
+\langle V \mathcal M\rangle\equiv \langle \tilde\mu\rangle = T\frac{\partial \ln\mathcal Z}{\partial B}\;.
 \end{align}
-In statistical mechanical, the mean-square fluctuation of any quantity magnetic moment $\mu$ can be written as
+In statistical mechanics, the mean-square fluctuation of any extensive quantity including magnetic moment $\tilde\mu$ can be written as a second derivative in the conjugate variable, here $\beta B$
 \begin{align}
-\langle\Delta \mu^2\rangle=\langle \mu^2\rangle-\langle \mu\rangle^2=T^2\frac{\partial^2 \ln\mathcal Z }{\partial B^2}
+\langle\Delta \tilde\mu^2\rangle=\langle \tilde\mu^2\rangle-\langle \tilde\mu\rangle^2=T^2\frac{\partial^2 \ln\mathcal Z }{\partial B^2}
 \end{align}
-In this scenario, the fluctuation of magnetization can be written as
+The fluctuation in magnetization (density) thus is
 \begin{align}
-{\langle\Delta \mathcal M^2\rangle}&=\frac{\langle\Delta \mu^2\rangle}{V}=\frac{T^2}{V}\frac{\partial^2 \ln\mathcal Z }{\partial B^2}=T\frac{\partial\langle M\rangle}{\partial B}.
+%{\langle V\Delta \mathcal M^2\rangle}=
+\langle\Delta \tilde\mu^2\rangle&
+%=T^2\frac{\partial^2 \ln\mathcal Z }{\partial B^2}
+=T\frac{\partial\langle V\mathcal{M}\rangle}{\partial B}.
 \end{align}
 
-From Eq.~(\ref{g2magplus}) and Eq.~(\ref{g2magminus}) we show that the total dimensionless magnetization ${\mathfrak M}={\mathfrak M}_{+}+{\mathfrak M}_{-}$ for the case $g=2$. In this scenario, the fluctuation of magnetized electron-positron plasma becomes
- \begin{align}\label{Fluctuation}
- \langle\Delta \mathcal{M}^2\rangle&=T\frac{\partial b_0}{\partial B}\frac{\partial {\langle M\rangle} }{\partial b_0}=\frac{m_e^2}{T}\left(\frac{\partial {\mathfrak M}_{+} }{\partial b_0}+\frac{\partial {\mathfrak M} _{-}}{\partial b_0}\right)
+Using  \req{g2magplus} and \req{g2magminus} we turn to consider dimensionless magnetization ${\mathfrak M}={\mathfrak M}_{+}+{\mathfrak M}_{-}$ for the case $g=2$. The fluctuation of magnetized electron-positron plasma becomes
+\begin{align}\label{Fluctuation}
+ \langle\Delta \tilde\mu^2\rangle&
+ %\langle\Delta \mathcal{M}^2\rangle&
+ =T\frac{\partial b_0}{\partial B}\frac{\partial {\langle V\mathcal{M}\rangle} }{\partial b_0}
+ =V\frac{m_e^2}{T}\left(\frac{\partial {\mathfrak M}_{+} }{\partial b_0}+\frac{\partial {\mathfrak M} _{-}}{\partial b_0}\right)
  \end{align}
- where the dimensionless magnetization $\partial{\mathfrak M}_{\pm}/\partial b_0$ are given by
+ In the last step we assumed that in the homogeneous Universe fluctuations in volume are constrained. The dimensionless magnetization $\partial{\mathfrak M}_{\pm}/\partial b_0$ are given by
  \begin{align}
  \frac{\partial {\mathfrak M}_{+} }{\partial b_0}=\frac{e^{2}}{\pi^{2}}\frac{T^{2}}{m_{e}^{2}}\xi\cosh{\frac{\mu}{T}}\,\left[\frac{1}{6}K_{0}(x_{+})\right],\quad x_{+}=\frac{m_{e}}{T}
  \end{align}
@@ -647,7 +659,7 @@ From Eq.~(\ref{g2magplus}) and Eq.~(\ref{g2magminus}) we show that the total dim
   &+\left(\frac{b_0}{6x_{-}}+\frac{b^2_0}{6x^3_{-}}\right)K_1(x_{-})\bigg],\quad  x_{-}\!\!=\!\sqrt{\frac{m_{e}^{2}}{T^{2}}+2b_{0}}.
  \end{align}
  
- Given the magnetic field $10^{-11}<b_0<10^{-3}$, we have $m_e/T\gg b_0$ in the temperature we are interested in. Then the dimensionless variable $x_{-}$ can written as
+ Given the magnetic field $10^{-11}<b_0<10^{-3}$, we have $m_e/T\gg b_0$ in the temperature range we are interested in. Then the dimensionless variable $x_{-}$ can written as
  \begin{align}
  x_{-}&=\frac{m_e}{T}\sqrt{1+\left(\frac{2T^2b_0}{m^2_e}\right)}\approx x_{+}\left[1+\left(\frac{T^2b_0}{m^2_e}\right)\right].
  \end{align}
@@ -660,25 +672,26 @@ then the fluctuation of magnetized electron-positron plasma Eq.~(\ref{Fluctuatio
  \begin{align}
   \langle\Delta \mathcal{M}^2\rangle
   &=\frac{T}{6}\left(\frac{e^{2}}{\pi^{2}}\right)\cosh{\frac{\mu}{T}}\cosh{\frac{\eta}{T}} K_0(x_+)\notag\\
-  &+\frac{T}{6}\left(\frac{e^{2}}{\pi^{2}}\right)\cosh{\frac{\mu}{T}}\xi^{-1}\frac{K_1(x_+)}{x_+}+{\cal O}\left(b_{0}^{2}\right)
+  &+b_0\left[\frac{T}{6}\left(\frac{e^{2}}{\pi^{2}}\right)\cosh{\frac{\mu}{T}}\xi^{-1}\frac{K_1(x_+)}{x_+}\right]+{\cal O}\left(b_{0}^{2}\right)
  \end{align} 
  In Fig.~\ref{Flu_fig} we plot the fluctuation $ \langle\Delta {\mathcal M}^2\rangle/m_e$ and  $\langle\Delta {\mathcal M}^2\rangle/\sqrt{\langle \mathcal M\rangle}$ as a function of temperature with $g=2$,  $\xi=1$, $b_0=10^{-11}$ and $b_0=10^{-3}$.
-%~~~Figure~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- \begin{figure}[ht]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[ht]
  \centering
  \includegraphics[width=0.5\textwidth]{plots/Fluctuation_Magnetization}
  \includegraphics[width=0.5\textwidth]{plots/Fluctuation_M002}
  \caption{The  dimensionless fluctuation $ \langle\Delta {M}^2\rangle/m_e$  and  $\langle\Delta {\mathcal M}^2\rangle/\sqrt{\langle \mathcal M\rangle}$ of the primordial $e^{+}e^{-}$-plasma as a function of temperature, with $g=2$,  $\xi=1$, $b_0=10^{-11}$ and $b_0=10^{-3}$.} 
  \label{Flu_fig} 
 \end{figure}
-%~~~Figure~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Spatial scale considerations}
+\label{sec:spatial}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %The CMB~\cite{Planck:2018vyg} indicates that the early universe was home to domains of slightly higher and lower baryon densities which resulted in the presence of galactic super-clusters, cosmic filaments, and great voids seen today. However, the CMB as measured today is blind to the localized inhomogeneities required for gravity to begin galaxy and supermassive black hole formation~\cite{..}. While such locally acute magnetization would not survive until present day, their presence could be inferred from future observation of pre-recombination structure.
 
-Such acute inhomogeneities distributed like a dust~\cite{Grayson:2023flr} in the plasma would make the proton density sharply and spatially dependant $n_{p}\rightarrow n_{p}(x)$ which would directly affect the potentials $\mu(x)$ and $\eta(x)$ and thus the density of electrons and positrons locally. This suggests that $e^{+}e^{-}$ may play a role in the initial seeding of gravitational collapse. If the plasma were home to such localized magnetic domains, the nonzero local angular momentum within these domains would provide a natural mechanism for the formation of rotating galaxies today.
-
-Recent measurements by the James Webb Space Telescope (JWST)~\citep{Yan:2022sxd,adams2023discovery,arrabal2023spectroscopic} indicate that galaxy formation began surprisingly early at large redshift values of $z\gtrsim10$ within the first 500 million years of the universe requiring gravitational collapse to begin in a hotter environment than expected. The observation of supermassive black holes already present~\citep{CEERSTeam:2023qgy} in this same high redshift period (already with millions of solar masses) indicates the need for local high density regions in the early universe whose generation is not yet explained and likely need to exist long before the recombination epoch.
+\noindent Acute inhomogeneities distributed like a dust~\cite{Grayson:2023flr} in the plasma would make the proton density sharply and spatially dependant $n_{p}\rightarrow n_{p}(x)$ which would directly affect the potentials $\mu(x)$ and $\eta(x)$ and thus the density of electrons and positrons locally. This suggests that $e^{+}e^{-}$ may play a role in the initial seeding of gravitational collapse. If the plasma were home to such localized magnetic domains, the nonzero local angular momentum within these domains would provide a natural mechanism for the formation of rotating galaxies today.
 
 As our model quantifies the relativistic paramagnetism of the $e^{+}e^{-}$ medium, the induced magnetization should then be subject to the variations and spectra of the external PMF present. If an observational signature of the $e^{+}e^{-}$ magnetization could be ascertained, then this would provide a way to characterize the length scale and coherence of the original PMF. If the polarization fugacity was nonzero as per \req{ferro} and \req{hiTferro}, then the spectra of the magnetization would match the variation in spatial spin polarization.}
 
