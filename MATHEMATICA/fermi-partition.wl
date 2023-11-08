@@ -447,9 +447,9 @@ reversal[T_]:=-T+ loT + hiT;
 bzero = {0};
 etaValues = {0};
 Plot[{Evaluate[ chempot[T, #,g,\[Eta]]/.m->me & /@ bzero],Evaluate[ chempot[T, #,g,etaValues]/.m->me & /@ bValues]}, {T, loT, hiT},
- 	PlotRange -> {{10,300},{10^(3),10^(-12)}},
+ 	PlotRange -> {{10,300},{10^(2),10^(-12)}},
  	Frame -> True,
- 	AspectRatio -> 3/2,
+ 	AspectRatio -> 3/4,
  	FrameLabel -> {"T [keV]", "\[Mu]/T"},
  	PlotStyle -> {Black,Directive[Dashed,Black],Directive[Dashed,Black],Directive[Dashed,Black],Directive[Dashed,Black],Directive[Dashed,Black],Directive[Dotted,Blue],Directive[Dotted,Blue],Directive[Dotted,Blue],Directive[Dotted,Blue],Directive[Dotted,Blue]},
  	LabelStyle -> Directive[Black,20,FontFamily -> "Times"],
@@ -461,7 +461,7 @@ Plot[{Evaluate[ chempot[T, #,g,\[Eta]]/.m->me & /@ bzero],Evaluate[ chempot[T, #
      FrameTicks -> {{{#, Superscript[10, Log10@#]} & /@ ({10^2, 10^-2, 10^-6, 10^-10}), None},
        {{#, Superscript[10, Log10@#]} & /@ ({10^3, 10^2, 10^1}), None}},
  	GridLines -> {Drop[Flatten[Table[Tlist[n],{n,{10,100,1000}}]],-8],Table[10^(n),{n,1,-33,-1}]},
- 	GridLinesStyle -> Directive[Line, Lighter[Gray,.65]]]
+ 	GridLinesStyle -> Directive[Line, Lighter[Gray,.55]]]
 
 
 g = 2;
@@ -532,20 +532,21 @@ reversal[T_]:=-T+ loT + hiT;
 f[T_, b_] = (T/V) (q/T^(2)) (D[lnZ[V, chempot[T,0,1,g]T, T, b, 1, g, \[Eta]], b] + D[lnZ[V, chempot[T,0,-1,g]T, T, b, -1, g, \[Eta]], b])/. q -> (4 Pi/137)/m^(2) /. m -> 511;
 bValues = {10^(-3), 10^(-11)};
 Plot[Evaluate[{Bc f[T, #],Bc B[T,#]} & /@ bValues], {T, loT, hiT},
- 	PlotRange -> {{10,1000},{10^(-30),10^(1)}},
+ 	PlotRange -> {{10,2000},{10^(-30),10^(1)}},
  	Frame -> True,
- 	FrameLabel -> {"T [keV]", "\!\(\*OverscriptBox[\(\[ScriptCapitalM]\), \(_\)]\)"},
- 	PlotStyle -> {Blue,Directive[Dashed,Blue],Red,Directive[Dashed, Red]},
+ 	AspectRatio -> 3/4,
+ 	FrameLabel -> {"T [keV]", "\[GothicCapitalM]"},
+ 	PlotStyle -> {Directive[Dashed,Blue],Directive[Dotted,Blue],Directive[Dashed,Red],Directive[Dotted, Red]},
  	LabelStyle -> Directive[Black,14,FontFamily -> "Times"],
  	FrameStyle -> Directive[Black,20],
  	Background -> White,
  	ScalingFunctions -> {
        {-Log[#]&,InverseFunction[-Log[#]&]},
        {Log,InverseFunction[Log]}},
-     FrameTicks -> {{{#, Superscript[10, Log10@#]} & /@ ({10^0, 10^-5, 10^-10, 10^-15, 10^-20, 10^-25}), None},
+     FrameTicks -> {{{#, Superscript[10, Log10@#]} & /@ ({10^0, 10^-5, 10^-10, 10^-15, 10^-20, 10^-25, 10^-30}), None},
        {{#, Superscript[10, Log10@#]} & /@ ({10^3, 10^2, 10^1}), None}},
  	GridLines -> {Drop[Flatten[Table[Tlist[n],{n,{10,100,1000}}]],-8],Table[10^(n),{n,1,-33,-1}]},
- 	GridLinesStyle -> Directive[Line, Lighter[Gray,.8]]]
+ 	GridLinesStyle -> Directive[Line, Lighter[Gray,.55]]]
 
 
 g = {1.16};
@@ -603,12 +604,12 @@ Bc = 1;
 bValues = {10^(-3)};
 Tlist[n_]:=Table[x,{x,n,9n,n}];
 ff[T_, b_,eta_,gee_] = (T/V) (q/T^(2)) (D[lnZ[V, chempot[T,0,gee,\[Eta]]T, T, b, 1, gee, eta], b] + D[lnZ[V, chempot[T,0,gee,\[Eta]]T, T, b, -1, gee, eta], b])/. q -> (4 Pi/137)/m^(2) /. m -> 511;
-Plot[{Bc ff[511, bValues, 0, gee],Bc ff[300, bValues, 0, gee],Bc ff[150, bValues, 0, gee],Bc ff[70, bValues, 0, gee]}, {gee, -12, 12},
+Plot[{Bc ff[511, bValues, 0, gee],Bc ff[300, bValues, 0, gee],Bc ff[200, bValues, 0, gee],Bc ff[70, bValues, 0, gee]}, {gee, -12, 12},
  	PlotRange -> {{-4,4},{-7 10^(-7),7 10^(-7)}},
  	Frame -> True,
- 	AspectRatio -> 3/2,
+ 	AspectRatio -> 3/4,
  	FrameLabel -> {"g-factor", "\[GothicCapitalM]"},
- 	PlotStyle -> {Red,Green,Blue,Black},
+ 	PlotStyle -> {Black,Green,Blue,Directive[Dashed,Red]},
  	LabelStyle -> Directive[Black,24,FontFamily -> "Times"],
  	FrameStyle -> Directive[Black,16],
  	Background -> White,
