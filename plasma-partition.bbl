@@ -1,4 +1,4 @@
-\begin{thebibliography}{48}
+\begin{thebibliography}{52}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -79,6 +79,24 @@ C.~Grayson, C.~T. Yang, M.~Formanek, and J.~Rafelski.
 \newblock \doi{10.48550/arXiv.2307.11264}.
 \newblock [in press in Annals of Physics].
 
+\bibitem[{Pomakov} et~al.(2022){Pomakov}, {O'Sullivan}, {Br{\"u}ggen}, {Vazza},
+  {Carretti}, {Heald}, {Horellou}, {Shimwell}, {Shulevski}, and
+  {Vernstrom}]{Pomakov:2022cem}
+V.~P. {Pomakov}, S.~P. {O'Sullivan}, M.~{Br{\"u}ggen}, F.~{Vazza},
+  E.~{Carretti}, G.~H. {Heald}, C.~{Horellou}, T.~{Shimwell}, A.~{Shulevski},
+  and T.~{Vernstrom}.
+\newblock {The redshift evolution of extragalactic magnetic fields}.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  515\penalty0 (1):\penalty0 256--270, 2022.
+\newblock \doi{10.1093/mnras/stac1805}.
+
+\bibitem[Jedamzik and Pogosian(2020)]{Jedamzik:2020krr}
+K.~Jedamzik and L.~Pogosian.
+\newblock Relieving the hubble tension with primordial magnetic fields.
+\newblock \emph{Physical Review Letters}, 125\penalty0 (18):\penalty0 181302,
+  2020.
+\newblock \doi{10.1103/PhysRevLett.125.181302}.
+
 \bibitem[Rafelski et~al.(2018)Rafelski, Formanek, and
   Steinmetz]{Rafelski:2017hce}
 J.~Rafelski, M.~Formanek, and A.~Steinmetz.
@@ -114,24 +132,6 @@ R.~Durrer and A.~Neronov.
 \newblock \emph{The Astronomy and Astrophysics Review}, 21:\penalty0 1--109,
   2013.
 \newblock \doi{10.1007/s00159-013-0062-7}.
-
-\bibitem[{Pomakov} et~al.(2022){Pomakov}, {O'Sullivan}, {Br{\"u}ggen}, {Vazza},
-  {Carretti}, {Heald}, {Horellou}, {Shimwell}, {Shulevski}, and
-  {Vernstrom}]{Pomakov:2022cem}
-V.~P. {Pomakov}, S.~P. {O'Sullivan}, M.~{Br{\"u}ggen}, F.~{Vazza},
-  E.~{Carretti}, G.~H. {Heald}, C.~{Horellou}, T.~{Shimwell}, A.~{Shulevski},
-  and T.~{Vernstrom}.
-\newblock {The redshift evolution of extragalactic magnetic fields}.
-\newblock \emph{Monthly Notices of the Royal Astronomical Society},
-  515\penalty0 (1):\penalty0 256--270, 2022.
-\newblock \doi{10.1093/mnras/stac1805}.
-
-\bibitem[Jedamzik and Pogosian(2020)]{Jedamzik:2020krr}
-K.~Jedamzik and L.~Pogosian.
-\newblock Relieving the hubble tension with primordial magnetic fields.
-\newblock \emph{Physical Review Letters}, 125\penalty0 (18):\penalty0 181302,
-  2020.
-\newblock \doi{10.1103/PhysRevLett.125.181302}.
 
 \bibitem[Birrell et~al.(2014)Birrell, Yang, and Rafelski]{Birrell:2014uka}
 J.~Birrell, C.~T. Yang, and J.~Rafelski.
@@ -221,7 +221,7 @@ A.~Steinmetz, M.~Formanek, and J.~Rafelski.
 
 \bibitem[Tiesinga et~al.(2021)Tiesinga, Mohr, Newell, and
   Taylor]{Tiesinga:2021myr}
-Eite Tiesinga, Peter~J. Mohr, David~B. Newell, and Barry~N. Taylor.
+E.~Tiesinga, P.~J. Mohr, D.~B. Newell, and B.~N. Taylor.
 \newblock {CODATA recommended values of the fundamental physical constants:
   2018}.
 \newblock \emph{Rev. Mod. Phys.}, 93\penalty0 (2):\penalty0 025010, 2021.
@@ -262,6 +262,13 @@ T.~Vachaspati.
 \newblock \emph{Rept. Prog. Phys.}, 84\penalty0 (7):\penalty0 074901, 2021.
 \newblock \doi{10.1088/1361-6633/ac03a9}.
 
+\bibitem[Stoneking et~al.(2020)]{Stoneking:2020egj}
+M.~R. Stoneking et~al.
+\newblock {A new frontier in laboratory physics: magnetized
+  electron\textendash{}positron plasmas}.
+\newblock \emph{J. Plasma Phys.}, 86\penalty0 (6):\penalty0 155860601, 2020.
+\newblock \doi{10.1017/S0022377820001385}.
+
 \bibitem[Gopal and Sethi(2005)]{Gopal:2004ut}
 R.~Gopal and S.~Sethi.
 \newblock {Generation of magnetic field in the pre-recombination era}.
@@ -274,6 +281,14 @@ L.~M. Perrone, G.~Gregori, B.~Reville, L.~O. Silva, and R.~Bingham.
 \newblock {Neutrino-electron magnetohydrodynamics in an expanding universe}.
 \newblock \emph{Phys. Rev. D}, 104\penalty0 (12):\penalty0 123013, 2021.
 \newblock \doi{10.1103/PhysRevD.104.123013}.
+
+\bibitem[Boyarsky et~al.(2012)Boyarsky, Frohlich, and
+  Ruchayskiy]{Boyarsky:2011uy}
+A.~Boyarsky, J.~Frohlich, and O.~Ruchayskiy.
+\newblock {Self-consistent evolution of magnetic fields and chiral asymmetry in
+  the early Universe}.
+\newblock \emph{Phys. Rev. Lett.}, 108:\penalty0 031301, 2012.
+\newblock \doi{10.1103/PhysRevLett.108.031301}.
 
 \bibitem[Evans and Rafelski(2022)]{Evans:2022fsu}
 S.~Evans and J.~Rafelski.
@@ -315,6 +330,20 @@ E.~J. Ferrer and A.~Hackebill.
   Fields on Neutron Star Physics}.
 \newblock \emph{J. Phys. Conf. Ser.}, 2536\penalty0 (1):\penalty0 012007, 2023.
 \newblock \doi{10.1088/1742-6596/2536/1/012007}.
+
+\bibitem[Jedamzik et~al.(2000)Jedamzik, Katalinic, and Olinto]{Jedamzik:1999bm}
+K.~Jedamzik, V.~Katalinic, and A.~V. Olinto.
+\newblock {A Limit on primordial small scale magnetic fields from CMB
+  distortions}.
+\newblock \emph{Phys. Rev. Lett.}, 85:\penalty0 700--703, 2000.
+\newblock \doi{10.1103/PhysRevLett.85.700}.
+
+\bibitem[Kahniashvili et~al.(2013)Kahniashvili, Tevzadze, Brandenburg, and
+  Neronov]{Kahniashvili:2012uj}
+T.~Kahniashvili, A.~G. Tevzadze, A.~Brandenburg, and A.~Neronov.
+\newblock {Evolution of Primordial Magnetic Fields from Phase Transitions}.
+\newblock \emph{Phys. Rev. D}, 87\penalty0 (8):\penalty0 083007, 2013.
+\newblock \doi{10.1103/PhysRevD.87.083007}.
 
 \bibitem[Yan et~al.(2023)Yan, Ma, Ling, Cheng, and Huang]{Yan:2022sxd}
 H.~Yan, Z.~Ma, C.~Ling, C.~Cheng, and J.~Huang.

@@ -1,3 +1,4 @@
+%\documentclass[aps,prd,floatfix]{revtex4-2}
 \documentclass[aps,prd,floatfix,reprint]{revtex4-2}
 % Leave uncommented if the LaTeX file is uploaded to arXiv.org
 \pdfoutput=1
@@ -58,10 +59,9 @@
 
 % Useful macros for annotation
 \newcommand*{\xred}{\color{red}}
-\newcommand*{\xblue}{\color{blue}}
+\newcommand*{\xblue}{\color{black}}
 \newcommand*{\xgreen}{\color{green}}
 
- 
 \begin{document}
 
 \title{Matter-antimatter origin of cosmic magnetism}
@@ -71,7 +71,7 @@
 \affiliation{Department of Physics, The University of Arizona, Tucson, AZ 85721, USA}
 
 %\date{\today}
-\date{August 28, 2023}
+\date{November 7, 2023}
 
 \begin{abstract}
 We explore the hypothesis that the abundant presence of relativistic antimatter (positrons) in the primordial universe is the source of the intergalactic magnetic fields we observe in the universe today. We evaluate both Landau diamagnetic and magnetic dipole moment paramagnetic properties of the very dense primordial electron-positron $e^{+}e^{-}$-plasma, and obtain in quantitative terms the relatively small magnitude of the $e^{+}e^{-}$ magnetic moment polarization asymmetry required to produce a consistent self-magnetization in the universe.
@@ -90,13 +90,17 @@ We explore the hypothesis that the abundant presence of relativistic antimatter 
  \label{igmf}
  10^{-8}{\rm\ G}>\mathcal{B}_{\rm IGMF}>10^{-16}{\rm\ G}\,.
 \end{align}
-Considering the ubiquity of magnetic fields in the universe~\cite{Giovannini:2017rbc,Giovannini:2003yn,Kronberg:1993vk}, we search for a common cosmic primordial mechanism considering the electron-positron $e^{+}e^{-}$-pair plasma~\cite{Rafelski:2023emw,Grayson:2023flr}: We investigate the novel hypothesis that the observed IGMF originates in the large scale non-Amp\'erian (i.e non-current sourced in the `Gilbertian' sense~\cite{Rafelski:2017hce}) primordial magnetic fields (PMF) created in the dense cosmic $e^{+}e^{-}$-pair plasma by magnetic dipole moment paramagnetism competing with Landau's diamagnetism. 
+Considering the ubiquity of magnetic fields in the universe~\cite{Giovannini:2017rbc,Giovannini:2003yn,Kronberg:1993vk}, we search for a common cosmic primordial mechanism considering the electron-positron $e^{+}e^{-}$-pair plasma~\cite{Rafelski:2023emw,Grayson:2023flr}.
 
-Our study of pre-recombination Gilbertian dipole moment magnetization of the $e^{+}e^{-}$-plasma is also motivated by the difficulty in generating Amp\'erian PMFs with large coherent length scales implied by the IGMF~\cite{Giovannini:2022rrl}, though currently the length scale for PMFs are not well constrained either~\cite{AlvesBatista:2021sln}. The conventional elaboration of the origins for cosmic PMFs are detailed in~\cite{Gaensler:2004gk,Durrer:2013pga,AlvesBatista:2021sln}.
+Faraday rotation from distant radio active galaxy nuclei (AGN)~\cite{Pomakov:2022cem} suggest that neither dynamo nor astrophysical processes would sufficiently account for the presence of magnetic fields in the universe today if the IGMF strength was around the upper bound of ${\cal B}_{\rm IGMF}\simeq30-60{\rm\ nG}$ as found in Ref.~\cite{Vernstrom:2021hru}. The presence of magnetic fields of this magnitude would then require that at least some portion of IGMFs to arise from primordial sources predating the formation of stars. The presence of a primordial magnetic field (PMF) ${\cal B}_{\rm PMF}\simeq0.1{\rm\ nG}$ according to Ref.~\cite{Jedamzik:2020krr} could be sufficient to explain the Hubble tension.
 
-Faraday rotation from distant radio active galaxy nuclei (AGN)~\cite{Pomakov:2022cem} suggest that neither dynamo nor astrophysical processes would sufficiently account for the presence of magnetic fields in the universe today if the IGMF strength was around the upper bound of ${\cal B}_{\rm IGMF}\simeq30-60{\rm\ nG}$ as found in Ref.~\cite{Vernstrom:2021hru}. The presence of magnetic fields of this magnitude would then require that at least some portion of IGMFs to arise from primordial sources predating the formation of stars. The presence of ${\cal B}_{\rm PMF}\simeq0.1{\rm\ nG}$ according to Ref.~\cite{Jedamzik:2020krr} could be sufficient to explain the Hubble tension. 
+We investigate the novel hypothesis that the observed IGMF originates in the large scale non-Amp{\`e}rian (i.e non-current sourced in the `Gilbertian' sense~\cite{Rafelski:2017hce}) PMFs created in the dense cosmic $e^{+}e^{-}$-pair plasma by magnetic dipole moment paramagnetism competing with Landau's diamagnetism.
 
-In this work our focus is to establish the Gilbertian (non-Amp\'erian = non-current) magnetic properties of the very dense $e^{+}e^{-}$ cosmic matter-antimatter plasma. In this framework, the magnetization of the early universe requires a large density of strong magnetic dipoles. Due to their large magnetic moment ($\propto e/m_e$) electrons and positrons magnetically dominate the universe. The dense $e^{+}e^{-}$-plasma is characterized in~\rf{fig:densityratio}: We show the antimatter (positron) abundance as a ratio to the prevailing baryon density as a function of cosmic photon temperature $T$. In this work we measure $T$ in units of energy (keV) thus we set the Boltzmann constant to $k_{B}=1$. We consider all results in temporal sequence in the expanding universe, thus we begin with high $T$ and early times on the left in~\rf{fig:densityratio} and end at lower $T$ and later times on the right.
+{\xblue We evaluate the Gilbertian magnetic properties of the very dense $e^{+}e^{-}$ cosmic matter-antimatter plasma. The abundance of $e^{+}e^{-}$ is considered in \rsec{sec:abundance} and its thermal properties in \rsec{sec:thermal}. We establish the Gilbertian (non-Amp{\`e}rian = non-current) magnetism present in the plasma in \rsec{sec:magnetization} and demonstrate in \rsec{sec:ferro} that the non-interacting plasma is non-ferromagnetic. We characterize that such ferromagnetism can occur if a tiny polarization asymmetry arises from residual interactions.}
+
+{\xblue Since the Gilbertian and Amp{\`e}rian mechanisms of magnetization are distinct physical phenomena the resulting spectral decomposition of magnetic space domains in a cosmological context cannot be assumed as being the same; we return to this question, albeit briefly, in \rsec{sec:lengthscale}.} In fact our study of pre-recombination Gilbertian dipole moment magnetization of the $e^{+}e^{-}$-plasma is in part motivated by the difficulty in generating Amp{\`e}rian PMFs with large coherent length scales implied by the IGMF~\cite{Giovannini:2022rrl}, though currently the length scale for PMFs are not well constrained either~\cite{AlvesBatista:2021sln}. The conventional elaboration of the origins for cosmic PMFs are detailed in~\cite{Gaensler:2004gk,Durrer:2013pga,AlvesBatista:2021sln}.
+
+In our framework, the magnetization of the early universe requires a large density of strong magnetic dipoles. Due to their large magnetic moment ($\propto e/m_e$) electrons and positrons magnetically dominate the universe. The dense $e^{+}e^{-}$-plasma is characterized in~\rf{fig:densityratio}: We show the antimatter (positron) abundance as a ratio to the prevailing baryon density as a function of cosmic photon temperature $T$. In this work we measure $T$ in units of energy (keV) thus we set the Boltzmann constant to $k_{B}=1$. We consider all results in temporal sequence in the expanding universe, thus we begin with high $T$ and early times on the left in~\rf{fig:densityratio} and end at lower $T$ and later times on the right.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[ht]
@@ -107,11 +111,11 @@ In this work our focus is to establish the Gilbertian (non-Amp\'erian = non-curr
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We evaluate the magnetic moment polarization required for PMF magnitude of the spontaneous Gilbertian magnetization. Magnetic flux persistence implies that once the $e^{+}e^{-}$-pair plasma fades out, the ambient large scale Gilbertian magnetic field is maintained by the induced Amp\'erian (current) sources arising in the residual $e^{-}p^{+}\alpha^{++}$-plasma ultimately leading to the observed large scale structure IGMF. 
+We evaluate the magnetic moment polarization required for PMF magnitude of the spontaneous Gilbertian magnetization. Magnetic flux persistence implies that once the $e^{+}e^{-}$-pair plasma fades out, the ambient large scale Gilbertian magnetic field is maintained by the induced Amp{\`e}rian (current) sources arising in the residual $e^{-}p^{+}\alpha^{++}$-plasma ultimately leading to the observed large scale structure IGMF. 
 
 As we see in~\rf{fig:densityratio} at $T>m_ec^2=511\keV$ the $e^{+}e^{-}$-pair abundance was nearly 450 million pairs per baryon, dropping to about 100 million pairs per baryon at the pre-BBN temperature of $T=100\keV$. The number of $e^{+}e^{-}$-pairs is large compared to the residual `unpaired' electrons neutralizing the baryon charge locally down to $T_\mathrm{split}=20.3\keV$. Since electrons and positrons have opposite magnetic moments, the magnetized dense $e^{+}e^{-}$-plasma entails negligible net local spin density in statistical average. The residual very small polarization of unpaired electrons complements the magnetic field induced polarization of the proton component. 
 
-As shown in Fig.\,2 in Ref.~\cite{Rafelski:2023emw}, following hadronization of the quark-gluon plasma (QGP) and below about $T\!=\!100\,000\keV$, in terms of energy densitythe early universe's first hour consists of photons, neutrinos and the $e^{+}e^{-}$-pair plasma. Massive dark matter and dark energy are negligible during this era. While we study the magnetic moment polarization of $e^{+}e^{-}$-plasma we do not address here its origin. However, we recall that the pair plasma decouples from the neutrino background near to $T=2000\keV$~\cite{Birrell:2014uka}. Therefore we consider the magnetic properties of the $e^{+}e^{-}$-pair plasma in the temperature range $2000\keV>T>20\keV$ and focus on the range $200\keV>T>20\keV$ where the most rapid antimatter abundance changes occurs and where the Boltzmann approximation is valid. This is notably the final epoch where antimatter exists in large quantities in the cosmos~\cite{Rafelski:2023emw}. 
+As shown in Fig.\,2 in Ref.~\cite{Rafelski:2023emw}, following hadronization of the quark-gluon plasma (QGP) and below about $T\!=\!100\,000\keV$, in terms of energy density the early universe's first hour consists of photons, neutrinos and the $e^{+}e^{-}$-pair plasma. Massive dark matter and dark energy are negligible during this era. While we study the magnetic moment polarization of $e^{+}e^{-}$-plasma we do not address here its origin. However, we recall that the pair plasma decouples from the neutrino background near to $T=2000\keV$~\cite{Birrell:2014uka}. Therefore we consider the magnetic properties of the $e^{+}e^{-}$-pair plasma in the temperature range $2000\keV>T>20\keV$ and focus on the range $200\keV>T>20\keV$ where the most rapid antimatter abundance changes occurs and where the Boltzmann approximation is valid. This is notably the final epoch where antimatter exists in large quantities in the cosmos~\cite{Rafelski:2023emw}. 
 
 The abundance of antimatter shown in~\rf{fig:densityratio} is obtained and discussed in more detail in~\rsec{sec:abundance}. Our analysis in~\rsec{sec:thermal} the four relativistic fermion gases (particle and antiparticle and both polarizations) where the spin and spin-orbit contributions are evaluated in~\rsec{sec:paradia}. The influence of magnetization on the charge chemical potential is determined in~\rsec{sec:chem}.  We show in~\rsec{sec:magnetization}, accounting for the matter-antimatter asymmetry present in the universe, that magnetization is nonzero. Our description of relativistic paramagnetism is covered in~\rsec{sec:paramagnetism}. The balance between paramagnetic and diamagnetic response is evaluated as a function of particle gyromagnetic ratio in~\rsec{sec:gfac}. The per-lepton magnetization is examined in~\rsec{sec:perlepton} distinguishing between cosmic and laboratory cases, in the latter case the number of magnetic dipoles is fixed, while in the universe the (comoving) number can  vary  with $T$. 
 
@@ -407,10 +411,13 @@ In our analysis, the external magnetic field always appears within the context o
 \end{align}
 The magnetization of the $e^{+}e^{-}$-plasma described by the partition function in~\req{boltzmann} can then be written as
 \begin{align}
- \label{defmagetization}
+\label{defmagetization}
  {\cal M}\equiv\frac{T}{V}\frac{\partial}{\partial{\cal B}}\ln{{\cal Z}_{e^{+}e^{-}}} = \frac{T}{V}\left(\frac{\partial b_{0}}{\partial{\cal B}}\right)\frac{\partial}{\partial b_{0}}\ln{{\cal Z}_{e^{+}e^{-}}}\,,
 \end{align}
-Magnetization arising from other components in the cosmic gas (protons, neutrinos, etc.) could in principle also be included. Localized inhomogeneities of matter evolution are often non-trivial and generally be solved numerically using magneto-hydrodynamics (MHD)~\cite{melrose2008quantum,Vazza:2017qge,Vachaspati:2020blt}. In the context of MHD, primordial magnetogenesis from fluid flows in the electron-positron epoch was considered in~\cite{Gopal:2004ut,Perrone:2021srr}.
+Magnetization arising from other components in the cosmic gas (protons, neutrinos, etc.) could in principle also be included. Localized inhomogeneities of matter evolution are often non-trivial and generally be solved numerically using magneto-hydrodynamics (MHD)~\cite{melrose2008quantum,Vazza:2017qge,Vachaspati:2020blt,Stoneking:2020egj}. In the context of MHD, primordial magnetogenesis from fluid flows in the electron-positron epoch was considered in~\cite{Gopal:2004ut,Perrone:2021srr}.  {\xblue We note in passing that the possible conservation of magnetic helicity~\cite{Boyarsky:2011uy}
+relates to current induced magnetic fields. We do not expect this conservation law to hold for our Gilbertian spin based magnetization. 
+}
+
 
 We introduce dimensionless units for magnetization ${\mathfrak M}$ by defining the critical field strength
 \begin{align}
@@ -602,13 +609,24 @@ This is seen explicitly in~\rf{fig:polarswap} where we plot the numerical densit
 
 The low $T$-behavior of~\rf{fig:polarswap} will need further corroboration after Amp{\'e}rian currents as a source of magnetic field are incorporated: The Gilbertian sources, here magnetic dipole moment paramagnetism and Landau diamagnetism, may not be dominant magnetic sources when $e^{+}e^{-}$-pairs are of comparable number to the residual electron and proton abundance.
 
+{\xblue
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Macroscopic magnetization length scale and statistical fluctuations}
+\label{sec:lengthscale}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent It is of interest to consider in the $e^{+}e^{-}$ medium the spatial length scale $\lambda $ over which the dipole induced magnetization is constant, referred in Amp{\`e}rian magnetization literature as coherence length.  As noted in \rsec{sec:introduction}, the two different mechanisms for magnetogenesis (through Amp{\`e}rian matter currents, or through Gilbertian magnetic moment alignment) are two different physical sources of magnetic field and  produce different spectra of magnetic fields across differing length scales.
+
+For these reasons we do not know what the typical length scale of induced magnetization could be. Similarly, the observational situation is in flux.  The length scale of IGMFs are not well constrained~\cite{Giovannini:2022rrl,Durrer:2013pga,AlvesBatista:2021sln} bounded by the range  $\lambda  \sim 10^{-2}-10^{3}$ Mpc for the external field strengths we considered. It has been argued that inhomogeneous PMFs of $\lambda  \lesssim 400$ pc are subject to dissipating effects~\cite{Jedamzik:1999bm}. Inhomogeneous field dissipation would affect not only the external PMFs, but also the induced magnetization as well restricting the spectrum of fluctuations. However, length scales above $\lambda \gtrsim10^{3}$ Mpc are not disallowed, if generated during an sufficiently early epoch such as inflation, but would require that the coherence of the PMF is beyond the size of the present day visible universe.
+
+Our theoretical model needs to evolve by consideration of interactions including with the background nuclear dust in order to allow for the introduction of a collective magnetization length scale sourced by magnetic dipoles. Moreover, we note possibility of coupling to the cosmological expansion dynamics~\cite{Kahniashvili:2012uj}. Similarly, we are working to understand the thermal fluctuations $\langle(\Delta\mathcal{M})^{2}\rangle$  which  could be required in models we are exploring to characterize the Gilbertian $e^{+}e^{-}$ plasma magnetization coherence length.
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary and discussion}
 \label{sec:conclusions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent This work is an effort to interpret the intergalactic magnetic fields of today as originating in primordial fields generated in the first hour of the universe's existence. In~\rsec{sec:abundance} have demonstrated that the $e^{+}e^{-}$-pair plasma is an appropriate non-electrical current candidate source for the primordial field: It is (a) very dense, (b) made of particles with highest magnetic moment in nature, (c) and displays a strong paramagnetic response. Therefore expanding on our work in~\cite{Rafelski:2023emw}, we explored its paramagnetic magnetization in the early universe temperature range between $2000\keV>T>20\keV$. 
 
-In~\rsec{sec:thermal} we define the comoving scale, $b_{0}$, of the magnetic field expressed in dimensionless units estimated between $10^{-3}>b_{0}>10^{-11}$. We believe considering conservation of magnetic flux that $b_{0}$ once created is most likely a conserved property of the expanding universe. Antiparticles $(e^{+})$ have the opposite sign of charge, and thus magnetic moment, compared to particles $(e^{-})$. Therefore in an $e^{+}e^{-}$-pair plasma, net magnetization can be associated with opposite spin orientations for particles and antiparticles without the accompaniment of a net angular momentum in the volume considered. This is of course very different from the the matter dominated universe arising below $T\simeq 20\keV$ which includes the current epoch.  
+In~\rsec{sec:thermal} we define the comoving scale, $b_{0}$, of the magnetic field expressed in dimensionless units estimated between $10^{-3}>b_{0}>10^{-11}$. We believe considering conservation of magnetic flux that $b_{0}$ once created is most likely a conserved property of the expanding universe. Antiparticles $(e^{+})$ have the opposite sign of charge, and thus magnetic moment, compared to particles $(e^{-})$. Therefore in an $e^{+}e^{-}$-pair plasma, net magnetization can be associated with opposite spin orientations for particles and antiparticles without the accompaniment of a net angular momentum in the volume considered. This is of course very different from the the matter dominated universe arising below $T\simeq 20\keV$ which includes the current epoch.
 
 The $e^{+}e^{-}$-pair plasma environment is well beyond the reach of all present day laboratory and known astrophysical environments. As seen in~\rf{fig:densityratio} the lower temperature limit, where the last $e^{+}e^{-}$-pair disappeared, is 15 times the Sun's core temperature~\cite{Bahcall:2000nu} $T_{\odot}=1.37\keV$. Laboratory conditions to explore our results depend on presence of $e^{+}e^{-}$-pair abundance which in turn depends on sufficiently stable thermal photon content.
 
