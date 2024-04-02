@@ -34,7 +34,8 @@ style="width: 1em; margin-inline-start: 0.5em"
 alt="ORCID iD icon"/> Johann Rafelski</a>
 
 ## cite as
-Steinmetz, A., Yang, C. T. & Rafelski, J. Matter-antimatter origin of cosmic magnetism. arXiv preprint arXiv:2308.14818 [hep-ph] (2023).
+Steinmetz, A., Yang, C. T. & Rafelski, J. Matter-antimatter origin of cosmic magnetism. Phys. Rev. D 108 (2023):123522.
 
 ## doi/arXiv id
+- https://doi.org/10.1103/PhysRevD.108.123522
 - https://arxiv.org/abs/2308.14818
