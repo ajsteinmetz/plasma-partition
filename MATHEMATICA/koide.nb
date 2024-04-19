@@ -1,0 +1,74 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1844,         64]
+NotebookOptionsPosition[      1418,         48]
+NotebookOutlinePosition[      1764,         63]
+CellTagsIndexPosition[      1721,         60]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Koide relation of various 3-family groups", "Subsection",
+ CellChangeTimes->{{3.9139756698404284`*^9, 3.9139756831260815`*^9}, {
+  3.9139816338620753`*^9, 
+  3.913981644434341*^9}},ExpressionUUID->"84cca9f3-1dc0-45ec-9777-\
+64332286ea6c"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"mL", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"0.511", ",", "105.66", ",", "1776.8"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mUp", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"2.2", ",", "1280", ",", "173100"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mDown", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"4.7", ",", "96", ","}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.913981649953139*^9, 
+  3.9139817393105035`*^9}},ExpressionUUID->"0f2916b2-381d-4dcd-b069-\
+598e4e50530e"]
+}, Open  ]]
+},
+WindowSize->{638, 620},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 244, 4, 53, "Subsection",ExpressionUUID->"84cca9f3-1dc0-45ec-9777-64332286ea6c"],
+Cell[827, 28, 575, 17, 67, "Input",ExpressionUUID->"0f2916b2-381d-4dcd-b069-598e4e50530e"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
